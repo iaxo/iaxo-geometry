@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<!-- ##VERSION BabyIAXO Top Veto Variations: In Between - Version 1.0 (${vetoInsertDepth} ${scintillatorSheetMiddleThickness} ${scintillatorSheetMiddleMaterial} ${scintillatorSheetLastThickness} ${scintillatorSheetLastMaterial})## -->
+<!-- ##VERSION BabyIAXO Top Veto Variations: In Between - Version 1.0 (${vetoInsertDepth} ${scintillatorSheetMiddleThickness} ${scintillatorSheetMiddleMaterial})## -->
 
 <!DOCTYPE gdml [
     <!ENTITY materials SYSTEM "../materials.xml">
@@ -1135,13 +1135,6 @@
                 <rotationref ref="vetoTopRotation" />
             </physvol>
 
-            <!--
-            <physvol name="scintillatorSheetLast">
-                <volumeref ref="scintillatorSheetLastVolume" />
-                <position name="scintillatorSheetLastPosition" unit="mm" x="vetoTopPosX" y="vetoTopPosY + 5*scintillatorThickness/2 + 4*scintillatorSheetMiddleThickness/2 + scintillatorSheetLastThickness/2" z="vetoTopPosZ - shieldingOffset" />
-                <rotationref ref="vetoTopRotation" />
-            </physvol>
-            -->
             <!-- END veto top-->
 
             <!-- BEGIN veto bottom -->
