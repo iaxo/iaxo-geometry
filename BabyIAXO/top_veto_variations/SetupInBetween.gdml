@@ -2,7 +2,7 @@
 <!-- ##VERSION BabyIAXO Top Veto Variations: In Between - Version 1.0 (${vetoInsertDepth} ${scintillatorSheetMiddleThickness} ${scintillatorSheetMiddleMaterial})## -->
 
 <!DOCTYPE gdml [
-    <!ENTITY materials SYSTEM "../materials.xml">
+    <!ENTITY materials SYSTEM "../../miscellaneous/materials.xml"> 
 ]>
 
 <gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
