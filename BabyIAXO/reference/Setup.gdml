@@ -866,7 +866,7 @@
     <!-- STEEL PIPE -->
     <structure>
         <volume name="steelPipeVolume">
-            <materialref ref="Stainlesssteel" />
+            <materialref ref="StainlessSteel" />
             <solidref ref="steelPipe" />
         </volume>
         <volume name="steelPipeVacuum">
