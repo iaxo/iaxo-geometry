@@ -759,6 +759,10 @@
         <box name="scintillatorSheetMiddleBoxSolid" x="3*scintillatorShortSide-2*scintillatorShortSideNonSensitive" y="scintillatorLongSide-2*scintillatorLongSideNonSensitive" z="scintillatorSheetMiddleThickness" lunit="mm" />
         <box name="scintillatorSheetLastBoxSolid" x="3*scintillatorShortSide-2*scintillatorShortSideNonSensitive" y="scintillatorLongSide-2*scintillatorLongSideNonSensitive" z="scintillatorSheetLastThickness" lunit="mm" />
         <box name="platformSolid" x="3*scintillatorShortSide-2*scintillatorShortSideNonSensitive + 2*scintillatorShortSide" y="scintillatorLongSide-2*scintillatorLongSideNonSensitive +2*scintillatorShortSide" z="platformThickness" lunit="mm" />
+        <subtraction name="scintillatorSheetMiddleBoxSolidHole">
+            <first ref="scintillatorSheetMiddleBoxSolid" />
+            <second ref="scintillatorHoleSquare" />
+        </subtraction>
 
     </solids>
     <!-- ***END SOLIDS*** -->
@@ -921,6 +925,11 @@
 
             <materialref ref="Cadmium" />
             <solidref ref="scintillatorSheetMiddleBoxSolid" />
+        </volume> 
+
+        <volume name="scintillatorSheetMiddleHoleVolume">
+            <materialref ref="Cadmium" />
+            <solidref ref="scintillatorSheetMiddleBoxSolidHole" />
         </volume> 
 
         <volume name="scintillatorSheetLastVolume">
@@ -1272,6 +1281,16 @@
                 <rotationref ref="vetoBackRotation" />
             </physvol>
 
+            <physvol name="scintillatorFrontSheetMiddle1">
+                <volumeref ref="scintillatorSheetMiddleHoleVolume" />
+                <position name="scintillatorFrontSheetMiddle1Position" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY" z="vetoFrontPosZ - shieldingOffset - scintillatorThickness/2 - scintillatorSheetMiddleThickness/2" />
+                <rotationref ref="vetoFrontRotation" />
+            </physvol>
+            <physvol name="scintillatorFrontSheetMiddle2">
+                <volumeref ref="scintillatorSheetMiddleHoleVolume" />
+                <position name="scintillatorFrontSheetMiddle2Position" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY" z="vetoFrontPosZ - shieldingOffset + scintillatorThickness/2 + scintillatorSheetMiddleThickness/2" />
+                <rotationref ref="vetoFrontRotation" />
+            </physvol>
             <!-- BEGIN veto east-->
             <physvol name="vetoEast1of3">
                 <volumeref ref="scintillatorVolume" />
