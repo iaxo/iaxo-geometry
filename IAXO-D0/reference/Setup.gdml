@@ -549,103 +549,103 @@
         <!-- BEGIN veto top -->
         <physvol name="scintillatorTopSheetMiddle1">
             <volumeref ref="scintillatorSheetMiddleVolume" />
-            <position name="scintillatorTopSheetMiddle1Position" unit="mm" x="vetoTopPosX + 40" y="vetoTopPosY - scintillatorThickness/2 + scintillatorSheetMiddleThickness/2" z="vetoTopPosZ - shieldingOffset" />
+            <position name="scintillatorTopSheetMiddle1Position" unit="mm" x="vetoTopPosX + 40" y="vetoTopPosY - scintillatorThickness/2 + scintillatorSheetMiddleThickness/2" z="vetoTopPosZ" />
             <rotationref ref="vetoTopRotation" />
         </physvol>
 
         <physvol name="vetoTop1of3">
             <volumeref ref="scintillatorVolume" />
-            <position name="vetoTop1of3Position" unit="mm" x="vetoTopPosX + 40 - 1*scintillatorShortSide - scintillatorCoverThickness" y="vetoTopPosY + scintillatorSheetMiddleThickness + scintillatorCoverThickness" z="vetoTopPosZ - shieldingOffset" />
+            <position name="vetoTop1of3Position" unit="mm" x="vetoTopPosX + 40 - 1*scintillatorShortSide - scintillatorCoverThickness" y="vetoTopPosY + scintillatorSheetMiddleThickness + scintillatorCoverThickness" z="vetoTopPosZ" />
             <rotationref ref="vetoTopRotation" />
         </physvol>
         <physvol name="vetoTop2of3">
             <volumeref ref="scintillatorVolume" />
-            <position name="vetoTop2of3Position" unit="mm" x="vetoTopPosX + 40" y="vetoTopPosY + scintillatorSheetMiddleThickness + scintillatorCoverThickness" z="vetoTopPosZ - shieldingOffset - 0*scintillatorShortSide - shieldingOffset" />
+            <position name="vetoTop2of3Position" unit="mm" x="vetoTopPosX + 40" y="vetoTopPosY + scintillatorSheetMiddleThickness + scintillatorCoverThickness" z="vetoTopPosZ - 0*scintillatorShortSide" />
             <rotationref ref="vetoTopRotation" />
         </physvol>
         <physvol name="vetoTop3of3">
             <volumeref ref="scintillatorVolume" />
-            <position name="vetoTop3of3Position" unit="mm" x="vetoTopPosX + 40 + 1*scintillatorShortSide + scintillatorCoverThickness" y="vetoTopPosY + scintillatorSheetMiddleThickness + scintillatorCoverThickness" z="vetoTopPosZ - shieldingOffset " />
+            <position name="vetoTop3of3Position" unit="mm" x="vetoTopPosX + 40 + 1*scintillatorShortSide + scintillatorCoverThickness" y="vetoTopPosY + scintillatorSheetMiddleThickness + scintillatorCoverThickness" z="vetoTopPosZ " />
             <rotationref ref="vetoTopRotation" />
         </physvol>
 
         <physvol name="scintillatorTopSheetMiddle2">
             <volumeref ref="scintillatorSheetMiddleVolume" />
-            <position name="scintillatorTopSheetMiddle2Position" unit="mm" x="vetoTopPosX + 40" y="vetoTopPosY + scintillatorSheetMiddleThickness + scintillatorThickness/2 + scintillatorSheetMiddleThickness/2 + 2*scintillatorCoverThickness" z="vetoTopPosZ - shieldingOffset" />
+            <position name="scintillatorTopSheetMiddle2Position" unit="mm" x="vetoTopPosX + 40" y="vetoTopPosY + scintillatorSheetMiddleThickness + scintillatorThickness/2 + scintillatorSheetMiddleThickness/2 + 2*scintillatorCoverThickness" z="vetoTopPosZ" />
             <rotationref ref="vetoTopRotation" />
         </physvol>
 
         <physvol name="scintillatorTopSheetMiddle3">
             <volumeref ref="scintillatorSheetMiddleFourLargeVolume" />
-            <position name="scintillatorTopSheetMiddle3Position" unit="mm" x="vetoTopPosX" y="vetoTopPosY - scintillatorThickness/2 + scintillatorSheetMiddleThickness/2 + 70" z="vetoTopPosZ - shieldingOffset + 80 + 265" />
+            <position name="scintillatorTopSheetMiddle3Position" unit="mm" x="vetoTopPosX" y="vetoTopPosY - scintillatorThickness/2 + scintillatorSheetMiddleThickness/2 + 70" z="vetoTopPosZ + 80 + 265" />
             <rotationref ref="vetoTopRotation" />
         </physvol>
 
         <physvol name="vetoTopMiddle1of4">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoTopMiddle1of4Position" unit="mm" x="vetoTopPosX - 1.5*scintillatorShortSide - 2*scintillatorCoverThickness" y="vetoTopPosY + 0*scintillatorThickness/2 + 2*scintillatorSheetMiddleThickness/2 + 70 + scintillatorCoverThickness" z="vetoTopPosZ + 265 - shieldingOffset + 80" />
+            <position name="vetoTopMiddle1of4Position" unit="mm" x="vetoTopPosX - 1.5*scintillatorShortSide - 2*scintillatorCoverThickness" y="vetoTopPosY + 0*scintillatorThickness/2 + 2*scintillatorSheetMiddleThickness/2 + 70 + scintillatorCoverThickness" z="vetoTopPosZ + 265 + 80" />
             <rotationref ref="vetoTopRotation" />
         </physvol>
         <physvol name="vetoTopMiddle2of4">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoTopMiddle2of4Position" unit="mm" x="vetoTopPosX - 0.5*scintillatorShortSide - 1*scintillatorCoverThickness" y="vetoTopPosY + 0*scintillatorThickness/2 + 2*scintillatorSheetMiddleThickness/2 + 70 + scintillatorCoverThickness" z="vetoTopPosZ + 265 - shieldingOffset + 80" />
+            <position name="vetoTopMiddle2of4Position" unit="mm" x="vetoTopPosX - 0.5*scintillatorShortSide - 1*scintillatorCoverThickness" y="vetoTopPosY + 0*scintillatorThickness/2 + 2*scintillatorSheetMiddleThickness/2 + 70 + scintillatorCoverThickness" z="vetoTopPosZ + 265 + 80" />
             <rotationref ref="vetoTopRotation" />
         </physvol>
         <physvol name="vetoTopMiddle3of4">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoTopMiddle3of4Position" unit="mm" x="vetoTopPosX + 0.5*scintillatorShortSide + 1*scintillatorCoverThickness" y="vetoTopPosY + 0*scintillatorThickness/2 + 2*scintillatorSheetMiddleThickness/2 + 70 + scintillatorCoverThickness" z="vetoTopPosZ + 265 - shieldingOffset + 80" />
+            <position name="vetoTopMiddle3of4Position" unit="mm" x="vetoTopPosX + 0.5*scintillatorShortSide + 1*scintillatorCoverThickness" y="vetoTopPosY + 0*scintillatorThickness/2 + 2*scintillatorSheetMiddleThickness/2 + 70 + scintillatorCoverThickness" z="vetoTopPosZ + 265 + 80" />
             <rotationref ref="vetoTopRotation" />
         </physvol>
         <physvol name="vetoTopMiddle4of4">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoTopMiddle4of4Position" unit="mm" x="vetoTopPosX + 1.5*scintillatorShortSide + 2*scintillatorCoverThickness" y="vetoTopPosY + 0*scintillatorThickness/2 + 2*scintillatorSheetMiddleThickness/2 + 70 + scintillatorCoverThickness" z="vetoTopPosZ + 265 - shieldingOffset + 80" />
+            <position name="vetoTopMiddle4of4Position" unit="mm" x="vetoTopPosX + 1.5*scintillatorShortSide + 2*scintillatorCoverThickness" y="vetoTopPosY + 0*scintillatorThickness/2 + 2*scintillatorSheetMiddleThickness/2 + 70 + scintillatorCoverThickness" z="vetoTopPosZ + 265 + 80" />
             <rotationref ref="vetoTopRotation" />
         </physvol>
 
         <physvol name="scintillatorTopSheetMiddle4">
             <volumeref ref="scintillatorSheetMiddleFourLargeVolume" />
-            <position name="scintillatorTopSheetMiddle4Position" unit="mm" x="vetoTopPosX" y="vetoTopPosY + scintillatorThickness/2 + scintillatorSheetMiddleThickness/2 + 70 + 2*scintillatorCoverThickness" z="vetoTopPosZ - shieldingOffset + 80 + 265" />
+            <position name="scintillatorTopSheetMiddle4Position" unit="mm" x="vetoTopPosX" y="vetoTopPosY + scintillatorThickness/2 + scintillatorSheetMiddleThickness/2 + 70 + 2*scintillatorCoverThickness" z="vetoTopPosZ + 80 + 265" />
             <rotationref ref="vetoTopRotation" />
         </physvol>
 
 
         <physvol name="scintillatorTopSheetMiddle5">
             <volumeref ref="scintillatorSheetMiddleFourLargeVolume" />
-            <position name="scintillatorTopSheetMiddle5Position" unit="mm" x="vetoTopPosX" y="vetoTopPosY - scintillatorThickness/2 + scintillatorSheetMiddleThickness/2 + 145" z="vetoTopPosZ - shieldingOffset + 265" />
+            <position name="scintillatorTopSheetMiddle5Position" unit="mm" x="vetoTopPosX" y="vetoTopPosY - scintillatorThickness/2 + scintillatorSheetMiddleThickness/2 + 145" z="vetoTopPosZ + 265" />
             <rotationref ref="vetoTopRotation" />
         </physvol>
 
         <physvol name="vetoTopLast1of4">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoTopLast1of4Position" unit="mm" x="vetoTopPosX - 1.5*scintillatorShortSide - 2*scintillatorCoverThickness" y="vetoTopPosY + 0*scintillatorThickness/2 + 2*scintillatorSheetMiddleThickness/2 + 145 + scintillatorCoverThickness" z="vetoTopPosZ + 265 - shieldingOffset" />
+            <position name="vetoTopLast1of4Position" unit="mm" x="vetoTopPosX - 1.5*scintillatorShortSide - 2*scintillatorCoverThickness" y="vetoTopPosY + 0*scintillatorThickness/2 + 2*scintillatorSheetMiddleThickness/2 + 145 + scintillatorCoverThickness" z="vetoTopPosZ + 265" />
             <rotationref ref="vetoTopRotation" />
         </physvol>
         <physvol name="vetoTopLast2of4">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoTopLast2of4Position" unit="mm" x="vetoTopPosX - 0.5*scintillatorShortSide - 1*scintillatorCoverThickness" y="vetoTopPosY + 0*scintillatorThickness/2 + 2*scintillatorSheetMiddleThickness/2 + 145 + scintillatorCoverThickness" z="vetoTopPosZ + 265 - shieldingOffset" />
+            <position name="vetoTopLast2of4Position" unit="mm" x="vetoTopPosX - 0.5*scintillatorShortSide - 1*scintillatorCoverThickness" y="vetoTopPosY + 0*scintillatorThickness/2 + 2*scintillatorSheetMiddleThickness/2 + 145 + scintillatorCoverThickness" z="vetoTopPosZ + 265" />
             <rotationref ref="vetoTopRotation" />
         </physvol>
         <physvol name="vetoTopLast3of4">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoTopLast3of4Position" unit="mm" x="vetoTopPosX + 0.5*scintillatorShortSide + 1*scintillatorCoverThickness" y="vetoTopPosY + 0*scintillatorThickness/2 + 2*scintillatorSheetMiddleThickness/2 + 145 + scintillatorCoverThickness" z="vetoTopPosZ + 265 - shieldingOffset" />
+            <position name="vetoTopLast3of4Position" unit="mm" x="vetoTopPosX + 0.5*scintillatorShortSide + 1*scintillatorCoverThickness" y="vetoTopPosY + 0*scintillatorThickness/2 + 2*scintillatorSheetMiddleThickness/2 + 145 + scintillatorCoverThickness" z="vetoTopPosZ + 265" />
             <rotationref ref="vetoTopRotation" />
         </physvol>
         <physvol name="vetoTopLast4of4">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoTopLast4of4Position" unit="mm" x="vetoTopPosX + 1.5*scintillatorShortSide + 2*scintillatorCoverThickness" y="vetoTopPosY + 0*scintillatorThickness/2 + 2*scintillatorSheetMiddleThickness/2 + 145 + scintillatorCoverThickness" z="vetoTopPosZ + 265 - shieldingOffset" />
+            <position name="vetoTopLast4of4Position" unit="mm" x="vetoTopPosX + 1.5*scintillatorShortSide + 2*scintillatorCoverThickness" y="vetoTopPosY + 0*scintillatorThickness/2 + 2*scintillatorSheetMiddleThickness/2 + 145 + scintillatorCoverThickness" z="vetoTopPosZ + 265" />
             <rotationref ref="vetoTopRotation" />
         </physvol>
 
         <physvol name="scintillatorTopSheetMiddle6">
             <volumeref ref="scintillatorSheetMiddleFourLargeVolume" />
-            <position name="scintillatorTopSheetMiddle6Position" unit="mm" x="vetoTopPosX" y="vetoTopPosY + scintillatorThickness/2 + scintillatorSheetMiddleThickness/2 + 145 + 2*scintillatorCoverThickness" z="vetoTopPosZ - shieldingOffset + 265" />
+            <position name="scintillatorTopSheetMiddle6Position" unit="mm" x="vetoTopPosX" y="vetoTopPosY + scintillatorThickness/2 + scintillatorSheetMiddleThickness/2 + 145 + 2*scintillatorCoverThickness" z="vetoTopPosZ + 265" />
             <rotationref ref="vetoTopRotation" />
         </physvol>
         <!-- END veto top-->
 
         <physvol name="platform">
             <volumeref ref="platformVolume" />
-            <position name="platformPosition" unit="mm" x="vetoTopPosX" y="-LeadBoxSize/2 - platformThickness/2 - 2" z="vetoBottomPosZ - shieldingOffset" />
+            <position name="platformPosition" unit="mm" x="vetoTopPosX" y="-LeadBoxSize/2 - platformThickness/2 - 2" z="vetoBottomPosZ" />
             <rotationref ref="vetoBottomRotation" />
         </physvol>
 
@@ -653,68 +653,68 @@
 
         <physvol name="scintillatorBottomSheetMiddle1">
             <volumeref ref="scintillatorSheetMiddleFourSmallVolume" />
-            <position name="scintillatorBottomSheetMiddle1Position" unit="mm" x="vetoBottomPosX" y="vetoBottomPosY  - scintillatorSheetMiddleThickness/2" z="vetoBottomPosZ - shieldingOffset" />
+            <position name="scintillatorBottomSheetMiddle1Position" unit="mm" x="vetoBottomPosX" y="vetoBottomPosY  - scintillatorSheetMiddleThickness/2" z="vetoBottomPosZ" />
             <rotationref ref="vetoBottomRotation" />
         </physvol>
 
         <physvol name="vetoBottom1of4">
             <volumeref ref="scintillatorVolume" />
-            <position name="vetoBottom1of4Position" unit="mm" x="vetoBottomPosX - 1.5*scintillatorShortSide - 2*scintillatorCoverThickness" y="vetoBottomPosY - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" z="vetoBottomPosZ - shieldingOffset" />
+            <position name="vetoBottom1of4Position" unit="mm" x="vetoBottomPosX - 1.5*scintillatorShortSide - 2*scintillatorCoverThickness" y="vetoBottomPosY - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" z="vetoBottomPosZ" />
             <rotationref ref="vetoBottomRotation" />
         </physvol>
         <physvol name="vetoBottom2of4">
             <volumeref ref="scintillatorVolume" />
-            <position name="vetoBottom2of4Position" unit="mm" x="vetoBottomPosX - 0.5*scintillatorShortSide - 1*scintillatorCoverThickness" y="vetoBottomPosY - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" z="vetoBottomPosZ - shieldingOffset" />
+            <position name="vetoBottom2of4Position" unit="mm" x="vetoBottomPosX - 0.5*scintillatorShortSide - 1*scintillatorCoverThickness" y="vetoBottomPosY - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" z="vetoBottomPosZ" />
             <rotationref ref="vetoBottomRotation" />
         </physvol>
         <physvol name="vetoBottom3of4">
             <volumeref ref="scintillatorVolume" />
-            <position name="vetoBottom3of4Position" unit="mm" x="vetoBottomPosX + 0.5*scintillatorShortSide + 1*scintillatorCoverThickness" y="vetoBottomPosY - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" z="vetoBottomPosZ - shieldingOffset " />
+            <position name="vetoBottom3of4Position" unit="mm" x="vetoBottomPosX + 0.5*scintillatorShortSide + 1*scintillatorCoverThickness" y="vetoBottomPosY - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" z="vetoBottomPosZ " />
             <rotationref ref="vetoBottomRotation" />
         </physvol>
         <physvol name="vetoBottom4of4">
             <volumeref ref="scintillatorVolume" />
-            <position name="vetoBottom4of4Position" unit="mm" x="vetoBottomPosX + 1.5*scintillatorShortSide + 2*scintillatorCoverThickness" y="vetoBottomPosY - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" z="vetoBottomPosZ - shieldingOffset " />
+            <position name="vetoBottom4of4Position" unit="mm" x="vetoBottomPosX + 1.5*scintillatorShortSide + 2*scintillatorCoverThickness" y="vetoBottomPosY - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" z="vetoBottomPosZ " />
             <rotationref ref="vetoBottomRotation" />
         </physvol>
 
         <physvol name="scintillatorBottomSheetMiddle2">
             <volumeref ref="scintillatorSheetMiddleFourSmallVolume" />
-            <position name="scintillatorBottomSheetMiddle2Position" unit="mm" x="vetoBottomPosX" y="vetoBottomPosY - 2*scintillatorSheetMiddleThickness/2 - 2*scintillatorCoverThickness - scintillatorThickness" z="vetoBottomPosZ - shieldingOffset" />
+            <position name="scintillatorBottomSheetMiddle2Position" unit="mm" x="vetoBottomPosX" y="vetoBottomPosY - 2*scintillatorSheetMiddleThickness/2 - 2*scintillatorCoverThickness - scintillatorThickness" z="vetoBottomPosZ" />
             <rotationref ref="vetoBottomRotation" />
         </physvol>
 
 
         <physvol name="scintillatorBottomSheetMiddle3">
             <volumeref ref="scintillatorSheetMiddleFourLargeVolume" />
-            <position name="scintillatorBottomSheetMiddle1Position" unit="mm" x="vetoBottomPosX" y="vetoBottomPosY  - scintillatorSheetMiddleThickness/2 - 65" z="vetoBottomPosZ - shieldingOffset + 240" />
+            <position name="scintillatorBottomSheetMiddle1Position" unit="mm" x="vetoBottomPosX" y="vetoBottomPosY  - scintillatorSheetMiddleThickness/2 - 65" z="vetoBottomPosZ + 240" />
             <rotationref ref="vetoBottomRotation" />
         </physvol>
 
         <physvol name="vetoBottomLast1of4">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoBottomLast1of4Position" unit="mm" x="vetoBottomPosX - 1.5*scintillatorShortSide - 2*scintillatorCoverThickness" y="vetoBottomPosY - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2 - 65" z="vetoBottomPosZ - shieldingOffset + 240" />
+            <position name="vetoBottomLast1of4Position" unit="mm" x="vetoBottomPosX - 1.5*scintillatorShortSide - 2*scintillatorCoverThickness" y="vetoBottomPosY - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2 - 65" z="vetoBottomPosZ + 240" />
             <rotationref ref="vetoBottomRotation" />
         </physvol>
         <physvol name="vetoBottomLast2of4">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoBottomLast2of4Position" unit="mm" x="vetoBottomPosX - 0.5*scintillatorShortSide - 1*scintillatorCoverThickness" y="vetoBottomPosY - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2 - 65" z="vetoBottomPosZ - shieldingOffset + 240" />
+            <position name="vetoBottomLast2of4Position" unit="mm" x="vetoBottomPosX - 0.5*scintillatorShortSide - 1*scintillatorCoverThickness" y="vetoBottomPosY - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2 - 65" z="vetoBottomPosZ + 240" />
             <rotationref ref="vetoBottomRotation" />
         </physvol>
         <physvol name="vetoBottomLast3of4">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoBottomLast3of4Position" unit="mm" x="vetoBottomPosX + 0.5*scintillatorShortSide + 1*scintillatorCoverThickness" y="vetoBottomPosY - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2 - 65" z="vetoBottomPosZ - shieldingOffset + 240" />
+            <position name="vetoBottomLast3of4Position" unit="mm" x="vetoBottomPosX + 0.5*scintillatorShortSide + 1*scintillatorCoverThickness" y="vetoBottomPosY - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2 - 65" z="vetoBottomPosZ + 240" />
             <rotationref ref="vetoBottomRotation" />
         </physvol>
         <physvol name="vetoBottomLast4of4">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoBottomLast4of4Position" unit="mm" x="vetoBottomPosX + 1.5*scintillatorShortSide + 2*scintillatorCoverThickness" y="vetoBottomPosY - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2 - 65" z="vetoBottomPosZ - shieldingOffset + 240" />
+            <position name="vetoBottomLast4of4Position" unit="mm" x="vetoBottomPosX + 1.5*scintillatorShortSide + 2*scintillatorCoverThickness" y="vetoBottomPosY - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2 - 65" z="vetoBottomPosZ + 240" />
             <rotationref ref="vetoBottomRotation" />
         </physvol>
 
         <physvol name="scintillatorBottomSheetMiddle4">
             <volumeref ref="scintillatorSheetMiddleFourLargeVolume" />
-            <position name="scintillatorBottomSheetMiddle2Position" unit="mm" x="vetoBottomPosX" y="vetoBottomPosY - 2*scintillatorSheetMiddleThickness/2 - 2*scintillatorCoverThickness - scintillatorThickness - 65" z="vetoBottomPosZ - shieldingOffset + 240" />
+            <position name="scintillatorBottomSheetMiddle2Position" unit="mm" x="vetoBottomPosX" y="vetoBottomPosY - 2*scintillatorSheetMiddleThickness/2 - 2*scintillatorCoverThickness - scintillatorThickness - 65" z="vetoBottomPosZ + 240" />
             <rotationref ref="vetoBottomRotation" />
         </physvol>
 
@@ -724,62 +724,62 @@
 
         <physvol name="scintillatorBackSheetMiddle1">
             <volumeref ref="scintillatorSheetMiddleVolume" />
-            <position name="scintillatorBackSheetMiddle1Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY" z="vetoBackPosZ - shieldingOffset - scintillatorSheetMiddleThickness/2" />
+            <position name="scintillatorBackSheetMiddle1Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY" z="vetoBackPosZ - scintillatorSheetMiddleThickness/2" />
             <rotationref ref="vetoBackRotation" />
         </physvol>
 
         <physvol name="vetoBack1of3">
             <volumeref ref="scintillatorVolume" />
-            <position name="vetoBack1of3Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY - 1*scintillatorShortSide - 1*scintillatorCoverThickness" z="vetoBackPosZ - shieldingOffset - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" />
+            <position name="vetoBack1of3Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY - 1*scintillatorShortSide - 1*scintillatorCoverThickness" z="vetoBackPosZ - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" />
             <rotationref ref="vetoBackRotation" />
         </physvol>
         <physvol name="vetoBack2of3">
             <volumeref ref="scintillatorVolume" />
-            <position name="vetoBack2of3Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY" z="vetoBackPosZ - shieldingOffset - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" />
+            <position name="vetoBack2of3Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY" z="vetoBackPosZ - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" />
             <rotationref ref="vetoBackRotation" />
         </physvol>
         <physvol name="vetoBack3of3">
             <volumeref ref="scintillatorVolume" />
-            <position name="vetoBack3of3Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY + 1*scintillatorShortSide + 1*scintillatorCoverThickness" z="vetoBackPosZ - shieldingOffset - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" />
+            <position name="vetoBack3of3Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY + 1*scintillatorShortSide + 1*scintillatorCoverThickness" z="vetoBackPosZ - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" />
             <rotationref ref="vetoBackRotation" />
         </physvol>
 
         <physvol name="scintillatorBackSheetMiddle2">
             <volumeref ref="scintillatorSheetMiddleVolume" />
-            <position name="scintillatorBackSheetMiddle2Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY" z="vetoBackPosZ - shieldingOffset - 1.5*scintillatorSheetMiddleThickness - 2*scintillatorCoverThickness - scintillatorThickness" />
+            <position name="scintillatorBackSheetMiddle2Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY" z="vetoBackPosZ - 1.5*scintillatorSheetMiddleThickness - 2*scintillatorCoverThickness - scintillatorThickness" />
             <rotationref ref="vetoBackRotation" />
         </physvol>
 
         <physvol name="scintillatorBackSheetMiddle3">
             <volumeref ref="scintillatorSheetMiddleFourSmallVolume" />
-            <position name="scintillatorBackSheetMiddle3Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY + 85" z="vetoBackPosZ - shieldingOffset - scintillatorSheetMiddleThickness/2 - 70" />
+            <position name="scintillatorBackSheetMiddle3Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY + 85" z="vetoBackPosZ - scintillatorSheetMiddleThickness/2 - 70" />
             <rotationref ref="vetoBackRotation" />
         </physvol>
 
         <physvol name="vetoBackLast1of4">
             <volumeref ref="scintillatorVolume" />
-            <position name="vetoBackLast1of4Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY + 1.5*scintillatorShortSide + 2*scintillatorCoverThickness + 85" z="vetoBackPosZ - shieldingOffset - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2 - 70" />
+            <position name="vetoBackLast1of4Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY + 1.5*scintillatorShortSide + 2*scintillatorCoverThickness + 85" z="vetoBackPosZ - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2 - 70" />
             <rotationref ref="vetoBackRotation" />
         </physvol>
         <physvol name="vetoBackLast2of4">
             <volumeref ref="scintillatorVolume" />
-            <position name="vetoBackLast2of4Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY + 0.5*scintillatorShortSide + 1*scintillatorCoverThickness + 85" z="vetoBackPosZ - shieldingOffset - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2 - 70" />
+            <position name="vetoBackLast2of4Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY + 0.5*scintillatorShortSide + 1*scintillatorCoverThickness + 85" z="vetoBackPosZ - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2 - 70" />
             <rotationref ref="vetoBackRotation" />
         </physvol>
         <physvol name="vetoBackLast3of4">
             <volumeref ref="scintillatorVolume" />
-            <position name="vetoBackLast3of4Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY - 0.5*scintillatorShortSide - 1*scintillatorCoverThickness + 85" z="vetoBackPosZ - shieldingOffset - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2 - 70" />
+            <position name="vetoBackLast3of4Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY - 0.5*scintillatorShortSide - 1*scintillatorCoverThickness + 85" z="vetoBackPosZ - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2 - 70" />
             <rotationref ref="vetoBackRotation" />
         </physvol>
         <physvol name="vetoBackLast4of4">
             <volumeref ref="scintillatorVolume" />
-            <position name="vetoBackLast4of4Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY - 1.5*scintillatorShortSide - 2*scintillatorCoverThickness + 85" z="vetoBackPosZ - shieldingOffset - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2 - 70" />
+            <position name="vetoBackLast4of4Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY - 1.5*scintillatorShortSide - 2*scintillatorCoverThickness + 85" z="vetoBackPosZ - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2 - 70" />
             <rotationref ref="vetoBackRotation" />
         </physvol>
 
         <physvol name="scintillatorBackSheetMiddle4">
             <volumeref ref="scintillatorSheetMiddleFourSmallVolume" />
-            <position name="scintillatorBackSheetMiddle4Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY + 85" z="vetoBackPosZ - shieldingOffset - 1.5*scintillatorSheetMiddleThickness - 70 - 2*scintillatorCoverThickness - scintillatorThickness" />
+            <position name="scintillatorBackSheetMiddle4Position" unit="mm" x="vetoBackPosX" y="vetoBackPosY + 85" z="vetoBackPosZ - 1.5*scintillatorSheetMiddleThickness - 70 - 2*scintillatorCoverThickness - scintillatorThickness" />
             <rotationref ref="vetoBackRotation" />
         </physvol>
 
@@ -789,57 +789,57 @@
 
         <physvol name="scintillatorFrontSheetMiddle1">
             <volumeref ref="scintillatorSheetMiddleThreeLargeVolume" />
-            <position name="scintillatorFrontSheetMiddle1Position" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY" z="vetoFrontPosZ - shieldingOffset + scintillatorSheetMiddleThickness/2" />
+            <position name="scintillatorFrontSheetMiddle1Position" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY" z="vetoFrontPosZ + scintillatorSheetMiddleThickness/2" />
             <rotationref ref="vetoFrontRotation" />
         </physvol>
 
         <physvol name="vetoFront1of3">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoFront1of3Position" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY - 1*scintillatorShortSide - 1*scintillatorCoverThickness" z="vetoFrontPosZ - shieldingOffset + scintillatorSheetMiddleThickness + scintillatorCoverThickness + scintillatorThickness/2" />
+            <position name="vetoFront1of3Position" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY - 1*scintillatorShortSide - 1*scintillatorCoverThickness" z="vetoFrontPosZ + scintillatorSheetMiddleThickness + scintillatorCoverThickness + scintillatorThickness/2" />
             <rotationref ref="vetoFrontRotation" />
         </physvol>
         <physvol name="vetoFront2of3">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoFront2of3Position" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY" z="vetoFrontPosZ - shieldingOffset + scintillatorSheetMiddleThickness + scintillatorCoverThickness + scintillatorThickness/2" />
+            <position name="vetoFront2of3Position" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY" z="vetoFrontPosZ + scintillatorSheetMiddleThickness + scintillatorCoverThickness + scintillatorThickness/2" />
             <rotationref ref="vetoFrontRotation" />
         </physvol>
         <physvol name="vetoFront3of3">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoFront3of3Position" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY + 1*scintillatorShortSide + 1*scintillatorCoverThickness" z="vetoFrontPosZ - shieldingOffset + scintillatorSheetMiddleThickness + scintillatorCoverThickness + scintillatorThickness/2" />
+            <position name="vetoFront3of3Position" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY + 1*scintillatorShortSide + 1*scintillatorCoverThickness" z="vetoFrontPosZ + scintillatorSheetMiddleThickness + scintillatorCoverThickness + scintillatorThickness/2" />
             <rotationref ref="vetoFrontRotation" />
         </physvol>
 
         <physvol name="scintillatorFrontSheetMiddle2">
             <volumeref ref="scintillatorSheetMiddleThreeLargeVolume" />
-            <position name="scintillatorFrontSheetMiddle2Position" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY" z="vetoFrontPosZ - shieldingOffset + 1.5*scintillatorSheetMiddleThickness + 2*scintillatorCoverThickness + scintillatorThickness" />
+            <position name="scintillatorFrontSheetMiddle2Position" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY" z="vetoFrontPosZ + 1.5*scintillatorSheetMiddleThickness + 2*scintillatorCoverThickness + scintillatorThickness" />
             <rotationref ref="vetoFrontRotation" />
         </physvol>
 
         <physvol name="scintillatorFrontSheetMiddle3">
             <volumeref ref="scintillatorSheetMiddleThreeLargeVolume" />
-            <position name="scintillatorFrontSheetMiddle3Position" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY" z="vetoFrontPosZ - shieldingOffset + scintillatorSheetMiddleThickness/2 + 70" />
+            <position name="scintillatorFrontSheetMiddle3Position" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY" z="vetoFrontPosZ + scintillatorSheetMiddleThickness/2 + 70" />
             <rotationref ref="vetoFrontRotation" />
         </physvol>
 
         <physvol name="vetoFrontLast1of3">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoFrontLast1of3" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY - 1*scintillatorShortSide - 1*scintillatorCoverThickness" z="vetoFrontPosZ - shieldingOffset + scintillatorSheetMiddleThickness + scintillatorCoverThickness + scintillatorThickness/2 + 70" />
+            <position name="vetoFrontLast1of3" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY - 1*scintillatorShortSide - 1*scintillatorCoverThickness" z="vetoFrontPosZ + scintillatorSheetMiddleThickness + scintillatorCoverThickness + scintillatorThickness/2 + 70" />
             <rotationref ref="vetoFrontRotation" />
         </physvol>
         <physvol name="vetoFrontLast2of3">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoFrontLast2of3" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY" z="vetoFrontPosZ - shieldingOffset + scintillatorSheetMiddleThickness + scintillatorCoverThickness + scintillatorThickness/2 + 70" />
+            <position name="vetoFrontLast2of3" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY" z="vetoFrontPosZ + scintillatorSheetMiddleThickness + scintillatorCoverThickness + scintillatorThickness/2 + 70" />
             <rotationref ref="vetoFrontRotation" />
         </physvol>
         <physvol name="vetoFrontLast3of3">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoFrontLast3of3" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY + 1*scintillatorShortSide + 1*scintillatorCoverThickness" z="vetoFrontPosZ - shieldingOffset + scintillatorSheetMiddleThickness + scintillatorCoverThickness + scintillatorThickness/2 + 70" />
+            <position name="vetoFrontLast3of3" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY + 1*scintillatorShortSide + 1*scintillatorCoverThickness" z="vetoFrontPosZ + scintillatorSheetMiddleThickness + scintillatorCoverThickness + scintillatorThickness/2 + 70" />
             <rotationref ref="vetoFrontRotation" />
         </physvol>
 
         <physvol name="scintillatorFrontSheetMiddle4">
             <volumeref ref="scintillatorSheetMiddleThreeLargeVolume" />
-            <position name="scintillatorFrontSheetMiddle4Position" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY" z="vetoFrontPosZ - shieldingOffset + 1.5*scintillatorSheetMiddleThickness + 2*scintillatorCoverThickness + scintillatorThickness + 70" />
+            <position name="scintillatorFrontSheetMiddle4Position" unit="mm" x="vetoFrontPosX" y="vetoFrontPosY" z="vetoFrontPosZ + 1.5*scintillatorSheetMiddleThickness + 2*scintillatorCoverThickness + scintillatorThickness + 70" />
             <rotationref ref="vetoFrontRotation" />
         </physvol>
 
@@ -848,53 +848,53 @@
         <!-- BEGIN veto West -->
         <physvol name="scintillatorWestSheetMiddle1">
             <volumeref ref="scintillatorSheetMiddleTwoSmallVolume" />
-            <position name="scintillatorWestSheetMiddle1Position" unit="mm" x="vetoWestPosX + scintillatorSheetMiddleThickness/2" y="vetoWestPosY" z="vetoWestPosZ - shieldingOffset" />
+            <position name="scintillatorWestSheetMiddle1Position" unit="mm" x="vetoWestPosX + scintillatorSheetMiddleThickness/2" y="vetoWestPosY" z="vetoWestPosZ" />
             <rotationref ref="vetoWestRotation" />
         </physvol>
 
         <physvol name="vetoWest1of3">
             <volumeref ref="scintillatorVolume" />
-            <position name="vetoWest1of3Position" unit="mm" x="vetoWestPosX + scintillatorSheetMiddleThickness + scintillatorCoverThickness + scintillatorThickness/2" y="vetoWestPosY - 1*scintillatorShortSide/2 - scintillatorCoverThickness" z="vetoWestPosZ - shieldingOffset" />
+            <position name="vetoWest1of3Position" unit="mm" x="vetoWestPosX + scintillatorSheetMiddleThickness + scintillatorCoverThickness + scintillatorThickness/2" y="vetoWestPosY - 1*scintillatorShortSide/2 - scintillatorCoverThickness" z="vetoWestPosZ" />
             <rotationref ref="vetoWestRotation" />
         </physvol>
         <physvol name="vetoWest2of3">
             <volumeref ref="scintillatorVolume" />
-            <position name="vetoWest2of3Position" unit="mm" x="vetoWestPosX + scintillatorSheetMiddleThickness + scintillatorCoverThickness + scintillatorThickness/2" y="vetoWestPosY + 1*scintillatorShortSide/2 + scintillatorCoverThickness" z="vetoWestPosZ - shieldingOffset" />
+            <position name="vetoWest2of3Position" unit="mm" x="vetoWestPosX + scintillatorSheetMiddleThickness + scintillatorCoverThickness + scintillatorThickness/2" y="vetoWestPosY + 1*scintillatorShortSide/2 + scintillatorCoverThickness" z="vetoWestPosZ" />
             <rotationref ref="vetoWestRotation" />
         </physvol>
 
         <physvol name="scintillatorWestSheetMiddle2">
             <volumeref ref="scintillatorSheetMiddleTwoSmallVolume" />
-            <position name="scintillatorWestSheetMiddle2Position" unit="mm" x="vetoWestPosX + 1.5*scintillatorSheetMiddleThickness + 2*scintillatorCoverThickness + scintillatorThickness" y="vetoWestPosY" z="vetoWestPosZ - shieldingOffset" />
+            <position name="scintillatorWestSheetMiddle2Position" unit="mm" x="vetoWestPosX + 1.5*scintillatorSheetMiddleThickness + 2*scintillatorCoverThickness + scintillatorThickness" y="vetoWestPosY" z="vetoWestPosZ" />
             <rotationref ref="vetoWestRotation" />
         </physvol>
 
 
         <physvol name="scintillatorWestSheetMiddle3">
             <volumeref ref="scintillatorSheetMiddleThreeLargeVolume" />
-            <position name="scintillatorWestSheetMiddle3Position" unit="mm" x="vetoWestPosX + scintillatorSheetMiddleThickness/2 + 70" y="vetoWestPosY - 20" z="vetoWestPosZ - shieldingOffset + 325 - 130" />
+            <position name="scintillatorWestSheetMiddle3Position" unit="mm" x="vetoWestPosX + scintillatorSheetMiddleThickness/2 + 70" y="vetoWestPosY - 20" z="vetoWestPosZ + 325 - 130" />
             <rotationref ref="vetoWestRotation" />
         </physvol>
 
         <physvol name="vetoWestLast1of3">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoWestLast1of3Position" unit="mm" x="vetoWestPosX + scintillatorSheetMiddleThickness + 70 + scintillatorCoverThickness + scintillatorThickness/2" y="vetoWestPosY - 1*scintillatorShortSide - scintillatorCoverThickness - 20" z="vetoWestPosZ - shieldingOffset + 325 - 130" />
+            <position name="vetoWestLast1of3Position" unit="mm" x="vetoWestPosX + scintillatorSheetMiddleThickness + 70 + scintillatorCoverThickness + scintillatorThickness/2" y="vetoWestPosY - 1*scintillatorShortSide - scintillatorCoverThickness - 20" z="vetoWestPosZ + 325 - 130" />
             <rotationref ref="vetoWestRotation" />
         </physvol>
         <physvol name="vetoWestLast2of3">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoWestLast2of3Position" unit="mm" x="vetoWestPosX + scintillatorSheetMiddleThickness + 70 + scintillatorCoverThickness + scintillatorThickness/2" y="vetoWestPosY + 0*scintillatorShortSide - 20" z="vetoWestPosZ - shieldingOffset + 325 - 130" />
+            <position name="vetoWestLast2of3Position" unit="mm" x="vetoWestPosX + scintillatorSheetMiddleThickness + 70 + scintillatorCoverThickness + scintillatorThickness/2" y="vetoWestPosY + 0*scintillatorShortSide - 20" z="vetoWestPosZ + 325 - 130" />
             <rotationref ref="vetoWestRotation" />
         </physvol>
         <physvol name="vetoWestLast3of3">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoWestLast3of3Position" unit="mm" x="vetoWestPosX + scintillatorSheetMiddleThickness + 70 + scintillatorCoverThickness + scintillatorThickness/2" y="vetoWestPosY  + 1*scintillatorShortSide + scintillatorCoverThickness - 20" z="vetoWestPosZ - shieldingOffset + 325 - 130" />
+            <position name="vetoWestLast3of3Position" unit="mm" x="vetoWestPosX + scintillatorSheetMiddleThickness + 70 + scintillatorCoverThickness + scintillatorThickness/2" y="vetoWestPosY  + 1*scintillatorShortSide + scintillatorCoverThickness - 20" z="vetoWestPosZ + 325 - 130" />
             <rotationref ref="vetoWestRotation" />
         </physvol>
 
         <physvol name="scintillatorWestSheetMiddle4">
             <volumeref ref="scintillatorSheetMiddleThreeLargeVolume" />
-            <position name="scintillatorWestSheetMiddle4Position" unit="mm" x="vetoWestPosX + 1.5*scintillatorSheetMiddleThickness + 70 + 2*scintillatorCoverThickness + scintillatorThickness" y="vetoWestPosY - 20" z="vetoWestPosZ - shieldingOffset + 325 - 130" />
+            <position name="scintillatorWestSheetMiddle4Position" unit="mm" x="vetoWestPosX + 1.5*scintillatorSheetMiddleThickness + 70 + 2*scintillatorCoverThickness + scintillatorThickness" y="vetoWestPosY - 20" z="vetoWestPosZ + 325 - 130" />
             <rotationref ref="vetoWestRotation" />
         </physvol>
         <!-- END veto West -->
@@ -902,62 +902,62 @@
         <!-- BEGIN veto East -->
         <physvol name="scintillatorEastSheetMiddle1">
             <volumeref ref="scintillatorSheetMiddleThreeLargeVolume" />
-            <position name="scintillatorEastSheetMiddle1Position" unit="mm" x="vetoEastPosX - scintillatorSheetMiddleThickness/2" y="vetoEastPosY" z="vetoEastPosZ - shieldingOffset" />
+            <position name="scintillatorEastSheetMiddle1Position" unit="mm" x="vetoEastPosX - scintillatorSheetMiddleThickness/2" y="vetoEastPosY" z="vetoEastPosZ" />
             <rotationref ref="vetoEastRotation" />
         </physvol>
 
         <physvol name="vetoEast1of3">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoEast1of3Position" unit="mm" x="vetoEastPosX - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" y="vetoEastPosY - 1*scintillatorShortSide - scintillatorCoverThickness" z="vetoEastPosZ - shieldingOffset" />
+            <position name="vetoEast1of3Position" unit="mm" x="vetoEastPosX - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" y="vetoEastPosY - 1*scintillatorShortSide - scintillatorCoverThickness" z="vetoEastPosZ" />
             <rotationref ref="vetoEastRotation" />
         </physvol>
         <physvol name="vetoEast2of3">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoEast2of3Position" unit="mm" x="vetoEastPosX - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" y="vetoEastPosY" z="vetoEastPosZ - shieldingOffset" />
+            <position name="vetoEast2of3Position" unit="mm" x="vetoEastPosX - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" y="vetoEastPosY" z="vetoEastPosZ" />
             <rotationref ref="vetoEastRotation" />
         </physvol>
         <physvol name="vetoEast3of3">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoEast3of3Position" unit="mm" x="vetoEastPosX - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" y="vetoEastPosY + 1*scintillatorShortSide + scintillatorCoverThickness" z="vetoEastPosZ - shieldingOffset" />
+            <position name="vetoEast3of3Position" unit="mm" x="vetoEastPosX - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" y="vetoEastPosY + 1*scintillatorShortSide + scintillatorCoverThickness" z="vetoEastPosZ" />
             <rotationref ref="vetoEastRotation" />
         </physvol>
 
         <physvol name="scintillatorEastSheetMiddle2">
             <volumeref ref="scintillatorSheetMiddleThreeLargeVolume" />
-            <position name="scintillatorEastSheetMiddle2Position" unit="mm" x="vetoEastPosX - 3*scintillatorSheetMiddleThickness/2 - scintillatorThickness - 2*scintillatorCoverThickness" y="vetoEastPosY" z="vetoEastPosZ - shieldingOffset" />
+            <position name="scintillatorEastSheetMiddle2Position" unit="mm" x="vetoEastPosX - 3*scintillatorSheetMiddleThickness/2 - scintillatorThickness - 2*scintillatorCoverThickness" y="vetoEastPosY" z="vetoEastPosZ" />
             <rotationref ref="vetoEastRotation" />
         </physvol>
 
         <physvol name="scintillatorEastSheetMiddle3">
             <volumeref ref="scintillatorSheetMiddleFourLargeVolume" />
-            <position name="scintillatorEastSheetMiddle3Position" unit="mm" x="vetoEastPosX - scintillatorSheetMiddleThickness/2 + 120 - 205" y="vetoEastPosY + scintillatorShortSide/2 + scintillatorCoverThickness" z="vetoEastPosZ - shieldingOffset" />
+            <position name="scintillatorEastSheetMiddle3Position" unit="mm" x="vetoEastPosX - scintillatorSheetMiddleThickness/2 + 120 - 205" y="vetoEastPosY + scintillatorShortSide/2 + scintillatorCoverThickness" z="vetoEastPosZ" />
             <rotationref ref="vetoEastRotation" />
         </physvol>
 
         <physvol name="vetoEastMiddle1of4">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoEastMiddle1of4Position" unit="mm" x="vetoEastPosX + 120 - 205 - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" y="vetoEastPosY - 1.5*scintillatorShortSide - 2*scintillatorCoverThickness + scintillatorShortSide/2 + scintillatorCoverThickness" z="vetoEastPosZ - shieldingOffset" />
+            <position name="vetoEastMiddle1of4Position" unit="mm" x="vetoEastPosX + 120 - 205 - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" y="vetoEastPosY - 1.5*scintillatorShortSide - 2*scintillatorCoverThickness + scintillatorShortSide/2 + scintillatorCoverThickness" z="vetoEastPosZ" />
             <rotationref ref="vetoEastRotation" />
         </physvol>
         <physvol name="vetoEastMiddle2of4">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoEastMiddle2of4Position" unit="mm" x="vetoEastPosX + 120 - 205 - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" y="vetoEastPosY - 0.5*scintillatorShortSide - 1*scintillatorCoverThickness + scintillatorShortSide/2 + scintillatorCoverThickness" z="vetoEastPosZ - shieldingOffset" />
+            <position name="vetoEastMiddle2of4Position" unit="mm" x="vetoEastPosX + 120 - 205 - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" y="vetoEastPosY - 0.5*scintillatorShortSide - 1*scintillatorCoverThickness + scintillatorShortSide/2 + scintillatorCoverThickness" z="vetoEastPosZ" />
             <rotationref ref="vetoEastRotation" />
         </physvol>
         <physvol name="vetoEastMiddle3of4">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoEastMiddle3of4Position" unit="mm" x="vetoEastPosX + 120 - 205 - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" y="vetoEastPosY + 0.5*scintillatorShortSide + 1*scintillatorCoverThickness + scintillatorShortSide/2 + scintillatorCoverThickness" z="vetoEastPosZ - shieldingOffset" />
+            <position name="vetoEastMiddle3of4Position" unit="mm" x="vetoEastPosX + 120 - 205 - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" y="vetoEastPosY + 0.5*scintillatorShortSide + 1*scintillatorCoverThickness + scintillatorShortSide/2 + scintillatorCoverThickness" z="vetoEastPosZ" />
             <rotationref ref="vetoEastRotation" />
         </physvol>
         <physvol name="vetoEastMiddle4of4">
             <volumeref ref="scintillatorLargeVolume" />
-            <position name="vetoEastMiddle4of4Position" unit="mm" x="vetoEastPosX + 120 - 205 - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" y="vetoEastPosY + 1.5*scintillatorShortSide + 2*scintillatorCoverThickness + scintillatorShortSide/2 + scintillatorCoverThickness" z="vetoEastPosZ - shieldingOffset" />
+            <position name="vetoEastMiddle4of4Position" unit="mm" x="vetoEastPosX + 120 - 205 - scintillatorSheetMiddleThickness - scintillatorCoverThickness - scintillatorThickness/2" y="vetoEastPosY + 1.5*scintillatorShortSide + 2*scintillatorCoverThickness + scintillatorShortSide/2 + scintillatorCoverThickness" z="vetoEastPosZ" />
             <rotationref ref="vetoEastRotation" />
         </physvol>
 
         <physvol name="scintillatorEastSheetMiddle4">
             <volumeref ref="scintillatorSheetMiddleFourLargeVolume" />
-            <position name="scintillatorEastSheetMiddle4Position" unit="mm" x="vetoEastPosX + 120 - 205 - 3*scintillatorSheetMiddleThickness/2 - scintillatorThickness - 2*scintillatorCoverThickness" y="vetoEastPosY + scintillatorShortSide/2 + scintillatorCoverThickness" z="vetoEastPosZ - shieldingOffset" />
+            <position name="scintillatorEastSheetMiddle4Position" unit="mm" x="vetoEastPosX + 120 - 205 - 3*scintillatorSheetMiddleThickness/2 - scintillatorThickness - 2*scintillatorCoverThickness" y="vetoEastPosY + scintillatorShortSide/2 + scintillatorCoverThickness" z="vetoEastPosZ" />
             <rotationref ref="vetoEastRotation" />
         </physvol>
         <!-- BEGIN veto East -->
