@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!-- ##VERSION BabyIAXO Electronics - Version 1.0 ## -->
+<!-- Contains electronics position (vacuum box) + chamber + detector pipe and (optionally) lead shielding and collar for protecting against radiation from the electronics. Intended to use the "electronics" volume as a source-->
+<!DOCTYPE gdml [
+    <!ENTITY materials SYSTEM "../../miscellaneous/materials.xml">
+]>
+
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+    <!-- ********************* -->
+    <!-- ***BEGIN DEFINE*** -->
+    <!-- GLOBAL -->
+    <define>
+        <!-- variables used for looping -->
+        <constant name="PI" value="3.14159265358979323846264" />
+        <constant name="degToRad" value="PI/180." />
+
+        <!-- World -->
+        <constant name="world_size" value="1500" />
+        <!-- try to keep that small to avoid interactions inside -->
+
+        <!-- Target gas -->
+        <variable name="target_pressure" value="1.4" />
+        <!-- pressure in bar -->
+        <variable name="target_temperature" value="300.0" />
+        <!-- temperature in K -->
+        <variable name="target_quencher" value="2" />
+        <!-- percentage of quencher gas in target gas (e.g. 2% -> 98%target + 2% quencher) -->
+    </define>
+    <!-- CHAMBER -->
+    <define>
+        <!-- Chamber -->
+        <variable name="chamberLength" value="30" />
+        <variable name="chamberDiameter" value="102" />
+        <variable name="chamberOuterSquareSide" value="134" />
+
+        <variable name="chamberTeflonWallThickness" value="1" />
+
+        <variable name="chamberBackplateThickness" value="15" />
+
+        <variable name="readoutKaptonThickness" value="0.5" />
+        <variable name="readoutCopperThickness" value="0.2" />
+        <variable name="readoutPlaneSide" value="60" />
+
+        <position name="kaptonReadoutPosition" unit="mm" x="0" y="0" z="-chamberLength/2. - readoutKaptonThickness/2." />
+        <position name="copperReadoutPosition" unit="mm" x="0" y="0" z="-chamberLength/2. + readoutCopperThickness/2." />
+        <rotation name="copperReadoutRotation" unit="deg" x="0" y="0" z="45." />
+
+        <variable name="cathodeTeflonDiskThickness" value="5" />
+        <variable name="cathodeTeflonDiskHoleRadius" value="15" />
+
+        <variable name="cathodeCopperSupportThickness" value="1" />
+        <variable name="cathodeCopperSupportOuterRadius" value="45" />
+        <variable name="cathodeCopperSupportInnerRadius" value="8.5" />
+        <variable name="cathodePatternLineWidth" value="0.3" />
+        <variable name="cathodePatternDiskRadius" value="4.25" />
+
+        <rotation name="cathodePatternRotation0" unit="deg" x="0" y="0" z="0" />
+        <rotation name="cathodePatternRotation1" unit="deg" x="0" y="0" z="45" />
+        <rotation name="cathodePatternRotation2" unit="deg" x="0" y="0" z="90" />
+        <rotation name="cathodePatternRotation3" unit="deg" x="0" y="0" z="135" />
+
+        <position name="cathodeTeflonDiskSubstractionPosition" unit="mm" x="0" y="0" z="-cathodeTeflonDiskThickness/2. + cathodeCopperSupportThickness/2." />
+
+        <variable name="mylarCathodeThickness" value="0.004" />
+
+        <position name="gasMylarCathodeSubtractionPosition" unit="mm" x="0" y="0" z="chamberLength/2. - mylarCathodeThickness/2." />
+        <position name="cathodeGasFillingSubstractionPosition" unit="mm" x="0" y="0" z="-cathodeTeflonDiskThickness/2. + cathodeCopperSupportThickness/2." />
+        <!-- Pipe -->
+    </define>
+    
+    <!-- PIPE -->
+    <define>
+        <!-- outside -->
+        <variable name="detectorPipeChamberFlangeThickness" value="14" />
+        <variable name="detectorPipeChamberFlangeRadius" value="chamberOuterSquareSide/2." />
+
+        <variable name="detectorPipeTelescopeFlangeThickness" value="18" />
+        <variable name="detectorPipeTelescopeFlangeRadius" value="150/2." />
+
+        <variable name="detectorPipeTotalLength" value="491" />
+        <variable name="detectorPipeSection2of2Length" value="150 - detectorPipeTelescopeFlangeThickness" />
+        <variable name="detectorPipeSection1of2Length" value="detectorPipeTotalLength - detectorPipeTelescopeFlangeThickness - detectorPipeChamberFlangeThickness - detectorPipeSection2of2Length" />
+
+        <variable name="detectorPipeOuterRadius1" value="92/2." />
+        <variable name="detectorPipeOuterRadius2" value="108/2." />
+
+        <variable name="detectorPipeUnion1Z" value="detectorPipeChamberFlangeThickness/2.0 + detectorPipeSection1of2Length/2.0" />
+        <position name="detectorPipeUnion1Position" x="0" y="0" z="detectorPipeUnion1Z" unit="mm" />        
+        <variable name="detectorPipeUnion2Z" value="detectorPipeUnion1Z + detectorPipeSection1of2Length/2.0 + detectorPipeSection2of2Length/2.0" />
+        <position name="detectorPipeUnion2Position" x="0" y="0" z="detectorPipeUnion2Z" unit="mm" />
+        <variable name="detectorPipeUnion3Z" value="detectorPipeUnion2Z + detectorPipeSection2of2Length/2.0 + detectorPipeTelescopeFlangeThickness/2.0" />
+        <position name="detectorPipeUnion3Position" x="0" y="0" z="detectorPipeUnion3Z" unit="mm" />
+
+        <!-- inside -->
+
+        <variable name="detectorPipeInsideSection1of3Radius" value="43/2." />
+        <variable name="detectorPipeInsideSection2of3Radius" value="68/2." />
+        <variable name="detectorPipeInsideSection3of3Radius" value="85/2." />
+        <variable name="detectorPipeInsideSectionTelescopeRadius" value="108/2." />
+
+        <variable name="detectorPipeInsideTotalLength" value="detectorPipeTotalLength" />
+
+        <variable name="detectorPipeInsideCone1of3Length" value="21.65" />
+        <variable name="detectorPipeInsideCone2of3Length" value="14.72" />
+        <variable name="detectorPipeInsideCone3of3Length" value="9" /> <!-- TODO Change this to actual value -->
+
+        <variable name="detectorPipeInsideSection3of3Length" value="115 - detectorPipeInsideCone3of3Length" />
+        <variable name="detectorPipeInsideSection2of3Length" value="290 - detectorPipeInsideSection3of3Length - detectorPipeInsideCone3of3Length - detectorPipeInsideCone2of3Length" />
+        <variable name="detectorPipeInsideSection1of3Length" value="201 - detectorPipeInsideCone1of3Length" />
+
+
+
+        <variable name="detectorPipeInsideUnion1Z" value="detectorPipeInsideSection1of3Length/2.0 + detectorPipeInsideCone1of3Length/2.0" />
+        <position name="detectorPipeInsideUnion1Position" x="0" y="0" z="detectorPipeInsideUnion1Z" unit="mm" />        
+
+        <variable name="detectorPipeInsideUnion2Z" value="detectorPipeInsideUnion1Z + detectorPipeInsideCone1of3Length/2.0 + detectorPipeInsideSection2of3Length/2.0" />
+        <position name="detectorPipeInsideUnion2Position" x="0" y="0" z="detectorPipeInsideUnion2Z" unit="mm" />     
+
+        <variable name="detectorPipeInsideUnion3Z" value="detectorPipeInsideUnion2Z + detectorPipeInsideSection2of3Length/2.0 + detectorPipeInsideCone2of3Length/2.0" />
+        <position name="detectorPipeInsideUnion3Position" x="0" y="0" z="detectorPipeInsideUnion3Z" unit="mm" />     
+
+        <variable name="detectorPipeInsideUnion4Z" value="detectorPipeInsideUnion3Z + detectorPipeInsideCone2of3Length/2.0 + detectorPipeInsideSection3of3Length/2.0" />
+        <position name="detectorPipeInsideUnion4Position" x="0" y="0" z="detectorPipeInsideUnion4Z" unit="mm" />     
+
+        <variable name="detectorPipeInsideUnion5Z" value="detectorPipeInsideUnion4Z + detectorPipeInsideSection3of3Length/2.0 + detectorPipeInsideCone3of3Length/2.0" />
+        <position name="detectorPipeInsideUnion5Position" x="0" y="0" z="detectorPipeInsideUnion5Z" unit="mm" />     
+
+        <position name="detectorPipeFillingSubtractionPosition" x="0" y="0" z="detectorPipeInsideSection1of3Length/2. - detectorPipeChamberFlangeThickness/2." unit="mm" />
+
+        <variable name="detectorPipeFillingOffsetWithPipe" value="detectorPipeInsideSection1of3Length/2. - detectorPipeChamberFlangeThickness/2." />
+        <variable name="detectorPipeZinWorld" value="detectorPipeChamberFlangeThickness/2. + chamberLength/2. + cathodeTeflonDiskThickness" />
+
+    </define>
+    <!-- ELECTRONICS -->
+    <define>
+        <variable name="electronicsZWithRespectToWindow" value="222" />
+        <variable name="electronicsYWithRespectToWindow" value="46.5 + 6.0" />
+
+        <variable name="electronicsWidth" value="102" />
+        <variable name="electronicsHeigth" value="15" />
+        <variable name="electronicsLength" value="100" />
+
+    </define>
+
+        <!-- SHIELDING -->
+    <define>
+        <variable name="leadBoxSizeXY" value="590" />
+        <variable name="leadBoxSizeZ" value="540" />
+        <variable name="leadBoxShaftShortSideX" value="194" />
+        <variable name="leadBoxShaftShortSideY" value="170" />
+        <variable name="leadBoxShaftLongSide" value="340" />
+
+        <variable name="leadCollarElectronicsLength" value="77" />
+        <variable name="leadCollarElectronicsWindowDistance" value="26.3" />
+
+        <position name="leadBoxShaftPosition" x="0" y="0" z="1 + leadBoxSizeZ/2 - leadBoxShaftLongSide/2 " unit="mm" />
+
+        <variable name="detectorToShieldingSeparation" value="-60" />
+        <variable name="shieldingOffset" value="detectorToShieldingSeparation + chamberLength/2.0 + readoutKaptonThickness + chamberBackplateThickness" />
+    </define>
+
+
+    <!-- ***END DEFINE*** -->
+    <!-- ********************* -->
+    <!-- ***BEGIN MATERIALS*** -->
+    &materials;
+    <!-- ***END MATERIALS*** -->
+    <!-- ********************* -->
+    <!-- ***BEGIN SOLIDS*** -->
+    <!-- WORLD -->
+    <solids>
+        <box name="WorldSolid" x="world_size" y="world_size" z="world_size" lunit="mm" />
+    </solids>
+    <!-- CHAMBER -->
+    <solids>
+        <tube name="gasSolidOriginal" startphi="0" deltaphi="360" rmin="0" rmax="chamberDiameter/2.0 - chamberTeflonWallThickness" z="chamberLength" aunit="deg" lunit="mm" />
+
+        <box name="kaptonReadoutSolid" x="chamberOuterSquareSide" y="chamberOuterSquareSide" z="readoutKaptonThickness" lunit="mm" />
+        <box name="copperReadoutSolid" x="readoutPlaneSide" y="readoutPlaneSide" z="readoutCopperThickness" lunit="mm" />
+
+        <subtraction name="gasSolidAux">
+            <first ref="gasSolidOriginal" />
+            <second ref="copperReadoutSolid" />
+            <positionref ref="copperReadoutPosition" />
+            <rotationref ref="copperReadoutRotation" />
+        </subtraction>
+
+        <tube name="teflonChamberWallSolid" startphi="0" deltaphi="360" rmin="chamberDiameter/2.0 - chamberTeflonWallThickness" rmax="chamberDiameter/2.0" z="chamberLength" aunit="deg" lunit="mm" />
+        
+        <box name="chamberBodySolidOriginal" x="chamberOuterSquareSide" y="chamberOuterSquareSide" z="chamberLength" lunit="mm" />
+        <tube name="chamberBodySolidHole" startphi="0" deltaphi="360" rmin="0" rmax="chamberDiameter/2.0" z="chamberLength" aunit="deg" lunit="mm" />
+
+        <subtraction name="chamberBodySolid">
+            <first ref="chamberBodySolidOriginal" />
+            <second ref="chamberBodySolidHole" />
+        </subtraction>
+
+        <box name="chamberBackplateSolid" x="chamberOuterSquareSide" y="chamberOuterSquareSide" z="chamberBackplateThickness" lunit="mm" />
+
+        <tube name="cathodeTeflonDiskSolidOriginal" startphi="0" deltaphi="360" rmin="cathodeTeflonDiskHoleRadius" rmax="chamberOuterSquareSide/2." z="cathodeTeflonDiskThickness" aunit="deg" lunit="mm" />
+        <tube name="cathodeCopperDiskSolidOriginal" startphi="0" deltaphi="360" rmin="cathodeCopperSupportInnerRadius" rmax="cathodeCopperSupportOuterRadius" z="cathodeCopperSupportThickness" aunit="deg" lunit="mm" />
+        <subtraction name="cathodeTeflonDiskSolid">
+            <first ref="cathodeTeflonDiskSolidOriginal" />
+            <second ref="cathodeCopperDiskSolidOriginal" />
+            <positionref ref="cathodeTeflonDiskSubstractionPosition" />
+        </subtraction>
+
+        <box name="cathodePatternLineAux" x="cathodePatternLineWidth" y="cathodeCopperSupportInnerRadius*2" z="cathodeCopperSupportThickness" lunit="mm" />
+        <tube name="cathodePatternCentralHole" startphi="0" deltaphi="360" rmin="0" rmax="cathodePatternDiskRadius - 0*cathodePatternLineWidth" z="cathodeCopperSupportThickness*1.1" aunit="deg" lunit="mm" />
+
+        <subtraction name="cathodePatternLine">
+            <first ref="cathodePatternLineAux" />
+            <second ref="cathodePatternCentralHole" />
+        </subtraction>
+
+        <tube name="cathodePatternDisk" startphi="0" deltaphi="360" rmin="cathodePatternDiskRadius - cathodePatternLineWidth" rmax="cathodePatternDiskRadius" z="cathodeCopperSupportThickness" aunit="deg" lunit="mm" />
+
+        <union name="cathodeCopperDiskSolidAux0">
+            <first ref="cathodeCopperDiskSolidOriginal" />
+            <second ref="cathodePatternDisk" />
+        </union>
+
+        <union name="cathodeCopperDiskSolidAux1">
+            <first ref="cathodeCopperDiskSolidAux0" />
+            <second ref="cathodePatternLine" />
+            <rotationref ref="cathodePatternRotation0" />
+        </union>
+
+        <union name="cathodeCopperDiskSolidAux2">
+            <first ref="cathodeCopperDiskSolidAux1" />
+            <second ref="cathodePatternLine" />
+            <rotationref ref="cathodePatternRotation1" />
+        </union>        
+        <union name="cathodeCopperDiskSolidAux3">
+            <first ref="cathodeCopperDiskSolidAux2" />
+            <second ref="cathodePatternLine" />
+            <rotationref ref="cathodePatternRotation2" />
+        </union>
+        <union name="cathodeCopperDiskSolid">
+            <first ref="cathodeCopperDiskSolidAux3" />
+            <second ref="cathodePatternLine" />
+            <rotationref ref="cathodePatternRotation3" />
+        </union>
+
+        <tube name="mylarCathodeSolid" startphi="0" deltaphi="360" rmin="0" rmax="cathodeTeflonDiskHoleRadius" z="mylarCathodeThickness" aunit="deg" lunit="mm" />
+
+        <subtraction name="gasSolid">
+            <first ref="gasSolidAux" />
+            <second ref="mylarCathodeSolid" />
+            <positionref ref="gasMylarCathodeSubtractionPosition" />
+        </subtraction>
+
+        <tube name="cathodeGasFillingOriginal" startphi="0" deltaphi="360" rmin="0" rmax="cathodeTeflonDiskHoleRadius" z="cathodeTeflonDiskThickness" aunit="deg" lunit="mm" />
+        <subtraction name="cathodeGasFilling">
+            <first ref="cathodeGasFillingOriginal" />
+            <second ref="cathodeCopperDiskSolid" />
+            <positionref ref="cathodeGasFillingSubstractionPosition" />
+        </subtraction>
+
+    </solids>
+    <!-- Pipe -->
+    <solids>
+        <!-- outsie -->
+        <tube name="detectorPipeChamberFlangeSolid" rmin="0" rmax="detectorPipeChamberFlangeRadius" z="detectorPipeChamberFlangeThickness" startphi="0" deltaphi="360" aunit="deg" lunit="mm" />
+        <tube name="detectorPipeTelescopeFlangeSolid" rmin="0" rmax="detectorPipeTelescopeFlangeRadius" z="detectorPipeTelescopeFlangeThickness" startphi="0" deltaphi="360" aunit="deg" lunit="mm" />
+
+        <tube name="detectorPipeSection1of2Solid" rmin="0" rmax="detectorPipeOuterRadius1" z="detectorPipeSection1of2Length" startphi="0" deltaphi="360" aunit="deg" lunit="mm" />
+        <tube name="detectorPipeSection2of2Solid" rmin="0" rmax="detectorPipeOuterRadius2" z="detectorPipeSection2of2Length" startphi="0" deltaphi="360" aunit="deg" lunit="mm" />
+
+        <union name="detectorPipeAux1">
+            <first ref="detectorPipeChamberFlangeSolid" />
+            <second ref="detectorPipeSection1of2Solid" />
+            <positionref ref="detectorPipeUnion1Position" />
+        </union>
+
+        <union name="detectorPipeAux2">
+            <first ref="detectorPipeAux1" />
+            <second ref="detectorPipeSection2of2Solid" />
+            <positionref ref="detectorPipeUnion2Position" />
+        </union>
+
+        <union name="detectorPipeNotEmpty">
+            <first ref="detectorPipeAux2" />
+            <second ref="detectorPipeTelescopeFlangeSolid" />
+            <positionref ref="detectorPipeUnion3Position" />
+        </union>
+        <!-- inside -->
+        <tube name="detectorPipeInside1of3Solid" rmin="0" rmax="detectorPipeInsideSection1of3Radius" z="detectorPipeInsideSection1of3Length" startphi="0" deltaphi="360" aunit="deg" lunit="mm" />
+        <tube name="detectorPipeInside2of3Solid" rmin="0" rmax="detectorPipeInsideSection2of3Radius" z="detectorPipeInsideSection2of3Length" startphi="0" deltaphi="360" aunit="deg" lunit="mm" />
+        <tube name="detectorPipeInside3of3Solid" rmin="0" rmax="detectorPipeInsideSection3of3Radius" z="detectorPipeInsideSection3of3Length" startphi="0" deltaphi="360" aunit="deg" lunit="mm" />
+
+        <cone name="detectorPipeInsideCone1of3Solid" rmin1="0" rmax1="detectorPipeInsideSection1of3Radius" rmin2="0" rmax2="detectorPipeInsideSection2of3Radius" z="detectorPipeInsideCone1of3Length" startphi="0" deltaphi="360" aunit="deg" lunit="mm" />
+        <cone name="detectorPipeInsideCone2of3Solid" rmin1="0" rmax1="detectorPipeInsideSection2of3Radius" rmin2="0" rmax2="detectorPipeInsideSection3of3Radius" z="detectorPipeInsideCone2of3Length" startphi="0" deltaphi="360" aunit="deg" lunit="mm" />
+        <cone name="detectorPipeInsideCone3of3Solid" rmin1="0" rmax1="detectorPipeInsideSection3of3Radius" rmin2="0" rmax2="detectorPipeInsideSectionTelescopeRadius" z="detectorPipeInsideCone3of3Length" startphi="0" deltaphi="360" aunit="deg" lunit="mm" />
+
+        <union name="detectorPipeInsideAux1">
+            <first ref="detectorPipeInside1of3Solid" />
+            <second ref="detectorPipeInsideCone1of3Solid" />
+            <positionref ref="detectorPipeInsideUnion1Position" />
+        </union>
+        <union name="detectorPipeInsideAux2">
+            <first ref="detectorPipeInsideAux1" />
+            <second ref="detectorPipeInside2of3Solid" />
+            <positionref ref="detectorPipeInsideUnion2Position" />
+        </union>
+        <union name="detectorPipeInsideAux3">
+            <first ref="detectorPipeInsideAux2" />
+            <second ref="detectorPipeInsideCone2of3Solid" />
+            <positionref ref="detectorPipeInsideUnion3Position" />
+        </union>
+        <union name="detectorPipeInsideAux4">
+            <first ref="detectorPipeInsideAux3" />
+            <second ref="detectorPipeInside3of3Solid" />
+            <positionref ref="detectorPipeInsideUnion4Position" />
+        </union>
+        <union name="detectorPipeInside">
+            <first ref="detectorPipeInsideAux4" />
+            <second ref="detectorPipeInsideCone3of3Solid" />
+            <positionref ref="detectorPipeInsideUnion5Position" />
+        </union>
+
+        <subtraction name="detectorPipeSolid">
+            <first ref="detectorPipeNotEmpty" />
+            <second ref="detectorPipeInside" />
+            <positionref ref="detectorPipeFillingSubtractionPosition" />
+        </subtraction>
+    </solids>
+
+    <!-- Electronics -->
+    <solids>
+        <box name="electronicsSolid" x="electronicsWidth" y="electronicsHeigth" z="electronicsLength" lunit="mm" />
+    </solids>
+
+    <!-- SHIELDING -->
+    <solids>
+        <box name="leadBoxSolid" x="leadBoxSizeXY" y="leadBoxSizeXY" z="leadBoxSizeZ" lunit="mm" />
+        <box name="leadBoxShaft" x="leadBoxShaftShortSideX" y="leadBoxShaftShortSideY" z="leadBoxShaftLongSide" lunit="mm" />
+
+        <subtraction name="leadBoxWithShaft">
+            <first ref="leadBoxSolid" />
+            <second ref="leadBoxShaft" />
+            <positionref ref="leadBoxShaftPosition" />
+        </subtraction>
+
+        <tube name="leadCollarElectronicsSolid" rmin="detectorPipeOuterRadius1" rmax="detectorPipeChamberFlangeRadius" z="leadCollarElectronicsLength" startphi="0" deltaphi="360" aunit="deg" lunit="mm" />
+
+    </solids>
+
+
+    <!-- ***END SOLIDS*** -->
+    <!-- ********************* -->
+    <!-- ***BEGIN STRUCTURE*** -->
+    <!-- CHAMBER -->
+    <structure>
+        <volume name="gasVolume">
+            <materialref ref="Ar_iC4H10" />
+            <solidref ref="gasSolid" />
+        </volume>
+
+        <volume name="kaptonReadoutVolume">
+            <materialref ref="Kapton" />
+            <solidref ref="kaptonReadoutSolid" />
+        </volume>
+
+        <volume name="copperReadoutVolume">
+            <materialref ref="Copper" />
+            <solidref ref="copperReadoutSolid" />
+        </volume>
+
+        <volume name="teflonChamberWallVolume">
+            <materialref ref="PTFE" />
+            <solidref ref="teflonChamberWallSolid" />
+        </volume>
+
+        <volume name="chamberBodyVolume">
+            <materialref ref="Copper" />
+            <solidref ref="chamberBodySolid" />
+        </volume>
+
+        <volume name="chamberBackplateVolume">
+            <materialref ref="Copper" />
+            <solidref ref="chamberBackplateSolid" />
+        </volume>
+
+        <volume name="cathodeTeflonDiskVolume">
+            <materialref ref="PTFE" />
+            <solidref ref="cathodeTeflonDiskSolid" />
+        </volume>
+
+        <volume name="cathodeCopperDiskVolume">
+            <materialref ref="Copper" />
+            <solidref ref="cathodeCopperDiskSolid" />
+        </volume>
+        
+        <volume name="mylarCathodeVolume">
+            <materialref ref="Mylar" />
+            <solidref ref="mylarCathodeSolid" />
+        </volume>
+
+        <volume name="cathodeGasFillingVolume">
+            <materialref ref="Vacuum" />
+            <solidref ref="cathodeGasFilling" />
+        </volume>
+        
+    </structure>
+    <!-- Pipe -->
+
+    <structure>
+        <volume name="detectorPipeVolume">
+            <materialref ref="Copper" />
+            <solidref ref="detectorPipeSolid" />
+        </volume>
+
+        <volume name="detectorPipeFillingVolume">
+            <materialref ref="Vacuum" />
+            <solidref ref="detectorPipeInside" />
+        </volume>
+    </structure>
+    <!-- Electronics -->
+
+    <structure>
+        <volume name="electronicsVolume">
+            <materialref ref="Vacuum" />
+            <solidref ref="electronicsSolid" />
+        </volume>
+    </structure>
+
+    <!-- SHIELDING -->
+    <structure>
+        <volume name="leadBoxVolume">
+            <materialref ref="Lead" />
+            <solidref ref="leadBoxWithShaft" />
+        </volume>
+
+        <volume name="leadCollarElectronicsVolume">
+            <materialref ref="Lead" />
+            <solidref ref="leadCollarElectronicsSolid" />
+        </volume>
+    </structure>
+
+    <!-- WORLD (physical volumes) -->
+    <structure>
+        <volume name="World">
+            <!-- WORLD -->
+            <materialref ref="Vacuum" />
+            <solidref ref="WorldSolid" />
+            <!-- CHAMBER -->
+
+            <physvol name="gas">
+                <volumeref ref="gasVolume" />
+                <position name="gasPosition" unit="mm" x="0" y="0" z="0" />
+            </physvol>
+
+            <physvol name="readoutKapton">
+                <volumeref ref="kaptonReadoutVolume" />
+                <positionref ref="kaptonReadoutPosition" />
+            </physvol>
+
+            <physvol name="readoutCopper">
+                <volumeref ref="copperReadoutVolume" />
+                <positionref ref="copperReadoutPosition" />
+                <rotationref ref="copperReadoutRotation" />
+            </physvol>
+
+            <physvol name="teflonChamberWall">
+                <volumeref ref="teflonChamberWallVolume" />
+                <position name="teflonChamberWallPosition" unit="mm" x="0" y="0" z="0" />
+            </physvol>
+
+            <physvol name="chamberBody">
+                <volumeref ref="chamberBodyVolume" />
+                <position name="chamberBodyPosition" unit="mm" x="0" y="0" z="0" />
+            </physvol>
+
+            <physvol name="chamberBackplate">
+                <volumeref ref="chamberBackplateVolume" />
+                <position name="chamberBackplatePosition" unit="mm" x="0" y="0" z="0 - chamberLength/2. - readoutKaptonThickness - chamberBackplateThickness/2." />
+            </physvol>
+
+            <physvol name="cathodeTeflonDisk">
+                <volumeref ref="cathodeTeflonDiskVolume" />
+                <position name="cathodeTeflonDiskPosition" unit="mm" x="0" y="0" z="0 + chamberLength/2. + cathodeTeflonDiskThickness/2." />
+            </physvol>
+
+            <physvol name="cathodePattern">
+                <volumeref ref="cathodeCopperDiskVolume" />
+                <position name="cathodeCopperDiskPosition" unit="mm" x="0" y="0" z="0 + chamberLength/2. + cathodeCopperSupportThickness/2." />
+            </physvol>
+
+            <physvol name="mylarCathode">
+                <volumeref ref="mylarCathodeVolume" />
+                <position name="mylarCathodePosition" unit="mm" x="0" y="0" z="0 + chamberLength/2. - mylarCathodeThickness/2." />
+            </physvol>
+
+            <physvol name="cathodeGasFilling">
+                <volumeref ref="cathodeGasFillingVolume" />
+                <position name="mylarCathodePosition" unit="mm" x="0" y="0" z="0 + chamberLength/2. + cathodeTeflonDiskThickness/2." />
+            </physvol>
+
+            <!-- PIPE -->
+
+            <physvol name="detectorPipe">
+                <volumeref ref="detectorPipeVolume" />
+                <position name="detectorPipePosition" unit="mm" x="0" y="0" z="detectorPipeZinWorld" />
+            </physvol>
+
+            <physvol name="detectorPipeFilling">
+                <volumeref ref="detectorPipeFillingVolume" />
+                <position name="detectorPipeFillingPosition" unit="mm" x="0" y="0" z="detectorPipeZinWorld + detectorPipeFillingOffsetWithPipe" />
+            </physvol>
+
+            <!-- ELECTRONICS -->
+            <physvol name="electronics">
+                <volumeref ref="electronicsVolume" />
+                <position name="electronicsPosition" unit="mm" x="0" y="electronicsYWithRespectToWindow" z="electronicsZWithRespectToWindow + chamberLength/2." />
+            </physvol>
+
+            <!-- SHIELDING
+            <physvol name="LeadShielding">
+                <volumeref ref="leadBoxVolume" />
+                <position name="leadBoxPosition" unit="mm" x="0" y="0" z="0 - shieldingOffset" />
+            </physvol>
+            -->
+            <physvol name="leadCollarElectronics">
+                <volumeref ref="leadCollarElectronicsVolume" />
+                <position name="leadCollarElectronicsPosition" unit="mm" x="0" y="0" z="leadCollarElectronicsLength/2. + chamberLength/2. + leadCollarElectronicsWindowDistance" />
+            </physvol>
+            
+        </volume>
+    </structure>
+    <!-- ***END STRUCTURE*** -->
+    <!-- ********************* -->
+    <!-- ***BEGIN SETUP*** -->
+    <setup name="Default" version="1.0">
+        <world ref="World" />
+    </setup>
+    <!-- ***END SETUP*** -->
+
+</gdml><?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+
