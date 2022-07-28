@@ -1,0 +1,208 @@
+<?xml version='1.0'?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+    <define/>
+    <materials>
+        <isotope Z="1.0" N="1" name="H1">
+            <atom value="1.007825" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="1.0" N="2" name="H2">
+            <atom value="2.014102" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="6.0" N="12" name="C12">
+            <atom value="12.0" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="6.0" N="13" name="C13">
+            <atom value="13.0034" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="48.0" N="106" name="Cd106">
+            <atom value="105.906" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="48.0" N="108" name="Cd108">
+            <atom value="107.904" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="48.0" N="110" name="Cd110">
+            <atom value="109.903" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="48.0" N="111" name="Cd111">
+            <atom value="110.904" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="48.0" N="112" name="Cd112">
+            <atom value="111.903" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="48.0" N="113" name="Cd113">
+            <atom value="112.904" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="48.0" N="114" name="Cd114">
+            <atom value="113.903" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="48.0" N="116" name="Cd116">
+            <atom value="115.905" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="17.0" N="35" name="Cl35">
+            <atom value="34.9689" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="17.0" N="37" name="Cl37">
+            <atom value="36.9659" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="8.0" N="16" name="O16">
+            <atom value="15.9949" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="8.0" N="17" name="O17">
+            <atom value="16.9991" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="8.0" N="18" name="O18">
+            <atom value="17.9992" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="7.0" N="14" name="N14">
+            <atom value="14.0031" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="7.0" N="15" name="N15">
+            <atom value="15.0001" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="18.0" N="36" name="Ar36">
+            <atom value="35.9675" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="18.0" N="38" name="Ar38">
+            <atom value="37.9627" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="18.0" N="40" name="Ar40">
+            <atom value="39.9624" unit="g/mole" type="A"/>
+        </isotope>
+        <element name="H">
+            <fraction n="0.999885" ref="H1"/>
+            <fraction n="1.15E-4" ref="H2"/>
+        </element>
+        <element name="C">
+            <fraction n="0.9893" ref="C12"/>
+            <fraction n="0.0107" ref="C13"/>
+        </element>
+        <element name="Cd">
+            <fraction n="0.0125" ref="Cd106"/>
+            <fraction n="0.0089" ref="Cd108"/>
+            <fraction n="0.1249" ref="Cd110"/>
+            <fraction n="0.128" ref="Cd111"/>
+            <fraction n="0.2413" ref="Cd112"/>
+            <fraction n="0.1222" ref="Cd113"/>
+            <fraction n="0.2873" ref="Cd114"/>
+            <fraction n="0.0749" ref="Cd116"/>
+        </element>
+        <element name="Cl">
+            <fraction n="0.7578" ref="Cl35"/>
+            <fraction n="0.2422" ref="Cl37"/>
+        </element>
+        <element name="O">
+            <fraction n="0.99757" ref="O16"/>
+            <fraction n="3.8E-4" ref="O17"/>
+            <fraction n="0.00205" ref="O18"/>
+        </element>
+        <element name="N">
+            <fraction n="0.99632" ref="N14"/>
+            <fraction n="0.00368" ref="N15"/>
+        </element>
+        <element name="Ar">
+            <fraction n="0.003365" ref="Ar36"/>
+            <fraction n="6.32E-4" ref="Ar38"/>
+            <fraction n="0.996003" ref="Ar40"/>
+        </element>
+        <material state="solid" name="BC408">
+            <D value="1.03" unit="g/cm3"/>
+            <fraction n="0.085" ref="H"/>
+            <fraction n="0.915" ref="C"/>
+        </material>
+        <material state="solid" name="G4_Cd">
+            <D value="8.65" unit="g/cm3"/>
+            <fraction n="1.0" ref="Cd"/>
+        </material>
+        <material state="solid" name="G4_RUBBER_NEOPRENE">
+            <D value="1.23" unit="g/cm3"/>
+            <fraction n="0.05692" ref="H"/>
+            <fraction n="0.542646" ref="C"/>
+            <fraction n="0.400434" ref="Cl"/>
+        </material>
+        <material state="solid" name="G4_LUCITE">
+            <D value="1.19" unit="g/cm3"/>
+            <fraction n="0.080538" ref="H"/>
+            <fraction n="0.599848" ref="C"/>
+            <fraction n="0.319614" ref="O"/>
+        </material>
+        <material state="gas" name="G4_AIR">
+            <D value="1.20479" unit="kg/m3"/>
+            <fraction n="1.24E-4" ref="C"/>
+            <fraction n="0.755268" ref="N"/>
+            <fraction n="0.231781" ref="O"/>
+            <fraction n="0.012827" ref="Ar"/>
+        </material>
+    </materials>
+    <solids>
+        <box name="scintillatorSolid-800.0mm" x="200.0" y="50.0" z="800.0"/>
+        <box name="captureLayerSolid-800.0mm" x="200.0" y="1.0" z="800.0"/>
+        <box name="scintillatorWrappingBaseSolid-800.0mm" x="202.0" y="52.0" z="802.0"/>
+        <box name="scintillatorWrappingHoleSolid-800.0mm" x="200.0" y="50.0" z="800.0"/>
+        <subtraction name="scintillatorWrappingFullSolid-800.0mm">
+            <first ref="scintillatorWrappingBaseSolid-800.0mm"/>
+            <second ref="scintillatorWrappingHoleSolid-800.0mm"/>
+        </subtraction>
+        <box name="scintillatorWrappingRemoveSideSolid" x="202.0" y="52.0" z="1.2"/>
+        <subtraction name="scintillatorWrappingSolid-800.0mm.solid">
+            <position name="scintillatorWrappingSolid-800.0mm.solid.position" z="-400.5"/>
+            <first ref="scintillatorWrappingFullSolid-800.0mm"/>
+            <second ref="scintillatorWrappingRemoveSideSolid"/>
+        </subtraction>
+        <trd name="scintillatorLightGuide1Solid-800.0mm" x1="200.0" x2="200.0" y1="60.0" y2="50.0" z="130.0"/>
+        <trd name="scintillatorLightGuide2Solid-800.0mm" x1="70.0" x2="200.0" y1="70.0" y2="60.0" z="80.0"/>
+        <union name="scintillatorLightGuideSolid-800.0mm">
+            <position name="scintillatorLightGuideSolid-800.0mm.position" z="-105.0"/>
+            <first ref="scintillatorLightGuide1Solid-800.0mm"/>
+            <second ref="scintillatorLightGuide2Solid-800.0mm"/>
+        </union>
+        <box name="worldBox" x="2000.0" y="2000.0" z="2000.0"/>
+    </solids>
+    <structure>
+        <volume name="scintillatorVolume-800.0mm">
+            <materialref ref="BC408"/>
+            <solidref ref="scintillatorSolid-800.0mm"/>
+        </volume>
+        <volume name="captureLayerVolume-800.0mm">
+            <materialref ref="G4_Cd"/>
+            <solidref ref="captureLayerSolid-800.0mm"/>
+        </volume>
+        <volume name="scintillatorWrappingSolid-800.0mm">
+            <materialref ref="G4_RUBBER_NEOPRENE"/>
+            <solidref ref="scintillatorWrappingSolid-800.0mm.solid"/>
+        </volume>
+        <volume name="scintillatorLightGuideVolume-800.0mm">
+            <materialref ref="G4_LUCITE"/>
+            <solidref ref="scintillatorLightGuideSolid-800.0mm"/>
+        </volume>
+        <assembly name="assembly-0">
+            <physvol name="scintillatorVolume-800.0mm-73266209">
+                <volumeref ref="scintillatorVolume-800.0mm"/>
+            </physvol>
+            <physvol name="scintillatorWrappingSolid-800.0mm-7326620a">
+                <volumeref ref="scintillatorWrappingSolid-800.0mm"/>
+            </physvol>
+            <physvol name="captureLayerVolume-800.0mm-7326620b">
+                <volumeref ref="captureLayerVolume-800.0mm"/>
+                <position name="captureLayerVolume-800.0mm-7326620b.position" y="26.5"/>
+            </physvol>
+            <physvol name="captureLayerVolume-800.0mm-7326620c">
+                <volumeref ref="captureLayerVolume-800.0mm"/>
+                <position name="captureLayerVolume-800.0mm-7326620c.position" y="-26.5"/>
+            </physvol>
+            <physvol name="scintillatorLightGuideVolume-800.0mm-7326620d">
+                <volumeref ref="scintillatorLightGuideVolume-800.0mm"/>
+                <position name="scintillatorLightGuideVolume-800.0mm-7326620d.position" z="-465.0"/>
+            </physvol>
+        </assembly>
+        <volume name="world">
+            <physvol name="Veto">
+                <volumeref ref="assembly-0"/>
+            </physvol>
+            <materialref ref="G4_AIR"/>
+            <solidref ref="worldBox"/>
+        </volume>
+    </structure>
+    <setup name="Default" version="1.0">
+        <world ref="world"/>
+    </setup>
+</gdml>

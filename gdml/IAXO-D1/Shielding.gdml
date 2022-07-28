@@ -1,0 +1,115 @@
+<?xml version='1.0'?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+    <define/>
+    <materials>
+        <isotope Z="82.0" N="204" name="Pb204">
+            <atom value="203.973" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="82.0" N="206" name="Pb206">
+            <atom value="205.974" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="82.0" N="207" name="Pb207">
+            <atom value="206.976" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="82.0" N="208" name="Pb208">
+            <atom value="207.977" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="6.0" N="12" name="C12">
+            <atom value="12.0" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="6.0" N="13" name="C13">
+            <atom value="13.0034" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="7.0" N="14" name="N14">
+            <atom value="14.0031" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="7.0" N="15" name="N15">
+            <atom value="15.0001" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="8.0" N="16" name="O16">
+            <atom value="15.9949" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="8.0" N="17" name="O17">
+            <atom value="16.9991" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="8.0" N="18" name="O18">
+            <atom value="17.9992" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="18.0" N="36" name="Ar36">
+            <atom value="35.9675" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="18.0" N="38" name="Ar38">
+            <atom value="37.9627" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="18.0" N="40" name="Ar40">
+            <atom value="39.9624" unit="g/mole" type="A"/>
+        </isotope>
+        <element name="Pb">
+            <fraction n="0.014" ref="Pb204"/>
+            <fraction n="0.241" ref="Pb206"/>
+            <fraction n="0.221" ref="Pb207"/>
+            <fraction n="0.524" ref="Pb208"/>
+        </element>
+        <element name="C">
+            <fraction n="0.9893" ref="C12"/>
+            <fraction n="0.0107" ref="C13"/>
+        </element>
+        <element name="N">
+            <fraction n="0.99632" ref="N14"/>
+            <fraction n="0.00368" ref="N15"/>
+        </element>
+        <element name="O">
+            <fraction n="0.99757" ref="O16"/>
+            <fraction n="3.8E-4" ref="O17"/>
+            <fraction n="0.00205" ref="O18"/>
+        </element>
+        <element name="Ar">
+            <fraction n="0.003365" ref="Ar36"/>
+            <fraction n="6.32E-4" ref="Ar38"/>
+            <fraction n="0.996003" ref="Ar40"/>
+        </element>
+        <material state="solid" name="G4_Pb">
+            <D value="11.35" unit="g/cm3"/>
+            <fraction n="1.0" ref="Pb"/>
+        </material>
+        <material state="gas" name="G4_AIR">
+            <D value="1.20479" unit="kg/m3"/>
+            <fraction n="1.24E-4" ref="C"/>
+            <fraction n="0.755268" ref="N"/>
+            <fraction n="0.231781" ref="O"/>
+            <fraction n="0.012827" ref="Ar"/>
+        </material>
+    </materials>
+    <solids>
+        <box name="leadBoxSolid" x="590.0" y="590.0" z="540.0"/>
+        <box name="leadBoxShaftSolid" x="194.0" y="170.0" z="340.0"/>
+        <subtraction name="leadBoxWithShaftSolid">
+            <position name="leadBoxWithShaftSolid.position" z="100.0"/>
+            <first ref="leadBoxSolid"/>
+            <second ref="leadBoxShaftSolid"/>
+        </subtraction>
+        <box name="worldBox" x="5000.0" y="5000.0" z="5000.0"/>
+    </solids>
+    <structure>
+        <volume name="ShieldingVolume">
+            <materialref ref="G4_Pb"/>
+            <solidref ref="leadBoxWithShaftSolid"/>
+        </volume>
+        <assembly name="Shielding">
+            <physvol name="shielding20cm">
+                <volumeref ref="ShieldingVolume"/>
+                <position name="shielding20cm.position" z="29.5"/>
+            </physvol>
+        </assembly>
+        <volume name="world">
+            <physvol name="Shielding">
+                <volumeref ref="Shielding"/>
+            </physvol>
+            <materialref ref="G4_AIR"/>
+            <solidref ref="worldBox"/>
+        </volume>
+    </structure>
+    <setup name="Default" version="1.0">
+        <world ref="world"/>
+    </setup>
+</gdml>

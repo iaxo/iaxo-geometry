@@ -1,0 +1,176 @@
+<?xml version='1.0'?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+    <define/>
+    <materials>
+        <isotope Z="29.0" N="63" name="Cu63">
+            <atom value="62.9296" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="29.0" N="65" name="Cu65">
+            <atom value="64.9278" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="1.0" N="1" name="H1">
+            <atom value="1.007825" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="1.0" N="2" name="H2">
+            <atom value="2.014102" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="6.0" N="12" name="C12">
+            <atom value="12.0" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="6.0" N="13" name="C13">
+            <atom value="13.0034" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="7.0" N="14" name="N14">
+            <atom value="14.0031" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="7.0" N="15" name="N15">
+            <atom value="15.0001" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="8.0" N="16" name="O16">
+            <atom value="15.9949" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="8.0" N="17" name="O17">
+            <atom value="16.9991" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="8.0" N="18" name="O18">
+            <atom value="17.9992" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="18.0" N="36" name="Ar36">
+            <atom value="35.9675" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="18.0" N="38" name="Ar38">
+            <atom value="37.9627" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="18.0" N="40" name="Ar40">
+            <atom value="39.9624" unit="g/mole" type="A"/>
+        </isotope>
+        <element name="Cu">
+            <fraction n="0.6917" ref="Cu63"/>
+            <fraction n="0.3083" ref="Cu65"/>
+        </element>
+        <element name="H">
+            <fraction n="0.999885" ref="H1"/>
+            <fraction n="1.15E-4" ref="H2"/>
+        </element>
+        <element name="C">
+            <fraction n="0.9893" ref="C12"/>
+            <fraction n="0.0107" ref="C13"/>
+        </element>
+        <element name="N">
+            <fraction n="0.99632" ref="N14"/>
+            <fraction n="0.00368" ref="N15"/>
+        </element>
+        <element name="O">
+            <fraction n="0.99757" ref="O16"/>
+            <fraction n="3.8E-4" ref="O17"/>
+            <fraction n="0.00205" ref="O18"/>
+        </element>
+        <element name="Ar">
+            <fraction n="0.003365" ref="Ar36"/>
+            <fraction n="6.32E-4" ref="Ar38"/>
+            <fraction n="0.996003" ref="Ar40"/>
+        </element>
+        <material state="solid" name="G4_Cu">
+            <D value="8.96" unit="g/cm3"/>
+            <fraction n="1.0" ref="Cu"/>
+        </material>
+        <material state="gas" name="G4_Galactic">
+            <D value="1.0E-22" unit="kg/m3"/>
+            <fraction n="1.0" ref="H"/>
+        </material>
+        <material state="gas" name="G4_AIR">
+            <D value="1.20479" unit="kg/m3"/>
+            <fraction n="1.24E-4" ref="C"/>
+            <fraction n="0.755268" ref="N"/>
+            <fraction n="0.231781" ref="O"/>
+            <fraction n="0.012827" ref="Ar"/>
+        </material>
+    </materials>
+    <solids>
+        <tube name="detectorPipeChamberFlangeSolid" rmax="67.0" z="14.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube name="detectorPipeTelescopeFlangeSolid" rmax="75.0" z="18.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube name="detectorPipeSection1of2Solid" rmax="46.0" z="327.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube name="detectorPipeSection2of2Solid" rmax="54.0" z="132.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <union name="detectorPipeAux1">
+            <position name="detectorPipeAux1.position" z="170.5"/>
+            <first ref="detectorPipeChamberFlangeSolid"/>
+            <second ref="detectorPipeSection1of2Solid"/>
+        </union>
+        <union name="detectorPipeAux2">
+            <position name="detectorPipeAux2.position" z="400.0"/>
+            <first ref="detectorPipeAux1"/>
+            <second ref="detectorPipeSection2of2Solid"/>
+        </union>
+        <union name="detectorPipeNotEmpty">
+            <position name="detectorPipeNotEmpty.position" z="475.0"/>
+            <first ref="detectorPipeAux2"/>
+            <second ref="detectorPipeTelescopeFlangeSolid"/>
+        </union>
+        <tube name="detectorPipeInside1of3Solid" rmax="21.5" z="179.35" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube name="detectorPipeInside2of3Solid" rmax="34.0" z="160.28" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube name="detectorPipeInside3of3Solid" rmax="42.5" z="106.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <cone name="detectorPipeInsideCone1of3Solid" z="21.65" rmax1="21.5" rmax2="34.0" deltaphi="6.283185307179586"/>
+        <cone name="detectorPipeInsideCone2of3Solid" z="14.72" rmax1="34.0" rmax2="42.5" deltaphi="6.283185307179586"/>
+        <cone name="detectorPipeInsideCone3of3Solid" z="9.0" rmax1="42.5" rmax2="54.0" deltaphi="6.283185307179586"/>
+        <union name="detectorPipeInsideAux1">
+            <position name="detectorPipeInsideAux1.position" z="100.5"/>
+            <first ref="detectorPipeInside1of3Solid"/>
+            <second ref="detectorPipeInsideCone1of3Solid"/>
+        </union>
+        <union name="detectorPipeInsideAux2">
+            <position name="detectorPipeInsideAux2.position" z="191.465"/>
+            <first ref="detectorPipeInsideAux1"/>
+            <second ref="detectorPipeInside2of3Solid"/>
+        </union>
+        <union name="detectorPipeInsideAux3">
+            <position name="detectorPipeInsideAux3.position" z="191.465"/>
+            <first ref="detectorPipeInsideAux2"/>
+            <second ref="detectorPipeInsideCone2of3Solid"/>
+        </union>
+        <union name="detectorPipeInsideAux4">
+            <position name="detectorPipeInsideAux4.position" z="251.82500000000002"/>
+            <first ref="detectorPipeInsideAux3"/>
+            <second ref="detectorPipeInside3of3Solid"/>
+        </union>
+        <union name="detectorPipeInside">
+            <position name="detectorPipeInside.position" z="309.32500000000005"/>
+            <first ref="detectorPipeInsideAux4"/>
+            <second ref="detectorPipeInsideCone3of3Solid"/>
+        </union>
+        <subtraction name="detectorPipeSolid">
+            <position name="detectorPipeSolid.position" z="82.675"/>
+            <first ref="detectorPipeNotEmpty"/>
+            <second ref="detectorPipeInside"/>
+        </subtraction>
+        <box name="worldBox" x="5000.0" y="5000.0" z="5000.0"/>
+    </solids>
+    <structure>
+        <volume name="detectorPipeVolume">
+            <materialref ref="G4_Cu"/>
+            <solidref ref="detectorPipeSolid"/>
+        </volume>
+        <volume name="detectorPipeFillingVolume">
+            <materialref ref="G4_Galactic"/>
+            <solidref ref="detectorPipeInside"/>
+        </volume>
+        <assembly name="DetectorPipe">
+            <physvol name="detectorPipe">
+                <volumeref ref="detectorPipeVolume"/>
+            </physvol>
+            <physvol name="detectorPipeFilling">
+                <volumeref ref="detectorPipeFillingVolume"/>
+                <position name="detectorPipeFilling.position" z="82.675"/>
+            </physvol>
+        </assembly>
+        <volume name="world">
+            <physvol name="DetectorPipe">
+                <volumeref ref="DetectorPipe"/>
+            </physvol>
+            <materialref ref="G4_AIR"/>
+            <solidref ref="worldBox"/>
+        </volume>
+    </structure>
+    <setup name="Default" version="1.0">
+        <world ref="world"/>
+    </setup>
+</gdml>

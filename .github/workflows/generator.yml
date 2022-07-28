@@ -1,0 +1,26 @@
+name: Geometry Generator
+
+on:
+  push:
+    branches:
+      - "*"
+  pull_request:
+    branches:
+      - "*"
+
+jobs:
+  generator:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run geometry generator
+        working-directory: ${{github.workspace}}/generator
+        run: |
+          chmod +x gradlew
+          ./gradlew run
+
+      - name: List geometry files
+        run: |
+          ls -lht ${{github.workspace}}/gdml
