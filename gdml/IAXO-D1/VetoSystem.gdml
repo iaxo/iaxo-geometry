@@ -134,48 +134,48 @@
         </material>
     </materials>
     <solids>
-        <box name="scintillatorSolid-1500.0mm" x="200.0" y="50.0" z="1500.0"/>
-        <box name="captureLayerSolid-1500.0mm" x="200.0" y="1.0" z="1500.0"/>
-        <box name="scintillatorWrappingBaseSolid-1500.0mm" x="202.0" y="52.0" z="1502.0"/>
-        <box name="scintillatorWrappingHoleSolid-1500.0mm" x="200.0" y="50.0" z="1500.0"/>
-        <subtraction name="scintillatorWrappingFullSolid-1500.0mm">
+        <box lunit="cm" aunit="rad" name="scintillatorSolid-1500.0mm" x="200.0" y="50.0" z="1500.0"/>
+        <box lunit="cm" aunit="rad" name="captureLayerSolid-1500.0mm" x="200.0" y="1.0" z="1500.0"/>
+        <box lunit="cm" aunit="rad" name="scintillatorWrappingBaseSolid-1500.0mm" x="202.0" y="52.0" z="1502.0"/>
+        <box lunit="cm" aunit="rad" name="scintillatorWrappingHoleSolid-1500.0mm" x="200.0" y="50.0" z="1500.0"/>
+        <subtraction lunit="cm" aunit="rad" name="scintillatorWrappingFullSolid-1500.0mm">
             <first ref="scintillatorWrappingBaseSolid-1500.0mm"/>
             <second ref="scintillatorWrappingHoleSolid-1500.0mm"/>
         </subtraction>
-        <box name="scintillatorWrappingRemoveSideSolid" x="202.0" y="52.0" z="1.2"/>
-        <subtraction name="scintillatorWrappingSolid-1500.0mm.solid">
+        <box lunit="cm" aunit="rad" name="scintillatorWrappingRemoveSideSolid" x="202.0" y="52.0" z="1.2"/>
+        <subtraction lunit="cm" aunit="rad" name="scintillatorWrappingSolid-1500.0mm.solid">
             <position name="scintillatorWrappingSolid-1500.0mm.solid.position" z="-750.5"/>
             <first ref="scintillatorWrappingFullSolid-1500.0mm"/>
             <second ref="scintillatorWrappingRemoveSideSolid"/>
         </subtraction>
-        <trd name="scintillatorLightGuide1Solid-1500.0mm" x1="200.0" x2="200.0" y1="60.0" y2="50.0" z="130.0"/>
-        <trd name="scintillatorLightGuide2Solid-1500.0mm" x1="70.0" x2="200.0" y1="70.0" y2="60.0" z="80.0"/>
-        <union name="scintillatorLightGuideSolid-1500.0mm">
+        <trd lunit="cm" aunit="rad" name="scintillatorLightGuide1Solid-1500.0mm" x1="200.0" x2="200.0" y1="60.0" y2="50.0" z="130.0"/>
+        <trd lunit="cm" aunit="rad" name="scintillatorLightGuide2Solid-1500.0mm" x1="70.0" x2="200.0" y1="70.0" y2="60.0" z="80.0"/>
+        <union lunit="cm" aunit="rad" name="scintillatorLightGuideSolid-1500.0mm">
             <position name="scintillatorLightGuideSolid-1500.0mm.position" z="-105.0"/>
             <first ref="scintillatorLightGuide1Solid-1500.0mm"/>
             <second ref="scintillatorLightGuide2Solid-1500.0mm"/>
         </union>
-        <box name="scintillatorSolid-800.0mm" x="200.0" y="50.0" z="800.0"/>
-        <box name="captureLayerSolid-800.0mm" x="200.0" y="1.0" z="800.0"/>
-        <box name="scintillatorWrappingBaseSolid-800.0mm" x="202.0" y="52.0" z="802.0"/>
-        <box name="scintillatorWrappingHoleSolid-800.0mm" x="200.0" y="50.0" z="800.0"/>
-        <subtraction name="scintillatorWrappingFullSolid-800.0mm">
+        <box lunit="cm" aunit="rad" name="scintillatorSolid-800.0mm" x="200.0" y="50.0" z="800.0"/>
+        <box lunit="cm" aunit="rad" name="captureLayerSolid-800.0mm" x="200.0" y="1.0" z="800.0"/>
+        <box lunit="cm" aunit="rad" name="scintillatorWrappingBaseSolid-800.0mm" x="202.0" y="52.0" z="802.0"/>
+        <box lunit="cm" aunit="rad" name="scintillatorWrappingHoleSolid-800.0mm" x="200.0" y="50.0" z="800.0"/>
+        <subtraction lunit="cm" aunit="rad" name="scintillatorWrappingFullSolid-800.0mm">
             <first ref="scintillatorWrappingBaseSolid-800.0mm"/>
             <second ref="scintillatorWrappingHoleSolid-800.0mm"/>
         </subtraction>
-        <subtraction name="scintillatorWrappingSolid-800.0mm.solid">
+        <subtraction lunit="cm" aunit="rad" name="scintillatorWrappingSolid-800.0mm.solid">
             <position name="scintillatorWrappingSolid-800.0mm.solid.position" z="-400.5"/>
             <first ref="scintillatorWrappingFullSolid-800.0mm"/>
             <second ref="scintillatorWrappingRemoveSideSolid"/>
         </subtraction>
-        <trd name="scintillatorLightGuide1Solid-800.0mm" x1="200.0" x2="200.0" y1="60.0" y2="50.0" z="130.0"/>
-        <trd name="scintillatorLightGuide2Solid-800.0mm" x1="70.0" x2="200.0" y1="70.0" y2="60.0" z="80.0"/>
-        <union name="scintillatorLightGuideSolid-800.0mm">
+        <trd lunit="cm" aunit="rad" name="scintillatorLightGuide1Solid-800.0mm" x1="200.0" x2="200.0" y1="60.0" y2="50.0" z="130.0"/>
+        <trd lunit="cm" aunit="rad" name="scintillatorLightGuide2Solid-800.0mm" x1="70.0" x2="200.0" y1="70.0" y2="60.0" z="80.0"/>
+        <union lunit="cm" aunit="rad" name="scintillatorLightGuideSolid-800.0mm">
             <position name="scintillatorLightGuideSolid-800.0mm.position" z="-105.0"/>
             <first ref="scintillatorLightGuide1Solid-800.0mm"/>
             <second ref="scintillatorLightGuide2Solid-800.0mm"/>
         </union>
-        <box name="worldBox" x="5000.0" y="5000.0" z="5000.0"/>
+        <box lunit="cm" aunit="rad" name="worldBox" x="5000.0" y="5000.0" z="5000.0"/>
     </solids>
     <structure>
         <volume name="scintillatorVolume-1500.0mm">

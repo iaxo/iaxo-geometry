@@ -81,14 +81,14 @@
         </material>
     </materials>
     <solids>
-        <box name="leadBoxSolid" x="590.0" y="590.0" z="540.0"/>
-        <box name="leadBoxShaftSolid" x="194.0" y="170.0" z="340.0"/>
-        <subtraction name="leadBoxWithShaftSolid">
+        <box lunit="cm" aunit="rad" name="leadBoxSolid" x="590.0" y="590.0" z="540.0"/>
+        <box lunit="cm" aunit="rad" name="leadBoxShaftSolid" x="194.0" y="170.0" z="340.0"/>
+        <subtraction lunit="cm" aunit="rad" name="leadBoxWithShaftSolid">
             <position name="leadBoxWithShaftSolid.position" z="100.0"/>
             <first ref="leadBoxSolid"/>
             <second ref="leadBoxShaftSolid"/>
         </subtraction>
-        <box name="worldBox" x="5000.0" y="5000.0" z="5000.0"/>
+        <box lunit="cm" aunit="rad" name="worldBox" x="5000.0" y="5000.0" z="5000.0"/>
     </solids>
     <structure>
         <volume name="ShieldingVolume">

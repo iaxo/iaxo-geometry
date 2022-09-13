@@ -117,129 +117,129 @@
         </material>
     </materials>
     <solids>
-        <box name="chamberBodyBaseSolid" x="134.0" y="134.0" z="30.0"/>
-        <tube name="chamberBodyHoleSolid" rmax="51.0" z="30.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <subtraction name="chamberBodySolid">
+        <box lunit="cm" aunit="rad" name="chamberBodyBaseSolid" x="134.0" y="134.0" z="30.0"/>
+        <tube lunit="cm" aunit="rad" name="chamberBodyHoleSolid" rmax="51.0" z="30.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <subtraction lunit="cm" aunit="rad" name="chamberBodySolid">
             <first ref="chamberBodyBaseSolid"/>
             <second ref="chamberBodyHoleSolid"/>
         </subtraction>
-        <box name="chamberBackplateSolid" x="134.0" y="134.0" z="15.0"/>
-        <tube name="chamberTeflonWallSolid" rmax="51.0" z="30.0" rmin="50.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <box name="kaptonReadoutSolid" x="134.0" y="134.0" z="0.5"/>
-        <box name="copperReadoutSolid" x="60.0" y="60.0" z="0.2"/>
-        <tube name="cathodeTeflonDiskBaseSolid" rmax="67.0" z="5.0" rmin="15.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <tube name="cathodeCopperDiskSolid" rmax="45.0" z="1.0" rmin="8.5" startphi="0.0" deltaphi="6.283185307179586"/>
-        <subtraction name="cathodeTeflonDiskSolid">
+        <box lunit="cm" aunit="rad" name="chamberBackplateSolid" x="134.0" y="134.0" z="15.0"/>
+        <tube lunit="cm" aunit="rad" name="chamberTeflonWallSolid" rmax="51.0" z="30.0" rmin="50.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <box lunit="cm" aunit="rad" name="kaptonReadoutSolid" x="134.0" y="134.0" z="0.5"/>
+        <box lunit="cm" aunit="rad" name="copperReadoutSolid" x="60.0" y="60.0" z="0.2"/>
+        <tube lunit="cm" aunit="rad" name="cathodeTeflonDiskBaseSolid" rmax="67.0" z="5.0" rmin="15.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="cm" aunit="rad" name="cathodeCopperDiskSolid" rmax="45.0" z="1.0" rmin="8.5" startphi="0.0" deltaphi="6.283185307179586"/>
+        <subtraction lunit="cm" aunit="rad" name="cathodeTeflonDiskSolid">
             <position name="cathodeTeflonDiskSolid.position" z="-2.0"/>
             <first ref="cathodeTeflonDiskBaseSolid"/>
             <second ref="cathodeCopperDiskSolid"/>
         </subtraction>
-        <tube name="cathodeWindowSolid" rmax="15.0" z="0.004" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <box name="cathodePatternLineAux" x="0.3" y="17.0" z="1.0"/>
-        <tube name="cathodePatternCentralHole" rmax="4.25" z="1.1" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <subtraction name="cathodePatternLine">
+        <tube lunit="cm" aunit="rad" name="cathodeWindowSolid" rmax="15.0" z="0.004" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <box lunit="cm" aunit="rad" name="cathodePatternLineAux" x="0.3" y="17.0" z="1.0"/>
+        <tube lunit="cm" aunit="rad" name="cathodePatternCentralHole" rmax="4.25" z="1.1" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <subtraction lunit="cm" aunit="rad" name="cathodePatternLine">
             <first ref="cathodePatternLineAux"/>
             <second ref="cathodePatternCentralHole"/>
         </subtraction>
-        <tube name="cathodePatternDisk" rmax="4.25" z="1.0" rmin="3.95" startphi="0.0" deltaphi="6.283185307179586"/>
-        <union name="cathodeCopperDiskSolidAux0">
+        <tube lunit="cm" aunit="rad" name="cathodePatternDisk" rmax="4.25" z="1.0" rmin="3.95" startphi="0.0" deltaphi="6.283185307179586"/>
+        <union lunit="cm" aunit="rad" name="cathodeCopperDiskSolidAux0">
             <rotation name="cathodeCopperDiskSolidAux0.rotation" unit="deg"/>
             <first ref="cathodeCopperDiskSolid"/>
             <second ref="cathodePatternLine"/>
         </union>
-        <union name="cathodeCopperDiskSolidAux1">
+        <union lunit="cm" aunit="rad" name="cathodeCopperDiskSolidAux1">
             <rotation name="cathodeCopperDiskSolidAux1.rotation" z="45.0" unit="deg"/>
             <first ref="cathodeCopperDiskSolidAux0"/>
             <second ref="cathodePatternLine"/>
         </union>
-        <union name="cathodeCopperDiskSolidAux2">
+        <union lunit="cm" aunit="rad" name="cathodeCopperDiskSolidAux2">
             <rotation name="cathodeCopperDiskSolidAux2.rotation" z="90.0" unit="deg"/>
             <first ref="cathodeCopperDiskSolidAux1"/>
             <second ref="cathodePatternLine"/>
         </union>
-        <union name="cathodeCopperDiskSolidAux3">
+        <union lunit="cm" aunit="rad" name="cathodeCopperDiskSolidAux3">
             <rotation name="cathodeCopperDiskSolidAux3.rotation" z="135.0" unit="deg"/>
             <first ref="cathodeCopperDiskSolidAux2"/>
             <second ref="cathodePatternLine"/>
         </union>
-        <union name="cathodeCopperDiskFinal.solid">
+        <union lunit="cm" aunit="rad" name="cathodeCopperDiskFinal.solid">
             <first ref="cathodeCopperDiskSolidAux3"/>
             <second ref="cathodePatternDisk"/>
         </union>
-        <tube name="cathodeFillingBaseSolid" rmax="15.0" z="5.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <subtraction name="cathodeFillingSolid">
+        <tube lunit="cm" aunit="rad" name="cathodeFillingBaseSolid" rmax="15.0" z="5.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <subtraction lunit="cm" aunit="rad" name="cathodeFillingSolid">
             <position name="cathodeFillingSolid.position" z="-2.0"/>
             <first ref="cathodeFillingBaseSolid"/>
             <second ref="cathodeCopperDiskFinal.solid"/>
         </subtraction>
-        <tube name="gasSolidOriginal" rmax="50.0" z="30.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <subtraction name="gasSolidAux">
+        <tube lunit="cm" aunit="rad" name="gasSolidOriginal" rmax="50.0" z="30.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <subtraction lunit="cm" aunit="rad" name="gasSolidAux">
             <position name="gasSolidAux.position" z="-14.9"/>
             <rotation name="gasSolidAux.rotation" z="45.0" unit="deg"/>
             <first ref="gasSolidOriginal"/>
             <second ref="copperReadoutSolid"/>
         </subtraction>
-        <subtraction name="gasSolid">
+        <subtraction lunit="cm" aunit="rad" name="gasSolid">
             <position name="gasSolid.position" z="14.998"/>
             <first ref="gasSolidAux"/>
             <second ref="cathodeWindowSolid"/>
         </subtraction>
-        <tube name="detectorPipeChamberFlangeSolid" rmax="67.0" z="14.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <tube name="detectorPipeTelescopeFlangeSolid" rmax="75.0" z="18.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <tube name="detectorPipeSection1of2Solid" rmax="46.0" z="327.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <tube name="detectorPipeSection2of2Solid" rmax="54.0" z="132.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <union name="detectorPipeAux1">
+        <tube lunit="cm" aunit="rad" name="detectorPipeChamberFlangeSolid" rmax="67.0" z="14.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="cm" aunit="rad" name="detectorPipeTelescopeFlangeSolid" rmax="75.0" z="18.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="cm" aunit="rad" name="detectorPipeSection1of2Solid" rmax="46.0" z="327.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="cm" aunit="rad" name="detectorPipeSection2of2Solid" rmax="54.0" z="132.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <union lunit="cm" aunit="rad" name="detectorPipeAux1">
             <position name="detectorPipeAux1.position" z="170.5"/>
             <first ref="detectorPipeChamberFlangeSolid"/>
             <second ref="detectorPipeSection1of2Solid"/>
         </union>
-        <union name="detectorPipeAux2">
+        <union lunit="cm" aunit="rad" name="detectorPipeAux2">
             <position name="detectorPipeAux2.position" z="400.0"/>
             <first ref="detectorPipeAux1"/>
             <second ref="detectorPipeSection2of2Solid"/>
         </union>
-        <union name="detectorPipeNotEmpty">
+        <union lunit="cm" aunit="rad" name="detectorPipeNotEmpty">
             <position name="detectorPipeNotEmpty.position" z="475.0"/>
             <first ref="detectorPipeAux2"/>
             <second ref="detectorPipeTelescopeFlangeSolid"/>
         </union>
-        <tube name="detectorPipeInside1of3Solid" rmax="21.5" z="179.35" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <tube name="detectorPipeInside2of3Solid" rmax="34.0" z="160.28" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <tube name="detectorPipeInside3of3Solid" rmax="42.5" z="106.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <cone name="detectorPipeInsideCone1of3Solid" z="21.65" rmax1="21.5" rmax2="34.0" deltaphi="6.283185307179586"/>
-        <cone name="detectorPipeInsideCone2of3Solid" z="14.72" rmax1="34.0" rmax2="42.5" deltaphi="6.283185307179586"/>
-        <cone name="detectorPipeInsideCone3of3Solid" z="9.0" rmax1="42.5" rmax2="54.0" deltaphi="6.283185307179586"/>
-        <union name="detectorPipeInsideAux1">
+        <tube lunit="cm" aunit="rad" name="detectorPipeInside1of3Solid" rmax="21.5" z="179.35" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="cm" aunit="rad" name="detectorPipeInside2of3Solid" rmax="34.0" z="160.28" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="cm" aunit="rad" name="detectorPipeInside3of3Solid" rmax="42.5" z="106.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <cone lunit="cm" aunit="rad" name="detectorPipeInsideCone1of3Solid" z="21.65" rmax1="21.5" rmax2="34.0" deltaphi="6.283185307179586"/>
+        <cone lunit="cm" aunit="rad" name="detectorPipeInsideCone2of3Solid" z="14.72" rmax1="34.0" rmax2="42.5" deltaphi="6.283185307179586"/>
+        <cone lunit="cm" aunit="rad" name="detectorPipeInsideCone3of3Solid" z="9.0" rmax1="42.5" rmax2="54.0" deltaphi="6.283185307179586"/>
+        <union lunit="cm" aunit="rad" name="detectorPipeInsideAux1">
             <position name="detectorPipeInsideAux1.position" z="100.5"/>
             <first ref="detectorPipeInside1of3Solid"/>
             <second ref="detectorPipeInsideCone1of3Solid"/>
         </union>
-        <union name="detectorPipeInsideAux2">
+        <union lunit="cm" aunit="rad" name="detectorPipeInsideAux2">
             <position name="detectorPipeInsideAux2.position" z="191.465"/>
             <first ref="detectorPipeInsideAux1"/>
             <second ref="detectorPipeInside2of3Solid"/>
         </union>
-        <union name="detectorPipeInsideAux3">
+        <union lunit="cm" aunit="rad" name="detectorPipeInsideAux3">
             <position name="detectorPipeInsideAux3.position" z="191.465"/>
             <first ref="detectorPipeInsideAux2"/>
             <second ref="detectorPipeInsideCone2of3Solid"/>
         </union>
-        <union name="detectorPipeInsideAux4">
+        <union lunit="cm" aunit="rad" name="detectorPipeInsideAux4">
             <position name="detectorPipeInsideAux4.position" z="251.82500000000002"/>
             <first ref="detectorPipeInsideAux3"/>
             <second ref="detectorPipeInside3of3Solid"/>
         </union>
-        <union name="detectorPipeInside">
+        <union lunit="cm" aunit="rad" name="detectorPipeInside">
             <position name="detectorPipeInside.position" z="309.32500000000005"/>
             <first ref="detectorPipeInsideAux4"/>
             <second ref="detectorPipeInsideCone3of3Solid"/>
         </union>
-        <subtraction name="detectorPipeSolid">
+        <subtraction lunit="cm" aunit="rad" name="detectorPipeSolid">
             <position name="detectorPipeSolid.position" z="82.675"/>
             <first ref="detectorPipeNotEmpty"/>
             <second ref="detectorPipeInside"/>
         </subtraction>
-        <box name="worldBox" x="2000.0" y="2000.0" z="2000.0"/>
+        <box lunit="cm" aunit="rad" name="worldBox" x="2000.0" y="2000.0" z="2000.0"/>
     </solids>
     <structure>
         <volume name="chamberBodyVolume">

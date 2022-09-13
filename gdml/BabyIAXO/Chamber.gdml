@@ -117,74 +117,74 @@
         </material>
     </materials>
     <solids>
-        <box name="chamberBodyBaseSolid" x="134.0" y="134.0" z="30.0"/>
-        <tube name="chamberBodyHoleSolid" rmax="51.0" z="30.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <subtraction name="chamberBodySolid">
+        <box lunit="cm" aunit="rad" name="chamberBodyBaseSolid" x="134.0" y="134.0" z="30.0"/>
+        <tube lunit="cm" aunit="rad" name="chamberBodyHoleSolid" rmax="51.0" z="30.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <subtraction lunit="cm" aunit="rad" name="chamberBodySolid">
             <first ref="chamberBodyBaseSolid"/>
             <second ref="chamberBodyHoleSolid"/>
         </subtraction>
-        <box name="chamberBackplateSolid" x="134.0" y="134.0" z="15.0"/>
-        <tube name="chamberTeflonWallSolid" rmax="51.0" z="30.0" rmin="50.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <box name="kaptonReadoutSolid" x="134.0" y="134.0" z="0.5"/>
-        <box name="copperReadoutSolid" x="60.0" y="60.0" z="0.2"/>
-        <tube name="cathodeTeflonDiskBaseSolid" rmax="67.0" z="5.0" rmin="15.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <tube name="cathodeCopperDiskSolid" rmax="45.0" z="1.0" rmin="8.5" startphi="0.0" deltaphi="6.283185307179586"/>
-        <subtraction name="cathodeTeflonDiskSolid">
+        <box lunit="cm" aunit="rad" name="chamberBackplateSolid" x="134.0" y="134.0" z="15.0"/>
+        <tube lunit="cm" aunit="rad" name="chamberTeflonWallSolid" rmax="51.0" z="30.0" rmin="50.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <box lunit="cm" aunit="rad" name="kaptonReadoutSolid" x="134.0" y="134.0" z="0.5"/>
+        <box lunit="cm" aunit="rad" name="copperReadoutSolid" x="60.0" y="60.0" z="0.2"/>
+        <tube lunit="cm" aunit="rad" name="cathodeTeflonDiskBaseSolid" rmax="67.0" z="5.0" rmin="15.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="cm" aunit="rad" name="cathodeCopperDiskSolid" rmax="45.0" z="1.0" rmin="8.5" startphi="0.0" deltaphi="6.283185307179586"/>
+        <subtraction lunit="cm" aunit="rad" name="cathodeTeflonDiskSolid">
             <position name="cathodeTeflonDiskSolid.position" z="-2.0"/>
             <first ref="cathodeTeflonDiskBaseSolid"/>
             <second ref="cathodeCopperDiskSolid"/>
         </subtraction>
-        <tube name="cathodeWindowSolid" rmax="15.0" z="0.004" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <box name="cathodePatternLineAux" x="0.3" y="17.0" z="1.0"/>
-        <tube name="cathodePatternCentralHole" rmax="4.25" z="1.1" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <subtraction name="cathodePatternLine">
+        <tube lunit="cm" aunit="rad" name="cathodeWindowSolid" rmax="15.0" z="0.004" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <box lunit="cm" aunit="rad" name="cathodePatternLineAux" x="0.3" y="17.0" z="1.0"/>
+        <tube lunit="cm" aunit="rad" name="cathodePatternCentralHole" rmax="4.25" z="1.1" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <subtraction lunit="cm" aunit="rad" name="cathodePatternLine">
             <first ref="cathodePatternLineAux"/>
             <second ref="cathodePatternCentralHole"/>
         </subtraction>
-        <tube name="cathodePatternDisk" rmax="4.25" z="1.0" rmin="3.95" startphi="0.0" deltaphi="6.283185307179586"/>
-        <union name="cathodeCopperDiskSolidAux0">
+        <tube lunit="cm" aunit="rad" name="cathodePatternDisk" rmax="4.25" z="1.0" rmin="3.95" startphi="0.0" deltaphi="6.283185307179586"/>
+        <union lunit="cm" aunit="rad" name="cathodeCopperDiskSolidAux0">
             <rotation name="cathodeCopperDiskSolidAux0.rotation" unit="deg"/>
             <first ref="cathodeCopperDiskSolid"/>
             <second ref="cathodePatternLine"/>
         </union>
-        <union name="cathodeCopperDiskSolidAux1">
+        <union lunit="cm" aunit="rad" name="cathodeCopperDiskSolidAux1">
             <rotation name="cathodeCopperDiskSolidAux1.rotation" z="45.0" unit="deg"/>
             <first ref="cathodeCopperDiskSolidAux0"/>
             <second ref="cathodePatternLine"/>
         </union>
-        <union name="cathodeCopperDiskSolidAux2">
+        <union lunit="cm" aunit="rad" name="cathodeCopperDiskSolidAux2">
             <rotation name="cathodeCopperDiskSolidAux2.rotation" z="90.0" unit="deg"/>
             <first ref="cathodeCopperDiskSolidAux1"/>
             <second ref="cathodePatternLine"/>
         </union>
-        <union name="cathodeCopperDiskSolidAux3">
+        <union lunit="cm" aunit="rad" name="cathodeCopperDiskSolidAux3">
             <rotation name="cathodeCopperDiskSolidAux3.rotation" z="135.0" unit="deg"/>
             <first ref="cathodeCopperDiskSolidAux2"/>
             <second ref="cathodePatternLine"/>
         </union>
-        <union name="cathodeCopperDiskFinal.solid">
+        <union lunit="cm" aunit="rad" name="cathodeCopperDiskFinal.solid">
             <first ref="cathodeCopperDiskSolidAux3"/>
             <second ref="cathodePatternDisk"/>
         </union>
-        <tube name="cathodeFillingBaseSolid" rmax="15.0" z="5.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <subtraction name="cathodeFillingSolid">
+        <tube lunit="cm" aunit="rad" name="cathodeFillingBaseSolid" rmax="15.0" z="5.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <subtraction lunit="cm" aunit="rad" name="cathodeFillingSolid">
             <position name="cathodeFillingSolid.position" z="-2.0"/>
             <first ref="cathodeFillingBaseSolid"/>
             <second ref="cathodeCopperDiskFinal.solid"/>
         </subtraction>
-        <tube name="gasSolidOriginal" rmax="50.0" z="30.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <subtraction name="gasSolidAux">
+        <tube lunit="cm" aunit="rad" name="gasSolidOriginal" rmax="50.0" z="30.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <subtraction lunit="cm" aunit="rad" name="gasSolidAux">
             <position name="gasSolidAux.position" z="-14.9"/>
             <rotation name="gasSolidAux.rotation" z="45.0" unit="deg"/>
             <first ref="gasSolidOriginal"/>
             <second ref="copperReadoutSolid"/>
         </subtraction>
-        <subtraction name="gasSolid">
+        <subtraction lunit="cm" aunit="rad" name="gasSolid">
             <position name="gasSolid.position" z="14.998"/>
             <first ref="gasSolidAux"/>
             <second ref="cathodeWindowSolid"/>
         </subtraction>
-        <box name="worldBox" x="2000.0" y="2000.0" z="2000.0"/>
+        <box lunit="cm" aunit="rad" name="worldBox" x="2000.0" y="2000.0" z="2000.0"/>
     </solids>
     <structure>
         <volume name="chamberBodyVolume">
