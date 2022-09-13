@@ -52,7 +52,7 @@ val geometries = mapOf(
                 physVolume(shieldingVolume, name = "Shielding")
             }
         }
-    }.withUnits(LUnit.CM, AUnit.RAD),
+    }.withUnits(LUnit.MM, AUnit.RAD),
     "ChamberAndPipe" to Gdml {
 
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
@@ -72,7 +72,7 @@ val geometries = mapOf(
                 }
             }
         }
-    }.withUnits(LUnit.CM, AUnit.RAD),
+    }.withUnits(LUnit.MM, AUnit.RAD),
     "VetoSystem" to Gdml {
 
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
@@ -92,7 +92,7 @@ val geometries = mapOf(
                 }
             }
         }
-    }.withUnits(LUnit.CM, AUnit.RAD),
+    }.withUnits(LUnit.MM, AUnit.RAD),
     "Veto" to Gdml {
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
 
@@ -105,7 +105,7 @@ val geometries = mapOf(
                 physVolume(vetoVolume, name = "Veto")
             }
         }
-    }.withUnits(LUnit.CM, AUnit.RAD),
+    }.withUnits(LUnit.MM, AUnit.RAD),
     "Chamber" to Gdml {
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
 
@@ -118,7 +118,7 @@ val geometries = mapOf(
                 physVolume(chamberVolume, name = "Chamber")
             }
         }
-    }.withUnits(LUnit.CM, AUnit.RAD),
+    }.withUnits(LUnit.MM, AUnit.RAD),
     "Shielding" to Gdml {
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
 
@@ -131,7 +131,7 @@ val geometries = mapOf(
                 physVolume(shieldingVolume, name = "Shielding")
             }
         }
-    }.withUnits(LUnit.CM, AUnit.RAD),
+    }.withUnits(LUnit.MM, AUnit.RAD),
     "DetectorPipe" to Gdml {
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
 
@@ -144,6 +144,6 @@ val geometries = mapOf(
                 physVolume(detectorPipeVolume, name = "DetectorPipe")
             }
         }
-    }.withUnits(LUnit.CM, AUnit.RAD),
+    }.withUnits(LUnit.MM, AUnit.RAD),
 )
 
