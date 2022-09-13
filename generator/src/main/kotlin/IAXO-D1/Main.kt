@@ -33,7 +33,7 @@ val geometries = mapOf(
                 }
             }
         }
-    },
+    }.withUnits(LUnit.CM, AUnit.RAD),
     "NoVetos" to Gdml {
 
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
@@ -51,7 +51,7 @@ val geometries = mapOf(
                 physVolume(shieldingVolume, name = "Shielding")
             }
         }
-    },
+    }.withUnits(LUnit.CM, AUnit.RAD),
     "ChamberAndPipe" to Gdml {
 
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
@@ -67,7 +67,7 @@ val geometries = mapOf(
                 physVolume(detectorPipeVolume, name = "DetectorPipe") { position(z = DetectorPipe.ZinWorld) }
             }
         }
-    },
+    }.withUnits(LUnit.CM, AUnit.RAD),
     "VetoSystem" to Gdml {
 
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
@@ -87,7 +87,7 @@ val geometries = mapOf(
                 }
             }
         }
-    },
+    }.withUnits(LUnit.CM, AUnit.RAD),
     "Veto" to Gdml {
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
 
@@ -100,7 +100,7 @@ val geometries = mapOf(
                 physVolume(vetoVolume, name = "Veto")
             }
         }
-    },
+    }.withUnits(LUnit.CM, AUnit.RAD),
     "Chamber" to Gdml {
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
 
@@ -113,7 +113,7 @@ val geometries = mapOf(
                 physVolume(chamberVolume, name = "Chamber")
             }
         }
-    },
+    }.withUnits(LUnit.CM, AUnit.RAD),
     "Shielding" to Gdml {
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
 
@@ -126,7 +126,7 @@ val geometries = mapOf(
                 physVolume(shieldingVolume, name = "Shielding")
             }
         }
-    },
+    }.withUnits(LUnit.CM, AUnit.RAD),
     "DetectorPipe" to Gdml {
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
 
@@ -139,6 +139,6 @@ val geometries = mapOf(
                 physVolume(detectorPipeVolume, name = "DetectorPipe")
             }
         }
-    },
+    }.withUnits(LUnit.CM, AUnit.RAD),
 )
 
