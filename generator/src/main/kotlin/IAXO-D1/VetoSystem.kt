@@ -58,16 +58,16 @@ class VetoLayerBottom : Geometry() {
                 for (i in 1..numberOfLayers) {
                     if (i == 1) {
                         physVolume(vetoLayer, name = "vetoLayerBottom$i") {
-                            position {
+                            position(
                                 y = -(Veto.FullThickness + 5) * (i - 1) + 20
-                            }
+                            ) { unit = LUnit.MM }
                             rotation { unit = AUnit.DEG; y = 180 * (i + 1) }
                         }
                     } else {
                         physVolume(vetoLayer, name = "vetoLayerBottom$i") {
-                            position {
+                            position(
                                 y = -(Veto.FullThickness + 5) * (i - 1)
-                            }
+                            ) { unit = LUnit.MM }
                             rotation { unit = AUnit.DEG; y = 180 * (i + 1) }
                         }
                     }
@@ -89,9 +89,9 @@ class VetoLayerEast : Geometry() {
             return@lazy gdml.structure.assembly {
                 for (i in 1..numberOfLayers) {
                     physVolume(vetoLayer, name = "vetoLayerEast$i") {
-                        position {
+                        position(
                             x = -(Veto.FullThickness + 20) * (i - 1)
-                        }
+                        ) { unit = LUnit.MM }
                         rotation { unit = AUnit.DEG; x = 180; z = -90 }
                     }
                 }
@@ -112,9 +112,9 @@ class VetoLayerWest : Geometry() {
             return@lazy gdml.structure.assembly {
                 for (i in 1..numberOfLayers) {
                     physVolume(vetoLayer, name = "vetoLayerWest$i") {
-                        position {
+                        position(
                             x = (Veto.FullThickness + 20) * (i - 1)
-                        }
+                        ) { unit = LUnit.MM }
                         rotation { unit = AUnit.DEG; x = 0; z = 90; y = 0 }
                     }
                 }
@@ -136,10 +136,10 @@ class VetoLayerBack : Geometry() {
             return@lazy gdml.structure.assembly {
                 for (i in 1..numberOfLayers) {
                     physVolume(vetoLayer, name = "vetoLayerBack$i") {
-                        position {
-                            z = -(Veto.FullThickness + 20) * (i - 1)
+                        position(
+                            z = -(Veto.FullThickness + 20) * (i - 1),
                             y = 0
-                        }
+                        ) { unit = LUnit.MM }
                         rotation { unit = AUnit.DEG; x = -90; y = -90 }
                     }
                 }
@@ -160,9 +160,9 @@ class VetoLayerFront : Geometry() {
             return@lazy gdml.structure.assembly {
                 for (i in 1..numberOfLayers) {
                     physVolume(vetoLayer, name = "vetoLayerBack$i") {
-                        position {
+                        position(
                             z = (Veto.FullThickness + 20) * (i - 1)
-                        }
+                        ) { unit = LUnit.MM }
                         rotation { unit = AUnit.DEG; x = -90; y = 90 }
                     }
                 }
@@ -179,40 +179,40 @@ class VetoSystem : Geometry() {
         val vetoSystemVolume: GdmlRef<GdmlAssembly> by lazy {
             return@lazy gdml.structure.assembly {
                 physVolume(VetoLayerTop().generate(gdml), name = "vetoSystemTop") {
-                    position {
-                        y = xyShieldingDistance - 10
+                    position(
+                        y = xyShieldingDistance - 10,
                         z = -Shielding.OffsetZ
-                    }
+                    ) { unit = LUnit.MM }
                 }
                 physVolume(VetoLayerBottom().generate(gdml), name = "vetoSystemBottom") {
-                    position {
-                        y = -xyShieldingDistance - 100
+                    position(
+                        y = -xyShieldingDistance - 100,
                         z = -Shielding.OffsetZ
-                    }
+                    ) { unit = LUnit.MM }
                 }
                 physVolume(VetoLayerEast().generate(gdml), name = "vetoSystemEast") {
-                    position {
-                        x = -xyShieldingDistance - 130 + 80
+                    position(
+                        x = -xyShieldingDistance - 130 + 80,
                         z = -Shielding.OffsetZ + 100
-                    }
+                    ) { unit = LUnit.MM }
                 }
                 physVolume(VetoLayerWest().generate(gdml), name = "vetoSystemWest") {
-                    position {
-                        x = xyShieldingDistance + 130 - 80
+                    position(
+                        x = xyShieldingDistance + 130 - 80,
                         z = -Shielding.OffsetZ - 100
-                    }
+                    ) { unit = LUnit.MM }
                 }
                 physVolume(VetoLayerBack().generate(gdml), name = "vetoSystemBack") {
-                    position {
-                        z = -zShieldingDistance - Shielding.OffsetZ - 520 + 120
+                    position(
+                        z = -zShieldingDistance - Shielding.OffsetZ - 520 + 120,
                         x = -65
-                    }
+                    ) { unit = LUnit.MM }
                 }
                 physVolume(VetoLayerFront().generate(gdml), name = "vetoSystemFront") {
-                    position {
-                        z = -Shielding.OffsetZ + zShieldingDistance + 500 - 120
+                    position(
+                        z = -Shielding.OffsetZ + zShieldingDistance + 500 - 120,
                         x = 65
-                    }
+                    ) { unit = LUnit.MM }
                 }
             }
         }

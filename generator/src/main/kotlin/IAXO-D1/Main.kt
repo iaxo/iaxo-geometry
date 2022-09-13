@@ -22,14 +22,18 @@ val geometries = mapOf(
 
             world = volume(Materials.Air.ref, worldBox, "world") {
                 physVolume(chamberVolume, name = "Chamber")
-                physVolume(detectorPipeVolume, name = "DetectorPipe") { position(z = DetectorPipe.ZinWorld) }
+                physVolume(detectorPipeVolume, name = "DetectorPipe") {
+                    position(z = DetectorPipe.ZinWorld) {
+                        unit = LUnit.MM
+                    }
+                }
                 physVolume(shieldingVolume, name = "Shielding")
                 physVolume(vetoSystemVolume, name = "VetoSystem") {
                     position(
                         x = 0,
                         y = 40,
                         z = 400,
-                    )
+                    ) { unit = LUnit.MM }
                 }
             }
         }
@@ -47,7 +51,11 @@ val geometries = mapOf(
 
             world = volume(Materials.Air.ref, worldBox, "world") {
                 physVolume(chamberVolume, name = "Chamber")
-                physVolume(detectorPipeVolume, name = "DetectorPipe") { position(z = DetectorPipe.ZinWorld) }
+                physVolume(detectorPipeVolume, name = "DetectorPipe") {
+                    position(z = DetectorPipe.ZinWorld) {
+                        unit = LUnit.MM
+                    }
+                }
                 physVolume(shieldingVolume, name = "Shielding")
             }
         }
@@ -64,7 +72,11 @@ val geometries = mapOf(
 
             world = volume(Materials.Air.ref, worldBox, "world") {
                 physVolume(chamberVolume, name = "Chamber")
-                physVolume(detectorPipeVolume, name = "DetectorPipe") { position(z = DetectorPipe.ZinWorld) }
+                physVolume(detectorPipeVolume, name = "DetectorPipe") {
+                    position(z = DetectorPipe.ZinWorld) {
+                        unit = LUnit.MM
+                    }
+                }
             }
         }
     }.withUnits(LUnit.CM, AUnit.RAD),
@@ -83,7 +95,7 @@ val geometries = mapOf(
                         x = 0,
                         y = 40,
                         z = 400,
-                    )
+                    ) { unit = LUnit.MM }
                 }
             }
         }

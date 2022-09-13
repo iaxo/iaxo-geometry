@@ -100,7 +100,9 @@ open class Chamber : Geometry() {
                     cathodeCopperDiskSolid,
                     "cathodeTeflonDiskSolid"
                 ) {
-                    position(z = -CathodeTeflonDiskThickness / 2 + CathodeCopperSupportThickness / 2)
+                    position(z = -CathodeTeflonDiskThickness / 2 + CathodeCopperSupportThickness / 2) {
+                        unit = LUnit.MM
+                    }
                 }
 
             val cathodeTeflonDiskVolume =
@@ -162,7 +164,9 @@ open class Chamber : Geometry() {
             )
             val cathodeFillingSolid =
                 gdml.solids.subtraction(cathodeFillingBaseSolid, cathodeCopperDiskFinal, "cathodeFillingSolid") {
-                    position(z = -CathodeTeflonDiskThickness / 2 + CathodeCopperSupportThickness / 2)
+                    position(z = -CathodeTeflonDiskThickness / 2 + CathodeCopperSupportThickness / 2) {
+                        unit = LUnit.MM
+                    }
                 }
             val cathodeFillingVolume =
                 gdml.structure.volume(Materials.Vacuum.ref, cathodeFillingSolid, "cathodeFillingVolume") {}
@@ -173,12 +177,12 @@ open class Chamber : Geometry() {
                 Height, "gasSolidOriginal"
             )
             val gasSolidAux = gdml.solids.subtraction(gasSolidOriginal, copperReadoutSolid, "gasSolidAux") {
-                position(z = -Height / 2 + ReadoutCopperThickness / 2)
+                position(z = -Height / 2 + ReadoutCopperThickness / 2) { unit = LUnit.MM }
                 rotation(z = 45) { unit = AUnit.DEG }
             }
             val gasSolid =
                 gdml.solids.subtraction(gasSolidAux, cathodeWindowSolid, "gasSolid") {
-                    position(z = Height / 2 - CathodeWindowThickness / 2)
+                    position(z = Height / 2 - CathodeWindowThickness / 2) { unit = LUnit.MM }
                 }
             val gasVolume = gdml.structure.volume(Materials.Gas.ref, gasSolid, "gasVolume")
 
@@ -188,28 +192,28 @@ open class Chamber : Geometry() {
                 physVolume(chamberBackplateVolume, name = "chamberBackplate") {
                     position(
                         z = -Height / 2 - ReadoutKaptonThickness - BackplateThickness / 2
-                    )
+                    ) { unit = LUnit.MM }
                 }
                 physVolume(chamberBodyVolume, name = "chamberBody")
                 physVolume(chamberTeflonWallVolume, name = "chamberTeflonWall")
                 physVolume(kaptonReadoutVolume, name = "kaptonReadout") {
-                    position(z = -Height / 2 - ReadoutKaptonThickness / 2)
+                    position(z = -Height / 2 - ReadoutKaptonThickness / 2) { unit = LUnit.MM }
                 }
                 physVolume(copperReadoutVolume, name = "copperReadout") {
-                    position(z = -Height / 2 + ReadoutCopperThickness / 2)
+                    position(z = -Height / 2 + ReadoutCopperThickness / 2) { unit = LUnit.MM }
                     rotation(z = 45) { unit = AUnit.DEG }
                 }
                 physVolume(cathodeWindowVolume, name = "cathodeWindow") {
-                    position(z = Height / 2 - CathodeWindowThickness / 2)
+                    position(z = Height / 2 - CathodeWindowThickness / 2) { unit = LUnit.MM }
                 }
                 physVolume(cathodeTeflonDiskVolume, name = "cathodeTeflonDisk") {
-                    position(z = Height / 2 + CathodeTeflonDiskThickness / 2)
+                    position(z = Height / 2 + CathodeTeflonDiskThickness / 2) { unit = LUnit.MM }
                 }
                 physVolume(cathodeFillingVolume, name = "cathodeFilling") {
-                    position(z = Height / 2 + CathodeTeflonDiskThickness / 2)
+                    position(z = Height / 2 + CathodeTeflonDiskThickness / 2) { unit = LUnit.MM }
                 }
                 physVolume(cathodeCopperDiskVolume, name = "cathodeCopperDiskPattern") {
-                    position(z = Height / 2 + CathodeCopperSupportThickness / 2)
+                    position(z = Height / 2 + CathodeCopperSupportThickness / 2) { unit = LUnit.MM }
                 }
             }
         }

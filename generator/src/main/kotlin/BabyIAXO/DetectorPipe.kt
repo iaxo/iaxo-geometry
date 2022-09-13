@@ -76,17 +76,17 @@ open class DetectorPipe : Geometry() {
             val detectorPipeAux1 =
                 gdml.solids.union(detectorPipeChamberFlangeSolid, detectorPipeSection1of2Solid, "detectorPipeAux1")
                 {
-                    position(z = Union1Z)
+                    position(z = Union1Z) { unit = LUnit.MM }
                 }
             val detectorPipeAux2 =
                 gdml.solids.union(detectorPipeAux1, detectorPipeSection2of2Solid, "detectorPipeAux2")
                 {
-                    position(z = Union2Z)
+                    position(z = Union2Z) { unit = LUnit.MM }
                 }
             val detectorPipeNotEmpty =
                 gdml.solids.union(detectorPipeAux2, detectorPipeTelescopeFlangeSolid, "detectorPipeNotEmpty")
                 {
-                    position(z = Union3Z)
+                    position(z = Union3Z) { unit = LUnit.MM }
                 }
             val detectorPipeInside1of3Solid = gdml.solids.tube(
                 InsideSection1of3Radius,
@@ -124,11 +124,11 @@ open class DetectorPipe : Geometry() {
                     detectorPipeInsideCone1of3Solid,
                     "detectorPipeInsideAux1"
                 ) {
-                    position(z = InsideUnion1Z)
+                    position(z = InsideUnion1Z) { unit = LUnit.MM }
                 }
             val detectorPipeInsideAux2 =
                 gdml.solids.union(detectorPipeInsideAux1, detectorPipeInside2of3Solid, "detectorPipeInsideAux2") {
-                    position(z = InsideUnion2Z)
+                    position(z = InsideUnion2Z) { unit = LUnit.MM }
                 }
             val detectorPipeInsideAux3 =
                 gdml.solids.union(
@@ -136,19 +136,19 @@ open class DetectorPipe : Geometry() {
                     detectorPipeInsideCone2of3Solid,
                     "detectorPipeInsideAux3"
                 ) {
-                    position(z = InsideUnion3Z)
+                    position(z = InsideUnion3Z) { unit = LUnit.MM }
                 }
             val detectorPipeInsideAux4 =
                 gdml.solids.union(detectorPipeInsideAux3, detectorPipeInside3of3Solid, "detectorPipeInsideAux4") {
-                    position(z = InsideUnion4Z)
+                    position(z = InsideUnion4Z) { unit = LUnit.MM }
                 }
             val detectorPipeInside =
                 gdml.solids.union(detectorPipeInsideAux4, detectorPipeInsideCone3of3Solid, "detectorPipeInside") {
-                    position(z = InsideUnion5Z)
+                    position(z = InsideUnion5Z) { unit = LUnit.MM }
                 }
             val detectorPipeSolid =
                 gdml.solids.subtraction(detectorPipeNotEmpty, detectorPipeInside, "detectorPipeSolid") {
-                    position(z = InsideSection1of3Length / 2 - ChamberFlangeThickness / 2)
+                    position(z = InsideSection1of3Length / 2 - ChamberFlangeThickness / 2) { unit = LUnit.MM }
                 }
             val detectorPipeVolume =
                 gdml.structure.volume(Materials.Copper.ref, detectorPipeSolid, "detectorPipeVolume")
@@ -162,7 +162,7 @@ open class DetectorPipe : Geometry() {
                 }
                 physVolume(detectorPipeFillingVolume) {
                     name = "detectorPipeFilling"
-                    position { z = FillingOffsetWithPipe }
+                    position(z = FillingOffsetWithPipe) { unit = LUnit.MM }
                 }
             }
         }
