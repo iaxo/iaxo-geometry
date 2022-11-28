@@ -142,7 +142,7 @@
             <first ref="detectorPipeNotEmpty"/>
             <second ref="detectorPipeInside"/>
         </subtraction>
-        <box lunit="mm" aunit="rad" name="worldBox" x="2000.0" y="2000.0" z="2000.0"/>
+        <box lunit="mm" aunit="rad" name="worldBox" x="1300.0" y="1550.0" z="1300.0"/>
     </solids>
     <structure>
         <volume name="detectorPipeVolume">
