@@ -13,10 +13,9 @@ private const val xyShieldingDistance =
 private const val zShieldingDistance =
     Shielding.SizeZ / 2 + Veto.FullThickness / 2 + Shielding.EnvelopeThickness
 
-class VetoLayerTop : Geometry() {
+class VetoLayerTop(private val numberOfLayers: Int = 3) : Geometry() {
     override fun generate(gdml: Gdml): GdmlRef<GdmlAssembly> {
 
-        val numberOfLayers = 3
         val vetoLayer = VetoLayer(4, vetoSize = VetoSize.LARGE).generate(gdml)
 
         val vetoLayerVolume: GdmlRef<GdmlAssembly> by lazy {
@@ -47,10 +46,9 @@ class VetoLayerTop : Geometry() {
 }
 
 
-class VetoLayerBottom : Geometry() {
+class VetoLayerBottom(private val numberOfLayers: Int = 3) : Geometry() {
     override fun generate(gdml: Gdml): GdmlRef<GdmlAssembly> {
 
-        val numberOfLayers = 3
         val vetoLayer = VetoLayer(4, vetoSize = VetoSize.LARGE).generate(gdml)
 
         val vetoLayerVolume: GdmlRef<GdmlAssembly> by lazy {
@@ -79,10 +77,9 @@ class VetoLayerBottom : Geometry() {
     }
 }
 
-class VetoLayerEast : Geometry() {
+class VetoLayerEast(private val numberOfLayers: Int = 3) : Geometry() {
     override fun generate(gdml: Gdml): GdmlRef<GdmlAssembly> {
 
-        val numberOfLayers = 3
         val vetoLayer = VetoLayer(3, vetoSize = VetoSize.LARGE, separation = 10.0).generate(gdml)
 
         val vetoLayerVolume: GdmlRef<GdmlAssembly> by lazy {
@@ -102,10 +99,9 @@ class VetoLayerEast : Geometry() {
     }
 }
 
-class VetoLayerWest : Geometry() {
+class VetoLayerWest(private val numberOfLayers: Int = 3) : Geometry() {
     override fun generate(gdml: Gdml): GdmlRef<GdmlAssembly> {
 
-        val numberOfLayers = 3
         val vetoLayer = VetoLayer(3, vetoSize = VetoSize.LARGE, separation = 10.0).generate(gdml)
 
         val vetoLayerVolume: GdmlRef<GdmlAssembly> by lazy {
@@ -126,10 +122,9 @@ class VetoLayerWest : Geometry() {
 }
 
 
-class VetoLayerBack : Geometry() {
+class VetoLayerBack(private val numberOfLayers: Int = 3) : Geometry() {
     override fun generate(gdml: Gdml): GdmlRef<GdmlAssembly> {
 
-        val numberOfLayers = 3
         val vetoLayer = VetoLayer(3, separation = 10.0).generate(gdml)
 
         val vetoLayerVolume: GdmlRef<GdmlAssembly> by lazy {
@@ -150,10 +145,9 @@ class VetoLayerBack : Geometry() {
     }
 }
 
-class VetoLayerFront : Geometry() {
+class VetoLayerFront(private val numberOfLayers: Int = 3) : Geometry() {
     override fun generate(gdml: Gdml): GdmlRef<GdmlAssembly> {
 
-        val numberOfLayers = 3
         val vetoLayer = VetoLayer(3, separation = 10.0).generate(gdml)
 
         val vetoLayerVolume: GdmlRef<GdmlAssembly> by lazy {
@@ -173,42 +167,42 @@ class VetoLayerFront : Geometry() {
     }
 }
 
-class VetoSystem : Geometry() {
+class VetoSystem(private val numberOfLayers: Int = 3) : Geometry() {
     override fun generate(gdml: Gdml): GdmlRef<GdmlAssembly> {
 
         val vetoSystemVolume: GdmlRef<GdmlAssembly> by lazy {
             return@lazy gdml.structure.assembly {
-                physVolume(VetoLayerTop().generate(gdml), name = "vetoSystemTop") {
+                physVolume(VetoLayerTop(numberOfLayers).generate(gdml), name = "vetoSystemTop") {
                     position(
                         y = xyShieldingDistance - 10,
                         z = -Shielding.OffsetZ
                     ) { unit = LUnit.MM }
                 }
-                physVolume(VetoLayerBottom().generate(gdml), name = "vetoSystemBottom") {
+                physVolume(VetoLayerBottom(numberOfLayers).generate(gdml), name = "vetoSystemBottom") {
                     position(
                         y = -xyShieldingDistance - 100,
                         z = -Shielding.OffsetZ
                     ) { unit = LUnit.MM }
                 }
-                physVolume(VetoLayerEast().generate(gdml), name = "vetoSystemEast") {
+                physVolume(VetoLayerEast(numberOfLayers).generate(gdml), name = "vetoSystemEast") {
                     position(
                         x = -xyShieldingDistance - 130 + 80,
                         z = -Shielding.OffsetZ + 100
                     ) { unit = LUnit.MM }
                 }
-                physVolume(VetoLayerWest().generate(gdml), name = "vetoSystemWest") {
+                physVolume(VetoLayerWest(numberOfLayers).generate(gdml), name = "vetoSystemWest") {
                     position(
                         x = xyShieldingDistance + 130 - 80,
                         z = -Shielding.OffsetZ - 100
                     ) { unit = LUnit.MM }
                 }
-                physVolume(VetoLayerBack().generate(gdml), name = "vetoSystemBack") {
+                physVolume(VetoLayerBack(numberOfLayers).generate(gdml), name = "vetoSystemBack") {
                     position(
                         z = -zShieldingDistance - Shielding.OffsetZ - 520 + 120,
                         x = -65
                     ) { unit = LUnit.MM }
                 }
-                physVolume(VetoLayerFront().generate(gdml), name = "vetoSystemFront") {
+                physVolume(VetoLayerFront(numberOfLayers).generate(gdml), name = "vetoSystemFront") {
                     position(
                         z = -Shielding.OffsetZ + zShieldingDistance + 500 - 120,
                         x = 65

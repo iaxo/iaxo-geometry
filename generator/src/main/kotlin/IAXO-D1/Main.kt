@@ -9,15 +9,16 @@ private const val worldSizeX = 1350.0
 private const val worldSizeY = 1350.0
 private const val worldSizeZ = 3000.0
 
-val geometries = mapOf(
-    "Default" to Gdml {
-
+fun completeGeometry(
+    vetoSystem: VetoSystem = VetoSystem(),
+): Gdml {
+    return Gdml {
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
 
         val chamberVolume = Chamber().generate(this)
         val detectorPipeVolume = DetectorPipe().generate(this)
         val shieldingVolume = Shielding().generate(this)
-        val vetoSystemVolume = VetoSystem().generate(this)
+        val vetoSystemVolume = vetoSystem.generate(this)
 
         structure {
             val worldBox = solids.box(worldSizeX, worldSizeY, worldSizeZ, "worldBox")
@@ -39,7 +40,16 @@ val geometries = mapOf(
                 }
             }
         }
-    }.withUnits(LUnit.MM, AUnit.RAD),
+    }.withUnits(LUnit.MM, AUnit.RAD)
+
+}
+
+val geometries = mapOf(
+    "Default" to completeGeometry(),
+    "CompleteVeto1Layers" to completeGeometry(vetoSystem = VetoSystem(numberOfLayers = 1)),
+    "CompleteVeto2Layers" to completeGeometry(vetoSystem = VetoSystem(numberOfLayers = 2)),
+    "CompleteVeto3Layers" to completeGeometry(vetoSystem = VetoSystem(numberOfLayers = 3)),
+    "CompleteVeto4Layers" to completeGeometry(vetoSystem = VetoSystem(numberOfLayers = 4)),
     "NoVetos" to Gdml {
 
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
