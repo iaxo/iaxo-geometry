@@ -35,10 +35,10 @@ open class Shielding : Geometry() {
                     position(z = SizeZ / 2 - ShaftLongSide / 2) { unit = LUnit.MM }
                 }
             val leadShieldingVolume =
-                gdml.structure.volume(Materials.Lead.ref, leadBoxWithShaftSolid, "ShieldingVolume")
+                gdml.structure.volume(Materials.Lead.ref, leadBoxWithShaftSolid, "shieldingVolume")
 
             return@lazy gdml.structure.assembly {
-                name = "Shielding"
+                name = "shielding"
                 physVolume(leadShieldingVolume, name = "shielding20cm") {
                     position(z = -OffsetZ) { unit = LUnit.MM }
                 }

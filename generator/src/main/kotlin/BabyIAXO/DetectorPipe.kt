@@ -156,7 +156,7 @@ open class DetectorPipe : Geometry() {
                 gdml.structure.volume(Materials.Vacuum.ref, detectorPipeInside, "detectorPipeFillingVolume")
 
             return@lazy gdml.structure.assembly {
-                name = "DetectorPipe"
+                name = "detectorPipe"
                 physVolume(detectorPipeVolume) {
                     name = "detectorPipe"
                 }
