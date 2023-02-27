@@ -91,19 +91,19 @@
         <box lunit="mm" aunit="rad" name="worldBox" x="1350.0" y="1350.0" z="3000.0"/>
     </solids>
     <structure>
-        <volume name="ShieldingVolume">
+        <volume name="shieldingVolume">
             <materialref ref="G4_Pb"/>
             <solidref ref="leadBoxWithShaftSolid"/>
         </volume>
-        <assembly name="Shielding">
+        <assembly name="shielding">
             <physvol name="shielding20cm">
-                <volumeref ref="ShieldingVolume"/>
+                <volumeref ref="shieldingVolume"/>
                 <position name="shielding20cm.position" z="29.5" unit="mm"/>
             </physvol>
         </assembly>
         <volume name="world">
             <physvol name="Shielding">
-                <volumeref ref="Shielding"/>
+                <volumeref ref="shielding"/>
             </physvol>
             <materialref ref="G4_AIR"/>
             <solidref ref="worldBox"/>

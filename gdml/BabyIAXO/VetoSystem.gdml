@@ -175,7 +175,7 @@
             <first ref="scintillatorLightGuide1Solid-300.0mm"/>
             <second ref="scintillatorLightGuide2Solid-300.0mm"/>
         </union>
-        <box lunit="mm" aunit="rad" name="worldBox" x="1300.0" y="1550.0" z="1300.0"/>
+        <box lunit="mm" aunit="rad" name="worldBox" x="1450.0" y="1600.0" z="1450.0"/>
     </solids>
     <structure>
         <volume name="scintillatorVolume-800.0mm">

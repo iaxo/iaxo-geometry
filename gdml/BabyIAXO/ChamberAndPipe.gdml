@@ -239,7 +239,7 @@
             <first ref="detectorPipeNotEmpty"/>
             <second ref="detectorPipeInside"/>
         </subtraction>
-        <box lunit="mm" aunit="rad" name="worldBox" x="1300.0" y="1550.0" z="1300.0"/>
+        <box lunit="mm" aunit="rad" name="worldBox" x="1450.0" y="1600.0" z="1450.0"/>
     </solids>
     <structure>
         <volume name="chamberBodyVolume">
@@ -330,7 +330,7 @@
             <materialref ref="G4_Galactic"/>
             <solidref ref="detectorPipeInside"/>
         </volume>
-        <assembly name="DetectorPipe">
+        <assembly name="detectorPipe">
             <physvol name="detectorPipe">
                 <volumeref ref="detectorPipeVolume"/>
             </physvol>
@@ -344,7 +344,7 @@
                 <volumeref ref="Chamber"/>
             </physvol>
             <physvol name="DetectorPipe">
-                <volumeref ref="DetectorPipe"/>
+                <volumeref ref="detectorPipe"/>
                 <position name="DetectorPipe.position" z="27.0" unit="mm"/>
             </physvol>
             <materialref ref="G4_AIR"/>

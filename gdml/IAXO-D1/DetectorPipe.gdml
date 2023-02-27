@@ -153,7 +153,7 @@
             <materialref ref="G4_Galactic"/>
             <solidref ref="detectorPipeInside"/>
         </volume>
-        <assembly name="DetectorPipe">
+        <assembly name="detectorPipe">
             <physvol name="detectorPipe">
                 <volumeref ref="detectorPipeVolume"/>
             </physvol>
@@ -164,7 +164,7 @@
         </assembly>
         <volume name="world">
             <physvol name="DetectorPipe">
-                <volumeref ref="DetectorPipe"/>
+                <volumeref ref="detectorPipe"/>
             </physvol>
             <materialref ref="G4_AIR"/>
             <solidref ref="worldBox"/>
