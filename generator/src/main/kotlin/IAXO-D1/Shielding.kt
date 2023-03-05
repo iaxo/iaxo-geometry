@@ -1,5 +1,5 @@
 package `IAXO-D1`
 
-class Shielding : BabyIAXO.Shielding() {
+class Shielding(override val layers: Boolean = false) : BabyIAXO.Shielding(layers) {
 
 }
