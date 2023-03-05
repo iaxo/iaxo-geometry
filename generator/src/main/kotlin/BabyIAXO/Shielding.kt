@@ -108,7 +108,7 @@ open class Shielding(open val layers: Boolean = false) : Geometry() {
                         }
                     }
                 val shieldingLayerLast =
-                    gdml.structure.volume(Materials.Lead.ref, leadBoxWithShaftSolid, "shieldingVolume")
+                    gdml.structure.volume(Materials.Lead.ref, leadBoxWithShaftSolid, "shieldingVolumeLayerLast")
 
 
                 return@lazy gdml.structure.assembly {
@@ -116,13 +116,7 @@ open class Shielding(open val layers: Boolean = false) : Geometry() {
                     physVolume(shieldingLayerLast, name = "shieldingLayerLast") {
                         position(z = -OffsetZ, x = 0) { unit = LUnit.MM }
                     }
-                    /*
-                                physVolume(test, name = "shieldingVolumeTest") {
-                                    position(z = -OffsetZ, x = 1000.0) { unit = LUnit.MM }
-                                }
 
-                     */
-                    // enumerated loop over list
                     for ((index, value) in shieldingLayerList.withIndex()) {
                         physVolume(value, name = "shieldingLayer${index + 1}") {
                             position(

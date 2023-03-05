@@ -412,13 +412,13 @@
             <materialref ref="G4_Pb"/>
             <solidref ref="shieldingLayerBoxWithHole4"/>
         </volume>
-        <volume name="shieldingVolume">
+        <volume name="shieldingVolumeLayerLast">
             <materialref ref="G4_Pb"/>
             <solidref ref="leadBoxWithShaftSolid"/>
         </volume>
         <assembly name="shielding">
             <physvol name="shieldingLayerLast">
-                <volumeref ref="shieldingVolume"/>
+                <volumeref ref="shieldingVolumeLayerLast"/>
                 <position name="shieldingLayerLast.position" z="29.5" unit="mm"/>
             </physvol>
             <physvol name="shieldingLayer1">
