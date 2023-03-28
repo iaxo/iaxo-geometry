@@ -4,12 +4,14 @@ import java.io.File
 
 import BabyIAXO.geometries as BabyIAXO
 import `IAXO-D1`.geometries as IAXOD1
+import `IAXO-LiquidO`.geometries as IAXOLiquidO
 
 fun main() {
 
     val geometriesTotal = mapOf(
         "BabyIAXO" to BabyIAXO,
         "IAXO-D1" to IAXOD1,
+        "IAXO-LiquidO" to IAXOLiquidO,
     )
 
     // Save all gdml files into "gdml" directory
@@ -28,5 +30,4 @@ fun main() {
                 .writeText(gdml.removeUnusedMaterials().encodeToString())
         }
     }
-
 }
