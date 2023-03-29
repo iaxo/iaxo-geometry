@@ -4,9 +4,9 @@ import materialsUrl
 
 import space.kscience.gdml.*
 
-private const val worldSizeX = 1350.0
-private const val worldSizeY = 1350.0
-private const val worldSizeZ = 3000.0
+private const val worldSizeX = 1500.0
+private const val worldSizeY = 1500.0
+private const val worldSizeZ = 1500.0
 
 val geometries = mapOf(
     "Default" to Gdml {
