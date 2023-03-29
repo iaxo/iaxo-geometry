@@ -30,5 +30,6 @@ enum class Materials(val ref: GdmlRef<GdmlMaterial>) {
     Cadmium(resolve("G4_Cd")),
     Lucite(resolve("G4_LUCITE")),
     Neoprene(resolve("G4_RUBBER_NEOPRENE")),
+    Steel(resolve("G4_STAINLESS-STEEL")),
 }
 
