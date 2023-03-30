@@ -14,6 +14,9 @@ open class TelescopePipe : Geometry() {
         const val TelescopeFlangeOutRadius = 300.0
 
         const val TelescopePipeZinWorld = 512.0
+
+        const val TelescopePipeGeneratorThickness = 0.1
+        const val TelescopePipeGeneratorRadius = 275.0
     }
 
     override fun generate(gdml: Gdml): GdmlRef<GdmlAssembly> {
@@ -33,7 +36,6 @@ open class TelescopePipe : Geometry() {
                 "steelPipeFlange"
             )
 
-            // subtract the flange from the pipe
             val telescopePipeSolid = gdml.solids.subtraction(
                 telescopePipeSolidFilled,
                 telescopePipeSolidFilling,
@@ -48,6 +50,17 @@ open class TelescopePipe : Geometry() {
             val telescopePipeFillingVolume =
                 gdml.structure.volume(Materials.Vacuum.ref, telescopePipeSolidFilling, "telescopePipeFillingVolume")
 
+            // aux volume for simulations
+            val telescopePipeGeneratorSolid = gdml.solids.tube(
+                TelescopePipeGeneratorRadius,
+                TelescopePipeGeneratorThickness,
+                "telescopePipeGeneratorSolid"
+            )
+
+            val telescopePipeGeneratorVolume =
+                gdml.structure.volume(Materials.Vacuum.ref, telescopePipeGeneratorSolid, "telescopePipeGeneratorVolume")
+
+
             return@lazy gdml.structure.assembly {
                 name = "telescopePipe"
                 physVolume(telescopePipeVolume) {
@@ -60,6 +73,10 @@ open class TelescopePipe : Geometry() {
                     position(z = TelescopePipeLength / 2) { unit = LUnit.MM }
                 }
 
+                physVolume(telescopePipeGeneratorVolume) {
+                    name = "telescopePipeGeneratorVolume"
+                    position(z = TelescopePipeLength + TelescopePipeGeneratorThickness / 2.0 + 0.1) { unit = LUnit.MM }
+                }
 
             }
         }

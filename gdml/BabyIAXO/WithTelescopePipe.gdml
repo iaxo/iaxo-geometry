@@ -445,6 +445,7 @@
             <first ref="steelPipeCone"/>
             <second ref="steelPipeFlange"/>
         </subtraction>
+        <tube lunit="mm" aunit="rad" name="telescopePipeGeneratorSolid" rmax="275.0" z="0.01" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
         <box lunit="mm" aunit="rad" name="worldBox" x="1450.0" y="1600.0" z="11450.0"/>
     </solids>
     <structure>
@@ -972,6 +973,10 @@
             <materialref ref="G4_Galactic"/>
             <solidref ref="steelPipeFlange"/>
         </volume>
+        <volume name="telescopePipeGeneratorVolume">
+            <materialref ref="G4_Galactic"/>
+            <solidref ref="telescopePipeGeneratorSolid"/>
+        </volume>
         <assembly name="telescopePipe">
             <physvol name="telescopePipeVolume">
                 <volumeref ref="telescopePipeVolume"/>
@@ -980,6 +985,10 @@
             <physvol name="telescopePipeFillingVolume">
                 <volumeref ref="telescopePipeFillingVolume"/>
                 <position name="telescopePipeFillingVolume.position" z="2500.0" unit="mm"/>
+            </physvol>
+            <physvol name="telescopePipeGeneratorVolume">
+                <volumeref ref="telescopePipeGeneratorVolume"/>
+                <position name="telescopePipeGeneratorVolume.position" z="5000.1050000000005" unit="mm"/>
             </physvol>
         </assembly>
         <volume name="world">
