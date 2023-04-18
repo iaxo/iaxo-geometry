@@ -438,14 +438,14 @@
             <first ref="scintillatorLightGuide1Solid-300.0mm"/>
             <second ref="scintillatorLightGuide2Solid-300.0mm"/>
         </union>
-        <cone lunit="mm" aunit="rad" name="steelPipeCone" z="5000.0" rmax1="75.0" rmax2="300.0" deltaphi="6.283185307179586"/>
-        <cone lunit="mm" aunit="rad" name="steelPipeFlange" z="5000.1" rmax1="55.0" rmax2="280.0" deltaphi="6.283185307179586"/>
+        <cone lunit="mm" aunit="rad" name="steelPipeCone" z="5000.0" rmax1="75.0" rmax2="350.0" deltaphi="6.283185307179586"/>
+        <cone lunit="mm" aunit="rad" name="steelPipeFlange" z="5000.1" rmax1="55.0" rmax2="330.0" deltaphi="6.283185307179586"/>
         <subtraction lunit="mm" aunit="rad" name="telescopePipeSolid">
             <position name="telescopePipeSolid.position" unit="mm"/>
             <first ref="steelPipeCone"/>
             <second ref="steelPipeFlange"/>
         </subtraction>
-        <tube lunit="mm" aunit="rad" name="telescopePipeGeneratorSolid" rmax="275.0" z="0.01" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="telescopePipeGeneratorSolid" rmax="275.0" z="0.1" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
         <box lunit="mm" aunit="rad" name="worldBox" x="1450.0" y="1600.0" z="11450.0"/>
     </solids>
     <structure>
@@ -988,7 +988,7 @@
             </physvol>
             <physvol name="telescopePipeGeneratorVolume">
                 <volumeref ref="telescopePipeGeneratorVolume"/>
-                <position name="telescopePipeGeneratorVolume.position" z="5000.1050000000005" unit="mm"/>
+                <position name="telescopePipeGeneratorVolume.position" z="5000.150000000001" unit="mm"/>
             </physvol>
         </assembly>
         <volume name="world">

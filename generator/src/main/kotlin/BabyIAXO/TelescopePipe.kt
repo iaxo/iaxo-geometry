@@ -11,7 +11,7 @@ open class TelescopePipe : Geometry() {
 
         const val TelescopeFlangeHeight = 10.0
         const val TelescopeFlangeInRadius = 75.0
-        const val TelescopeFlangeOutRadius = 300.0
+        const val TelescopeFlangeOutRadius = 350.0
 
         const val TelescopePipeZinWorld = 512.0
 
