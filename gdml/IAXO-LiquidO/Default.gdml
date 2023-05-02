@@ -1,5 +1,6 @@
 <?xml version='1.0'?>
-<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
     <define/>
     <materials>
         <isotope Z="29.0" N="63" name="Cu63">
@@ -59,6 +60,30 @@
         <isotope Z="82.0" N="208" name="Pb208">
             <atom value="207.977" unit="g/mole" type="A"/>
         </isotope>
+        <isotope Z="48.0" N="106" name="Cd106">
+            <atom value="105.906" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="48.0" N="108" name="Cd108">
+            <atom value="107.904" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="48.0" N="110" name="Cd110">
+            <atom value="109.903" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="48.0" N="111" name="Cd111">
+            <atom value="110.904" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="48.0" N="112" name="Cd112">
+            <atom value="111.903" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="48.0" N="113" name="Cd113">
+            <atom value="112.904" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="48.0" N="114" name="Cd114">
+            <atom value="113.903" unit="g/mole" type="A"/>
+        </isotope>
+        <isotope Z="48.0" N="116" name="Cd116">
+            <atom value="115.905" unit="g/mole" type="A"/>
+        </isotope>
         <element name="Cu">
             <fraction n="0.6917" ref="Cu63"/>
             <fraction n="0.3083" ref="Cu65"/>
@@ -93,6 +118,16 @@
             <fraction n="0.241" ref="Pb206"/>
             <fraction n="0.221" ref="Pb207"/>
             <fraction n="0.524" ref="Pb208"/>
+        </element>
+        <element name="Cd">
+            <fraction n="0.0125" ref="Cd106"/>
+            <fraction n="0.0089" ref="Cd108"/>
+            <fraction n="0.1249" ref="Cd110"/>
+            <fraction n="0.128" ref="Cd111"/>
+            <fraction n="0.2413" ref="Cd112"/>
+            <fraction n="0.1222" ref="Cd113"/>
+            <fraction n="0.2873" ref="Cd114"/>
+            <fraction n="0.0749" ref="Cd116"/>
         </element>
         <material state="solid" name="G4_Cu">
             <D value="8.96" unit="g/cm3"/>
@@ -142,33 +177,1236 @@
             <fraction n="0.231781" ref="O"/>
             <fraction n="0.012827" ref="Ar"/>
         </material>
+        <material state="solid" name="G4_Cd">
+            <D value="8.65" unit="g/cm3"/>
+            <fraction n="1.0" ref="Cd"/>
+        </material>
+        <material name="LiquidScintillatorBase" state="solid">
+            <D unit="g/cm3" value="1.03"/>
+            <fraction n="0.085000" ref="G4_H"/>
+            <fraction n="0.915000" ref="G4_C"/>
+        </material>
+        <material name="LiquidScintillator1pctPb" state="solid">
+            <D unit="g/cm3" value="1.133200"/>
+            <fraction n="0.010000" ref="G4_Pb"/>
+            <fraction n="0.990000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator2pctPb" state="solid">
+            <D unit="g/cm3" value="1.236400"/>
+            <fraction n="0.020000" ref="G4_Pb"/>
+            <fraction n="0.980000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator3pctPb" state="solid">
+            <D unit="g/cm3" value="1.339600"/>
+            <fraction n="0.030000" ref="G4_Pb"/>
+            <fraction n="0.970000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator4pctPb" state="solid">
+            <D unit="g/cm3" value="1.442800"/>
+            <fraction n="0.040000" ref="G4_Pb"/>
+            <fraction n="0.960000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator5pctPb" state="solid">
+            <D unit="g/cm3" value="1.546000"/>
+            <fraction n="0.050000" ref="G4_Pb"/>
+            <fraction n="0.950000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator6pctPb" state="solid">
+            <D unit="g/cm3" value="1.649200"/>
+            <fraction n="0.060000" ref="G4_Pb"/>
+            <fraction n="0.940000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator7pctPb" state="solid">
+            <D unit="g/cm3" value="1.752400"/>
+            <fraction n="0.070000" ref="G4_Pb"/>
+            <fraction n="0.930000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator8pctPb" state="solid">
+            <D unit="g/cm3" value="1.855600"/>
+            <fraction n="0.080000" ref="G4_Pb"/>
+            <fraction n="0.920000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator9pctPb" state="solid">
+            <D unit="g/cm3" value="1.958800"/>
+            <fraction n="0.090000" ref="G4_Pb"/>
+            <fraction n="0.910000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator10pctPb" state="solid">
+            <D unit="g/cm3" value="2.062000"/>
+            <fraction n="0.100000" ref="G4_Pb"/>
+            <fraction n="0.900000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator11pctPb" state="solid">
+            <D unit="g/cm3" value="2.165200"/>
+            <fraction n="0.110000" ref="G4_Pb"/>
+            <fraction n="0.890000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator12pctPb" state="solid">
+            <D unit="g/cm3" value="2.268400"/>
+            <fraction n="0.120000" ref="G4_Pb"/>
+            <fraction n="0.880000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator13pctPb" state="solid">
+            <D unit="g/cm3" value="2.371600"/>
+            <fraction n="0.130000" ref="G4_Pb"/>
+            <fraction n="0.870000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator14pctPb" state="solid">
+            <D unit="g/cm3" value="2.474800"/>
+            <fraction n="0.140000" ref="G4_Pb"/>
+            <fraction n="0.860000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator15pctPb" state="solid">
+            <D unit="g/cm3" value="2.578000"/>
+            <fraction n="0.150000" ref="G4_Pb"/>
+            <fraction n="0.850000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator16pctPb" state="solid">
+            <D unit="g/cm3" value="2.681200"/>
+            <fraction n="0.160000" ref="G4_Pb"/>
+            <fraction n="0.840000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator17pctPb" state="solid">
+            <D unit="g/cm3" value="2.784400"/>
+            <fraction n="0.170000" ref="G4_Pb"/>
+            <fraction n="0.830000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator18pctPb" state="solid">
+            <D unit="g/cm3" value="2.887600"/>
+            <fraction n="0.180000" ref="G4_Pb"/>
+            <fraction n="0.820000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator19pctPb" state="solid">
+            <D unit="g/cm3" value="2.990800"/>
+            <fraction n="0.190000" ref="G4_Pb"/>
+            <fraction n="0.810000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator20pctPb" state="solid">
+            <D unit="g/cm3" value="3.094000"/>
+            <fraction n="0.200000" ref="G4_Pb"/>
+            <fraction n="0.800000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator21pctPb" state="solid">
+            <D unit="g/cm3" value="3.197200"/>
+            <fraction n="0.210000" ref="G4_Pb"/>
+            <fraction n="0.790000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator22pctPb" state="solid">
+            <D unit="g/cm3" value="3.300400"/>
+            <fraction n="0.220000" ref="G4_Pb"/>
+            <fraction n="0.780000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator23pctPb" state="solid">
+            <D unit="g/cm3" value="3.403600"/>
+            <fraction n="0.230000" ref="G4_Pb"/>
+            <fraction n="0.770000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator24pctPb" state="solid">
+            <D unit="g/cm3" value="3.506800"/>
+            <fraction n="0.240000" ref="G4_Pb"/>
+            <fraction n="0.760000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator25pctPb" state="solid">
+            <D unit="g/cm3" value="3.610000"/>
+            <fraction n="0.250000" ref="G4_Pb"/>
+            <fraction n="0.750000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator26pctPb" state="solid">
+            <D unit="g/cm3" value="3.713200"/>
+            <fraction n="0.260000" ref="G4_Pb"/>
+            <fraction n="0.740000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator27pctPb" state="solid">
+            <D unit="g/cm3" value="3.816400"/>
+            <fraction n="0.270000" ref="G4_Pb"/>
+            <fraction n="0.730000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator28pctPb" state="solid">
+            <D unit="g/cm3" value="3.919600"/>
+            <fraction n="0.280000" ref="G4_Pb"/>
+            <fraction n="0.720000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator29pctPb" state="solid">
+            <D unit="g/cm3" value="4.022800"/>
+            <fraction n="0.290000" ref="G4_Pb"/>
+            <fraction n="0.710000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator30pctPb" state="solid">
+            <D unit="g/cm3" value="4.126000"/>
+            <fraction n="0.300000" ref="G4_Pb"/>
+            <fraction n="0.700000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator31pctPb" state="solid">
+            <D unit="g/cm3" value="4.229200"/>
+            <fraction n="0.310000" ref="G4_Pb"/>
+            <fraction n="0.690000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator32pctPb" state="solid">
+            <D unit="g/cm3" value="4.332400"/>
+            <fraction n="0.320000" ref="G4_Pb"/>
+            <fraction n="0.680000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator33pctPb" state="solid">
+            <D unit="g/cm3" value="4.435600"/>
+            <fraction n="0.330000" ref="G4_Pb"/>
+            <fraction n="0.670000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator34pctPb" state="solid">
+            <D unit="g/cm3" value="4.538800"/>
+            <fraction n="0.340000" ref="G4_Pb"/>
+            <fraction n="0.660000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator35pctPb" state="solid">
+            <D unit="g/cm3" value="4.642000"/>
+            <fraction n="0.350000" ref="G4_Pb"/>
+            <fraction n="0.650000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator36pctPb" state="solid">
+            <D unit="g/cm3" value="4.745200"/>
+            <fraction n="0.360000" ref="G4_Pb"/>
+            <fraction n="0.640000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator37pctPb" state="solid">
+            <D unit="g/cm3" value="4.848400"/>
+            <fraction n="0.370000" ref="G4_Pb"/>
+            <fraction n="0.630000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator38pctPb" state="solid">
+            <D unit="g/cm3" value="4.951600"/>
+            <fraction n="0.380000" ref="G4_Pb"/>
+            <fraction n="0.620000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator39pctPb" state="solid">
+            <D unit="g/cm3" value="5.054800"/>
+            <fraction n="0.390000" ref="G4_Pb"/>
+            <fraction n="0.610000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator40pctPb" state="solid">
+            <D unit="g/cm3" value="5.158000"/>
+            <fraction n="0.400000" ref="G4_Pb"/>
+            <fraction n="0.600000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator41pctPb" state="solid">
+            <D unit="g/cm3" value="5.261200"/>
+            <fraction n="0.410000" ref="G4_Pb"/>
+            <fraction n="0.590000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator42pctPb" state="solid">
+            <D unit="g/cm3" value="5.364400"/>
+            <fraction n="0.420000" ref="G4_Pb"/>
+            <fraction n="0.580000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator43pctPb" state="solid">
+            <D unit="g/cm3" value="5.467600"/>
+            <fraction n="0.430000" ref="G4_Pb"/>
+            <fraction n="0.570000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator44pctPb" state="solid">
+            <D unit="g/cm3" value="5.570800"/>
+            <fraction n="0.440000" ref="G4_Pb"/>
+            <fraction n="0.560000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator45pctPb" state="solid">
+            <D unit="g/cm3" value="5.674000"/>
+            <fraction n="0.450000" ref="G4_Pb"/>
+            <fraction n="0.550000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator46pctPb" state="solid">
+            <D unit="g/cm3" value="5.777200"/>
+            <fraction n="0.460000" ref="G4_Pb"/>
+            <fraction n="0.540000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator47pctPb" state="solid">
+            <D unit="g/cm3" value="5.880400"/>
+            <fraction n="0.470000" ref="G4_Pb"/>
+            <fraction n="0.530000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator48pctPb" state="solid">
+            <D unit="g/cm3" value="5.983600"/>
+            <fraction n="0.480000" ref="G4_Pb"/>
+            <fraction n="0.520000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator49pctPb" state="solid">
+            <D unit="g/cm3" value="6.086800"/>
+            <fraction n="0.490000" ref="G4_Pb"/>
+            <fraction n="0.510000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator50pctPb" state="solid">
+            <D unit="g/cm3" value="6.190000"/>
+            <fraction n="0.500000" ref="G4_Pb"/>
+            <fraction n="0.500000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator51pctPb" state="solid">
+            <D unit="g/cm3" value="6.293200"/>
+            <fraction n="0.510000" ref="G4_Pb"/>
+            <fraction n="0.490000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator52pctPb" state="solid">
+            <D unit="g/cm3" value="6.396400"/>
+            <fraction n="0.520000" ref="G4_Pb"/>
+            <fraction n="0.480000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator53pctPb" state="solid">
+            <D unit="g/cm3" value="6.499600"/>
+            <fraction n="0.530000" ref="G4_Pb"/>
+            <fraction n="0.470000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator54pctPb" state="solid">
+            <D unit="g/cm3" value="6.602800"/>
+            <fraction n="0.540000" ref="G4_Pb"/>
+            <fraction n="0.460000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator55pctPb" state="solid">
+            <D unit="g/cm3" value="6.706000"/>
+            <fraction n="0.550000" ref="G4_Pb"/>
+            <fraction n="0.450000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator56pctPb" state="solid">
+            <D unit="g/cm3" value="6.809200"/>
+            <fraction n="0.560000" ref="G4_Pb"/>
+            <fraction n="0.440000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator57pctPb" state="solid">
+            <D unit="g/cm3" value="6.912400"/>
+            <fraction n="0.570000" ref="G4_Pb"/>
+            <fraction n="0.430000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator58pctPb" state="solid">
+            <D unit="g/cm3" value="7.015600"/>
+            <fraction n="0.580000" ref="G4_Pb"/>
+            <fraction n="0.420000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator59pctPb" state="solid">
+            <D unit="g/cm3" value="7.118800"/>
+            <fraction n="0.590000" ref="G4_Pb"/>
+            <fraction n="0.410000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator60pctPb" state="solid">
+            <D unit="g/cm3" value="7.222000"/>
+            <fraction n="0.600000" ref="G4_Pb"/>
+            <fraction n="0.400000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator61pctPb" state="solid">
+            <D unit="g/cm3" value="7.325200"/>
+            <fraction n="0.610000" ref="G4_Pb"/>
+            <fraction n="0.390000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator62pctPb" state="solid">
+            <D unit="g/cm3" value="7.428400"/>
+            <fraction n="0.620000" ref="G4_Pb"/>
+            <fraction n="0.380000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator63pctPb" state="solid">
+            <D unit="g/cm3" value="7.531600"/>
+            <fraction n="0.630000" ref="G4_Pb"/>
+            <fraction n="0.370000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator64pctPb" state="solid">
+            <D unit="g/cm3" value="7.634800"/>
+            <fraction n="0.640000" ref="G4_Pb"/>
+            <fraction n="0.360000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator65pctPb" state="solid">
+            <D unit="g/cm3" value="7.738000"/>
+            <fraction n="0.650000" ref="G4_Pb"/>
+            <fraction n="0.350000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator66pctPb" state="solid">
+            <D unit="g/cm3" value="7.841200"/>
+            <fraction n="0.660000" ref="G4_Pb"/>
+            <fraction n="0.340000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator67pctPb" state="solid">
+            <D unit="g/cm3" value="7.944400"/>
+            <fraction n="0.670000" ref="G4_Pb"/>
+            <fraction n="0.330000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator68pctPb" state="solid">
+            <D unit="g/cm3" value="8.047600"/>
+            <fraction n="0.680000" ref="G4_Pb"/>
+            <fraction n="0.320000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator69pctPb" state="solid">
+            <D unit="g/cm3" value="8.150800"/>
+            <fraction n="0.690000" ref="G4_Pb"/>
+            <fraction n="0.310000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator70pctPb" state="solid">
+            <D unit="g/cm3" value="8.254000"/>
+            <fraction n="0.700000" ref="G4_Pb"/>
+            <fraction n="0.300000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator71pctPb" state="solid">
+            <D unit="g/cm3" value="8.357200"/>
+            <fraction n="0.710000" ref="G4_Pb"/>
+            <fraction n="0.290000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator72pctPb" state="solid">
+            <D unit="g/cm3" value="8.460400"/>
+            <fraction n="0.720000" ref="G4_Pb"/>
+            <fraction n="0.280000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator73pctPb" state="solid">
+            <D unit="g/cm3" value="8.563600"/>
+            <fraction n="0.730000" ref="G4_Pb"/>
+            <fraction n="0.270000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator74pctPb" state="solid">
+            <D unit="g/cm3" value="8.666800"/>
+            <fraction n="0.740000" ref="G4_Pb"/>
+            <fraction n="0.260000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator75pctPb" state="solid">
+            <D unit="g/cm3" value="8.770000"/>
+            <fraction n="0.750000" ref="G4_Pb"/>
+            <fraction n="0.250000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator76pctPb" state="solid">
+            <D unit="g/cm3" value="8.873200"/>
+            <fraction n="0.760000" ref="G4_Pb"/>
+            <fraction n="0.240000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator77pctPb" state="solid">
+            <D unit="g/cm3" value="8.976400"/>
+            <fraction n="0.770000" ref="G4_Pb"/>
+            <fraction n="0.230000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator78pctPb" state="solid">
+            <D unit="g/cm3" value="9.079600"/>
+            <fraction n="0.780000" ref="G4_Pb"/>
+            <fraction n="0.220000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator79pctPb" state="solid">
+            <D unit="g/cm3" value="9.182800"/>
+            <fraction n="0.790000" ref="G4_Pb"/>
+            <fraction n="0.210000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator80pctPb" state="solid">
+            <D unit="g/cm3" value="9.286000"/>
+            <fraction n="0.800000" ref="G4_Pb"/>
+            <fraction n="0.200000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator81pctPb" state="solid">
+            <D unit="g/cm3" value="9.389200"/>
+            <fraction n="0.810000" ref="G4_Pb"/>
+            <fraction n="0.190000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator82pctPb" state="solid">
+            <D unit="g/cm3" value="9.492400"/>
+            <fraction n="0.820000" ref="G4_Pb"/>
+            <fraction n="0.180000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator83pctPb" state="solid">
+            <D unit="g/cm3" value="9.595600"/>
+            <fraction n="0.830000" ref="G4_Pb"/>
+            <fraction n="0.170000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator84pctPb" state="solid">
+            <D unit="g/cm3" value="9.698800"/>
+            <fraction n="0.840000" ref="G4_Pb"/>
+            <fraction n="0.160000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator85pctPb" state="solid">
+            <D unit="g/cm3" value="9.802000"/>
+            <fraction n="0.850000" ref="G4_Pb"/>
+            <fraction n="0.150000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator86pctPb" state="solid">
+            <D unit="g/cm3" value="9.905200"/>
+            <fraction n="0.860000" ref="G4_Pb"/>
+            <fraction n="0.140000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator87pctPb" state="solid">
+            <D unit="g/cm3" value="10.008400"/>
+            <fraction n="0.870000" ref="G4_Pb"/>
+            <fraction n="0.130000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator88pctPb" state="solid">
+            <D unit="g/cm3" value="10.111600"/>
+            <fraction n="0.880000" ref="G4_Pb"/>
+            <fraction n="0.120000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator89pctPb" state="solid">
+            <D unit="g/cm3" value="10.214800"/>
+            <fraction n="0.890000" ref="G4_Pb"/>
+            <fraction n="0.110000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator90pctPb" state="solid">
+            <D unit="g/cm3" value="10.318000"/>
+            <fraction n="0.900000" ref="G4_Pb"/>
+            <fraction n="0.100000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator91pctPb" state="solid">
+            <D unit="g/cm3" value="10.421200"/>
+            <fraction n="0.910000" ref="G4_Pb"/>
+            <fraction n="0.090000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator92pctPb" state="solid">
+            <D unit="g/cm3" value="10.524400"/>
+            <fraction n="0.920000" ref="G4_Pb"/>
+            <fraction n="0.080000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator93pctPb" state="solid">
+            <D unit="g/cm3" value="10.627600"/>
+            <fraction n="0.930000" ref="G4_Pb"/>
+            <fraction n="0.070000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator94pctPb" state="solid">
+            <D unit="g/cm3" value="10.730800"/>
+            <fraction n="0.940000" ref="G4_Pb"/>
+            <fraction n="0.060000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator95pctPb" state="solid">
+            <D unit="g/cm3" value="10.834000"/>
+            <fraction n="0.950000" ref="G4_Pb"/>
+            <fraction n="0.050000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator96pctPb" state="solid">
+            <D unit="g/cm3" value="10.937200"/>
+            <fraction n="0.960000" ref="G4_Pb"/>
+            <fraction n="0.040000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator97pctPb" state="solid">
+            <D unit="g/cm3" value="11.040400"/>
+            <fraction n="0.970000" ref="G4_Pb"/>
+            <fraction n="0.030000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator98pctPb" state="solid">
+            <D unit="g/cm3" value="11.143600"/>
+            <fraction n="0.980000" ref="G4_Pb"/>
+            <fraction n="0.020000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator99pctPb" state="solid">
+            <D unit="g/cm3" value="11.246800"/>
+            <fraction n="0.990000" ref="G4_Pb"/>
+            <fraction n="0.010000" ref="LiquidScintillatorBase"/>
+        </material>
+        <material name="LiquidScintillator1pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="1.133200"/>
+            <fraction n="0.010000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.989500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator2pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="1.236400"/>
+            <fraction n="0.020000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.979500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator3pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="1.339600"/>
+            <fraction n="0.030000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.969500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator4pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="1.442800"/>
+            <fraction n="0.040000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.959500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator5pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="1.546000"/>
+            <fraction n="0.050000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.949500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator6pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="1.649200"/>
+            <fraction n="0.060000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.939500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator7pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="1.752400"/>
+            <fraction n="0.070000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.929500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator8pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="1.855600"/>
+            <fraction n="0.080000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.919500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator9pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="1.958800"/>
+            <fraction n="0.090000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.909500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator10pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="2.062000"/>
+            <fraction n="0.100000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.899500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator11pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="2.165200"/>
+            <fraction n="0.110000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.889500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator12pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="2.268400"/>
+            <fraction n="0.120000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.879500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator13pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="2.371600"/>
+            <fraction n="0.130000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.869500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator14pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="2.474800"/>
+            <fraction n="0.140000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.859500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator15pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="2.578000"/>
+            <fraction n="0.150000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.849500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator16pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="2.681200"/>
+            <fraction n="0.160000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.839500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator17pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="2.784400"/>
+            <fraction n="0.170000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.829500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator18pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="2.887600"/>
+            <fraction n="0.180000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.819500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator19pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="2.990800"/>
+            <fraction n="0.190000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.809500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator20pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="3.094000"/>
+            <fraction n="0.200000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.799500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator21pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="3.197200"/>
+            <fraction n="0.210000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.789500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator22pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="3.300400"/>
+            <fraction n="0.220000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.779500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator23pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="3.403600"/>
+            <fraction n="0.230000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.769500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator24pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="3.506800"/>
+            <fraction n="0.240000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.759500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator25pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="3.610000"/>
+            <fraction n="0.250000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.749500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator26pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="3.713200"/>
+            <fraction n="0.260000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.739500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator27pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="3.816400"/>
+            <fraction n="0.270000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.729500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator28pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="3.919600"/>
+            <fraction n="0.280000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.719500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator29pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="4.022800"/>
+            <fraction n="0.290000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.709500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator30pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="4.126000"/>
+            <fraction n="0.300000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.699500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator31pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="4.229200"/>
+            <fraction n="0.310000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.689500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator32pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="4.332400"/>
+            <fraction n="0.320000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.679500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator33pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="4.435600"/>
+            <fraction n="0.330000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.669500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator34pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="4.538800"/>
+            <fraction n="0.340000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.659500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator35pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="4.642000"/>
+            <fraction n="0.350000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.649500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator36pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="4.745200"/>
+            <fraction n="0.360000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.639500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator37pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="4.848400"/>
+            <fraction n="0.370000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.629500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator38pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="4.951600"/>
+            <fraction n="0.380000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.619500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator39pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="5.054800"/>
+            <fraction n="0.390000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.609500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator40pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="5.158000"/>
+            <fraction n="0.400000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.599500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator41pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="5.261200"/>
+            <fraction n="0.410000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.589500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator42pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="5.364400"/>
+            <fraction n="0.420000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.579500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator43pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="5.467600"/>
+            <fraction n="0.430000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.569500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator44pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="5.570800"/>
+            <fraction n="0.440000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.559500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator45pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="5.674000"/>
+            <fraction n="0.450000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.549500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator46pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="5.777200"/>
+            <fraction n="0.460000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.539500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator47pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="5.880400"/>
+            <fraction n="0.470000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.529500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator48pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="5.983600"/>
+            <fraction n="0.480000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.519500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator49pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="6.086800"/>
+            <fraction n="0.490000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.509500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator50pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="6.190000"/>
+            <fraction n="0.500000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.499500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator51pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="6.293200"/>
+            <fraction n="0.510000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.489500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator52pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="6.396400"/>
+            <fraction n="0.520000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.479500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator53pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="6.499600"/>
+            <fraction n="0.530000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.469500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator54pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="6.602800"/>
+            <fraction n="0.540000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.459500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator55pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="6.706000"/>
+            <fraction n="0.550000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.449500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator56pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="6.809200"/>
+            <fraction n="0.560000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.439500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator57pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="6.912400"/>
+            <fraction n="0.570000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.429500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator58pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="7.015600"/>
+            <fraction n="0.580000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.419500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator59pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="7.118800"/>
+            <fraction n="0.590000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.409500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator60pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="7.222000"/>
+            <fraction n="0.600000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.399500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator61pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="7.325200"/>
+            <fraction n="0.610000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.389500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator62pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="7.428400"/>
+            <fraction n="0.620000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.379500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator63pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="7.531600"/>
+            <fraction n="0.630000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.369500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator64pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="7.634800"/>
+            <fraction n="0.640000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.359500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator65pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="7.738000"/>
+            <fraction n="0.650000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.349500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator66pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="7.841200"/>
+            <fraction n="0.660000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.339500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator67pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="7.944400"/>
+            <fraction n="0.670000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.329500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator68pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="8.047600"/>
+            <fraction n="0.680000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.319500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator69pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="8.150800"/>
+            <fraction n="0.690000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.309500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator70pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="8.254000"/>
+            <fraction n="0.700000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.299500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator71pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="8.357200"/>
+            <fraction n="0.710000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.289500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator72pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="8.460400"/>
+            <fraction n="0.720000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.279500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator73pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="8.563600"/>
+            <fraction n="0.730000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.269500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator74pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="8.666800"/>
+            <fraction n="0.740000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.259500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator75pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="8.770000"/>
+            <fraction n="0.750000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.249500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator76pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="8.873200"/>
+            <fraction n="0.760000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.239500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator77pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="8.976400"/>
+            <fraction n="0.770000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.229500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator78pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="9.079600"/>
+            <fraction n="0.780000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.219500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator79pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="9.182800"/>
+            <fraction n="0.790000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.209500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator80pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="9.286000"/>
+            <fraction n="0.800000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.199500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator81pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="9.389200"/>
+            <fraction n="0.810000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.189500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator82pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="9.492400"/>
+            <fraction n="0.820000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.179500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator83pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="9.595600"/>
+            <fraction n="0.830000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.169500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator84pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="9.698800"/>
+            <fraction n="0.840000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.159500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator85pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="9.802000"/>
+            <fraction n="0.850000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.149500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator86pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="9.905200"/>
+            <fraction n="0.860000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.139500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator87pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="10.008400"/>
+            <fraction n="0.870000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.129500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator88pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="10.111600"/>
+            <fraction n="0.880000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.119500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator89pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="10.214800"/>
+            <fraction n="0.890000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.109500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator90pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="10.318000"/>
+            <fraction n="0.900000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.099500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator91pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="10.421200"/>
+            <fraction n="0.910000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.089500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator92pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="10.524400"/>
+            <fraction n="0.920000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.079500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator93pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="10.627600"/>
+            <fraction n="0.930000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.069500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator94pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="10.730800"/>
+            <fraction n="0.940000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.059500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator95pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="10.834000"/>
+            <fraction n="0.950000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.049500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator96pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="10.937200"/>
+            <fraction n="0.960000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.039500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator97pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="11.040400"/>
+            <fraction n="0.970000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.029500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator98pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="11.143600"/>
+            <fraction n="0.980000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.019500" ref="LiquidScintillatorBase"/>
+        </material>
+
+        <material name="LiquidScintillator99pctPbWithCd" state="solid">
+            <D unit="g/cm3" value="11.246800"/>
+            <fraction n="0.990000" ref="G4_Pb"/>
+            <fraction n="0.000500" ref="G4_Cd"/>
+            <fraction n="0.009500" ref="LiquidScintillatorBase"/>
+        </material>
     </materials>
     <solids>
         <box lunit="mm" aunit="rad" name="chamberBodyBaseSolid" x="134.0" y="134.0" z="30.0"/>
-        <tube lunit="mm" aunit="rad" name="chamberBodyHoleSolid" rmax="51.0" z="30.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="chamberBodyHoleSolid" rmax="51.0" z="30.0" rmin="0.0" startphi="0.0"
+              deltaphi="6.283185307179586"/>
         <subtraction lunit="mm" aunit="rad" name="chamberBodySolid">
             <first ref="chamberBodyBaseSolid"/>
             <second ref="chamberBodyHoleSolid"/>
         </subtraction>
         <box lunit="mm" aunit="rad" name="chamberBackplateSolid" x="134.0" y="134.0" z="15.0"/>
-        <tube lunit="mm" aunit="rad" name="chamberTeflonWallSolid" rmax="51.0" z="30.0" rmin="50.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="chamberTeflonWallSolid" rmax="51.0" z="30.0" rmin="50.0" startphi="0.0"
+              deltaphi="6.283185307179586"/>
         <box lunit="mm" aunit="rad" name="kaptonReadoutSolid" x="134.0" y="134.0" z="0.5"/>
         <box lunit="mm" aunit="rad" name="copperReadoutSolid" x="60.0" y="60.0" z="0.2"/>
-        <tube lunit="mm" aunit="rad" name="cathodeTeflonDiskBaseSolid" rmax="67.0" z="5.0" rmin="15.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <tube lunit="mm" aunit="rad" name="cathodeCopperDiskSolid" rmax="45.0" z="1.0" rmin="8.5" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="cathodeTeflonDiskBaseSolid" rmax="67.0" z="5.0" rmin="15.0" startphi="0.0"
+              deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="cathodeCopperDiskSolid" rmax="45.0" z="1.0" rmin="8.5" startphi="0.0"
+              deltaphi="6.283185307179586"/>
         <subtraction lunit="mm" aunit="rad" name="cathodeTeflonDiskSolid">
             <position name="cathodeTeflonDiskSolid.position" z="-2.0" unit="mm"/>
             <first ref="cathodeTeflonDiskBaseSolid"/>
             <second ref="cathodeCopperDiskSolid"/>
         </subtraction>
-        <tube lunit="mm" aunit="rad" name="cathodeWindowSolid" rmax="15.0" z="0.004" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="cathodeWindowSolid" rmax="15.0" z="0.004" rmin="0.0" startphi="0.0"
+              deltaphi="6.283185307179586"/>
         <box lunit="mm" aunit="rad" name="cathodePatternLineAux" x="0.3" y="17.0" z="1.0"/>
-        <tube lunit="mm" aunit="rad" name="cathodePatternCentralHole" rmax="4.25" z="1.1" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="cathodePatternCentralHole" rmax="4.25" z="1.1" rmin="0.0" startphi="0.0"
+              deltaphi="6.283185307179586"/>
         <subtraction lunit="mm" aunit="rad" name="cathodePatternLine">
             <first ref="cathodePatternLineAux"/>
             <second ref="cathodePatternCentralHole"/>
         </subtraction>
-        <tube lunit="mm" aunit="rad" name="cathodePatternDisk" rmax="4.25" z="1.0" rmin="3.95" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="cathodePatternDisk" rmax="4.25" z="1.0" rmin="3.95" startphi="0.0"
+              deltaphi="6.283185307179586"/>
         <union lunit="mm" aunit="rad" name="cathodeCopperDiskSolidAux0">
             <rotation name="cathodeCopperDiskSolidAux0.rotation" unit="deg"/>
             <first ref="cathodeCopperDiskSolid"/>
@@ -193,13 +1431,15 @@
             <first ref="cathodeCopperDiskSolidAux3"/>
             <second ref="cathodePatternDisk"/>
         </union>
-        <tube lunit="mm" aunit="rad" name="cathodeFillingBaseSolid" rmax="15.0" z="5.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="cathodeFillingBaseSolid" rmax="15.0" z="5.0" rmin="0.0" startphi="0.0"
+              deltaphi="6.283185307179586"/>
         <subtraction lunit="mm" aunit="rad" name="cathodeFillingSolid">
             <position name="cathodeFillingSolid.position" z="-2.0" unit="mm"/>
             <first ref="cathodeFillingBaseSolid"/>
             <second ref="cathodeCopperDiskFinal.solid"/>
         </subtraction>
-        <tube lunit="mm" aunit="rad" name="gasSolidOriginal" rmax="50.0" z="30.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="gasSolidOriginal" rmax="50.0" z="30.0" rmin="0.0" startphi="0.0"
+              deltaphi="6.283185307179586"/>
         <subtraction lunit="mm" aunit="rad" name="gasSolidAux">
             <position name="gasSolidAux.position" z="-14.9" unit="mm"/>
             <rotation name="gasSolidAux.rotation" z="45.0" unit="deg"/>
@@ -211,10 +1451,14 @@
             <first ref="gasSolidAux"/>
             <second ref="cathodeWindowSolid"/>
         </subtraction>
-        <tube lunit="mm" aunit="rad" name="detectorPipeChamberFlangeSolid" rmax="67.0" z="14.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <tube lunit="mm" aunit="rad" name="detectorPipeTelescopeFlangeSolid" rmax="75.0" z="18.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <tube lunit="mm" aunit="rad" name="detectorPipeSection1of2Solid" rmax="46.0" z="327.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <tube lunit="mm" aunit="rad" name="detectorPipeSection2of2Solid" rmax="54.0" z="132.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="detectorPipeChamberFlangeSolid" rmax="67.0" z="14.0" rmin="0.0"
+              startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="detectorPipeTelescopeFlangeSolid" rmax="75.0" z="18.0" rmin="0.0"
+              startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="detectorPipeSection1of2Solid" rmax="46.0" z="327.0" rmin="0.0" startphi="0.0"
+              deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="detectorPipeSection2of2Solid" rmax="54.0" z="132.0" rmin="0.0" startphi="0.0"
+              deltaphi="6.283185307179586"/>
         <union lunit="mm" aunit="rad" name="detectorPipeAux1">
             <position name="detectorPipeAux1.position" z="170.5" unit="mm"/>
             <first ref="detectorPipeChamberFlangeSolid"/>
@@ -230,12 +1474,18 @@
             <first ref="detectorPipeAux2"/>
             <second ref="detectorPipeTelescopeFlangeSolid"/>
         </union>
-        <tube lunit="mm" aunit="rad" name="detectorPipeInside1of3Solid" rmax="21.5" z="179.35" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <tube lunit="mm" aunit="rad" name="detectorPipeInside2of3Solid" rmax="34.0" z="160.28" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <tube lunit="mm" aunit="rad" name="detectorPipeInside3of3Solid" rmax="42.5" z="106.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <cone lunit="mm" aunit="rad" name="detectorPipeInsideCone1of3Solid" z="21.65" rmax1="21.5" rmax2="34.0" deltaphi="6.283185307179586"/>
-        <cone lunit="mm" aunit="rad" name="detectorPipeInsideCone2of3Solid" z="14.72" rmax1="34.0" rmax2="42.5" deltaphi="6.283185307179586"/>
-        <cone lunit="mm" aunit="rad" name="detectorPipeInsideCone3of3Solid" z="9.0" rmax1="42.5" rmax2="54.0" deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="detectorPipeInside1of3Solid" rmax="21.5" z="179.35" rmin="0.0" startphi="0.0"
+              deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="detectorPipeInside2of3Solid" rmax="34.0" z="160.28" rmin="0.0" startphi="0.0"
+              deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="detectorPipeInside3of3Solid" rmax="42.5" z="106.0" rmin="0.0" startphi="0.0"
+              deltaphi="6.283185307179586"/>
+        <cone lunit="mm" aunit="rad" name="detectorPipeInsideCone1of3Solid" z="21.65" rmax1="21.5" rmax2="34.0"
+              deltaphi="6.283185307179586"/>
+        <cone lunit="mm" aunit="rad" name="detectorPipeInsideCone2of3Solid" z="14.72" rmax1="34.0" rmax2="42.5"
+              deltaphi="6.283185307179586"/>
+        <cone lunit="mm" aunit="rad" name="detectorPipeInsideCone3of3Solid" z="9.0" rmax1="42.5" rmax2="54.0"
+              deltaphi="6.283185307179586"/>
         <union lunit="mm" aunit="rad" name="detectorPipeInsideAux1">
             <position name="detectorPipeInsideAux1.position" z="100.5" unit="mm"/>
             <first ref="detectorPipeInside1of3Solid"/>
@@ -395,7 +1645,7 @@
             <solidref ref="leadBoxWithHoleAndEntrySolid"/>
         </volume>
         <volume name="liquidVetoVolume">
-            <materialref ref="BC408"/>
+            <materialref ref="LiquidScintillator10pctPbWithCd"/>
             <solidref ref="liquidVetoHoleAndEntry"/>
         </volume>
         <assembly name="vetoSystem">
