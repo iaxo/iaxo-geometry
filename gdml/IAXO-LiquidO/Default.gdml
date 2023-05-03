@@ -1645,7 +1645,7 @@
             <solidref ref="leadBoxWithHoleAndEntrySolid"/>
         </volume>
         <volume name="liquidVetoVolume">
-            <materialref ref="LiquidScintillator10pctPbWithCd"/>
+            <materialref ref="${LIQUIDO_SCINTILLATOR_MATERIAL}"/>
             <solidref ref="liquidVetoHoleAndEntry"/>
         </volume>
         <assembly name="vetoSystem">
