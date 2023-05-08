@@ -6,7 +6,7 @@ import space.kscience.gdml.*
 
 open class DetectorPipe : Geometry() {
     companion object Parameters {
-        const val TotalLength: Double = 491.0
+        private const val TotalLength: Double = 491.0
 
         // Outside
         const val ChamberFlangeThickness: Double = 14.0
@@ -24,21 +24,20 @@ open class DetectorPipe : Geometry() {
         const val Union3Z: Double = Union2Z + Section2of2Length / 2 + TelescopeFlangeThickness / 2
 
         // Inside
-
         const val InsideSection1of3Radius: Double = 43.0 / 2
         const val InsideSection2of3Radius: Double = 68.0 / 2
         const val InsideSection3of3Radius: Double = 85.0 / 2
         const val InsideSectionTelescopeRadius: Double = 108.0 / 2
         const val InsideCone1of3Length: Double = 21.65
         const val InsideCone2of3Length: Double = 14.72
-        const val InsideCone3of3Length: Double = 9.0
+        const val InsideCone3of3Length: Double = 8.50
         const val InsideSection3of3Length: Double = 115.0 - InsideCone3of3Length
         const val InsideSection2of3Length: Double =
             290.0 - InsideSection3of3Length - InsideCone3of3Length - InsideCone2of3Length
         const val InsideSection1of3Length: Double = 201.0 - InsideCone1of3Length
         const val InsideUnion1Z: Double = InsideSection1of3Length / 2 + InsideCone1of3Length / 2
         const val InsideUnion2Z: Double = InsideUnion1Z + InsideCone1of3Length / 2 + InsideSection2of3Length / 2
-        const val InsideUnion3Z: Double = InsideUnion1Z + InsideCone1of3Length / 2 + InsideSection2of3Length / 2
+        const val InsideUnion3Z: Double = InsideUnion2Z + InsideSection2of3Length / 2 + InsideCone2of3Length / 2
         const val InsideUnion4Z: Double = InsideUnion3Z + InsideCone2of3Length / 2 + InsideSection3of3Length / 2
         const val InsideUnion5Z: Double = InsideUnion4Z + InsideSection3of3Length / 2 + InsideCone3of3Length / 2
         const val FillingOffsetWithPipe: Double = InsideSection1of3Length / 2 - ChamberFlangeThickness / 2

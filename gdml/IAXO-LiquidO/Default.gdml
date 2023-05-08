@@ -60,30 +60,6 @@
         <isotope Z="82.0" N="208" name="Pb208">
             <atom value="207.977" unit="g/mole" type="A"/>
         </isotope>
-        <isotope Z="48.0" N="106" name="Cd106">
-            <atom value="105.906" unit="g/mole" type="A"/>
-        </isotope>
-        <isotope Z="48.0" N="108" name="Cd108">
-            <atom value="107.904" unit="g/mole" type="A"/>
-        </isotope>
-        <isotope Z="48.0" N="110" name="Cd110">
-            <atom value="109.903" unit="g/mole" type="A"/>
-        </isotope>
-        <isotope Z="48.0" N="111" name="Cd111">
-            <atom value="110.904" unit="g/mole" type="A"/>
-        </isotope>
-        <isotope Z="48.0" N="112" name="Cd112">
-            <atom value="111.903" unit="g/mole" type="A"/>
-        </isotope>
-        <isotope Z="48.0" N="113" name="Cd113">
-            <atom value="112.904" unit="g/mole" type="A"/>
-        </isotope>
-        <isotope Z="48.0" N="114" name="Cd114">
-            <atom value="113.903" unit="g/mole" type="A"/>
-        </isotope>
-        <isotope Z="48.0" N="116" name="Cd116">
-            <atom value="115.905" unit="g/mole" type="A"/>
-        </isotope>
         <element name="Cu">
             <fraction n="0.6917" ref="Cu63"/>
             <fraction n="0.3083" ref="Cu65"/>
@@ -118,16 +94,6 @@
             <fraction n="0.241" ref="Pb206"/>
             <fraction n="0.221" ref="Pb207"/>
             <fraction n="0.524" ref="Pb208"/>
-        </element>
-        <element name="Cd">
-            <fraction n="0.0125" ref="Cd106"/>
-            <fraction n="0.0089" ref="Cd108"/>
-            <fraction n="0.1249" ref="Cd110"/>
-            <fraction n="0.128" ref="Cd111"/>
-            <fraction n="0.2413" ref="Cd112"/>
-            <fraction n="0.1222" ref="Cd113"/>
-            <fraction n="0.2873" ref="Cd114"/>
-            <fraction n="0.0749" ref="Cd116"/>
         </element>
         <material state="solid" name="G4_Cu">
             <D value="8.96" unit="g/cm3"/>
@@ -177,10 +143,7 @@
             <fraction n="0.231781" ref="O"/>
             <fraction n="0.012827" ref="Ar"/>
         </material>
-        <material state="solid" name="G4_Cd">
-            <D value="8.65" unit="g/cm3"/>
-            <fraction n="1.0" ref="Cd"/>
-        </material>
+
         <material name="LiquidScintillatorBase" state="solid">
             <D unit="g/cm3" value="1.03"/>
             <fraction n="0.085000" ref="G4_H"/>
@@ -1478,13 +1441,13 @@
               deltaphi="6.283185307179586"/>
         <tube lunit="mm" aunit="rad" name="detectorPipeInside2of3Solid" rmax="34.0" z="160.28" rmin="0.0" startphi="0.0"
               deltaphi="6.283185307179586"/>
-        <tube lunit="mm" aunit="rad" name="detectorPipeInside3of3Solid" rmax="42.5" z="106.0" rmin="0.0" startphi="0.0"
+        <tube lunit="mm" aunit="rad" name="detectorPipeInside3of3Solid" rmax="42.5" z="106.5" rmin="0.0" startphi="0.0"
               deltaphi="6.283185307179586"/>
         <cone lunit="mm" aunit="rad" name="detectorPipeInsideCone1of3Solid" z="21.65" rmax1="21.5" rmax2="34.0"
               deltaphi="6.283185307179586"/>
         <cone lunit="mm" aunit="rad" name="detectorPipeInsideCone2of3Solid" z="14.72" rmax1="34.0" rmax2="42.5"
               deltaphi="6.283185307179586"/>
-        <cone lunit="mm" aunit="rad" name="detectorPipeInsideCone3of3Solid" z="9.0" rmax1="42.5" rmax2="54.0"
+        <cone lunit="mm" aunit="rad" name="detectorPipeInsideCone3of3Solid" z="8.5" rmax1="42.5" rmax2="54.0"
               deltaphi="6.283185307179586"/>
         <union lunit="mm" aunit="rad" name="detectorPipeInsideAux1">
             <position name="detectorPipeInsideAux1.position" z="100.5" unit="mm"/>
@@ -1497,17 +1460,17 @@
             <second ref="detectorPipeInside2of3Solid"/>
         </union>
         <union lunit="mm" aunit="rad" name="detectorPipeInsideAux3">
-            <position name="detectorPipeInsideAux3.position" z="191.465" unit="mm"/>
+            <position name="detectorPipeInsideAux3.position" z="278.96500000000003" unit="mm"/>
             <first ref="detectorPipeInsideAux2"/>
             <second ref="detectorPipeInsideCone2of3Solid"/>
         </union>
         <union lunit="mm" aunit="rad" name="detectorPipeInsideAux4">
-            <position name="detectorPipeInsideAux4.position" z="251.82500000000002" unit="mm"/>
+            <position name="detectorPipeInsideAux4.position" z="339.57500000000005" unit="mm"/>
             <first ref="detectorPipeInsideAux3"/>
             <second ref="detectorPipeInside3of3Solid"/>
         </union>
         <union lunit="mm" aunit="rad" name="detectorPipeInside">
-            <position name="detectorPipeInside.position" z="309.32500000000005" unit="mm"/>
+            <position name="detectorPipeInside.position" z="397.07500000000005" unit="mm"/>
             <first ref="detectorPipeInsideAux4"/>
             <second ref="detectorPipeInsideCone3of3Solid"/>
         </union>
