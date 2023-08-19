@@ -10,11 +10,12 @@ private const val worldSizeZ = 1450.0
 
 fun completeGeometry(
     vetoSystem: VetoSystem = VetoSystem(),
+    useXenon: Boolean = false,
 ): Gdml {
     return Gdml {
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
 
-        val chamberVolume = Chamber().generate(this)
+        val chamberVolume = Chamber(useXenon = useXenon).generate(this)
         val detectorPipeVolume = DetectorPipe().generate(this)
         val shieldingVolume = Shielding().generate(this)
         val vetoSystemVolume = vetoSystem.generate(this)
@@ -38,6 +39,7 @@ fun completeGeometry(
 
 val geometries = mapOf(
     "Default" to completeGeometry(),
+    "DefaultXenon" to completeGeometry(useXenon = true),
     "CompleteVeto1Layers" to completeGeometry(vetoSystem = VetoSystem(numberOfLayers = 1)),
     "CompleteVeto2Layers" to completeGeometry(vetoSystem = VetoSystem(numberOfLayers = 2)),
     "CompleteVeto3Layers" to completeGeometry(vetoSystem = VetoSystem(numberOfLayers = 3)),

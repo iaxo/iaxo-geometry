@@ -153,7 +153,7 @@ class VetoLayerFront(private val numberOfLayers: Int = 3) : Geometry() {
         val vetoLayerVolume: GdmlRef<GdmlAssembly> by lazy {
             return@lazy gdml.structure.assembly {
                 for (i in 1..numberOfLayers) {
-                    physVolume(vetoLayer, name = "vetoLayerBack$i") {
+                    physVolume(vetoLayer, name = "vetoLayerFront$i") {
                         position(
                             z = (Veto.FullThickness + 20) * (i - 1)
                         ) { unit = LUnit.MM }

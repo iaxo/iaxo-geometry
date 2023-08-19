@@ -1,10 +1,13 @@
 package BabyIAXO
 
 import Geometry
+import Materials
 
 import space.kscience.gdml.*
 
-open class Chamber : Geometry() {
+open class Chamber(
+    val useXenon: Boolean = false,
+) : Geometry() {
     companion object Parameters {
         // Body
         const val Height: Double = 30.0
@@ -184,7 +187,9 @@ open class Chamber : Geometry() {
                 gdml.solids.subtraction(gasSolidAux, cathodeWindowSolid, "gasSolid") {
                     position(z = Height / 2 - CathodeWindowThickness / 2) { unit = LUnit.MM }
                 }
-            val gasVolume = gdml.structure.volume(Materials.Gas.ref, gasSolid, "gasVolume")
+            val gasMaterialRef = if (useXenon) Materials.GasXenon.ref else Materials.GasArgon.ref
+
+            val gasVolume = gdml.structure.volume(gasMaterialRef, gasSolid, "gasVolume")
 
             return@lazy gdml.structure.assembly {
                 name = "Chamber"
