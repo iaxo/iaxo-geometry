@@ -6,7 +6,7 @@ void ViewGdml(string filename, float transparency = 50)
     TGeoNode *node = gGeoManager->GetTopNode();
     node->CheckOverlaps(0.0001);
 
-    for (int i = 0; i < gGeoManager->GetListOfVolumes()->GetEntries(); i++)
+    for (auto i = 0; i < gGeoManager->GetListOfVolumes()->GetEntries(); i++)
     {
         TGeoVolume *geoVolume = gGeoManager->GetVolume(i); // https://root.cern/doc/v606/classTGeoVolume.html
         if (!geoVolume)

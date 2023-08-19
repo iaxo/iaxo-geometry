@@ -27,7 +27,7 @@ fun main() {
 
         for ((name, gdml) in geometries) {
             File("$outputDirectoryName/$geometryName/$name.gdml")
-                .writeText(gdml.removeUnusedMaterials().encodeToString())
+                .writeText(gdml.encodeToString()) // do not use removeUnusedMaterials() here
         }
     }
 }

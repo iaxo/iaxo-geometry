@@ -46,6 +46,7 @@ fun completeGeometry(
 
 val geometries = mapOf(
     "Default" to completeGeometry(),
+    "DefaultXenon" to BabyIAXO.completeGeometry(useXenon = true),
     "CompleteVeto1Layers" to completeGeometry(vetoSystem = VetoSystem(numberOfLayers = 1)),
     "CompleteVeto2Layers" to completeGeometry(vetoSystem = VetoSystem(numberOfLayers = 2)),
     "CompleteVeto3Layers" to completeGeometry(vetoSystem = VetoSystem(numberOfLayers = 3)),
