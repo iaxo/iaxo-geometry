@@ -259,7 +259,7 @@ class VetoLayerBottom(private val numberOfLayers: Int = 3) : Geometry() {
     }
 }
 
-class VetoLayerEast(private val numberOfLayers: Int = 3) : Geometry() {
+class VetoLayerRight(private val numberOfLayers: Int = 3) : Geometry() {
     override fun generate(gdml: Gdml): GdmlRef<GdmlAssembly> {
 
         val vetoLayer = VetoLayer(4).generate(gdml)
@@ -267,7 +267,7 @@ class VetoLayerEast(private val numberOfLayers: Int = 3) : Geometry() {
         val vetoLayerVolume: GdmlRef<GdmlAssembly> by lazy {
             return@lazy gdml.structure.assembly {
                 for (i in 1..numberOfLayers) {
-                    physVolume(vetoLayer, name = "vetoLayerEast$i") {
+                    physVolume(vetoLayer, name = "vetoLayerRight$i") {
                         position(
                             x = -(Veto.FullThickness + 20) * (i - 1)
                         ) { unit = LUnit.MM }
@@ -281,7 +281,7 @@ class VetoLayerEast(private val numberOfLayers: Int = 3) : Geometry() {
     }
 }
 
-class VetoLayerWest(private val numberOfLayers: Int = 3) : Geometry() {
+class VetoLayerLeft(private val numberOfLayers: Int = 3) : Geometry() {
     override fun generate(gdml: Gdml): GdmlRef<GdmlAssembly> {
 
         val vetoLayer = VetoLayer(4).generate(gdml)
@@ -289,7 +289,7 @@ class VetoLayerWest(private val numberOfLayers: Int = 3) : Geometry() {
         val vetoLayerVolume: GdmlRef<GdmlAssembly> by lazy {
             return@lazy gdml.structure.assembly {
                 for (i in 1..numberOfLayers) {
-                    physVolume(vetoLayer, name = "vetoLayerWest$i") {
+                    physVolume(vetoLayer, name = "vetoLayerLeft$i") {
                         position(
                             x = (Veto.FullThickness + 20) * (i - 1)
                         ) { unit = LUnit.MM }
@@ -365,13 +365,13 @@ class VetoSystem(private val numberOfLayers: Int = 3) : Geometry() {
                         z = -Shielding.OffsetZ
                     ) { unit = LUnit.MM }
                 }
-                physVolume(VetoLayerEast(numberOfLayers).generate(gdml), name = "vetoSystemEast") {
+                physVolume(VetoLayerRight(numberOfLayers).generate(gdml), name = "vetoSystemRight") {
                     position(
                         x = -xyShieldingDistance - 130,
                         z = -Shielding.OffsetZ - 30
                     ) { unit = LUnit.MM }
                 }
-                physVolume(VetoLayerWest(numberOfLayers).generate(gdml), name = "vetoSystemWest") {
+                physVolume(VetoLayerLeft(numberOfLayers).generate(gdml), name = "vetoSystemLeft") {
                     position(
                         x = xyShieldingDistance + 130,
                         z = -Shielding.OffsetZ
