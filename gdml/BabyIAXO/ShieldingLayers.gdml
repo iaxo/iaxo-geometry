@@ -3125,11 +3125,125 @@
             <fraction n="0.019012" ref="C"/>
             <fraction n="0.003988" ref="H"/>
         </material>
+        <material state="gas" name="GasMixture-Argon1%Isobutane1.2Bar">
+            <D value="1.988417232" unit="kg/m3"/>
+            <fraction n="0.99" ref="Ar"/>
+            <fraction n="0.00827" ref="C"/>
+            <fraction n="0.00173" ref="H"/>
+        </material>
+        <material state="gas" name="GasMixture-Argon1%Isobutane1.4Bar">
+            <D value="2.319820104" unit="kg/m3"/>
+            <fraction n="0.99" ref="Ar"/>
+            <fraction n="0.00827" ref="C"/>
+            <fraction n="0.00173" ref="H"/>
+        </material>
+        <material state="gas" name="GasMixture-Argon1%Isobutane1.6Bar">
+            <D value="2.651222976" unit="kg/m3"/>
+            <fraction n="0.99" ref="Ar"/>
+            <fraction n="0.00827" ref="C"/>
+            <fraction n="0.00173" ref="H"/>
+        </material>
+        <material state="gas" name="GasMixture-Argon1%Isobutane1.8Bar">
+            <D value="2.982625848" unit="kg/m3"/>
+            <fraction n="0.99" ref="Ar"/>
+            <fraction n="0.00827" ref="C"/>
+            <fraction n="0.00173" ref="H"/>
+        </material>
+        <material state="gas" name="GasMixture-Argon1%Isobutane2.0Bar">
+            <D value="3.31402872" unit="kg/m3"/>
+            <fraction n="0.99" ref="Ar"/>
+            <fraction n="0.00827" ref="C"/>
+            <fraction n="0.00173" ref="H"/>
+        </material>
+        <material state="gas" name="GasMixture-Argon2%Isobutane1.2Bar">
+            <D value="1.988417232" unit="kg/m3"/>
+            <fraction n="0.98" ref="Ar"/>
+            <fraction n="0.016532" ref="C"/>
+            <fraction n="0.003468" ref="H"/>
+        </material>
         <material state="gas" name="GasMixture-Argon2%Isobutane1.4Bar">
             <D value="2.319820104" unit="kg/m3"/>
             <fraction n="0.98" ref="Ar"/>
             <fraction n="0.016532" ref="C"/>
             <fraction n="0.003468" ref="H"/>
+        </material>
+        <material state="gas" name="GasMixture-Argon2%Isobutane1.6Bar">
+            <D value="2.651222976" unit="kg/m3"/>
+            <fraction n="0.98" ref="Ar"/>
+            <fraction n="0.016532" ref="C"/>
+            <fraction n="0.003468" ref="H"/>
+        </material>
+        <material state="gas" name="GasMixture-Argon2%Isobutane1.8Bar">
+            <D value="2.982625848" unit="kg/m3"/>
+            <fraction n="0.98" ref="Ar"/>
+            <fraction n="0.016532" ref="C"/>
+            <fraction n="0.003468" ref="H"/>
+        </material>
+        <material state="gas" name="GasMixture-Argon2%Isobutane2.0Bar">
+            <D value="3.31402872" unit="kg/m3"/>
+            <fraction n="0.98" ref="Ar"/>
+            <fraction n="0.016532" ref="C"/>
+            <fraction n="0.003468" ref="H"/>
+        </material>
+        <material state="gas" name="GasMixture-Argon3%Isobutane1.2Bar">
+            <D value="1.988417232" unit="kg/m3"/>
+            <fraction n="0.97" ref="Ar"/>
+            <fraction n="0.024798" ref="C"/>
+            <fraction n="0.005202" ref="H"/>
+        </material>
+        <material state="gas" name="GasMixture-Argon3%Isobutane1.4Bar">
+            <D value="2.319820104" unit="kg/m3"/>
+            <fraction n="0.97" ref="Ar"/>
+            <fraction n="0.024798" ref="C"/>
+            <fraction n="0.005202" ref="H"/>
+        </material>
+        <material state="gas" name="GasMixture-Argon3%Isobutane1.6Bar">
+            <D value="2.651222976" unit="kg/m3"/>
+            <fraction n="0.97" ref="Ar"/>
+            <fraction n="0.024798" ref="C"/>
+            <fraction n="0.005202" ref="H"/>
+        </material>
+        <material state="gas" name="GasMixture-Argon3%Isobutane1.8Bar">
+            <D value="2.982625848" unit="kg/m3"/>
+            <fraction n="0.97" ref="Ar"/>
+            <fraction n="0.024798" ref="C"/>
+            <fraction n="0.005202" ref="H"/>
+        </material>
+        <material state="gas" name="GasMixture-Argon3%Isobutane2.0Bar">
+            <D value="3.31402872" unit="kg/m3"/>
+            <fraction n="0.97" ref="Ar"/>
+            <fraction n="0.024798" ref="C"/>
+            <fraction n="0.005202" ref="H"/>
+        </material>
+        <material state="gas" name="GasMixture-Argon5%Isobutane1.2Bar">
+            <D value="1.988417232" unit="kg/m3"/>
+            <fraction n="0.95" ref="Ar"/>
+            <fraction n="0.04133" ref="C"/>
+            <fraction n="0.00867" ref="H"/>
+        </material>
+        <material state="gas" name="GasMixture-Argon5%Isobutane1.4Bar">
+            <D value="2.319820104" unit="kg/m3"/>
+            <fraction n="0.95" ref="Ar"/>
+            <fraction n="0.04133" ref="C"/>
+            <fraction n="0.00867" ref="H"/>
+        </material>
+        <material state="gas" name="GasMixture-Argon5%Isobutane1.6Bar">
+            <D value="2.651222976" unit="kg/m3"/>
+            <fraction n="0.95" ref="Ar"/>
+            <fraction n="0.04133" ref="C"/>
+            <fraction n="0.00867" ref="H"/>
+        </material>
+        <material state="gas" name="GasMixture-Argon5%Isobutane1.8Bar">
+            <D value="2.982625848" unit="kg/m3"/>
+            <fraction n="0.95" ref="Ar"/>
+            <fraction n="0.04133" ref="C"/>
+            <fraction n="0.00867" ref="H"/>
+        </material>
+        <material state="gas" name="GasMixture-Argon5%Isobutane2.0Bar">
+            <D value="3.31402872" unit="kg/m3"/>
+            <fraction n="0.95" ref="Ar"/>
+            <fraction n="0.04133" ref="C"/>
+            <fraction n="0.00867" ref="H"/>
         </material>
         <material state="gas" name="GasMixture-Xenon2%Isobutane1.4Bar">
             <D value="7.496860518" unit="kg/m3"/>
