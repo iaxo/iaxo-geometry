@@ -3389,7 +3389,8 @@
             <first ref="cathodeTeflonDiskBaseSolid"/>
             <second ref="cathodeCopperDiskSolid"/>
         </subtraction>
-        <tube lunit="mm" aunit="rad" name="cathodeWindowSolid" rmax="15.0" z="0.004" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="cathodeWindowMylarSolid" rmax="15.0" z="0.00396" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <tube lunit="mm" aunit="rad" name="cathodeWindowAluminiumSolid" rmax="15.0" z="4.0E-5" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
         <box lunit="mm" aunit="rad" name="cathodePatternLineAux" x="0.3" y="17.0" z="1.0"/>
         <tube lunit="mm" aunit="rad" name="cathodePatternCentralHole" rmax="4.25" z="1.1" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
         <subtraction lunit="mm" aunit="rad" name="cathodePatternLine">
@@ -3428,16 +3429,21 @@
             <second ref="cathodeCopperDiskFinal.solid"/>
         </subtraction>
         <tube lunit="mm" aunit="rad" name="gasSolidOriginal" rmax="50.0" z="30.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
-        <subtraction lunit="mm" aunit="rad" name="gasSolidAux">
-            <position name="gasSolidAux.position" z="-14.9" unit="mm"/>
-            <rotation name="gasSolidAux.rotation" z="45.0" unit="deg"/>
+        <subtraction lunit="mm" aunit="rad" name="gasSolidAux1">
+            <position name="gasSolidAux1.position" z="-14.9" unit="mm"/>
+            <rotation name="gasSolidAux1.rotation" z="45.0" unit="deg"/>
             <first ref="gasSolidOriginal"/>
             <second ref="copperReadoutSolid"/>
         </subtraction>
+        <subtraction lunit="mm" aunit="rad" name="gasSolidAux2">
+            <position name="gasSolidAux2.position" z="14.996020000000001" unit="mm"/>
+            <first ref="gasSolidAux1"/>
+            <second ref="cathodeWindowAluminiumSolid"/>
+        </subtraction>
         <subtraction lunit="mm" aunit="rad" name="gasSolid">
-            <position name="gasSolid.position" z="14.998" unit="mm"/>
-            <first ref="gasSolidAux"/>
-            <second ref="cathodeWindowSolid"/>
+            <position name="gasSolid.position" z="14.99802" unit="mm"/>
+            <first ref="gasSolidAux2"/>
+            <second ref="cathodeWindowMylarSolid"/>
         </subtraction>
         <tube lunit="mm" aunit="rad" name="detectorPipeChamberFlangeSolid" rmax="67.0" z="14.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
         <tube lunit="mm" aunit="rad" name="detectorPipeTelescopeFlangeSolid" rmax="75.0" z="18.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
@@ -3556,9 +3562,13 @@
             <materialref ref="G4_TEFLON"/>
             <solidref ref="cathodeTeflonDiskSolid"/>
         </volume>
-        <volume name="cathodeWindowVolume">
+        <volume name="cathodeWindowMylarVolume">
             <materialref ref="G4_MYLAR"/>
-            <solidref ref="cathodeWindowSolid"/>
+            <solidref ref="cathodeWindowMylarSolid"/>
+        </volume>
+        <volume name="cathodeWindowAluminiumVolume">
+            <materialref ref="G4_Al"/>
+            <solidref ref="cathodeWindowAluminiumSolid"/>
         </volume>
         <volume name="cathodeCopperDiskFinal">
             <materialref ref="G4_Cu"/>
@@ -3595,9 +3605,13 @@
                 <position name="copperReadout.position" z="-14.9" unit="mm"/>
                 <rotation name="copperReadout.rotation" z="45.0" unit="deg"/>
             </physvol>
-            <physvol name="cathodeWindow">
-                <volumeref ref="cathodeWindowVolume"/>
-                <position name="cathodeWindow.position" z="14.998" unit="mm"/>
+            <physvol name="cathodeWindowMylar">
+                <volumeref ref="cathodeWindowMylarVolume"/>
+                <position name="cathodeWindowMylar.position" z="14.99802" unit="mm"/>
+            </physvol>
+            <physvol name="cathodeWindowAluminium">
+                <volumeref ref="cathodeWindowAluminiumVolume"/>
+                <position name="cathodeWindowAluminium.position" z="14.996020000000001" unit="mm"/>
             </physvol>
             <physvol name="cathodeTeflonDisk">
                 <volumeref ref="cathodeTeflonDiskVolume"/>
