@@ -28,6 +28,8 @@ open class Chamber(
         const val CathodeCopperSupportInnerRadius: Double = 8.5
         const val CathodeCopperSupportThickness: Double = 1.0
         const val CathodeWindowThickness: Double = 0.004
+        const val CathodeWindowAliminiumThickness: Double = 0.00004
+        const val CathodeWindowMylarThickness: Double = CathodeWindowThickness - CathodeWindowAliminiumThickness
         const val CathodePatternDiskRadius: Double = 4.25
         const val CathodePatternLineWidth: Double = 0.3
     }
