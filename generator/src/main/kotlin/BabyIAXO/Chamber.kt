@@ -200,10 +200,12 @@ open class Chamber(
             }
             val gasSolidAux2 =
                 gdml.solids.subtraction(gasSolidAux1, cathodeWindowAluminiumSolid, "gasSolidAux2") {
-                    position(z = Height / 2 - CathodeWindowAliminiumThickness / 2) { unit = LUnit.MM }
+                    position(z = Height / 2 - CathodeWindowMylarThickness - CathodeWindowAliminiumThickness / 2) {
+                        unit = LUnit.MM
+                    }
                 }
             val gasSolid = gdml.solids.subtraction(gasSolidAux2, cathodeWindowMylarSolid, "gasSolid") {
-                position(z = Height / 2 + CathodeWindowAliminiumThickness - CathodeWindowMylarThickness / 2) {
+                position(z = Height / 2 - CathodeWindowMylarThickness / 2) {
                     unit = LUnit.MM
                 }
             }
@@ -230,12 +232,14 @@ open class Chamber(
                     rotation(z = 45) { unit = AUnit.DEG }
                 }
                 physVolume(cathodeWindowMylarVolume, name = "cathodeWindowMylar") {
-                    position(z = Height / 2 + CathodeWindowAliminiumThickness - CathodeWindowMylarThickness / 2) {
+                    position(z = Height / 2 - CathodeWindowMylarThickness / 2) {
                         unit = LUnit.MM
                     }
                 }
                 physVolume(cathodeWindowAluminiumVolume, name = "cathodeWindowAluminium") {
-                    position(z = Height / 2 - CathodeWindowAliminiumThickness / 2) { unit = LUnit.MM }
+                    position(z = Height / 2 - CathodeWindowMylarThickness - CathodeWindowAliminiumThickness / 2) {
+                        unit = LUnit.MM
+                    }
                 }
                 physVolume(cathodeTeflonDiskVolume, name = "cathodeTeflonDisk") {
                     position(z = Height / 2 + CathodeTeflonDiskThickness / 2) { unit = LUnit.MM }
