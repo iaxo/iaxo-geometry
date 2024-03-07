@@ -26,6 +26,7 @@ enum class Materials(val ref: GdmlRef<GdmlMaterial>) {
     Teflon(resolve("G4_TEFLON")),
     Kapton(resolve("G4_KAPTON")),
     Mylar(resolve("G4_MYLAR")),
+    Aluminium(resolve("G4_Al")),
     Lead(resolve("G4_Pb")),
     BC408(resolve("BC408")),
     Cadmium(resolve("G4_Cd")),
