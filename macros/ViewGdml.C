@@ -5,6 +5,8 @@ void ViewGdml(string filename, float transparency = 50)
     // check for overlaps
     TGeoNode *node = gGeoManager->GetTopNode();
     node->CheckOverlaps(0.0001);
+    // print overlaps
+    gGeoManager->PrintOverlaps();
 
     for (auto i = 0; i < gGeoManager->GetListOfVolumes()->GetEntries(); i++)
     {
