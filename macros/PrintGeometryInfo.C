@@ -99,7 +99,8 @@ void PrintGeometryInfo(const std::string &gdmlfile){
         for (int i = 0; i < info.level; ++i) {
             std::cout << "\t";
         }
-        std::cout << "Material: " << info.material << ", Density: " << info.density << " g/cm^3" << ", Volume: " << info.volume << " cm^3" << ", Daughters: " << info.ndaughters << std::endl;
+        std::cout << "Material: " << info.material << ", Density: " << info.density << " g/cm^3" << ", Volume: " << info.volume << " cm^3" << ", Mass: " << info.density * info.volume * 0.001 << " kg" << ", Daughters: " << info.ndaughters << std::endl;
+
         for (int i = 0; i < info.level; ++i) {
             std::cout << "\t";
         }
