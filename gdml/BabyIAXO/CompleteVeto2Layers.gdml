@@ -3500,8 +3500,15 @@
             <first ref="detectorPipeNotEmpty"/>
             <second ref="detectorPipeInside"/>
         </subtraction>
-        <box lunit="mm" aunit="rad" name="leadBoxSolid" x="590.0" y="590.0" z="540.0"/>
-        <box lunit="mm" aunit="rad" name="leadBoxShaftSolid" x="194.0" y="170.0" z="340.0"/>
+        <box lunit="mm" aunit="rad" name="copperBoxOutterSolid" x="200.0" y="200.0" z="350.0"/>
+        <box lunit="mm" aunit="rad" name="copperBoxInnerSolid" x="180.0" y="150.0" z="350.0"/>
+        <subtraction lunit="mm" aunit="rad" name="copperBoxSolid">
+            <position name="copperBoxSolid.position" z="10.0" unit="mm"/>
+            <first ref="copperBoxOutterSolid"/>
+            <second ref="copperBoxInnerSolid"/>
+        </subtraction>
+        <box lunit="mm" aunit="rad" name="leadBoxSolid" x="590.0" y="590.0" z="550.0"/>
+        <box lunit="mm" aunit="rad" name="leadBoxShaftSolid" x="200.0" y="200.0" z="350.0"/>
         <subtraction lunit="mm" aunit="rad" name="leadBoxWithShaftSolid">
             <position name="leadBoxWithShaftSolid.position" z="100.0" unit="mm"/>
             <first ref="leadBoxSolid"/>
@@ -3656,6 +3663,10 @@
                 <position name="detectorPipeFilling.position" z="82.675" unit="mm"/>
             </physvol>
         </assembly>
+        <volume name="copperBoxVolume">
+            <materialref ref="G4_Cu"/>
+            <solidref ref="copperBoxSolid"/>
+        </volume>
         <volume name="shieldingVolume">
             <materialref ref="G4_Pb"/>
             <solidref ref="leadBoxWithShaftSolid"/>
@@ -3663,7 +3674,11 @@
         <assembly name="shielding">
             <physvol name="shielding20cm">
                 <volumeref ref="shieldingVolume"/>
-                <position name="shielding20cm.position" z="29.5" unit="mm"/>
+                <position name="shielding20cm.position" z="19.5" unit="mm"/>
+            </physvol>
+            <physvol name="copperBox">
+                <volumeref ref="copperBoxVolume"/>
+                <position name="copperBox.position" z="119.5" unit="mm"/>
             </physvol>
         </assembly>
         <volume name="scintillatorVolume-800.0mm">
@@ -4022,27 +4037,27 @@
         <assembly name="assembly-3">
             <physvol name="vetoSystemTop">
                 <volumeref ref="assembly-6"/>
-                <position name="vetoSystemTop.position" y="352.0" z="29.5" unit="mm"/>
+                <position name="vetoSystemTop.position" y="352.0" z="19.5" unit="mm"/>
             </physvol>
             <physvol name="vetoSystemBottom">
                 <volumeref ref="assembly-9"/>
-                <position name="vetoSystemBottom.position" y="-352.0" z="29.5" unit="mm"/>
+                <position name="vetoSystemBottom.position" y="-352.0" z="19.5" unit="mm"/>
             </physvol>
             <physvol name="vetoSystemRight">
                 <volumeref ref="assembly-12"/>
-                <position name="vetoSystemRight.position" x="-462.0" z="-0.5" unit="mm"/>
+                <position name="vetoSystemRight.position" x="-462.0" z="-10.5" unit="mm"/>
             </physvol>
             <physvol name="vetoSystemLeft">
                 <volumeref ref="assembly-15"/>
-                <position name="vetoSystemLeft.position" x="462.0" z="29.5" unit="mm"/>
+                <position name="vetoSystemLeft.position" x="462.0" z="19.5" unit="mm"/>
             </physvol>
             <physvol name="vetoSystemBack">
                 <volumeref ref="assembly-18"/>
-                <position name="vetoSystemBack.position" y="80.0" z="-407.5" unit="mm"/>
+                <position name="vetoSystemBack.position" y="80.0" z="-422.5" unit="mm"/>
             </physvol>
             <physvol name="vetoSystemFront">
                 <volumeref ref="assembly-22"/>
-                <position name="vetoSystemFront.position" z="466.5" unit="mm"/>
+                <position name="vetoSystemFront.position" z="461.5" unit="mm"/>
             </physvol>
         </assembly>
         <volume name="world">
