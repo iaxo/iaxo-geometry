@@ -4,7 +4,7 @@ import Geometry
 
 import space.kscience.gdml.*
 
-open class Shielding(open val layers: Boolean = false) : Geometry() {
+open class Shielding(open val layers: Boolean = false, open val copperBox: Boolean = true) : Geometry() {
     companion object Parameters {
         const val SizeXY: Double = 600.0
         const val SizeZ: Double = 550.0
@@ -164,8 +164,10 @@ open class Shielding(open val layers: Boolean = false) : Geometry() {
                 return@lazy gdml.structure.assembly {
                     name = "shielding"
 
-                    physVolume(copperBoxVolume, name = "copperBox") {
-                        position(z = -OffsetZ + SizeZ / 2 - ShaftLongSide / 2) { unit = LUnit.MM }
+                    if (copperBox) {
+                        physVolume(copperBoxVolume, name = "copperBox") {
+                            position(z = -OffsetZ + SizeZ / 2 - ShaftLongSide / 2) { unit = LUnit.MM }
+                        }
                     }
 
                     if (shieldingLayerLastNullable != null) {
