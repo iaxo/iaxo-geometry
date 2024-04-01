@@ -3542,7 +3542,7 @@
             <first ref="copperBoxOutterSolid"/>
             <second ref="copperBoxInnerSolid"/>
         </subtraction>
-        <box lunit="mm" aunit="rad" name="worldBox" x="1450.0" y="1600.0" z="1450.0"/>
+        <box lunit="mm" aunit="rad" name="worldBox" x="1350.0" y="1350.0" z="3000.0"/>
     </solids>
     <structure>
         <volume name="chamberBodyVolume">
@@ -3675,10 +3675,6 @@
             <solidref ref="copperBoxSolid"/>
         </volume>
         <assembly name="shielding">
-            <physvol name="copperBox">
-                <volumeref ref="copperBoxVolume"/>
-                <position name="copperBox.position" z="119.5" unit="mm"/>
-            </physvol>
             <physvol name="shieldingLayer1">
                 <volumeref ref="shieldingVolumeLayer1"/>
                 <position name="shieldingLayer1.position" z="99.5" unit="mm"/>

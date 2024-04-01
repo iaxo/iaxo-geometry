@@ -3675,10 +3675,6 @@
             <solidref ref="copperBoxSolid"/>
         </volume>
         <assembly name="shielding">
-            <physvol name="copperBox">
-                <volumeref ref="copperBoxVolume"/>
-                <position name="copperBox.position" z="119.5" unit="mm"/>
-            </physvol>
             <physvol name="shieldingLayer1">
                 <volumeref ref="shieldingVolumeLayer1"/>
                 <position name="shieldingLayer1.position" z="99.5" unit="mm"/>
