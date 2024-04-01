@@ -3528,12 +3528,12 @@
             <first ref="shieldingLayerBox4"/>
             <second ref="shieldingLayerHole4"/>
         </subtraction>
-        <box lunit="mm" aunit="rad" name="leadBoxSolid" x="590.0" y="590.0" z="550.0"/>
-        <box lunit="mm" aunit="rad" name="leadBoxShaftSolid" x="520.0" y="520.0" z="510.0"/>
-        <subtraction lunit="mm" aunit="rad" name="leadBoxWithShaftSolid">
-            <position name="leadBoxWithShaftSolid.position" z="20.0" unit="mm"/>
-            <first ref="leadBoxSolid"/>
-            <second ref="leadBoxShaftSolid"/>
+        <box lunit="mm" aunit="rad" name="shieldingLayerBox5" x="600.0" y="600.0" z="550.0"/>
+        <box lunit="mm" aunit="rad" name="shieldingLayerHole5" x="520.0" y="520.0" z="510.0"/>
+        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole5">
+            <position name="shieldingLayerBoxWithHole5.position" z="20.0" unit="mm"/>
+            <first ref="shieldingLayerBox5"/>
+            <second ref="shieldingLayerHole5"/>
         </subtraction>
         <box lunit="mm" aunit="rad" name="copperBoxOutterSolid" x="200.0" y="200.0" z="350.0"/>
         <box lunit="mm" aunit="rad" name="copperBoxInnerSolid" x="180.0" y="150.0" z="350.0"/>
@@ -3666,9 +3666,9 @@
             <materialref ref="G4_Pb"/>
             <solidref ref="shieldingLayerBoxWithHole4"/>
         </volume>
-        <volume name="shieldingVolumeLayerLast">
+        <volume name="shieldingVolumeLayer5">
             <materialref ref="G4_Pb"/>
-            <solidref ref="leadBoxWithShaftSolid"/>
+            <solidref ref="shieldingLayerBoxWithHole5"/>
         </volume>
         <volume name="copperBoxVolume">
             <materialref ref="G4_Cu"/>
@@ -3678,10 +3678,6 @@
             <physvol name="copperBox">
                 <volumeref ref="copperBoxVolume"/>
                 <position name="copperBox.position" z="119.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayerLast">
-                <volumeref ref="shieldingVolumeLayerLast"/>
-                <position name="shieldingLayerLast.position" z="19.5" unit="mm"/>
             </physvol>
             <physvol name="shieldingLayer1">
                 <volumeref ref="shieldingVolumeLayer1"/>
@@ -3698,6 +3694,10 @@
             <physvol name="shieldingLayer4">
                 <volumeref ref="shieldingVolumeLayer4"/>
                 <position name="shieldingLayer4.position" z="39.5" unit="mm"/>
+            </physvol>
+            <physvol name="shieldingLayer5">
+                <volumeref ref="shieldingVolumeLayer5"/>
+                <position name="shieldingLayer5.position" z="19.5" unit="mm"/>
             </physvol>
         </assembly>
         <volume name="world">

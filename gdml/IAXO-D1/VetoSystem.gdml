@@ -3799,19 +3799,19 @@
         <assembly name="assembly-0">
             <physvol name="vetoSystemTop">
                 <volumeref ref="assembly-3"/>
-                <position name="vetoSystemTop.position" y="322.0" z="19.5" unit="mm"/>
+                <position name="vetoSystemTop.position" y="327.0" z="19.5" unit="mm"/>
             </physvol>
             <physvol name="vetoSystemBottom">
                 <volumeref ref="assembly-8"/>
-                <position name="vetoSystemBottom.position" y="-432.0" z="19.5" unit="mm"/>
+                <position name="vetoSystemBottom.position" y="-437.0" z="19.5" unit="mm"/>
             </physvol>
             <physvol name="vetoSystemRight">
                 <volumeref ref="assembly-11"/>
-                <position name="vetoSystemRight.position" x="-382.0" z="119.5" unit="mm"/>
+                <position name="vetoSystemRight.position" x="-387.0" z="119.5" unit="mm"/>
             </physvol>
             <physvol name="vetoSystemLeft">
                 <volumeref ref="assembly-14"/>
-                <position name="vetoSystemLeft.position" x="382.0" z="-80.5" unit="mm"/>
+                <position name="vetoSystemLeft.position" x="387.0" z="-80.5" unit="mm"/>
             </physvol>
             <physvol name="vetoSystemBack">
                 <volumeref ref="assembly-17"/>

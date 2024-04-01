@@ -3507,7 +3507,7 @@
             <first ref="copperBoxOutterSolid"/>
             <second ref="copperBoxInnerSolid"/>
         </subtraction>
-        <box lunit="mm" aunit="rad" name="leadBoxSolid" x="590.0" y="590.0" z="550.0"/>
+        <box lunit="mm" aunit="rad" name="leadBoxSolid" x="600.0" y="600.0" z="550.0"/>
         <box lunit="mm" aunit="rad" name="leadBoxShaftSolid" x="200.0" y="200.0" z="350.0"/>
         <subtraction lunit="mm" aunit="rad" name="leadBoxWithShaftSolid">
             <position name="leadBoxWithShaftSolid.position" z="100.0" unit="mm"/>
@@ -4064,19 +4064,19 @@
         <assembly name="assembly-3">
             <physvol name="vetoSystemTop">
                 <volumeref ref="assembly-6"/>
-                <position name="vetoSystemTop.position" y="322.0" z="19.5" unit="mm"/>
+                <position name="vetoSystemTop.position" y="327.0" z="19.5" unit="mm"/>
             </physvol>
             <physvol name="vetoSystemBottom">
                 <volumeref ref="assembly-11"/>
-                <position name="vetoSystemBottom.position" y="-432.0" z="19.5" unit="mm"/>
+                <position name="vetoSystemBottom.position" y="-437.0" z="19.5" unit="mm"/>
             </physvol>
             <physvol name="vetoSystemRight">
                 <volumeref ref="assembly-14"/>
-                <position name="vetoSystemRight.position" x="-382.0" z="119.5" unit="mm"/>
+                <position name="vetoSystemRight.position" x="-387.0" z="119.5" unit="mm"/>
             </physvol>
             <physvol name="vetoSystemLeft">
                 <volumeref ref="assembly-17"/>
-                <position name="vetoSystemLeft.position" x="382.0" z="-80.5" unit="mm"/>
+                <position name="vetoSystemLeft.position" x="387.0" z="-80.5" unit="mm"/>
             </physvol>
             <physvol name="vetoSystemBack">
                 <volumeref ref="assembly-20"/>

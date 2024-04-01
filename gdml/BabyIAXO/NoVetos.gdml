@@ -3507,7 +3507,7 @@
             <first ref="copperBoxOutterSolid"/>
             <second ref="copperBoxInnerSolid"/>
         </subtraction>
-        <box lunit="mm" aunit="rad" name="leadBoxSolid" x="590.0" y="590.0" z="550.0"/>
+        <box lunit="mm" aunit="rad" name="leadBoxSolid" x="600.0" y="600.0" z="550.0"/>
         <box lunit="mm" aunit="rad" name="leadBoxShaftSolid" x="200.0" y="200.0" z="350.0"/>
         <subtraction lunit="mm" aunit="rad" name="leadBoxWithShaftSolid">
             <position name="leadBoxWithShaftSolid.position" z="100.0" unit="mm"/>
