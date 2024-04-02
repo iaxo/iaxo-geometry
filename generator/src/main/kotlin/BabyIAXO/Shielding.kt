@@ -15,7 +15,7 @@ open class Shielding(open val layers: Boolean = false, open val copperBox: Boole
 
         const val copperBoxThickness: Double = 10.0
 
-        const val MultiLayerThickness: Double = 40.0
+        const val MultiLayerThickness: Double = 10.0
 
         private const val DetectorToShieldingSeparation: Double = -60.0 + copperBoxThickness
         const val EnvelopeThickness: Double = 10.0
