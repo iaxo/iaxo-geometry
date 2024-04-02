@@ -3544,7 +3544,7 @@
             <solidref ref="kaptonReadoutSolid"/>
         </volume>
         <volume name="copperReadoutVolume">
-            <materialref ref="G4_KAPTON"/>
+            <materialref ref="G4_Cu"/>
             <solidref ref="copperReadoutSolid"/>
         </volume>
         <volume name="cathodeTeflonDiskVolume">

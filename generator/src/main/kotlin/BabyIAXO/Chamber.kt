@@ -80,7 +80,7 @@ open class Chamber(
             )
 
             val copperReadoutVolume =
-                gdml.structure.volume(Materials.Kapton.ref, copperReadoutSolid, "copperReadoutVolume")
+                gdml.structure.volume(Materials.Copper.ref, copperReadoutSolid, "copperReadoutVolume")
 
             // cathode
             val cathodeTeflonDiskBaseSolid = gdml.solids.tube(
