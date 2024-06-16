@@ -3500,6 +3500,12 @@
             <first ref="detectorPipeNotEmpty"/>
             <second ref="detectorPipeInside"/>
         </subtraction>
+        <box lunit="mm" aunit="rad" name="electronicsBoxOutSolid" x="40.0" y="90.0" z="200.0"/>
+        <box lunit="mm" aunit="rad" name="electronicsBoxInSolid" x="30.0" y="80.0" z="190.0"/>
+        <subtraction lunit="mm" aunit="rad" name="electronicsBoxSolid">
+            <first ref="electronicsBoxOutSolid"/>
+            <second ref="electronicsBoxInSolid"/>
+        </subtraction>
         <box lunit="mm" aunit="rad" name="shieldingLayerBox1" x="220.0" y="220.0" z="360.0"/>
         <box lunit="mm" aunit="rad" name="shieldingLayerHole1" x="200.0" y="200.0" z="350.0"/>
         <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole1">
@@ -3755,6 +3761,22 @@
                 <position name="detectorPipeFilling.position" z="82.675" unit="mm"/>
             </physvol>
         </assembly>
+        <volume name="electronicsBoxVolume">
+            <materialref ref="G4_Cu"/>
+            <solidref ref="electronicsBoxSolid"/>
+        </volume>
+        <volume name="electronicsBoxFillingVolume">
+            <materialref ref="G4_Galactic"/>
+            <solidref ref="electronicsBoxInSolid"/>
+        </volume>
+        <assembly name="electronicsBox">
+            <physvol name="electronicsBox">
+                <volumeref ref="electronicsBoxVolume"/>
+            </physvol>
+            <physvol name="electronicsBoxFilling">
+                <volumeref ref="electronicsBoxFillingVolume"/>
+            </physvol>
+        </assembly>
         <volume name="shieldingVolumeLayer1">
             <materialref ref="G4_Pb"/>
             <solidref ref="shieldingLayerBoxWithHole1"/>
@@ -3932,6 +3954,10 @@
             <physvol name="DetectorPipe">
                 <volumeref ref="detectorPipe"/>
                 <position name="DetectorPipe.position" z="27.0" unit="mm"/>
+            </physvol>
+            <physvol name="ElectronicsBox">
+                <volumeref ref="electronicsBox"/>
+                <position name="ElectronicsBox.position" x="67.0" z="245.0" unit="mm"/>
             </physvol>
             <physvol name="Shielding">
                 <volumeref ref="shielding"/>
