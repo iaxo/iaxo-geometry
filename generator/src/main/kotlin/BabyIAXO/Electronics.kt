@@ -16,7 +16,8 @@ open class Electronics : Geometry() {
 
         // Distance 
         const val DetectorToElectronicsDistanceZ: Double = 245.0
-        const val PipeToElectronicsDistanceX: Double = 82.0 - electronicsBoxShortSideX / 2
+        const val PipeToElectronicsOffSetX: Double = 5.0
+        const val PipeToElectronicsDistanceX: Double = 82.0 - (electronicsBoxShortSideX / 2) + PipeToElectronicsOffSetS
 
     }
 
