@@ -19,8 +19,8 @@
             <atom value="4.002644" unit="g/mole" type="A"/>
         </isotope>
         <element name="He">
-            <fraction n="1.369999493E-6" ref="He3"/>
-            <fraction n="0.99999863" ref="He4"/>
+            <fraction n="1.0E-6" ref="He3"/>
+            <fraction n="0.999999" ref="He4"/>
         </element>
         <isotope Z="3.0" N="6" name="Li6">
             <atom value="6.01512" unit="g/mole" type="A"/>
@@ -138,9 +138,9 @@
             <atom value="29.9738" unit="g/mole" type="A"/>
         </isotope>
         <element name="Si">
-            <fraction n="0.9222960777" ref="Si28"/>
-            <fraction n="0.04683195317" ref="Si29"/>
-            <fraction n="0.03087196913" ref="Si30"/>
+            <fraction n="0.922296" ref="Si28"/>
+            <fraction n="0.046832" ref="Si29"/>
+            <fraction n="0.030872" ref="Si30"/>
         </element>
         <isotope Z="15.0" N="31" name="P31">
             <atom value="30.9738" unit="g/mole" type="A"/>
@@ -1412,11 +1412,11 @@
             <fraction n="0.888102" ref="O"/>
         </material>
         <material state="gas" name="G4_H">
-            <D value="0.083748" unit="kg/m3"/>
+            <D value="8.3748E-5" unit="g/cm3"/>
             <fraction n="1.0" ref="H"/>
         </material>
         <material state="gas" name="G4_He">
-            <D value="0.166322" unit="kg/m3"/>
+            <D value="1.66322E-4" unit="g/cm3"/>
             <fraction n="1.0" ref="He"/>
         </material>
         <material state="solid" name="G4_Li">
@@ -1436,19 +1436,19 @@
             <fraction n="1.0" ref="C"/>
         </material>
         <material state="gas" name="G4_N">
-            <D value="1.1652" unit="kg/m3"/>
+            <D value="0.0011652" unit="g/cm3"/>
             <fraction n="1.0" ref="N"/>
         </material>
         <material state="gas" name="G4_O">
-            <D value="1.33151" unit="kg/m3"/>
+            <D value="0.00133151" unit="g/cm3"/>
             <fraction n="1.0" ref="O"/>
         </material>
         <material state="gas" name="G4_F">
-            <D value="1.58029" unit="kg/m3"/>
+            <D value="0.00158029" unit="g/cm3"/>
             <fraction n="1.0" ref="F"/>
         </material>
         <material state="gas" name="G4_Ne">
-            <D value="0.838505" unit="kg/m3"/>
+            <D value="8.38505E-4" unit="g/cm3"/>
             <fraction n="1.0" ref="Ne"/>
         </material>
         <material state="solid" name="G4_Na">
@@ -1476,11 +1476,11 @@
             <fraction n="1.0" ref="S"/>
         </material>
         <material state="gas" name="G4_Cl">
-            <D value="2.99473" unit="kg/m3"/>
+            <D value="0.00299473" unit="g/cm3"/>
             <fraction n="1.0" ref="Cl"/>
         </material>
         <material state="gas" name="G4_Ar">
-            <D value="1.66201" unit="kg/m3"/>
+            <D value="0.00166201" unit="g/cm3"/>
             <fraction n="1.0" ref="Ar"/>
         </material>
         <material state="solid" name="G4_K">
@@ -1548,11 +1548,11 @@
             <fraction n="1.0" ref="Se"/>
         </material>
         <material state="gas" name="G4_Br">
-            <D value="7.0721" unit="kg/m3"/>
+            <D value="0.0070721" unit="g/cm3"/>
             <fraction n="1.0" ref="Br"/>
         </material>
         <material state="gas" name="G4_Kr">
-            <D value="3.47832" unit="kg/m3"/>
+            <D value="0.00347832" unit="g/cm3"/>
             <fraction n="1.0" ref="Kr"/>
         </material>
         <material state="solid" name="G4_Rb">
@@ -1624,7 +1624,7 @@
             <fraction n="1.0" ref="I"/>
         </material>
         <material state="gas" name="G4_Xe">
-            <D value="5.48536" unit="kg/m3"/>
+            <D value="0.00548536" unit="g/cm3"/>
             <fraction n="1.0" ref="Xe"/>
         </material>
         <material state="solid" name="G4_Cs">
@@ -1752,7 +1752,7 @@
             <fraction n="1.0" ref="At"/>
         </material>
         <material state="gas" name="G4_Rn">
-            <D value="9.00662" unit="kg/m3"/>
+            <D value="0.00900662" unit="g/cm3"/>
             <fraction n="1.0" ref="Rn"/>
         </material>
         <material state="solid" name="G4_Fr">
@@ -1819,7 +1819,7 @@
             <fraction n="0.275475" ref="O"/>
         </material>
         <material state="gas" name="G4_ACETYLENE">
-            <D value="1.0967" unit="kg/m3"/>
+            <D value="0.0010967" unit="g/cm3"/>
             <fraction n="0.922577" ref="C"/>
             <fraction n="0.077423" ref="H"/>
         </material>
@@ -1840,7 +1840,7 @@
             <fraction n="0.001" ref="Cl"/>
         </material>
         <material state="gas" name="G4_AIR">
-            <D value="1.20479" unit="kg/m3"/>
+            <D value="0.00120479" unit="g/cm3"/>
             <fraction n="1.24E-4" ref="C"/>
             <fraction n="0.755268" ref="N"/>
             <fraction n="0.231781" ref="O"/>
@@ -1865,7 +1865,7 @@
             <fraction n="0.105096" ref="O"/>
         </material>
         <material state="gas" name="G4_AMMONIA">
-            <D value="0.826019" unit="kg/m3"/>
+            <D value="8.26019E-4" unit="g/cm3"/>
             <fraction n="0.822448" ref="N"/>
             <fraction n="0.177552" ref="H"/>
         </material>
@@ -1980,8 +1980,19 @@
             <fraction n="0.003" ref="Cl"/>
             <fraction n="0.003" ref="K"/>
         </material>
+        <material state="solid" name="G4_BREAST_ICRP">
+            <D value="1.02" unit="g/cm3"/>
+            <fraction n="0.106" ref="H"/>
+            <fraction n="0.332" ref="C"/>
+            <fraction n="0.03" ref="N"/>
+            <fraction n="0.527" ref="O"/>
+            <fraction n="0.001" ref="Na"/>
+            <fraction n="0.001" ref="P"/>
+            <fraction n="0.002" ref="S"/>
+            <fraction n="0.001" ref="Cl"/>
+        </material>
         <material state="gas" name="G4_BUTANE">
-            <D value="2.49343" unit="kg/m3"/>
+            <D value="0.00249343" unit="g/cm3"/>
             <fraction n="0.826583" ref="C"/>
             <fraction n="0.173417" ref="H"/>
         </material>
@@ -2039,7 +2050,7 @@
             <fraction n="0.222278" ref="O"/>
         </material>
         <material state="gas" name="G4_CARBON_DIOXIDE">
-            <D value="1.84212" unit="kg/m3"/>
+            <D value="0.00184212" unit="g/cm3"/>
             <fraction n="0.272912" ref="C"/>
             <fraction n="0.727088" ref="O"/>
         </material>
@@ -2155,7 +2166,7 @@
             <fraction n="0.410396" ref="S"/>
         </material>
         <material state="gas" name="G4_ETHANE">
-            <D value="1.25324" unit="kg/m3"/>
+            <D value="0.00125324" unit="g/cm3"/>
             <fraction n="0.798875" ref="C"/>
             <fraction n="0.201125" ref="H"/>
         </material>
@@ -2172,7 +2183,7 @@
             <fraction n="0.324791" ref="O"/>
         </material>
         <material state="gas" name="G4_ETHYLENE">
-            <D value="1.17497" unit="kg/m3"/>
+            <D value="0.00117497" unit="g/cm3"/>
             <fraction n="0.856282" ref="C"/>
             <fraction n="0.143718" ref="H"/>
         </material>
@@ -2312,6 +2323,18 @@
             <fraction n="0.55756" ref="O"/>
             <fraction n="0.023417" ref="H"/>
         </material>
+        <material state="solid" name="G4_HEART_ICRP">
+            <D value="1.055" unit="g/cm3"/>
+            <fraction n="0.103" ref="H"/>
+            <fraction n="0.121" ref="C"/>
+            <fraction n="0.032" ref="N"/>
+            <fraction n="0.734" ref="O"/>
+            <fraction n="0.001" ref="Na"/>
+            <fraction n="0.001" ref="P"/>
+            <fraction n="0.002" ref="S"/>
+            <fraction n="0.003" ref="Cl"/>
+            <fraction n="0.002" ref="K"/>
+        </material>
         <material state="solid" name="G4_N-HEPTANE">
             <D value="0.68376" unit="g/cm3"/>
             <fraction n="0.839055" ref="C"/>
@@ -2328,6 +2351,19 @@
             <fraction n="0.026363" ref="H"/>
             <fraction n="0.073271" ref="N"/>
             <fraction n="0.209237" ref="O"/>
+        </material>
+        <material state="solid" name="G4_KIDNEY_ICRP">
+            <D value="1.05" unit="g/cm3"/>
+            <fraction n="0.103" ref="H"/>
+            <fraction n="0.132" ref="C"/>
+            <fraction n="0.03" ref="N"/>
+            <fraction n="0.724" ref="O"/>
+            <fraction n="0.002" ref="Na"/>
+            <fraction n="0.002" ref="P"/>
+            <fraction n="0.002" ref="S"/>
+            <fraction n="0.002" ref="Cl"/>
+            <fraction n="0.002" ref="K"/>
+            <fraction n="0.001" ref="Ca"/>
         </material>
         <material state="solid" name="G4_LANTHANUM_OXYBROMIDE">
             <D value="6.28" unit="g/cm3"/>
@@ -2384,6 +2420,18 @@
             <fraction n="0.255701" ref="B"/>
             <fraction n="0.662227" ref="O"/>
         </material>
+        <material state="solid" name="G4_LIVER_ICRP">
+            <D value="1.065" unit="g/cm3"/>
+            <fraction n="0.102" ref="H"/>
+            <fraction n="0.139" ref="C"/>
+            <fraction n="0.03" ref="N"/>
+            <fraction n="0.716" ref="O"/>
+            <fraction n="0.002" ref="Na"/>
+            <fraction n="0.003" ref="P"/>
+            <fraction n="0.003" ref="S"/>
+            <fraction n="0.002" ref="Cl"/>
+            <fraction n="0.003" ref="K"/>
+        </material>
         <material state="solid" name="G4_LUNG_ICRP">
             <D value="1.04" unit="g/cm3"/>
             <fraction n="0.105" ref="H"/>
@@ -2431,8 +2479,13 @@
             <fraction n="0.441452" ref="Hg"/>
             <fraction n="0.558548" ref="I"/>
         </material>
+        <material state="solid" name="G4_SILICUM_OXIDE">
+            <D value="2.65" unit="g/cm3"/>
+            <fraction n="0.467" ref="Si"/>
+            <fraction n="0.532" ref="O"/>
+        </material>
         <material state="gas" name="G4_METHANE">
-            <D value="0.667151" unit="kg/m3"/>
+            <D value="6.67151E-4" unit="g/cm3"/>
             <fraction n="0.748682" ref="C"/>
             <fraction n="0.251318" ref="H"/>
         </material>
@@ -2509,7 +2562,7 @@
             <fraction n="0.259921" ref="O"/>
         </material>
         <material state="gas" name="G4_NITROUS_OXIDE">
-            <D value="1.83094" unit="kg/m3"/>
+            <D value="0.00183094" unit="g/cm3"/>
             <fraction n="0.636484" ref="N"/>
             <fraction n="0.363516" ref="O"/>
         </material>
@@ -2693,7 +2746,7 @@
             <fraction n="0.169852" ref="O"/>
         </material>
         <material state="gas" name="G4_PROPANE">
-            <D value="1.87939" unit="kg/m3"/>
+            <D value="0.00187939" unit="g/cm3"/>
             <fraction n="0.817136" ref="C"/>
             <fraction n="0.182864" ref="H"/>
         </material>
@@ -2848,14 +2901,14 @@
             <fraction n="0.762" ref="O"/>
         </material>
         <material state="gas" name="G4_TISSUE-METHANE">
-            <D value="1.06409" unit="kg/m3"/>
+            <D value="0.00106409" unit="g/cm3"/>
             <fraction n="0.101869" ref="H"/>
             <fraction n="0.456179" ref="C"/>
             <fraction n="0.035172" ref="N"/>
             <fraction n="0.40678" ref="O"/>
         </material>
         <material state="gas" name="G4_TISSUE-PROPANE">
-            <D value="1.82628" unit="kg/m3"/>
+            <D value="0.00182628" unit="g/cm3"/>
             <fraction n="0.102672" ref="H"/>
             <fraction n="0.56894" ref="C"/>
             <fraction n="0.035022" ref="N"/>
@@ -2925,7 +2978,7 @@
             <fraction n="0.710028" ref="F"/>
         </material>
         <material state="gas" name="G4_WATER_VAPOR">
-            <D value="0.756182" unit="kg/m3"/>
+            <D value="7.56182E-4" unit="g/cm3"/>
             <fraction n="0.111898" ref="H"/>
             <fraction n="0.888102" ref="O"/>
         </material>
@@ -2973,7 +3026,7 @@
             <fraction n="0.403998" ref="W"/>
         </material>
         <material state="gas" name="G4_Galactic">
-            <D value="1.0E-22" unit="kg/m3"/>
+            <D value="1.0E-25" unit="g/cm3"/>
             <fraction n="1.0" ref="H"/>
         </material>
         <material state="solid" name="G4_GRAPHITE_POROUS">
@@ -3107,268 +3160,712 @@
             <fraction n="0.252195" ref="N"/>
             <fraction n="0.288072" ref="O"/>
         </material>
-        <material state="gas" name="Isobutane">
-            <D value="2.51" unit="kg/m3"/>
-            <fraction n="0.826583" ref="C"/>
-            <fraction n="0.173417" ref="H"/>
-        </material>
-        <material state="gas" name="TMA">
-            <D value="627.0" unit="kg/m3"/>
-            <fraction n="0.609574" ref="C"/>
-            <fraction n="0.153466" ref="H"/>
-            <fraction n="0.236959" ref="N"/>
-        </material>
-        <material state="gas" name="GasMixture-XenonNeon2.3%Isobutane1.05Bar">
-            <D value="3.524116" unit="kg/m3"/>
-            <fraction n="0.4885" ref="Xe"/>
-            <fraction n="0.4885" ref="Ne"/>
-            <fraction n="0.019012" ref="C"/>
-            <fraction n="0.003988" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon1%Isobutane1.2Bar">
-            <D value="1.988417232" unit="kg/m3"/>
-            <fraction n="0.99" ref="Ar"/>
-            <fraction n="0.00827" ref="C"/>
-            <fraction n="0.00173" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon1%Isobutane1.4Bar">
-            <D value="2.319820104" unit="kg/m3"/>
-            <fraction n="0.99" ref="Ar"/>
-            <fraction n="0.00827" ref="C"/>
-            <fraction n="0.00173" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon1%Isobutane1.6Bar">
-            <D value="2.651222976" unit="kg/m3"/>
-            <fraction n="0.99" ref="Ar"/>
-            <fraction n="0.00827" ref="C"/>
-            <fraction n="0.00173" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon1%Isobutane1.8Bar">
-            <D value="2.982625848" unit="kg/m3"/>
-            <fraction n="0.99" ref="Ar"/>
-            <fraction n="0.00827" ref="C"/>
-            <fraction n="0.00173" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon1%Isobutane2.0Bar">
-            <D value="3.31402872" unit="kg/m3"/>
-            <fraction n="0.99" ref="Ar"/>
-            <fraction n="0.00827" ref="C"/>
-            <fraction n="0.00173" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon2%Isobutane1.2Bar">
-            <D value="1.988417232" unit="kg/m3"/>
-            <fraction n="0.98" ref="Ar"/>
-            <fraction n="0.016532" ref="C"/>
-            <fraction n="0.003468" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon2%Isobutane1.4Bar">
-            <D value="2.319820104" unit="kg/m3"/>
-            <fraction n="0.98" ref="Ar"/>
-            <fraction n="0.016532" ref="C"/>
-            <fraction n="0.003468" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon2%Isobutane1.6Bar">
-            <D value="2.651222976" unit="kg/m3"/>
-            <fraction n="0.98" ref="Ar"/>
-            <fraction n="0.016532" ref="C"/>
-            <fraction n="0.003468" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon2%Isobutane1.8Bar">
-            <D value="2.982625848" unit="kg/m3"/>
-            <fraction n="0.98" ref="Ar"/>
-            <fraction n="0.016532" ref="C"/>
-            <fraction n="0.003468" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon2%Isobutane2.0Bar">
-            <D value="3.31402872" unit="kg/m3"/>
-            <fraction n="0.98" ref="Ar"/>
-            <fraction n="0.016532" ref="C"/>
-            <fraction n="0.003468" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon3%Isobutane1.2Bar">
-            <D value="1.988417232" unit="kg/m3"/>
-            <fraction n="0.97" ref="Ar"/>
-            <fraction n="0.024798" ref="C"/>
-            <fraction n="0.005202" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon3%Isobutane1.4Bar">
-            <D value="2.319820104" unit="kg/m3"/>
-            <fraction n="0.97" ref="Ar"/>
-            <fraction n="0.024798" ref="C"/>
-            <fraction n="0.005202" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon3%Isobutane1.6Bar">
-            <D value="2.651222976" unit="kg/m3"/>
-            <fraction n="0.97" ref="Ar"/>
-            <fraction n="0.024798" ref="C"/>
-            <fraction n="0.005202" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon3%Isobutane1.8Bar">
-            <D value="2.982625848" unit="kg/m3"/>
-            <fraction n="0.97" ref="Ar"/>
-            <fraction n="0.024798" ref="C"/>
-            <fraction n="0.005202" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon3%Isobutane2.0Bar">
-            <D value="3.31402872" unit="kg/m3"/>
-            <fraction n="0.97" ref="Ar"/>
-            <fraction n="0.024798" ref="C"/>
-            <fraction n="0.005202" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon5%Isobutane1.2Bar">
-            <D value="1.988417232" unit="kg/m3"/>
-            <fraction n="0.95" ref="Ar"/>
-            <fraction n="0.04133" ref="C"/>
-            <fraction n="0.00867" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon5%Isobutane1.4Bar">
-            <D value="2.319820104" unit="kg/m3"/>
-            <fraction n="0.95" ref="Ar"/>
-            <fraction n="0.04133" ref="C"/>
-            <fraction n="0.00867" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon5%Isobutane1.6Bar">
-            <D value="2.651222976" unit="kg/m3"/>
-            <fraction n="0.95" ref="Ar"/>
-            <fraction n="0.04133" ref="C"/>
-            <fraction n="0.00867" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon5%Isobutane1.8Bar">
-            <D value="2.982625848" unit="kg/m3"/>
-            <fraction n="0.95" ref="Ar"/>
-            <fraction n="0.04133" ref="C"/>
-            <fraction n="0.00867" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon5%Isobutane2.0Bar">
-            <D value="3.31402872" unit="kg/m3"/>
-            <fraction n="0.95" ref="Ar"/>
-            <fraction n="0.04133" ref="C"/>
-            <fraction n="0.00867" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Xenon2%Isobutane1.4Bar">
-            <D value="7.496860518" unit="kg/m3"/>
-            <fraction n="0.98" ref="Xe"/>
-            <fraction n="0.016532" ref="C"/>
-            <fraction n="0.003468" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Neon2%Isobutane1.4Bar">
-            <D value="1.204745976" unit="kg/m3"/>
-            <fraction n="0.98" ref="Ne"/>
-            <fraction n="0.016532" ref="C"/>
-            <fraction n="0.003468" ref="H"/>
-        </material>
-        <material state="gas" name="GasMixture-Argon2%TMA1.4Bar">
-            <D value="19.57688401" unit="kg/m3"/>
-            <fraction n="0.98" ref="Ar"/>
-            <fraction n="0.012191" ref="C"/>
-            <fraction n="0.003069" ref="H"/>
-            <fraction n="0.004739" ref="N"/>
-        </material>
-        <material state="gas" name="GasMixture-Xenon2%TMA1.4Bar">
-            <D value="24.75392442" unit="kg/m3"/>
-            <fraction n="0.98" ref="Xe"/>
-            <fraction n="0.012191" ref="C"/>
-            <fraction n="0.003069" ref="H"/>
-            <fraction n="0.004739" ref="N"/>
-        </material>
-        <material state="gas" name="GasMixture-Neon2%TMA1.4Bar">
-            <D value="18.46180988" unit="kg/m3"/>
-            <fraction n="0.98" ref="Ne"/>
-            <fraction n="0.012191" ref="C"/>
-            <fraction n="0.003069" ref="H"/>
-            <fraction n="0.004739" ref="N"/>
-        </material>
         <material state="gas" name="Vacuum">
-            <D value="1.0E-22" unit="kg/m3"/>
-            <fraction n="1.0" ref="H"/>
+            <D value="1.0E-20" unit="g/cm3"/>
+            <fraction n="0.7" ref="G4_N"/>
+            <fraction n="0.3" ref="G4_O"/>
         </material>
         <material state="solid" name="BC408">
             <D value="1.03" unit="g/cm3"/>
-            <fraction n="0.085" ref="H"/>
-            <fraction n="0.915" ref="C"/>
+            <fraction n="0.085" ref="G4_H"/>
+            <fraction n="0.915" ref="G4_C"/>
         </material>
-        <material state="liquid" name="HC">
+        <element name="6Li">
+            <fraction n="1.0" ref="Li6"/>
+        </element>
+        <material state="solid" name="6LiI">
+            <D value="3.494" unit="g/cm3"/>
+            <fraction n="0.045113" ref="6Li"/>
+            <fraction n="0.954887" ref="I"/>
+        </material>
+        <material state="solid" name="LUNG20_AIR80">
+            <D value="0.209" unit="g/cm3"/>
+            <fraction n="0.2" ref="G4_LUNG_ICRP"/>
+            <fraction n="0.8" ref="G4_AIR"/>
+        </material>
+        <material state="liquid" name="LiquidScintillatorBase">
+            <D value="1.03" unit="g/cm3"/>
+            <fraction n="0.085" ref="G4_H"/>
+            <fraction n="0.915" ref="G4_C"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator1pctPb">
+            <D value="1.1332" unit="g/cm3"/>
+            <fraction n="0.01" ref="G4_Pb"/>
+            <fraction n="0.99" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator2pctPb">
+            <D value="1.2364" unit="g/cm3"/>
+            <fraction n="0.02" ref="G4_Pb"/>
+            <fraction n="0.98" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator3pctPb">
+            <D value="1.3396" unit="g/cm3"/>
+            <fraction n="0.03" ref="G4_Pb"/>
+            <fraction n="0.97" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator4pctPb">
+            <D value="1.4428" unit="g/cm3"/>
+            <fraction n="0.04" ref="G4_Pb"/>
+            <fraction n="0.96" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator5pctPb">
+            <D value="1.546" unit="g/cm3"/>
+            <fraction n="0.05" ref="G4_Pb"/>
+            <fraction n="0.95" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator6pctPb">
+            <D value="1.6492" unit="g/cm3"/>
+            <fraction n="0.06" ref="G4_Pb"/>
+            <fraction n="0.94" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator7pctPb">
+            <D value="1.7524" unit="g/cm3"/>
+            <fraction n="0.07" ref="G4_Pb"/>
+            <fraction n="0.93" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator8pctPb">
+            <D value="1.8556" unit="g/cm3"/>
+            <fraction n="0.08" ref="G4_Pb"/>
+            <fraction n="0.92" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator9pctPb">
+            <D value="1.9588" unit="g/cm3"/>
+            <fraction n="0.09" ref="G4_Pb"/>
+            <fraction n="0.91" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator10pctPb">
+            <D value="2.062" unit="g/cm3"/>
+            <fraction n="0.1" ref="G4_Pb"/>
+            <fraction n="0.9" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator11pctPb">
+            <D value="2.1652" unit="g/cm3"/>
+            <fraction n="0.11" ref="G4_Pb"/>
+            <fraction n="0.89" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator12pctPb">
+            <D value="2.2684" unit="g/cm3"/>
+            <fraction n="0.12" ref="G4_Pb"/>
+            <fraction n="0.88" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator13pctPb">
+            <D value="2.3716" unit="g/cm3"/>
+            <fraction n="0.13" ref="G4_Pb"/>
+            <fraction n="0.87" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator14pctPb">
+            <D value="2.4748" unit="g/cm3"/>
+            <fraction n="0.14" ref="G4_Pb"/>
+            <fraction n="0.86" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator15pctPb">
+            <D value="2.578" unit="g/cm3"/>
+            <fraction n="0.15" ref="G4_Pb"/>
+            <fraction n="0.85" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator16pctPb">
+            <D value="2.6812" unit="g/cm3"/>
+            <fraction n="0.16" ref="G4_Pb"/>
+            <fraction n="0.84" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator17pctPb">
+            <D value="2.7844" unit="g/cm3"/>
+            <fraction n="0.17" ref="G4_Pb"/>
+            <fraction n="0.83" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator18pctPb">
+            <D value="2.8876" unit="g/cm3"/>
+            <fraction n="0.18" ref="G4_Pb"/>
+            <fraction n="0.82" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator19pctPb">
+            <D value="2.9908" unit="g/cm3"/>
+            <fraction n="0.19" ref="G4_Pb"/>
+            <fraction n="0.81" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator20pctPb">
+            <D value="3.094" unit="g/cm3"/>
+            <fraction n="0.2" ref="G4_Pb"/>
+            <fraction n="0.8" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator21pctPb">
+            <D value="3.1972" unit="g/cm3"/>
+            <fraction n="0.21" ref="G4_Pb"/>
+            <fraction n="0.79" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator22pctPb">
+            <D value="3.3004" unit="g/cm3"/>
+            <fraction n="0.22" ref="G4_Pb"/>
+            <fraction n="0.78" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator23pctPb">
+            <D value="3.4036" unit="g/cm3"/>
+            <fraction n="0.23" ref="G4_Pb"/>
+            <fraction n="0.77" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator24pctPb">
+            <D value="3.5068" unit="g/cm3"/>
+            <fraction n="0.24" ref="G4_Pb"/>
+            <fraction n="0.76" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator25pctPb">
+            <D value="3.61" unit="g/cm3"/>
+            <fraction n="0.25" ref="G4_Pb"/>
+            <fraction n="0.75" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator26pctPb">
+            <D value="3.7132" unit="g/cm3"/>
+            <fraction n="0.26" ref="G4_Pb"/>
+            <fraction n="0.74" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator27pctPb">
+            <D value="3.8164" unit="g/cm3"/>
+            <fraction n="0.27" ref="G4_Pb"/>
+            <fraction n="0.73" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator28pctPb">
+            <D value="3.9196" unit="g/cm3"/>
+            <fraction n="0.28" ref="G4_Pb"/>
+            <fraction n="0.72" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator29pctPb">
+            <D value="4.0228" unit="g/cm3"/>
+            <fraction n="0.29" ref="G4_Pb"/>
+            <fraction n="0.71" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator30pctPb">
+            <D value="4.126" unit="g/cm3"/>
+            <fraction n="0.3" ref="G4_Pb"/>
+            <fraction n="0.7" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator31pctPb">
+            <D value="4.2292" unit="g/cm3"/>
+            <fraction n="0.31" ref="G4_Pb"/>
+            <fraction n="0.69" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator32pctPb">
+            <D value="4.3324" unit="g/cm3"/>
+            <fraction n="0.32" ref="G4_Pb"/>
+            <fraction n="0.68" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator33pctPb">
+            <D value="4.4356" unit="g/cm3"/>
+            <fraction n="0.33" ref="G4_Pb"/>
+            <fraction n="0.67" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator34pctPb">
+            <D value="4.5388" unit="g/cm3"/>
+            <fraction n="0.34" ref="G4_Pb"/>
+            <fraction n="0.66" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator35pctPb">
+            <D value="4.642" unit="g/cm3"/>
+            <fraction n="0.35" ref="G4_Pb"/>
+            <fraction n="0.65" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator36pctPb">
+            <D value="4.7452" unit="g/cm3"/>
+            <fraction n="0.36" ref="G4_Pb"/>
+            <fraction n="0.64" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator37pctPb">
+            <D value="4.8484" unit="g/cm3"/>
+            <fraction n="0.37" ref="G4_Pb"/>
+            <fraction n="0.63" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator38pctPb">
+            <D value="4.9516" unit="g/cm3"/>
+            <fraction n="0.38" ref="G4_Pb"/>
+            <fraction n="0.62" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator39pctPb">
+            <D value="5.0548" unit="g/cm3"/>
+            <fraction n="0.39" ref="G4_Pb"/>
+            <fraction n="0.61" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator40pctPb">
+            <D value="5.158" unit="g/cm3"/>
+            <fraction n="0.4" ref="G4_Pb"/>
+            <fraction n="0.6" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator41pctPb">
+            <D value="5.2612" unit="g/cm3"/>
+            <fraction n="0.41" ref="G4_Pb"/>
+            <fraction n="0.59" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator42pctPb">
+            <D value="5.3644" unit="g/cm3"/>
+            <fraction n="0.42" ref="G4_Pb"/>
+            <fraction n="0.58" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator43pctPb">
+            <D value="5.4676" unit="g/cm3"/>
+            <fraction n="0.43" ref="G4_Pb"/>
+            <fraction n="0.57" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator44pctPb">
+            <D value="5.5708" unit="g/cm3"/>
+            <fraction n="0.44" ref="G4_Pb"/>
+            <fraction n="0.56" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator45pctPb">
+            <D value="5.674" unit="g/cm3"/>
+            <fraction n="0.45" ref="G4_Pb"/>
+            <fraction n="0.55" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator46pctPb">
+            <D value="5.7772" unit="g/cm3"/>
+            <fraction n="0.46" ref="G4_Pb"/>
+            <fraction n="0.54" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator47pctPb">
+            <D value="5.8804" unit="g/cm3"/>
+            <fraction n="0.47" ref="G4_Pb"/>
+            <fraction n="0.53" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator48pctPb">
+            <D value="5.9836" unit="g/cm3"/>
+            <fraction n="0.48" ref="G4_Pb"/>
+            <fraction n="0.52" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator49pctPb">
+            <D value="6.0868" unit="g/cm3"/>
+            <fraction n="0.49" ref="G4_Pb"/>
+            <fraction n="0.51" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator50pctPb">
+            <D value="6.19" unit="g/cm3"/>
+            <fraction n="0.5" ref="G4_Pb"/>
+            <fraction n="0.5" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator51pctPb">
+            <D value="6.2932" unit="g/cm3"/>
+            <fraction n="0.51" ref="G4_Pb"/>
+            <fraction n="0.49" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator52pctPb">
+            <D value="6.3964" unit="g/cm3"/>
+            <fraction n="0.52" ref="G4_Pb"/>
+            <fraction n="0.48" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator53pctPb">
+            <D value="6.4996" unit="g/cm3"/>
+            <fraction n="0.53" ref="G4_Pb"/>
+            <fraction n="0.47" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator54pctPb">
+            <D value="6.6028" unit="g/cm3"/>
+            <fraction n="0.54" ref="G4_Pb"/>
+            <fraction n="0.46" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator55pctPb">
+            <D value="6.706" unit="g/cm3"/>
+            <fraction n="0.55" ref="G4_Pb"/>
+            <fraction n="0.45" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator56pctPb">
+            <D value="6.8092" unit="g/cm3"/>
+            <fraction n="0.56" ref="G4_Pb"/>
+            <fraction n="0.44" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator57pctPb">
+            <D value="6.9124" unit="g/cm3"/>
+            <fraction n="0.57" ref="G4_Pb"/>
+            <fraction n="0.43" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator58pctPb">
+            <D value="7.0156" unit="g/cm3"/>
+            <fraction n="0.58" ref="G4_Pb"/>
+            <fraction n="0.42" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator59pctPb">
+            <D value="7.1188" unit="g/cm3"/>
+            <fraction n="0.59" ref="G4_Pb"/>
+            <fraction n="0.41" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator60pctPb">
+            <D value="7.222" unit="g/cm3"/>
+            <fraction n="0.6" ref="G4_Pb"/>
+            <fraction n="0.4" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator61pctPb">
+            <D value="7.3252" unit="g/cm3"/>
+            <fraction n="0.61" ref="G4_Pb"/>
+            <fraction n="0.39" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator62pctPb">
+            <D value="7.4284" unit="g/cm3"/>
+            <fraction n="0.62" ref="G4_Pb"/>
+            <fraction n="0.38" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator63pctPb">
+            <D value="7.5316" unit="g/cm3"/>
+            <fraction n="0.63" ref="G4_Pb"/>
+            <fraction n="0.37" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator64pctPb">
+            <D value="7.6348" unit="g/cm3"/>
+            <fraction n="0.64" ref="G4_Pb"/>
+            <fraction n="0.36" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator65pctPb">
+            <D value="7.738" unit="g/cm3"/>
+            <fraction n="0.65" ref="G4_Pb"/>
+            <fraction n="0.35" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator66pctPb">
+            <D value="7.8412" unit="g/cm3"/>
+            <fraction n="0.66" ref="G4_Pb"/>
+            <fraction n="0.34" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator67pctPb">
+            <D value="7.9444" unit="g/cm3"/>
+            <fraction n="0.67" ref="G4_Pb"/>
+            <fraction n="0.33" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator68pctPb">
+            <D value="8.0476" unit="g/cm3"/>
+            <fraction n="0.68" ref="G4_Pb"/>
+            <fraction n="0.32" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator69pctPb">
+            <D value="8.1508" unit="g/cm3"/>
+            <fraction n="0.69" ref="G4_Pb"/>
+            <fraction n="0.31" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator70pctPb">
+            <D value="8.254" unit="g/cm3"/>
+            <fraction n="0.7" ref="G4_Pb"/>
+            <fraction n="0.3" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator71pctPb">
+            <D value="8.3572" unit="g/cm3"/>
+            <fraction n="0.71" ref="G4_Pb"/>
+            <fraction n="0.29" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator72pctPb">
+            <D value="8.4604" unit="g/cm3"/>
+            <fraction n="0.72" ref="G4_Pb"/>
+            <fraction n="0.28" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator73pctPb">
+            <D value="8.5636" unit="g/cm3"/>
+            <fraction n="0.73" ref="G4_Pb"/>
+            <fraction n="0.27" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator74pctPb">
+            <D value="8.6668" unit="g/cm3"/>
+            <fraction n="0.74" ref="G4_Pb"/>
+            <fraction n="0.26" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator75pctPb">
+            <D value="8.77" unit="g/cm3"/>
+            <fraction n="0.75" ref="G4_Pb"/>
+            <fraction n="0.25" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator76pctPb">
+            <D value="8.8732" unit="g/cm3"/>
+            <fraction n="0.76" ref="G4_Pb"/>
+            <fraction n="0.24" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator77pctPb">
+            <D value="8.9764" unit="g/cm3"/>
+            <fraction n="0.77" ref="G4_Pb"/>
+            <fraction n="0.23" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator78pctPb">
+            <D value="9.0796" unit="g/cm3"/>
+            <fraction n="0.78" ref="G4_Pb"/>
+            <fraction n="0.22" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator79pctPb">
+            <D value="9.1828" unit="g/cm3"/>
+            <fraction n="0.79" ref="G4_Pb"/>
+            <fraction n="0.21" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator80pctPb">
+            <D value="9.286" unit="g/cm3"/>
+            <fraction n="0.8" ref="G4_Pb"/>
+            <fraction n="0.2" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator81pctPb">
+            <D value="9.3892" unit="g/cm3"/>
+            <fraction n="0.81" ref="G4_Pb"/>
+            <fraction n="0.19" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator82pctPb">
+            <D value="9.4924" unit="g/cm3"/>
+            <fraction n="0.82" ref="G4_Pb"/>
+            <fraction n="0.18" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator83pctPb">
+            <D value="9.5956" unit="g/cm3"/>
+            <fraction n="0.83" ref="G4_Pb"/>
+            <fraction n="0.17" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator84pctPb">
+            <D value="9.6988" unit="g/cm3"/>
+            <fraction n="0.84" ref="G4_Pb"/>
+            <fraction n="0.16" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator85pctPb">
+            <D value="9.802" unit="g/cm3"/>
+            <fraction n="0.85" ref="G4_Pb"/>
+            <fraction n="0.15" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator86pctPb">
+            <D value="9.9052" unit="g/cm3"/>
+            <fraction n="0.86" ref="G4_Pb"/>
+            <fraction n="0.14" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator87pctPb">
+            <D value="10.0084" unit="g/cm3"/>
+            <fraction n="0.87" ref="G4_Pb"/>
+            <fraction n="0.13" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator88pctPb">
+            <D value="10.1116" unit="g/cm3"/>
+            <fraction n="0.88" ref="G4_Pb"/>
+            <fraction n="0.12" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator89pctPb">
+            <D value="10.2148" unit="g/cm3"/>
+            <fraction n="0.89" ref="G4_Pb"/>
+            <fraction n="0.11" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator90pctPb">
+            <D value="10.318" unit="g/cm3"/>
+            <fraction n="0.9" ref="G4_Pb"/>
+            <fraction n="0.1" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator91pctPb">
+            <D value="10.4212" unit="g/cm3"/>
+            <fraction n="0.91" ref="G4_Pb"/>
+            <fraction n="0.09" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator92pctPb">
+            <D value="10.5244" unit="g/cm3"/>
+            <fraction n="0.92" ref="G4_Pb"/>
+            <fraction n="0.08" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator93pctPb">
+            <D value="10.6276" unit="g/cm3"/>
+            <fraction n="0.93" ref="G4_Pb"/>
+            <fraction n="0.07" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator94pctPb">
+            <D value="10.7308" unit="g/cm3"/>
+            <fraction n="0.94" ref="G4_Pb"/>
+            <fraction n="0.06" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator95pctPb">
+            <D value="10.834" unit="g/cm3"/>
+            <fraction n="0.95" ref="G4_Pb"/>
+            <fraction n="0.05" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator96pctPb">
+            <D value="10.9372" unit="g/cm3"/>
+            <fraction n="0.96" ref="G4_Pb"/>
+            <fraction n="0.04" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator97pctPb">
+            <D value="11.0404" unit="g/cm3"/>
+            <fraction n="0.97" ref="G4_Pb"/>
+            <fraction n="0.03" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator98pctPb">
+            <D value="11.1436" unit="g/cm3"/>
+            <fraction n="0.98" ref="G4_Pb"/>
+            <fraction n="0.02" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="liquid" name="LiquidScintillator99pctPb">
+            <D value="11.2468" unit="g/cm3"/>
+            <fraction n="0.99" ref="G4_Pb"/>
+            <fraction n="0.01" ref="LiquidScintillatorBase"/>
+        </material>
+        <material state="gas" name="TMAGas">
+            <D value="6.7" unit="kg/m3"/>
+            <fraction n="0.6095775385572637" ref="C"/>
+            <fraction n="0.1534682886203227" ref="H"/>
+            <fraction n="0.2369541728224135" ref="N"/>
+        </material>
+        <material state="gas" name="IsobutaneGas">
+            <D value="2.38467" unit="kg/m3"/>
+            <fraction n="0.8265819278538703" ref="C"/>
+            <fraction n="0.1734180721461297" ref="H"/>
+        </material>
+        <material state="gas" name="HeliumGas">
+            <D value="0.125" unit="kg/m3"/>
+            <fraction n="1.0" ref="He"/>
+        </material>
+        <material state="gas" name="XenonGas">
+            <D value="5.894" unit="kg/m3"/>
+            <fraction n="1.0" ref="Xe"/>
+        </material>
+        <material state="gas" name="ArgonGas">
+            <D value="1.63897" unit="kg/m3"/>
+            <fraction n="1.0" ref="Ar"/>
+        </material>
+        <material state="gas" name="Xenon50Neon50Gas">
+            <D value="3.0553" unit="kg/m3"/>
+            <fraction n="0.8667868153341387" ref="Xe"/>
+            <fraction n="0.1332131846658613" ref="Ne"/>
+        </material>
+        <material state="gas" name="Argon1%Isobutane1bar">
+            <D value="1.61882" unit="kg/m3"/>
+            <fraction n="0.9855" ref="ArgonGas"/>
+            <fraction n="0.0145" ref="IsobutaneGas"/>
+        </material>
+        <material state="gas" name="Argon2%Isobutane1bar">
+            <D value="1.62615" unit="kg/m3"/>
+            <fraction n="0.9711" ref="ArgonGas"/>
+            <fraction n="0.0289" ref="IsobutaneGas"/>
+        </material>
+        <material state="gas" name="Argon3%Isobutane1bar">
+            <D value="1.63348" unit="kg/m3"/>
+            <fraction n="0.9569" ref="ArgonGas"/>
+            <fraction n="0.0431" ref="IsobutaneGas"/>
+        </material>
+        <material state="gas" name="Argon4%Isobutane1bar">
+            <D value="1.64081" unit="kg/m3"/>
+            <fraction n="0.9428" ref="ArgonGas"/>
+            <fraction n="0.0572" ref="IsobutaneGas"/>
+        </material>
+        <material state="gas" name="Argon5%Isobutane1bar">
+            <D value="1.64814" unit="kg/m3"/>
+            <fraction n="0.9288" ref="ArgonGas"/>
+            <fraction n="0.0712" ref="IsobutaneGas"/>
+        </material>
+        <material state="gas" name="Argon10%Isobutane1bar">
+            <D value="1.6848" unit="kg/m3"/>
+            <fraction n="0.8608" ref="ArgonGas"/>
+            <fraction n="0.1392" ref="IsobutaneGas"/>
+        </material>
+        <material state="gas" name="XenonNeon1%Isobutane1bar">
+            <D value="3.04819" unit="kg/m3"/>
+            <fraction n="0.99230795006" ref="Xenon50Neon50Gas"/>
+            <fraction n="0.00769204994" ref="IsobutaneGas"/>
+        </material>
+        <material state="gas" name="XenonNeon2.3%Isobutane1bar">
+            <D value="3.03895" unit="kg/m3"/>
+            <fraction n="0.98225450491" ref="Xenon50Neon50Gas"/>
+            <fraction n="0.01774549509" ref="IsobutaneGas"/>
+        </material>
+        <material state="gas" name="XenonNeon2.3%Isobutane1.05bar">
+            <D value="3.1908975" unit="kg/m3"/>
+            <fraction n="1.0" ref="XenonNeon2.3%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon1%Isobutane1.2bar">
+            <D value="1.942584" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon1%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon2%Isobutane1.2bar">
+            <D value="1.95138" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon2%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon3%Isobutane1.2bar">
+            <D value="1.960176" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon3%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon4%Isobutane1.2bar">
+            <D value="1.968972" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon4%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon5%Isobutane1.2bar">
+            <D value="1.977768" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon5%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon10%Isobutane1.2bar">
+            <D value="2.02176" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon10%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon1%Isobutane1.4bar">
+            <D value="2.266348" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon1%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon2%Isobutane1.4bar">
+            <D value="2.27661" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon2%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon3%Isobutane1.4bar">
+            <D value="2.286872" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon3%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon4%Isobutane1.4bar">
+            <D value="2.297134" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon4%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon5%Isobutane1.4bar">
+            <D value="2.307396" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon5%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon10%Isobutane1.4bar">
+            <D value="2.35872" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon10%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon1%Isobutane1.6bar">
+            <D value="2.590112" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon1%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon2%Isobutane1.6bar">
+            <D value="2.60184" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon2%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon3%Isobutane1.6bar">
+            <D value="2.613568" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon3%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon4%Isobutane1.6bar">
+            <D value="2.625296" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon4%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon5%Isobutane1.6bar">
+            <D value="2.637024" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon5%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon10%Isobutane1.6bar">
+            <D value="2.69568" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon10%Isobutane1bar"/>
+        </material>
+        <material state="solid" name="Copper">
+            <D value="8.96" unit="g/cm3"/>
+            <fraction n="1.0" ref="Cu"/>
+        </material>
+        <material state="solid" name="Lead">
+            <D value="11.35" unit="g/cm3"/>
+            <fraction n="1.0" ref="Pb"/>
+        </material>
+        <material state="solid" name="Aluminium">
+            <D value="2.699" unit="g/cm3"/>
+            <fraction n="1.0" ref="Al"/>
+        </material>
+        <material state="solid" name="Cadmium">
+            <D value="8.65" unit="g/cm3"/>
+            <fraction n="1.0" ref="Cd"/>
+        </material>
+        <material state="solid" name="Steel">
+            <D value="8.0" unit="g/cm3"/>
+            <fraction n="0.746213" ref="Fe"/>
+            <fraction n="0.169001" ref="Cr"/>
+            <fraction n="0.084786" ref="Ni"/>
+        </material>
+        <material state="solid" name="StainlessSteel">
+            <D value="8.0" unit="g/cm3"/>
+            <fraction n="0.746213" ref="Fe"/>
+            <fraction n="0.169001" ref="Cr"/>
+            <fraction n="0.084786" ref="Ni"/>
+        </material>
+        <material state="solid" name="Water">
             <D value="1.0" unit="g/cm3"/>
-            <fraction n="0.077423" ref="H"/>
-            <fraction n="0.922577" ref="C"/>
+            <fraction n="0.111898" ref="H"/>
+            <fraction n="0.888102" ref="O"/>
         </material>
-        <material state="liquid" name="LiquidScintillator-HC+0%Pb">
-            <D value="1.0" unit="g/cm3"/>
-            <fraction n="0.077423" ref="H"/>
-            <fraction n="0.922577" ref="C"/>
-            <fraction n="0.0" ref="Pb"/>
-        </material>
-        <material state="liquid" name="LiquidScintillator-HC+0%Pb+0.1%Cd">
-            <D value="1.00765" unit="g/cm3"/>
-            <fraction n="0.077345" ref="H"/>
-            <fraction n="0.921655" ref="C"/>
-            <fraction n="0.0" ref="Pb"/>
-            <fraction n="0.001" ref="Cd"/>
-        </material>
-        <material state="liquid" name="LiquidScintillator-HC+1%Pb">
-            <D value="1.1035" unit="g/cm3"/>
-            <fraction n="0.076648" ref="H"/>
-            <fraction n="0.913352" ref="C"/>
-            <fraction n="0.01" ref="Pb"/>
-        </material>
-        <material state="liquid" name="LiquidScintillator-HC+1%Pb+0.1%Cd">
-            <D value="1.11115" unit="g/cm3"/>
-            <fraction n="0.076571" ref="H"/>
-            <fraction n="0.912429" ref="C"/>
-            <fraction n="0.01" ref="Pb"/>
-            <fraction n="0.001" ref="Cd"/>
-        </material>
-        <material state="liquid" name="LiquidScintillator-HC+5%Pb">
-            <D value="1.5175" unit="g/cm3"/>
-            <fraction n="0.073552" ref="H"/>
-            <fraction n="0.876448" ref="C"/>
-            <fraction n="0.05" ref="Pb"/>
-        </material>
-        <material state="liquid" name="LiquidScintillator-HC+5%Pb+0.1%Cd">
-            <D value="1.52515" unit="g/cm3"/>
-            <fraction n="0.073474" ref="H"/>
-            <fraction n="0.875526" ref="C"/>
-            <fraction n="0.05" ref="Pb"/>
-            <fraction n="0.001" ref="Cd"/>
-        </material>
-        <material state="liquid" name="LiquidScintillator-HC+10%Pb">
-            <D value="2.035" unit="g/cm3"/>
-            <fraction n="0.06968" ref="H"/>
-            <fraction n="0.83032" ref="C"/>
-            <fraction n="0.1" ref="Pb"/>
-        </material>
-        <material state="liquid" name="LiquidScintillator-HC+10%Pb+0.1%Cd">
-            <D value="2.04265" unit="g/cm3"/>
-            <fraction n="0.069603" ref="H"/>
-            <fraction n="0.829397" ref="C"/>
-            <fraction n="0.1" ref="Pb"/>
-            <fraction n="0.001" ref="Cd"/>
-        </material>
-        <material state="liquid" name="LiquidScintillator-HC+20%Pb">
-            <D value="3.07" unit="g/cm3"/>
-            <fraction n="0.061938" ref="H"/>
-            <fraction n="0.738062" ref="C"/>
-            <fraction n="0.2" ref="Pb"/>
-        </material>
-        <material state="liquid" name="LiquidScintillator-HC+20%Pb+0.1%Cd">
-            <D value="3.07765" unit="g/cm3"/>
-            <fraction n="0.061861" ref="H"/>
-            <fraction n="0.737139" ref="C"/>
-            <fraction n="0.2" ref="Pb"/>
-            <fraction n="0.001" ref="Cd"/>
-        </material>
-        <material state="liquid" name="LiquidScintillator-HC+50%Pb">
-            <D value="6.175" unit="g/cm3"/>
-            <fraction n="0.038711" ref="H"/>
-            <fraction n="0.461289" ref="C"/>
-            <fraction n="0.5" ref="Pb"/>
-        </material>
-        <material state="liquid" name="LiquidScintillator-HC+50%Pb+0.1%Cd">
-            <D value="6.18265" unit="g/cm3"/>
-            <fraction n="0.038634" ref="H"/>
-            <fraction n="0.460366" ref="C"/>
-            <fraction n="0.5" ref="Pb"/>
-            <fraction n="0.001" ref="Cd"/>
+        <material state="gas" name="Air">
+            <D value="0.00120479" unit="g/cm3"/>
+            <fraction n="1.24E-4" ref="C"/>
+            <fraction n="0.755268" ref="N"/>
+            <fraction n="0.231781" ref="O"/>
+            <fraction n="0.012827" ref="Ar"/>
         </material>
     </materials>
     <solids>

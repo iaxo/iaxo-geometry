@@ -1,6 +1,6 @@
 import space.kscience.gdml.*
 
-const val materialsUrl = "https://raw.githubusercontent.com/lobis/geant4-materials-xml/main/materials.xml"
+const val materialsUrl = "https://raw.githubusercontent.com/rest-for-physics/materials/main/output/materials.xml"
 
 private val materialsGdml = Gdml {
     loadMaterialsFromUrl(materialsUrl)
@@ -19,8 +19,8 @@ fun resolveMaterialByRef(material: Materials): GdmlMaterial {
 
 enum class Materials(val ref: GdmlRef<GdmlMaterial>) {
     Air(resolve("G4_AIR")),
-    GasArgon(resolve("GasMixture-Argon2%Isobutane1.4Bar")),
-    GasXenon(resolve("GasMixture-XenonNeon2.3%Isobutane1.05Bar")),
+    GasArgon(resolve("Argon1%Isobutane1.4bar")),
+    GasXenon(resolve("XenonNeon2.3%Isobutane1.05bar")),
     Vacuum(resolve("G4_Galactic")),
     Copper(resolve("G4_Cu")),
     Teflon(resolve("G4_TEFLON")),
