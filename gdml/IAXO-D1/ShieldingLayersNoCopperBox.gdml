@@ -3997,6 +3997,14 @@
             <first ref="detectorPipeNotEmpty"/>
             <second ref="detectorPipeInside"/>
         </subtraction>
+        <box lunit="mm" aunit="rad" name="electronicsBoxOutSolid" x="41.0" y="90.0" z="200.0"/>
+        <box lunit="mm" aunit="rad" name="electronicsBoxInSolid" x="31.0" y="80.0" z="190.0"/>
+        <subtraction lunit="mm" aunit="rad" name="electronicsBoxSolid">
+            <first ref="electronicsBoxOutSolid"/>
+            <second ref="electronicsBoxInSolid"/>
+        </subtraction>
+        <box lunit="mm" aunit="rad" name="electronicsCardSolid" x="2.5" y="70.0" z="100.0"/>
+        <box lunit="mm" aunit="rad" name="flatcableSolid" x="1.0" y="70.0" z="150.0"/>
         <box lunit="mm" aunit="rad" name="shieldingLayerBox1" x="220.0" y="220.0" z="360.0"/>
         <box lunit="mm" aunit="rad" name="shieldingLayerHole1" x="200.0" y="200.0" z="350.0"/>
         <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole1">
@@ -4252,6 +4260,56 @@
                 <position name="detectorPipeFilling.position" z="82.675" unit="mm"/>
             </physvol>
         </assembly>
+        <volume name="electronicsBoxVolume">
+            <materialref ref="G4_Cu"/>
+            <solidref ref="electronicsBoxSolid"/>
+        </volume>
+        <volume name="electronicsBoxFillingVolume">
+            <materialref ref="G4_Galactic"/>
+            <solidref ref="electronicsBoxInSolid"/>
+        </volume>
+        <volume name="electronicsCardVolume">
+            <materialref ref="G4_Cu"/>
+            <solidref ref="electronicsCardSolid"/>
+        </volume>
+        <volume name="flatcableVolume">
+            <materialref ref="G4_Cu"/>
+            <solidref ref="flatcableSolid"/>
+        </volume>
+        <assembly name="electronicsBox">
+            <physvol name="electronicsCard1">
+                <volumeref ref="electronicsCardVolume"/>
+                <position name="electronicsCard1.position" x="-15.0" unit="mm"/>
+            </physvol>
+            <physvol name="electronicsCard2">
+                <volumeref ref="electronicsCardVolume"/>
+                <position name="electronicsCard2.position" x="-5.0" unit="mm"/>
+            </physvol>
+            <physvol name="electronicsCard3">
+                <volumeref ref="electronicsCardVolume"/>
+                <position name="electronicsCard3.position" x="5.0" unit="mm"/>
+            </physvol>
+            <physvol name="electronicsCard4">
+                <volumeref ref="electronicsCardVolume"/>
+                <position name="electronicsCard4.position" x="15.0" unit="mm"/>
+            </physvol>
+            <physvol name="flatcable1">
+                <volumeref ref="flatcableVolume"/>
+                <position name="flatcable1.position" x="-15.0" z="-125.0" unit="mm"/>
+            </physvol>
+            <physvol name="flatcable2">
+                <volumeref ref="flatcableVolume"/>
+                <position name="flatcable2.position" x="-5.0" z="-125.0" unit="mm"/>
+            </physvol>
+            <physvol name="flatcable3">
+                <volumeref ref="flatcableVolume"/>
+                <position name="flatcable3.position" x="5.0" z="-125.0" unit="mm"/>
+            </physvol>
+            <physvol name="flatcable4">
+                <volumeref ref="flatcableVolume"/>
+                <position name="flatcable4.position" x="15.0" z="-125.0" unit="mm"/>
+            </physvol>
+        </assembly>
         <volume name="shieldingVolumeLayer1">
             <materialref ref="G4_Pb"/>
             <solidref ref="shieldingLayerBoxWithHole1"/>
@@ -4425,6 +4483,10 @@
             <physvol name="DetectorPipe">
                 <volumeref ref="detectorPipe"/>
                 <position name="DetectorPipe.position" z="27.0" unit="mm"/>
+            </physvol>
+            <physvol name="ElectronicsBox">
+                <volumeref ref="electronicsBox"/>
+                <position name="ElectronicsBox.position" x="66.5" z="235.0" unit="mm"/>
             </physvol>
             <physvol name="Shielding">
                 <volumeref ref="shielding"/>
