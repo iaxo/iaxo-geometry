@@ -7,6 +7,7 @@ import space.kscience.gdml.*
 
 open class Chamber(
     val useXenon: Boolean = false,
+    val splitGas: Boolean = false,
 ) : Geometry() {
     companion object Parameters {
         // Body
@@ -198,6 +199,7 @@ open class Chamber(
                 position(z = -Height / 2 + ReadoutCopperThickness / 2) { unit = LUnit.MM }
                 rotation(z = 45) { unit = AUnit.DEG }
             }
+
             val gasSolidAux2 =
                 gdml.solids.subtraction(gasSolidAux1, cathodeWindowAluminiumSolid, "gasSolidAux2") {
                     position(z = Height / 2 - CathodeWindowMylarThickness - CathodeWindowAliminiumThickness / 2) {
@@ -210,13 +212,56 @@ open class Chamber(
                 }
             }
 
+            val gasSolidAboveReadoutOriginal = gdml.solids.box(
+                ReadoutPlaneSide,
+                ReadoutPlaneSide,
+                Height,
+                "gasSolidAboveReadoutOriginal"
+            )
+            val gasSolidAboveReadoutAux = gdml.solids.subtraction(
+                gasSolidAboveReadoutOriginal,
+                copperReadoutSolid,
+                "gasSolidAboveReadoutAux"
+            ) {
+                position(z = -Height / 2 + ReadoutCopperThickness / 2) { unit = LUnit.MM }
+                rotation(z = 45) { unit = AUnit.DEG }
+            }
+
+            val gasSolidAboveReadoutAux2 =
+                gdml.solids.subtraction(gasSolidAboveReadoutAux, cathodeWindowAluminiumSolid, "gasSolidAboveReadoutAux2") {
+                    position(z = Height / 2 - CathodeWindowMylarThickness - CathodeWindowAliminiumThickness / 2) {
+                        unit = LUnit.MM
+                    }
+                }
+
+            val gasSolidAboveReadoutSolid =
+                gdml.solids.subtraction(gasSolidAboveReadoutAux2, cathodeWindowMylarSolid, "gasSolidAboveReadoutSolid") {
+                    position(z = Height / 2 - CathodeWindowMylarThickness / 2) {
+                        unit = LUnit.MM
+                    }
+                }
+
+            val gasSolidWithHole =
+                gdml.solids.subtraction(gasSolid, gasSolidAboveReadoutSolid, "gasSolidWithHole") {
+                    rotation(z = 45) { unit = AUnit.DEG }
+                }
+
             val gasMaterialRef = if (useXenon) Materials.GasXenon.ref else Materials.GasArgon.ref
 
             val gasVolume = gdml.structure.volume(gasMaterialRef, gasSolid, "gasVolume")
+            val gasVolumeNotAboveReadout =
+                gdml.structure.volume(gasMaterialRef, gasSolidWithHole, "gasVolumeNotAboveReadout")
+            val gasVolumeAboveReadout =
+                gdml.structure.volume(gasMaterialRef, gasSolidAboveReadoutSolid, "gasVolumeAboveReadout")
 
             return@lazy gdml.structure.assembly {
                 name = "Chamber"
-                physVolume(gasVolume, name = "gas")
+                if (splitGas) {
+                    physVolume(gasVolumeNotAboveReadout, name = "gasNotAboveReadout")
+                    physVolume(gasVolumeAboveReadout, name = "gasAboveReadout").rotation(z = 45) { unit = AUnit.DEG }
+                } else {
+                    physVolume(gasVolume, name = "gas")
+                }
                 physVolume(chamberBackplateVolume, name = "chamberBackplate") {
                     position(
                         z = -Height / 2 - ReadoutKaptonThickness - BackplateThickness / 2

@@ -3942,6 +3942,28 @@
             <first ref="gasSolidAux2"/>
             <second ref="cathodeWindowMylarSolid"/>
         </subtraction>
+        <box lunit="mm" aunit="rad" name="gasSolidAboveReadoutOriginal" x="60.0" y="60.0" z="30.0"/>
+        <subtraction lunit="mm" aunit="rad" name="gasSolidAboveReadoutAux">
+            <position name="gasSolidAboveReadoutAux.position" z="-14.9" unit="mm"/>
+            <rotation name="gasSolidAboveReadoutAux.rotation" z="45.0" unit="deg"/>
+            <first ref="gasSolidAboveReadoutOriginal"/>
+            <second ref="copperReadoutSolid"/>
+        </subtraction>
+        <subtraction lunit="mm" aunit="rad" name="gasSolidAboveReadoutAux2">
+            <position name="gasSolidAboveReadoutAux2.position" z="14.996020000000001" unit="mm"/>
+            <first ref="gasSolidAboveReadoutAux"/>
+            <second ref="cathodeWindowAluminiumSolid"/>
+        </subtraction>
+        <subtraction lunit="mm" aunit="rad" name="gasSolidAboveReadoutSolid">
+            <position name="gasSolidAboveReadoutSolid.position" z="14.99802" unit="mm"/>
+            <first ref="gasSolidAboveReadoutAux2"/>
+            <second ref="cathodeWindowMylarSolid"/>
+        </subtraction>
+        <subtraction lunit="mm" aunit="rad" name="gasSolidWithHole">
+            <rotation name="gasSolidWithHole.rotation" z="45.0" unit="deg"/>
+            <first ref="gasSolid"/>
+            <second ref="gasSolidAboveReadoutSolid"/>
+        </subtraction>
         <tube lunit="mm" aunit="rad" name="detectorPipeChamberFlangeSolid" rmax="67.0" z="14.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
         <tube lunit="mm" aunit="rad" name="detectorPipeTelescopeFlangeSolid" rmax="75.0" z="18.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
         <tube lunit="mm" aunit="rad" name="detectorPipeSection1of2Solid" rmax="46.0" z="327.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
@@ -4198,6 +4220,14 @@
         <volume name="gasVolume">
             <materialref ref="Argon1%Isobutane1.4bar"/>
             <solidref ref="gasSolid"/>
+        </volume>
+        <volume name="gasVolumeNotAboveReadout">
+            <materialref ref="Argon1%Isobutane1.4bar"/>
+            <solidref ref="gasSolidWithHole"/>
+        </volume>
+        <volume name="gasVolumeAboveReadout">
+            <materialref ref="Argon1%Isobutane1.4bar"/>
+            <solidref ref="gasSolidAboveReadoutSolid"/>
         </volume>
         <assembly name="Chamber">
             <physvol name="gas">
