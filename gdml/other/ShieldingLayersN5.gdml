@@ -7,11 +7,13 @@
 
         <constant name="shieldingLayer1Thickness" value="${shieldingLayer1Thickness}"/> <!-- Lead layer -->
         <constant name="shieldingLayer2Thickness" value="${shieldingLayer2Thickness}"/> <!-- HDPE layer -->
-        <constant name="shieldingLayer3Thickness"
-                  value="shieldingPbThickness - shieldingLayer1Thickness"/> <!-- Lead layer -->
+        <constant name="shieldingLayer3Thickness" value="${shieldingLayer3Thickness}"/> <!-- Lead layer -->
+        <constant name="shieldingLayer4Thickness" value="${shieldingLayer4Thickness}"/> <!-- HDPE layer -->
+        <constant name="shieldingLayer5Thickness"
+                  value="shieldingPbThickness - shieldingLayer1Thickness - shieldingLayer3Thickness"/> <!-- Lead layer -->
 
         <constant name="shieldingThickness"
-                  value="shieldingLayer1Thickness + shieldingLayer2Thickness + shieldingLayer3Thickness"/>
+                  value="shieldingLayer1Thickness + shieldingLayer2Thickness + shieldingLayer3Thickness + shieldingLayer4Thickness + shieldingLayer5Thickness"/>
 
     </define>
     <materials>
@@ -4064,12 +4066,27 @@
             <first ref="copperBoxOutterSolid"/>
             <second ref="copperBoxInnerSolid"/>
         </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayer1Full" x="chamberBoxSize + 2 * shieldingLayer1Thickness"
-             y="chamberBoxSize + 2 * shieldingLayer1Thickness" z="chamberBoxSize + 2 * shieldingLayer1Thickness"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayer2Full" x="chamberBoxSize + 2 * shieldingLayer1Thickness + 2 * shieldingLayer2Thickness"
-             y="chamberBoxSize + 2 * shieldingLayer1Thickness + 2 * shieldingLayer2Thickness" z="chamberBoxSize + 2 * shieldingLayer1Thickness + 2 * shieldingLayer2Thickness"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayer3Full" x="chamberBoxSize + 2 * shieldingLayer1Thickness + 2 * shieldingLayer2Thickness + 2 * shieldingLayer3Thickness"
-             y="chamberBoxSize + 2 * shieldingLayer1Thickness + 2 * shieldingLayer2Thickness + 2 * shieldingLayer3Thickness" z="chamberBoxSize + 2 * shieldingLayer1Thickness + 2 * shieldingLayer2Thickness + 2 * shieldingLayer3Thickness"/>
+
+        <box lunit="mm" aunit="rad" name="shieldingLayer1Full"
+             x="chamberBoxSize + 2 * shieldingLayer1Thickness"
+             y="chamberBoxSize + 2 * shieldingLayer1Thickness"
+             z="chamberBoxSize + 2 * shieldingLayer1Thickness"/>
+        <box lunit="mm" aunit="rad" name="shieldingLayer2Full"
+             x="chamberBoxSize + 2 * shieldingLayer1Thickness + 2 * shieldingLayer2Thickness"
+             y="chamberBoxSize + 2 * shieldingLayer1Thickness + 2 * shieldingLayer2Thickness"
+             z="chamberBoxSize + 2 * shieldingLayer1Thickness + 2 * shieldingLayer2Thickness"/>
+        <box lunit="mm" aunit="rad" name="shieldingLayer3Full"
+             x="chamberBoxSize + 2 * shieldingLayer1Thickness + 2 * shieldingLayer2Thickness + 2 * shieldingLayer3Thickness"
+             y="chamberBoxSize + 2 * shieldingLayer1Thickness + 2 * shieldingLayer2Thickness + 2 * shieldingLayer3Thickness"
+             z="chamberBoxSize + 2 * shieldingLayer1Thickness + 2 * shieldingLayer2Thickness + 2 * shieldingLayer3Thickness"/>
+        <box lunit="mm" aunit="rad" name="shieldingLayer4Full"
+             x="chamberBoxSize + 2 * shieldingLayer1Thickness + 2 * shieldingLayer2Thickness + 2 * shieldingLayer3Thickness + 2 * shieldingLayer4Thickness"
+             y="chamberBoxSize + 2 * shieldingLayer1Thickness + 2 * shieldingLayer2Thickness + 2 * shieldingLayer3Thickness + 2 * shieldingLayer4Thickness"
+             z="chamberBoxSize + 2 * shieldingLayer1Thickness + 2 * shieldingLayer2Thickness + 2 * shieldingLayer3Thickness + 2 * shieldingLayer4Thickness"/>
+        <box lunit="mm" aunit="rad" name="shieldingLayer5Full"
+             x="chamberBoxSize + 2 * shieldingLayer1Thickness + 2 * shieldingLayer2Thickness + 2 * shieldingLayer3Thickness + 2 * shieldingLayer4Thickness + 2 * shieldingLayer5Thickness"
+             y="chamberBoxSize + 2 * shieldingLayer1Thickness + 2 * shieldingLayer2Thickness + 2 * shieldingLayer3Thickness + 2 * shieldingLayer4Thickness + 2 * shieldingLayer5Thickness"
+             z="chamberBoxSize + 2 * shieldingLayer1Thickness + 2 * shieldingLayer2Thickness + 2 * shieldingLayer3Thickness + 2 * shieldingLayer4Thickness + 2 * shieldingLayer5Thickness"/>
 
         <box lunit="mm" aunit="rad" name="shieldingCenterHole" x="chamberBoxSize" y="chamberBoxSize"
              z="chamberBoxSize"/>
@@ -4087,6 +4104,16 @@
         <subtraction lunit="mm" aunit="rad" name="shieldingLayer3">
             <first ref="shieldingLayer3Full"/>
             <second ref="shieldingLayer2Full"/>
+        </subtraction>
+
+        <subtraction lunit="mm" aunit="rad" name="shieldingLayer4">
+            <first ref="shieldingLayer4Full"/>
+            <second ref="shieldingLayer3Full"/>
+        </subtraction>
+
+        <subtraction lunit="mm" aunit="rad" name="shieldingLayer5">
+            <first ref="shieldingLayer5Full"/>
+            <second ref="shieldingLayer4Full"/>
         </subtraction>
 
         <box lunit="mm" aunit="rad" name="worldBox" x="chamberBoxSize + 2 * shieldingThickness + 1"
@@ -4219,13 +4246,20 @@
             <solidref ref="shieldingLayer1"/>
         </volume>
         <volume name="shieldingLayer2Volume">
-            <!-- <materialref ref="G4_POLYETHYLENE"/> -->
-            <materialref ref="BoratedHDPE5pct"/>
+            <materialref ref="G4_POLYETHYLENE"/>
             <solidref ref="shieldingLayer2"/>
         </volume>
         <volume name="shieldingLayer3Volume">
             <materialref ref="G4_Pb"/>
             <solidref ref="shieldingLayer3"/>
+        </volume>
+        <volume name="shieldingLayer4Volume">
+            <materialref ref="G4_POLYETHYLENE"/>
+            <solidref ref="shieldingLayer4"/>
+        </volume>
+        <volume name="shieldingLayer5Volume">
+            <materialref ref="G4_Pb"/>
+            <solidref ref="shieldingLayer5"/>
         </volume>
         <assembly name="shielding">
             <physvol name="shieldingLayer1">
@@ -4236,6 +4270,12 @@
             </physvol>
             <physvol name="shieldingLayer3">
                 <volumeref ref="shieldingLayer3Volume"/>
+            </physvol>
+            <physvol name="shieldingLayer4">
+                <volumeref ref="shieldingLayer4Volume"/>
+            </physvol>
+            <physvol name="shieldingLayer5">
+                <volumeref ref="shieldingLayer5Volume"/>
             </physvol>
         </assembly>
         <volume name="world">
