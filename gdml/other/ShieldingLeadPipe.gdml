@@ -4022,14 +4022,6 @@
             <first ref="detectorPipeNotEmpty"/>
             <second ref="detectorPipeInside"/>
         </subtraction>
-        <box lunit="mm" aunit="rad" name="electronicsBoxOutSolid" x="41.0" y="90.0" z="200.0"/>
-        <box lunit="mm" aunit="rad" name="electronicsBoxInSolid" x="31.0" y="80.0" z="190.0"/>
-        <subtraction lunit="mm" aunit="rad" name="electronicsBoxSolid">
-            <first ref="electronicsBoxOutSolid"/>
-            <second ref="electronicsBoxInSolid"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="electronicsCardSolid" x="2.5" y="70.0" z="100.0"/>
-        <box lunit="mm" aunit="rad" name="flatcableSolid" x="1.0" y="70.0" z="150.0"/>
         <box lunit="mm" aunit="rad" name="copperBoxOutterSolid" x="200.0" y="200.0" z="350.0"/>
         <box lunit="mm" aunit="rad" name="copperBoxInnerSolid" x="180.0" y="150.0" z="350.0"/>
         <subtraction lunit="mm" aunit="rad" name="copperBoxSolid">
@@ -4169,56 +4161,6 @@
                 <position name="detectorPipeFilling.position" z="82.675" unit="mm"/>
             </physvol>
         </assembly>
-        <volume name="electronicsBoxVolume">
-            <materialref ref="G4_Cu"/>
-            <solidref ref="electronicsBoxSolid"/>
-        </volume>
-        <volume name="electronicsBoxFillingVolume">
-            <materialref ref="G4_Galactic"/>
-            <solidref ref="electronicsBoxInSolid"/>
-        </volume>
-        <volume name="electronicsCardVolume">
-            <materialref ref="G4_Cu"/>
-            <solidref ref="electronicsCardSolid"/>
-        </volume>
-        <volume name="flatcableVolume">
-            <materialref ref="G4_Cu"/>
-            <solidref ref="flatcableSolid"/>
-        </volume>
-        <assembly name="electronicsBox">
-            <physvol name="electronicsCard1">
-                <volumeref ref="electronicsCardVolume"/>
-                <position name="electronicsCard1.position" x="-15.0" unit="mm"/>
-            </physvol>
-            <physvol name="electronicsCard2">
-                <volumeref ref="electronicsCardVolume"/>
-                <position name="electronicsCard2.position" x="-5.0" unit="mm"/>
-            </physvol>
-            <physvol name="electronicsCard3">
-                <volumeref ref="electronicsCardVolume"/>
-                <position name="electronicsCard3.position" x="5.0" unit="mm"/>
-            </physvol>
-            <physvol name="electronicsCard4">
-                <volumeref ref="electronicsCardVolume"/>
-                <position name="electronicsCard4.position" x="15.0" unit="mm"/>
-            </physvol>
-            <physvol name="flatcable1">
-                <volumeref ref="flatcableVolume"/>
-                <position name="flatcable1.position" x="-15.0" z="-125.0" unit="mm"/>
-            </physvol>
-            <physvol name="flatcable2">
-                <volumeref ref="flatcableVolume"/>
-                <position name="flatcable2.position" x="-5.0" z="-125.0" unit="mm"/>
-            </physvol>
-            <physvol name="flatcable3">
-                <volumeref ref="flatcableVolume"/>
-                <position name="flatcable3.position" x="5.0" z="-125.0" unit="mm"/>
-            </physvol>
-            <physvol name="flatcable4">
-                <volumeref ref="flatcableVolume"/>
-                <position name="flatcable4.position" x="15.0" z="-125.0" unit="mm"/>
-            </physvol>
-        </assembly>
         <volume name="copperBoxVolume">
             <materialref ref="G4_Cu"/>
             <solidref ref="copperBoxSolid"/>
@@ -4230,14 +4172,7 @@
         <assembly name="shielding">
             <physvol name="shielding">
                 <volumeref ref="shieldingVolume"/>
-                <position name="shielding.position" z="0" unit="mm"/>
             </physvol>
-            <!--
-            <physvol name="copperBox">
-                <volumeref ref="copperBoxVolume"/>
-                <position name="copperBox.position" z="119.5" unit="mm"/>
-            </physvol>
-            -->
         </assembly>
         <volume name="world">
             <physvol name="Chamber">
@@ -4247,12 +4182,6 @@
                 <volumeref ref="detectorPipe"/>
                 <position name="DetectorPipe.position" z="27.0" unit="mm"/>
             </physvol>
-            <!--
-            <physvol name="ElectronicsBox">
-                <volumeref ref="electronicsBox"/>
-                <position name="ElectronicsBox.position" x="66.5" z="235.0" unit="mm"/>
-            </physvol>
-            -->
             <physvol name="Shielding">
                 <volumeref ref="shielding"/>
             </physvol>

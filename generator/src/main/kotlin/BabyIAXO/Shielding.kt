@@ -30,12 +30,12 @@ open class Shielding(
     override fun generate(gdml: Gdml): GdmlRef<GdmlAssembly> {
         if (!layers) {
             val shieldingVolume: GdmlRef<GdmlAssembly> by lazy {
-                val copperBoxOutterSolid =
+                val copperBoxOuterSolid =
                     gdml.solids.box(
                         ShaftShortSideX,
                         ShaftShortSideY,
                         ShaftLongSide,
-                        "copperBoxOutterSolid"
+                        "copperBoxOuterSolid"
                     )
                 val copperBoxInnerSolid =
                     gdml.solids.box(
@@ -45,7 +45,7 @@ open class Shielding(
                         "copperBoxInnerSolid"
                     )
                 val copperBoxSolid =
-                    gdml.solids.subtraction(copperBoxOutterSolid, copperBoxInnerSolid, "copperBoxSolid") {
+                    gdml.solids.subtraction(copperBoxOuterSolid, copperBoxInnerSolid, "copperBoxSolid") {
                         position(z = copperBoxThickness) { unit = LUnit.MM }
                     }
                 val copperBoxVolume =
@@ -65,8 +65,6 @@ open class Shielding(
                         position(z = SizeZ / 2 - ShaftLongSide / 2) { unit = LUnit.MM }
                     }
 
-                // val leadShieldingVolume = gdml.structure.volume(Materials.Lead.ref, leadBoxWithNeutronShieldingSolid, "shieldingVolume")
-                // conditional to hdpeNeutronShielding, use either leadBoxWithNeutronShieldingSolid or leadBoxWithShaftSolid
                 var neutronShieldingRodSolidShielding: GdmlRef<GdmlSolid>? = null
 
                 val counts = 14
@@ -141,7 +139,7 @@ open class Shielding(
                         neutronShieldingRodSolidShielding?.let {
                             physVolume(
                                 gdml.structure.volume(
-                                    Materials.Lead.ref,
+                                    Materials.BoratedHDPE5pct.ref,
                                     neutronShieldingRodSolidShielding,
                                     "neutronShieldingRods"
                                 ), name = "neutronShieldingRods"
@@ -219,12 +217,12 @@ open class Shielding(
                         gdml.structure.volume(Materials.Lead.ref, leadBoxWithShaftSolid, "shieldingVolumeLayerLast")
                 }
 
-                val copperBoxOutterSolid =
+                val copperBoxOuterSolid =
                     gdml.solids.box(
                         ShaftShortSideX,
                         ShaftShortSideY,
                         ShaftLongSide,
-                        "copperBoxOutterSolid"
+                        "copperBoxOuterSolid"
                     )
                 val copperBoxInnerSolid =
                     gdml.solids.box(
@@ -234,7 +232,7 @@ open class Shielding(
                         "copperBoxInnerSolid"
                     )
                 val copperBoxSolid =
-                    gdml.solids.subtraction(copperBoxOutterSolid, copperBoxInnerSolid, "copperBoxSolid") {
+                    gdml.solids.subtraction(copperBoxOuterSolid, copperBoxInnerSolid, "copperBoxSolid") {
                         position(z = copperBoxThickness) { unit = LUnit.MM }
                     }
                 val copperBoxVolume =

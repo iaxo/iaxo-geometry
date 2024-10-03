@@ -3183,6 +3183,11 @@
             <fraction n="0.2" ref="G4_LUNG_ICRP"/>
             <fraction n="0.8" ref="G4_AIR"/>
         </material>
+        <material state="solid" name="BoratedHDPE5pct">
+            <D value="1.04" unit="g/cm3"/>
+            <fraction n="0.05" ref="G4_B"/>
+            <fraction n="0.95" ref="G4_POLYETHYLENE"/>
+        </material>
         <material state="liquid" name="LiquidScintillatorBase">
             <D value="1.03" unit="g/cm3"/>
             <fraction n="0.085" ref="G4_H"/>
@@ -3751,9 +3756,10 @@
             <fraction n="0.98225450491" ref="Xenon50Neon50Gas"/>
             <fraction n="0.01774549509" ref="IsobutaneGas"/>
         </material>
-        <material state="gas" name="XenonNeon2.3%Isobutane1.05bar">
-            <D value="3.1908975" unit="kg/m3"/>
-            <fraction n="1.0" ref="XenonNeon2.3%Isobutane1bar"/>
+        <material state="gas" name="XenonNeon5%Isobutane1bar">
+            <D value="3.01977" unit="kg/m3"/>
+            <fraction n="0.961177731" ref="Xenon50Neon50Gas"/>
+            <fraction n="0.038822269" ref="IsobutaneGas"/>
         </material>
         <material state="gas" name="Argon1%Isobutane1.2bar">
             <D value="1.942584" unit="kg/m3"/>
@@ -3803,6 +3809,30 @@
             <D value="2.35872" unit="kg/m3"/>
             <fraction n="1.0" ref="Argon10%Isobutane1bar"/>
         </material>
+        <material state="gas" name="Argon1%Isobutane1.5bar">
+            <D value="2.42836" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon1%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon2%Isobutane1.5bar">
+            <D value="2.43936" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon2%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon3%Isobutane1.5bar">
+            <D value="2.45036" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon3%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon4%Isobutane1.5bar">
+            <D value="2.46136" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon4%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon5%Isobutane1.5bar">
+            <D value="2.47235" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon5%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon10%Isobutane1.5bar">
+            <D value="2.52735" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon10%Isobutane1bar"/>
+        </material>
         <material state="gas" name="Argon1%Isobutane1.6bar">
             <D value="2.590112" unit="kg/m3"/>
             <fraction n="1.0" ref="Argon1%Isobutane1bar"/>
@@ -3826,6 +3856,50 @@
         <material state="gas" name="Argon10%Isobutane1.6bar">
             <D value="2.69568" unit="kg/m3"/>
             <fraction n="1.0" ref="Argon10%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon1%Isobutane2.0bar">
+            <D value="3.23781" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon1%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon2%Isobutane2.0bar">
+            <D value="3.25248" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon2%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon3%Isobutane2.0bar">
+            <D value="3.26714" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon3%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon4%Isobutane2.0bar">
+            <D value="3.28181" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon4%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon5%Isobutane2.0bar">
+            <D value="3.29647" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon5%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon10%Isobutane2.0bar">
+            <D value="3.3698" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon10%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="XenonNeon2.3%Isobutane1.05bar">
+            <D value="3.1908975" unit="kg/m3"/>
+            <fraction n="1.0" ref="XenonNeon2.3%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="XenonNeon2.3%Isobutane1.5bar">
+            <D value="4.5585" unit="kg/m3"/>
+            <fraction n="1.0" ref="XenonNeon2.3%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="XenonNeon2.3%Isobutane2.0bar">
+            <D value="6.078" unit="kg/m3"/>
+            <fraction n="1.0" ref="XenonNeon2.3%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="XenonNeon5%Isobutane1.5bar">
+            <D value="4.52972" unit="kg/m3"/>
+            <fraction n="1.0" ref="XenonNeon5%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="XenonNeon5%Isobutane2.0bar">
+            <D value="6.03963" unit="kg/m3"/>
+            <fraction n="1.0" ref="XenonNeon5%Isobutane1bar"/>
         </material>
         <material state="solid" name="Copper">
             <D value="8.96" unit="g/cm3"/>
@@ -4026,12 +4100,12 @@
             <second ref="electronicsBoxInSolid"/>
         </subtraction>
         <box lunit="mm" aunit="rad" name="electronicsCardSolid" x="2.5" y="70.0" z="100.0"/>
-        <box lunit="mm" aunit="rad" name="flatcableSolid" x="1.0" y="70.0" z="150.0"/>
-        <box lunit="mm" aunit="rad" name="copperBoxOutterSolid" x="200.0" y="200.0" z="350.0"/>
+        <box lunit="mm" aunit="rad" name="flatCableSolid" x="1.0" y="70.0" z="150.0"/>
+        <box lunit="mm" aunit="rad" name="copperBoxOuterSolid" x="200.0" y="200.0" z="350.0"/>
         <box lunit="mm" aunit="rad" name="copperBoxInnerSolid" x="180.0" y="150.0" z="350.0"/>
         <subtraction lunit="mm" aunit="rad" name="copperBoxSolid">
             <position name="copperBoxSolid.position" z="10.0" unit="mm"/>
-            <first ref="copperBoxOutterSolid"/>
+            <first ref="copperBoxOuterSolid"/>
             <second ref="copperBoxInnerSolid"/>
         </subtraction>
         <box lunit="mm" aunit="rad" name="leadBoxSolid" x="600.0" y="600.0" z="550.0"/>
@@ -4040,6 +4114,1451 @@
             <position name="leadBoxWithShaftSolid.position" z="100.0" unit="mm"/>
             <first ref="leadBoxSolid"/>
             <second ref="leadBoxShaftSolid"/>
+        </subtraction>
+        <tube lunit="mm" aunit="rad" name="neutronShieldingRodSolid" rmax="10.0" z="550.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX0Y0">
+            <first ref="neutronShieldingRodSolid"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX1Y1">
+            <position name="shieldingNeutronRodX1Y1.position" unit="mm"/>
+            <first ref="shieldingNeutronRodX0Y0"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX1Y1">
+            <position name="leadBoxWithNeutronShieldingSolidX1Y1.position" x="-257.14285714285717" y="-257.14285714285717" unit="mm"/>
+            <first ref="leadBoxWithShaftSolid"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX1Y2">
+            <position name="shieldingNeutronRodX1Y2.position" y="42.857142857142854" unit="mm"/>
+            <first ref="shieldingNeutronRodX1Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX1Y2">
+            <position name="leadBoxWithNeutronShieldingSolidX1Y2.position" x="-257.14285714285717" y="-214.28571428571428" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX1Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX1Y3">
+            <position name="shieldingNeutronRodX1Y3.position" y="85.71428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX1Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX1Y3">
+            <position name="leadBoxWithNeutronShieldingSolidX1Y3.position" x="-257.14285714285717" y="-171.42857142857144" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX1Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX1Y4">
+            <position name="shieldingNeutronRodX1Y4.position" y="128.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX1Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX1Y4">
+            <position name="leadBoxWithNeutronShieldingSolidX1Y4.position" x="-257.14285714285717" y="-128.57142857142858" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX1Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX1Y5">
+            <position name="shieldingNeutronRodX1Y5.position" y="171.42857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX1Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX1Y5">
+            <position name="leadBoxWithNeutronShieldingSolidX1Y5.position" x="-257.14285714285717" y="-85.71428571428572" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX1Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX1Y6">
+            <position name="shieldingNeutronRodX1Y6.position" y="214.28571428571428" unit="mm"/>
+            <first ref="shieldingNeutronRodX1Y5"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX1Y6">
+            <position name="leadBoxWithNeutronShieldingSolidX1Y6.position" x="-257.14285714285717" y="-42.85714285714289" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX1Y5"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX1Y7">
+            <position name="shieldingNeutronRodX1Y7.position" y="257.1428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX1Y6"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX1Y7">
+            <position name="leadBoxWithNeutronShieldingSolidX1Y7.position" x="-257.14285714285717" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX1Y6"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX1Y8">
+            <position name="shieldingNeutronRodX1Y8.position" y="300.0" unit="mm"/>
+            <first ref="shieldingNeutronRodX1Y7"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX1Y8">
+            <position name="leadBoxWithNeutronShieldingSolidX1Y8.position" x="-257.14285714285717" y="42.85714285714283" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX1Y7"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX1Y9">
+            <position name="shieldingNeutronRodX1Y9.position" y="342.85714285714283" unit="mm"/>
+            <first ref="shieldingNeutronRodX1Y8"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX1Y9">
+            <position name="leadBoxWithNeutronShieldingSolidX1Y9.position" x="-257.14285714285717" y="85.71428571428567" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX1Y8"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX1Y10">
+            <position name="shieldingNeutronRodX1Y10.position" y="385.71428571428567" unit="mm"/>
+            <first ref="shieldingNeutronRodX1Y9"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX1Y10">
+            <position name="leadBoxWithNeutronShieldingSolidX1Y10.position" x="-257.14285714285717" y="128.57142857142856" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX1Y9"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX1Y11">
+            <position name="shieldingNeutronRodX1Y11.position" y="428.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX1Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX1Y11">
+            <position name="leadBoxWithNeutronShieldingSolidX1Y11.position" x="-257.14285714285717" y="171.4285714285714" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX1Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX1Y12">
+            <position name="shieldingNeutronRodX1Y12.position" y="471.4285714285714" unit="mm"/>
+            <first ref="shieldingNeutronRodX1Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX1Y12">
+            <position name="leadBoxWithNeutronShieldingSolidX1Y12.position" x="-257.14285714285717" y="214.28571428571422" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX1Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX1Y13">
+            <position name="shieldingNeutronRodX1Y13.position" y="514.2857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX1Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX1Y13">
+            <position name="leadBoxWithNeutronShieldingSolidX1Y13.position" x="-257.14285714285717" y="257.1428571428571" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX1Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX2Y1">
+            <position name="shieldingNeutronRodX2Y1.position" x="42.857142857142854" unit="mm"/>
+            <first ref="shieldingNeutronRodX1Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX2Y1">
+            <position name="leadBoxWithNeutronShieldingSolidX2Y1.position" x="-214.28571428571428" y="-257.14285714285717" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX1Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX2Y2">
+            <position name="shieldingNeutronRodX2Y2.position" x="42.857142857142854" y="42.857142857142854" unit="mm"/>
+            <first ref="shieldingNeutronRodX2Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX2Y2">
+            <position name="leadBoxWithNeutronShieldingSolidX2Y2.position" x="-214.28571428571428" y="-214.28571428571428" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX2Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX2Y3">
+            <position name="shieldingNeutronRodX2Y3.position" x="42.857142857142854" y="85.71428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX2Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX2Y3">
+            <position name="leadBoxWithNeutronShieldingSolidX2Y3.position" x="-214.28571428571428" y="-171.42857142857144" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX2Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX2Y4">
+            <position name="shieldingNeutronRodX2Y4.position" x="42.857142857142854" y="128.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX2Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX2Y4">
+            <position name="leadBoxWithNeutronShieldingSolidX2Y4.position" x="-214.28571428571428" y="-128.57142857142858" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX2Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX2Y5">
+            <position name="shieldingNeutronRodX2Y5.position" x="42.857142857142854" y="171.42857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX2Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX2Y5">
+            <position name="leadBoxWithNeutronShieldingSolidX2Y5.position" x="-214.28571428571428" y="-85.71428571428572" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX2Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX2Y6">
+            <position name="shieldingNeutronRodX2Y6.position" x="42.857142857142854" y="214.28571428571428" unit="mm"/>
+            <first ref="shieldingNeutronRodX2Y5"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX2Y6">
+            <position name="leadBoxWithNeutronShieldingSolidX2Y6.position" x="-214.28571428571428" y="-42.85714285714289" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX2Y5"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX2Y7">
+            <position name="shieldingNeutronRodX2Y7.position" x="42.857142857142854" y="257.1428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX2Y6"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX2Y7">
+            <position name="leadBoxWithNeutronShieldingSolidX2Y7.position" x="-214.28571428571428" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX2Y6"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX2Y8">
+            <position name="shieldingNeutronRodX2Y8.position" x="42.857142857142854" y="300.0" unit="mm"/>
+            <first ref="shieldingNeutronRodX2Y7"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX2Y8">
+            <position name="leadBoxWithNeutronShieldingSolidX2Y8.position" x="-214.28571428571428" y="42.85714285714283" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX2Y7"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX2Y9">
+            <position name="shieldingNeutronRodX2Y9.position" x="42.857142857142854" y="342.85714285714283" unit="mm"/>
+            <first ref="shieldingNeutronRodX2Y8"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX2Y9">
+            <position name="leadBoxWithNeutronShieldingSolidX2Y9.position" x="-214.28571428571428" y="85.71428571428567" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX2Y8"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX2Y10">
+            <position name="shieldingNeutronRodX2Y10.position" x="42.857142857142854" y="385.71428571428567" unit="mm"/>
+            <first ref="shieldingNeutronRodX2Y9"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX2Y10">
+            <position name="leadBoxWithNeutronShieldingSolidX2Y10.position" x="-214.28571428571428" y="128.57142857142856" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX2Y9"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX2Y11">
+            <position name="shieldingNeutronRodX2Y11.position" x="42.857142857142854" y="428.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX2Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX2Y11">
+            <position name="leadBoxWithNeutronShieldingSolidX2Y11.position" x="-214.28571428571428" y="171.4285714285714" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX2Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX2Y12">
+            <position name="shieldingNeutronRodX2Y12.position" x="42.857142857142854" y="471.4285714285714" unit="mm"/>
+            <first ref="shieldingNeutronRodX2Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX2Y12">
+            <position name="leadBoxWithNeutronShieldingSolidX2Y12.position" x="-214.28571428571428" y="214.28571428571422" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX2Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX2Y13">
+            <position name="shieldingNeutronRodX2Y13.position" x="42.857142857142854" y="514.2857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX2Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX2Y13">
+            <position name="leadBoxWithNeutronShieldingSolidX2Y13.position" x="-214.28571428571428" y="257.1428571428571" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX2Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX3Y1">
+            <position name="shieldingNeutronRodX3Y1.position" x="85.71428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX2Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX3Y1">
+            <position name="leadBoxWithNeutronShieldingSolidX3Y1.position" x="-171.42857142857144" y="-257.14285714285717" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX2Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX3Y2">
+            <position name="shieldingNeutronRodX3Y2.position" x="85.71428571428571" y="42.857142857142854" unit="mm"/>
+            <first ref="shieldingNeutronRodX3Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX3Y2">
+            <position name="leadBoxWithNeutronShieldingSolidX3Y2.position" x="-171.42857142857144" y="-214.28571428571428" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX3Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX3Y3">
+            <position name="shieldingNeutronRodX3Y3.position" x="85.71428571428571" y="85.71428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX3Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX3Y3">
+            <position name="leadBoxWithNeutronShieldingSolidX3Y3.position" x="-171.42857142857144" y="-171.42857142857144" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX3Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX3Y4">
+            <position name="shieldingNeutronRodX3Y4.position" x="85.71428571428571" y="128.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX3Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX3Y4">
+            <position name="leadBoxWithNeutronShieldingSolidX3Y4.position" x="-171.42857142857144" y="-128.57142857142858" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX3Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX3Y5">
+            <position name="shieldingNeutronRodX3Y5.position" x="85.71428571428571" y="171.42857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX3Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX3Y5">
+            <position name="leadBoxWithNeutronShieldingSolidX3Y5.position" x="-171.42857142857144" y="-85.71428571428572" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX3Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX3Y6">
+            <position name="shieldingNeutronRodX3Y6.position" x="85.71428571428571" y="214.28571428571428" unit="mm"/>
+            <first ref="shieldingNeutronRodX3Y5"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX3Y6">
+            <position name="leadBoxWithNeutronShieldingSolidX3Y6.position" x="-171.42857142857144" y="-42.85714285714289" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX3Y5"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX3Y7">
+            <position name="shieldingNeutronRodX3Y7.position" x="85.71428571428571" y="257.1428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX3Y6"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX3Y7">
+            <position name="leadBoxWithNeutronShieldingSolidX3Y7.position" x="-171.42857142857144" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX3Y6"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX3Y8">
+            <position name="shieldingNeutronRodX3Y8.position" x="85.71428571428571" y="300.0" unit="mm"/>
+            <first ref="shieldingNeutronRodX3Y7"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX3Y8">
+            <position name="leadBoxWithNeutronShieldingSolidX3Y8.position" x="-171.42857142857144" y="42.85714285714283" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX3Y7"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX3Y9">
+            <position name="shieldingNeutronRodX3Y9.position" x="85.71428571428571" y="342.85714285714283" unit="mm"/>
+            <first ref="shieldingNeutronRodX3Y8"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX3Y9">
+            <position name="leadBoxWithNeutronShieldingSolidX3Y9.position" x="-171.42857142857144" y="85.71428571428567" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX3Y8"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX3Y10">
+            <position name="shieldingNeutronRodX3Y10.position" x="85.71428571428571" y="385.71428571428567" unit="mm"/>
+            <first ref="shieldingNeutronRodX3Y9"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX3Y10">
+            <position name="leadBoxWithNeutronShieldingSolidX3Y10.position" x="-171.42857142857144" y="128.57142857142856" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX3Y9"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX3Y11">
+            <position name="shieldingNeutronRodX3Y11.position" x="85.71428571428571" y="428.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX3Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX3Y11">
+            <position name="leadBoxWithNeutronShieldingSolidX3Y11.position" x="-171.42857142857144" y="171.4285714285714" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX3Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX3Y12">
+            <position name="shieldingNeutronRodX3Y12.position" x="85.71428571428571" y="471.4285714285714" unit="mm"/>
+            <first ref="shieldingNeutronRodX3Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX3Y12">
+            <position name="leadBoxWithNeutronShieldingSolidX3Y12.position" x="-171.42857142857144" y="214.28571428571422" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX3Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX3Y13">
+            <position name="shieldingNeutronRodX3Y13.position" x="85.71428571428571" y="514.2857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX3Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX3Y13">
+            <position name="leadBoxWithNeutronShieldingSolidX3Y13.position" x="-171.42857142857144" y="257.1428571428571" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX3Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX4Y1">
+            <position name="shieldingNeutronRodX4Y1.position" x="128.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX3Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX4Y1">
+            <position name="leadBoxWithNeutronShieldingSolidX4Y1.position" x="-128.57142857142858" y="-257.14285714285717" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX3Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX4Y2">
+            <position name="shieldingNeutronRodX4Y2.position" x="128.57142857142856" y="42.857142857142854" unit="mm"/>
+            <first ref="shieldingNeutronRodX4Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX4Y2">
+            <position name="leadBoxWithNeutronShieldingSolidX4Y2.position" x="-128.57142857142858" y="-214.28571428571428" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX4Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX4Y3">
+            <position name="shieldingNeutronRodX4Y3.position" x="128.57142857142856" y="85.71428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX4Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX4Y3">
+            <position name="leadBoxWithNeutronShieldingSolidX4Y3.position" x="-128.57142857142858" y="-171.42857142857144" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX4Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX4Y4">
+            <position name="shieldingNeutronRodX4Y4.position" x="128.57142857142856" y="128.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX4Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX4Y4">
+            <position name="leadBoxWithNeutronShieldingSolidX4Y4.position" x="-128.57142857142858" y="-128.57142857142858" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX4Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX4Y5">
+            <position name="shieldingNeutronRodX4Y5.position" x="128.57142857142856" y="171.42857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX4Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX4Y5">
+            <position name="leadBoxWithNeutronShieldingSolidX4Y5.position" x="-128.57142857142858" y="-85.71428571428572" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX4Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX4Y6">
+            <position name="shieldingNeutronRodX4Y6.position" x="128.57142857142856" y="214.28571428571428" unit="mm"/>
+            <first ref="shieldingNeutronRodX4Y5"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX4Y6">
+            <position name="leadBoxWithNeutronShieldingSolidX4Y6.position" x="-128.57142857142858" y="-42.85714285714289" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX4Y5"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX4Y7">
+            <position name="shieldingNeutronRodX4Y7.position" x="128.57142857142856" y="257.1428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX4Y6"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX4Y7">
+            <position name="leadBoxWithNeutronShieldingSolidX4Y7.position" x="-128.57142857142858" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX4Y6"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX4Y8">
+            <position name="shieldingNeutronRodX4Y8.position" x="128.57142857142856" y="300.0" unit="mm"/>
+            <first ref="shieldingNeutronRodX4Y7"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX4Y8">
+            <position name="leadBoxWithNeutronShieldingSolidX4Y8.position" x="-128.57142857142858" y="42.85714285714283" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX4Y7"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX4Y9">
+            <position name="shieldingNeutronRodX4Y9.position" x="128.57142857142856" y="342.85714285714283" unit="mm"/>
+            <first ref="shieldingNeutronRodX4Y8"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX4Y9">
+            <position name="leadBoxWithNeutronShieldingSolidX4Y9.position" x="-128.57142857142858" y="85.71428571428567" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX4Y8"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX4Y10">
+            <position name="shieldingNeutronRodX4Y10.position" x="128.57142857142856" y="385.71428571428567" unit="mm"/>
+            <first ref="shieldingNeutronRodX4Y9"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX4Y10">
+            <position name="leadBoxWithNeutronShieldingSolidX4Y10.position" x="-128.57142857142858" y="128.57142857142856" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX4Y9"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX4Y11">
+            <position name="shieldingNeutronRodX4Y11.position" x="128.57142857142856" y="428.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX4Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX4Y11">
+            <position name="leadBoxWithNeutronShieldingSolidX4Y11.position" x="-128.57142857142858" y="171.4285714285714" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX4Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX4Y12">
+            <position name="shieldingNeutronRodX4Y12.position" x="128.57142857142856" y="471.4285714285714" unit="mm"/>
+            <first ref="shieldingNeutronRodX4Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX4Y12">
+            <position name="leadBoxWithNeutronShieldingSolidX4Y12.position" x="-128.57142857142858" y="214.28571428571422" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX4Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX4Y13">
+            <position name="shieldingNeutronRodX4Y13.position" x="128.57142857142856" y="514.2857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX4Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX4Y13">
+            <position name="leadBoxWithNeutronShieldingSolidX4Y13.position" x="-128.57142857142858" y="257.1428571428571" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX4Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX5Y1">
+            <position name="shieldingNeutronRodX5Y1.position" x="171.42857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX4Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX5Y1">
+            <position name="leadBoxWithNeutronShieldingSolidX5Y1.position" x="-85.71428571428572" y="-257.14285714285717" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX4Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX5Y2">
+            <position name="shieldingNeutronRodX5Y2.position" x="171.42857142857142" y="42.857142857142854" unit="mm"/>
+            <first ref="shieldingNeutronRodX5Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX5Y2">
+            <position name="leadBoxWithNeutronShieldingSolidX5Y2.position" x="-85.71428571428572" y="-214.28571428571428" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX5Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX5Y3">
+            <position name="shieldingNeutronRodX5Y3.position" x="171.42857142857142" y="85.71428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX5Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX5Y3">
+            <position name="leadBoxWithNeutronShieldingSolidX5Y3.position" x="-85.71428571428572" y="-171.42857142857144" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX5Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX5Y4">
+            <position name="shieldingNeutronRodX5Y4.position" x="171.42857142857142" y="128.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX5Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX5Y4">
+            <position name="leadBoxWithNeutronShieldingSolidX5Y4.position" x="-85.71428571428572" y="-128.57142857142858" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX5Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX5Y10">
+            <position name="shieldingNeutronRodX5Y10.position" x="171.42857142857142" y="385.71428571428567" unit="mm"/>
+            <first ref="shieldingNeutronRodX5Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX5Y10">
+            <position name="leadBoxWithNeutronShieldingSolidX5Y10.position" x="-85.71428571428572" y="128.57142857142856" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX5Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX5Y11">
+            <position name="shieldingNeutronRodX5Y11.position" x="171.42857142857142" y="428.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX5Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX5Y11">
+            <position name="leadBoxWithNeutronShieldingSolidX5Y11.position" x="-85.71428571428572" y="171.4285714285714" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX5Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX5Y12">
+            <position name="shieldingNeutronRodX5Y12.position" x="171.42857142857142" y="471.4285714285714" unit="mm"/>
+            <first ref="shieldingNeutronRodX5Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX5Y12">
+            <position name="leadBoxWithNeutronShieldingSolidX5Y12.position" x="-85.71428571428572" y="214.28571428571422" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX5Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX5Y13">
+            <position name="shieldingNeutronRodX5Y13.position" x="171.42857142857142" y="514.2857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX5Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX5Y13">
+            <position name="leadBoxWithNeutronShieldingSolidX5Y13.position" x="-85.71428571428572" y="257.1428571428571" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX5Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX6Y1">
+            <position name="shieldingNeutronRodX6Y1.position" x="214.28571428571428" unit="mm"/>
+            <first ref="shieldingNeutronRodX5Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX6Y1">
+            <position name="leadBoxWithNeutronShieldingSolidX6Y1.position" x="-42.85714285714289" y="-257.14285714285717" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX5Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX6Y2">
+            <position name="shieldingNeutronRodX6Y2.position" x="214.28571428571428" y="42.857142857142854" unit="mm"/>
+            <first ref="shieldingNeutronRodX6Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX6Y2">
+            <position name="leadBoxWithNeutronShieldingSolidX6Y2.position" x="-42.85714285714289" y="-214.28571428571428" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX6Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX6Y3">
+            <position name="shieldingNeutronRodX6Y3.position" x="214.28571428571428" y="85.71428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX6Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX6Y3">
+            <position name="leadBoxWithNeutronShieldingSolidX6Y3.position" x="-42.85714285714289" y="-171.42857142857144" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX6Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX6Y4">
+            <position name="shieldingNeutronRodX6Y4.position" x="214.28571428571428" y="128.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX6Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX6Y4">
+            <position name="leadBoxWithNeutronShieldingSolidX6Y4.position" x="-42.85714285714289" y="-128.57142857142858" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX6Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX6Y10">
+            <position name="shieldingNeutronRodX6Y10.position" x="214.28571428571428" y="385.71428571428567" unit="mm"/>
+            <first ref="shieldingNeutronRodX6Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX6Y10">
+            <position name="leadBoxWithNeutronShieldingSolidX6Y10.position" x="-42.85714285714289" y="128.57142857142856" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX6Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX6Y11">
+            <position name="shieldingNeutronRodX6Y11.position" x="214.28571428571428" y="428.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX6Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX6Y11">
+            <position name="leadBoxWithNeutronShieldingSolidX6Y11.position" x="-42.85714285714289" y="171.4285714285714" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX6Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX6Y12">
+            <position name="shieldingNeutronRodX6Y12.position" x="214.28571428571428" y="471.4285714285714" unit="mm"/>
+            <first ref="shieldingNeutronRodX6Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX6Y12">
+            <position name="leadBoxWithNeutronShieldingSolidX6Y12.position" x="-42.85714285714289" y="214.28571428571422" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX6Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX6Y13">
+            <position name="shieldingNeutronRodX6Y13.position" x="214.28571428571428" y="514.2857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX6Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX6Y13">
+            <position name="leadBoxWithNeutronShieldingSolidX6Y13.position" x="-42.85714285714289" y="257.1428571428571" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX6Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX7Y1">
+            <position name="shieldingNeutronRodX7Y1.position" x="257.1428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX6Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX7Y1">
+            <position name="leadBoxWithNeutronShieldingSolidX7Y1.position" y="-257.14285714285717" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX6Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX7Y2">
+            <position name="shieldingNeutronRodX7Y2.position" x="257.1428571428571" y="42.857142857142854" unit="mm"/>
+            <first ref="shieldingNeutronRodX7Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX7Y2">
+            <position name="leadBoxWithNeutronShieldingSolidX7Y2.position" y="-214.28571428571428" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX7Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX7Y3">
+            <position name="shieldingNeutronRodX7Y3.position" x="257.1428571428571" y="85.71428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX7Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX7Y3">
+            <position name="leadBoxWithNeutronShieldingSolidX7Y3.position" y="-171.42857142857144" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX7Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX7Y4">
+            <position name="shieldingNeutronRodX7Y4.position" x="257.1428571428571" y="128.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX7Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX7Y4">
+            <position name="leadBoxWithNeutronShieldingSolidX7Y4.position" y="-128.57142857142858" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX7Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX7Y10">
+            <position name="shieldingNeutronRodX7Y10.position" x="257.1428571428571" y="385.71428571428567" unit="mm"/>
+            <first ref="shieldingNeutronRodX7Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX7Y10">
+            <position name="leadBoxWithNeutronShieldingSolidX7Y10.position" y="128.57142857142856" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX7Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX7Y11">
+            <position name="shieldingNeutronRodX7Y11.position" x="257.1428571428571" y="428.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX7Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX7Y11">
+            <position name="leadBoxWithNeutronShieldingSolidX7Y11.position" y="171.4285714285714" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX7Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX7Y12">
+            <position name="shieldingNeutronRodX7Y12.position" x="257.1428571428571" y="471.4285714285714" unit="mm"/>
+            <first ref="shieldingNeutronRodX7Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX7Y12">
+            <position name="leadBoxWithNeutronShieldingSolidX7Y12.position" y="214.28571428571422" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX7Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX7Y13">
+            <position name="shieldingNeutronRodX7Y13.position" x="257.1428571428571" y="514.2857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX7Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX7Y13">
+            <position name="leadBoxWithNeutronShieldingSolidX7Y13.position" y="257.1428571428571" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX7Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX8Y1">
+            <position name="shieldingNeutronRodX8Y1.position" x="300.0" unit="mm"/>
+            <first ref="shieldingNeutronRodX7Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX8Y1">
+            <position name="leadBoxWithNeutronShieldingSolidX8Y1.position" x="42.85714285714283" y="-257.14285714285717" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX7Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX8Y2">
+            <position name="shieldingNeutronRodX8Y2.position" x="300.0" y="42.857142857142854" unit="mm"/>
+            <first ref="shieldingNeutronRodX8Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX8Y2">
+            <position name="leadBoxWithNeutronShieldingSolidX8Y2.position" x="42.85714285714283" y="-214.28571428571428" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX8Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX8Y3">
+            <position name="shieldingNeutronRodX8Y3.position" x="300.0" y="85.71428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX8Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX8Y3">
+            <position name="leadBoxWithNeutronShieldingSolidX8Y3.position" x="42.85714285714283" y="-171.42857142857144" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX8Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX8Y4">
+            <position name="shieldingNeutronRodX8Y4.position" x="300.0" y="128.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX8Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX8Y4">
+            <position name="leadBoxWithNeutronShieldingSolidX8Y4.position" x="42.85714285714283" y="-128.57142857142858" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX8Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX8Y10">
+            <position name="shieldingNeutronRodX8Y10.position" x="300.0" y="385.71428571428567" unit="mm"/>
+            <first ref="shieldingNeutronRodX8Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX8Y10">
+            <position name="leadBoxWithNeutronShieldingSolidX8Y10.position" x="42.85714285714283" y="128.57142857142856" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX8Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX8Y11">
+            <position name="shieldingNeutronRodX8Y11.position" x="300.0" y="428.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX8Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX8Y11">
+            <position name="leadBoxWithNeutronShieldingSolidX8Y11.position" x="42.85714285714283" y="171.4285714285714" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX8Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX8Y12">
+            <position name="shieldingNeutronRodX8Y12.position" x="300.0" y="471.4285714285714" unit="mm"/>
+            <first ref="shieldingNeutronRodX8Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX8Y12">
+            <position name="leadBoxWithNeutronShieldingSolidX8Y12.position" x="42.85714285714283" y="214.28571428571422" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX8Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX8Y13">
+            <position name="shieldingNeutronRodX8Y13.position" x="300.0" y="514.2857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX8Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX8Y13">
+            <position name="leadBoxWithNeutronShieldingSolidX8Y13.position" x="42.85714285714283" y="257.1428571428571" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX8Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX9Y1">
+            <position name="shieldingNeutronRodX9Y1.position" x="342.85714285714283" unit="mm"/>
+            <first ref="shieldingNeutronRodX8Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX9Y1">
+            <position name="leadBoxWithNeutronShieldingSolidX9Y1.position" x="85.71428571428567" y="-257.14285714285717" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX8Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX9Y2">
+            <position name="shieldingNeutronRodX9Y2.position" x="342.85714285714283" y="42.857142857142854" unit="mm"/>
+            <first ref="shieldingNeutronRodX9Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX9Y2">
+            <position name="leadBoxWithNeutronShieldingSolidX9Y2.position" x="85.71428571428567" y="-214.28571428571428" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX9Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX9Y3">
+            <position name="shieldingNeutronRodX9Y3.position" x="342.85714285714283" y="85.71428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX9Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX9Y3">
+            <position name="leadBoxWithNeutronShieldingSolidX9Y3.position" x="85.71428571428567" y="-171.42857142857144" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX9Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX9Y4">
+            <position name="shieldingNeutronRodX9Y4.position" x="342.85714285714283" y="128.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX9Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX9Y4">
+            <position name="leadBoxWithNeutronShieldingSolidX9Y4.position" x="85.71428571428567" y="-128.57142857142858" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX9Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX9Y10">
+            <position name="shieldingNeutronRodX9Y10.position" x="342.85714285714283" y="385.71428571428567" unit="mm"/>
+            <first ref="shieldingNeutronRodX9Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX9Y10">
+            <position name="leadBoxWithNeutronShieldingSolidX9Y10.position" x="85.71428571428567" y="128.57142857142856" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX9Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX9Y11">
+            <position name="shieldingNeutronRodX9Y11.position" x="342.85714285714283" y="428.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX9Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX9Y11">
+            <position name="leadBoxWithNeutronShieldingSolidX9Y11.position" x="85.71428571428567" y="171.4285714285714" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX9Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX9Y12">
+            <position name="shieldingNeutronRodX9Y12.position" x="342.85714285714283" y="471.4285714285714" unit="mm"/>
+            <first ref="shieldingNeutronRodX9Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX9Y12">
+            <position name="leadBoxWithNeutronShieldingSolidX9Y12.position" x="85.71428571428567" y="214.28571428571422" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX9Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX9Y13">
+            <position name="shieldingNeutronRodX9Y13.position" x="342.85714285714283" y="514.2857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX9Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX9Y13">
+            <position name="leadBoxWithNeutronShieldingSolidX9Y13.position" x="85.71428571428567" y="257.1428571428571" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX9Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX10Y1">
+            <position name="shieldingNeutronRodX10Y1.position" x="385.71428571428567" unit="mm"/>
+            <first ref="shieldingNeutronRodX9Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX10Y1">
+            <position name="leadBoxWithNeutronShieldingSolidX10Y1.position" x="128.57142857142856" y="-257.14285714285717" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX9Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX10Y2">
+            <position name="shieldingNeutronRodX10Y2.position" x="385.71428571428567" y="42.857142857142854" unit="mm"/>
+            <first ref="shieldingNeutronRodX10Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX10Y2">
+            <position name="leadBoxWithNeutronShieldingSolidX10Y2.position" x="128.57142857142856" y="-214.28571428571428" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX10Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX10Y3">
+            <position name="shieldingNeutronRodX10Y3.position" x="385.71428571428567" y="85.71428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX10Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX10Y3">
+            <position name="leadBoxWithNeutronShieldingSolidX10Y3.position" x="128.57142857142856" y="-171.42857142857144" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX10Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX10Y4">
+            <position name="shieldingNeutronRodX10Y4.position" x="385.71428571428567" y="128.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX10Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX10Y4">
+            <position name="leadBoxWithNeutronShieldingSolidX10Y4.position" x="128.57142857142856" y="-128.57142857142858" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX10Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX10Y5">
+            <position name="shieldingNeutronRodX10Y5.position" x="385.71428571428567" y="171.42857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX10Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX10Y5">
+            <position name="leadBoxWithNeutronShieldingSolidX10Y5.position" x="128.57142857142856" y="-85.71428571428572" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX10Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX10Y6">
+            <position name="shieldingNeutronRodX10Y6.position" x="385.71428571428567" y="214.28571428571428" unit="mm"/>
+            <first ref="shieldingNeutronRodX10Y5"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX10Y6">
+            <position name="leadBoxWithNeutronShieldingSolidX10Y6.position" x="128.57142857142856" y="-42.85714285714289" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX10Y5"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX10Y7">
+            <position name="shieldingNeutronRodX10Y7.position" x="385.71428571428567" y="257.1428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX10Y6"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX10Y7">
+            <position name="leadBoxWithNeutronShieldingSolidX10Y7.position" x="128.57142857142856" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX10Y6"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX10Y8">
+            <position name="shieldingNeutronRodX10Y8.position" x="385.71428571428567" y="300.0" unit="mm"/>
+            <first ref="shieldingNeutronRodX10Y7"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX10Y8">
+            <position name="leadBoxWithNeutronShieldingSolidX10Y8.position" x="128.57142857142856" y="42.85714285714283" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX10Y7"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX10Y9">
+            <position name="shieldingNeutronRodX10Y9.position" x="385.71428571428567" y="342.85714285714283" unit="mm"/>
+            <first ref="shieldingNeutronRodX10Y8"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX10Y9">
+            <position name="leadBoxWithNeutronShieldingSolidX10Y9.position" x="128.57142857142856" y="85.71428571428567" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX10Y8"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX10Y10">
+            <position name="shieldingNeutronRodX10Y10.position" x="385.71428571428567" y="385.71428571428567" unit="mm"/>
+            <first ref="shieldingNeutronRodX10Y9"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX10Y10">
+            <position name="leadBoxWithNeutronShieldingSolidX10Y10.position" x="128.57142857142856" y="128.57142857142856" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX10Y9"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX10Y11">
+            <position name="shieldingNeutronRodX10Y11.position" x="385.71428571428567" y="428.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX10Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX10Y11">
+            <position name="leadBoxWithNeutronShieldingSolidX10Y11.position" x="128.57142857142856" y="171.4285714285714" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX10Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX10Y12">
+            <position name="shieldingNeutronRodX10Y12.position" x="385.71428571428567" y="471.4285714285714" unit="mm"/>
+            <first ref="shieldingNeutronRodX10Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX10Y12">
+            <position name="leadBoxWithNeutronShieldingSolidX10Y12.position" x="128.57142857142856" y="214.28571428571422" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX10Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX10Y13">
+            <position name="shieldingNeutronRodX10Y13.position" x="385.71428571428567" y="514.2857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX10Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX10Y13">
+            <position name="leadBoxWithNeutronShieldingSolidX10Y13.position" x="128.57142857142856" y="257.1428571428571" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX10Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX11Y1">
+            <position name="shieldingNeutronRodX11Y1.position" x="428.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX10Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX11Y1">
+            <position name="leadBoxWithNeutronShieldingSolidX11Y1.position" x="171.4285714285714" y="-257.14285714285717" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX10Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX11Y2">
+            <position name="shieldingNeutronRodX11Y2.position" x="428.57142857142856" y="42.857142857142854" unit="mm"/>
+            <first ref="shieldingNeutronRodX11Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX11Y2">
+            <position name="leadBoxWithNeutronShieldingSolidX11Y2.position" x="171.4285714285714" y="-214.28571428571428" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX11Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX11Y3">
+            <position name="shieldingNeutronRodX11Y3.position" x="428.57142857142856" y="85.71428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX11Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX11Y3">
+            <position name="leadBoxWithNeutronShieldingSolidX11Y3.position" x="171.4285714285714" y="-171.42857142857144" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX11Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX11Y4">
+            <position name="shieldingNeutronRodX11Y4.position" x="428.57142857142856" y="128.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX11Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX11Y4">
+            <position name="leadBoxWithNeutronShieldingSolidX11Y4.position" x="171.4285714285714" y="-128.57142857142858" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX11Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX11Y5">
+            <position name="shieldingNeutronRodX11Y5.position" x="428.57142857142856" y="171.42857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX11Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX11Y5">
+            <position name="leadBoxWithNeutronShieldingSolidX11Y5.position" x="171.4285714285714" y="-85.71428571428572" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX11Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX11Y6">
+            <position name="shieldingNeutronRodX11Y6.position" x="428.57142857142856" y="214.28571428571428" unit="mm"/>
+            <first ref="shieldingNeutronRodX11Y5"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX11Y6">
+            <position name="leadBoxWithNeutronShieldingSolidX11Y6.position" x="171.4285714285714" y="-42.85714285714289" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX11Y5"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX11Y7">
+            <position name="shieldingNeutronRodX11Y7.position" x="428.57142857142856" y="257.1428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX11Y6"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX11Y7">
+            <position name="leadBoxWithNeutronShieldingSolidX11Y7.position" x="171.4285714285714" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX11Y6"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX11Y8">
+            <position name="shieldingNeutronRodX11Y8.position" x="428.57142857142856" y="300.0" unit="mm"/>
+            <first ref="shieldingNeutronRodX11Y7"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX11Y8">
+            <position name="leadBoxWithNeutronShieldingSolidX11Y8.position" x="171.4285714285714" y="42.85714285714283" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX11Y7"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX11Y9">
+            <position name="shieldingNeutronRodX11Y9.position" x="428.57142857142856" y="342.85714285714283" unit="mm"/>
+            <first ref="shieldingNeutronRodX11Y8"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX11Y9">
+            <position name="leadBoxWithNeutronShieldingSolidX11Y9.position" x="171.4285714285714" y="85.71428571428567" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX11Y8"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX11Y10">
+            <position name="shieldingNeutronRodX11Y10.position" x="428.57142857142856" y="385.71428571428567" unit="mm"/>
+            <first ref="shieldingNeutronRodX11Y9"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX11Y10">
+            <position name="leadBoxWithNeutronShieldingSolidX11Y10.position" x="171.4285714285714" y="128.57142857142856" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX11Y9"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX11Y11">
+            <position name="shieldingNeutronRodX11Y11.position" x="428.57142857142856" y="428.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX11Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX11Y11">
+            <position name="leadBoxWithNeutronShieldingSolidX11Y11.position" x="171.4285714285714" y="171.4285714285714" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX11Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX11Y12">
+            <position name="shieldingNeutronRodX11Y12.position" x="428.57142857142856" y="471.4285714285714" unit="mm"/>
+            <first ref="shieldingNeutronRodX11Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX11Y12">
+            <position name="leadBoxWithNeutronShieldingSolidX11Y12.position" x="171.4285714285714" y="214.28571428571422" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX11Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX11Y13">
+            <position name="shieldingNeutronRodX11Y13.position" x="428.57142857142856" y="514.2857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX11Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX11Y13">
+            <position name="leadBoxWithNeutronShieldingSolidX11Y13.position" x="171.4285714285714" y="257.1428571428571" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX11Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX12Y1">
+            <position name="shieldingNeutronRodX12Y1.position" x="471.4285714285714" unit="mm"/>
+            <first ref="shieldingNeutronRodX11Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX12Y1">
+            <position name="leadBoxWithNeutronShieldingSolidX12Y1.position" x="214.28571428571422" y="-257.14285714285717" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX11Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX12Y2">
+            <position name="shieldingNeutronRodX12Y2.position" x="471.4285714285714" y="42.857142857142854" unit="mm"/>
+            <first ref="shieldingNeutronRodX12Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX12Y2">
+            <position name="leadBoxWithNeutronShieldingSolidX12Y2.position" x="214.28571428571422" y="-214.28571428571428" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX12Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX12Y3">
+            <position name="shieldingNeutronRodX12Y3.position" x="471.4285714285714" y="85.71428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX12Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX12Y3">
+            <position name="leadBoxWithNeutronShieldingSolidX12Y3.position" x="214.28571428571422" y="-171.42857142857144" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX12Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX12Y4">
+            <position name="shieldingNeutronRodX12Y4.position" x="471.4285714285714" y="128.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX12Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX12Y4">
+            <position name="leadBoxWithNeutronShieldingSolidX12Y4.position" x="214.28571428571422" y="-128.57142857142858" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX12Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX12Y5">
+            <position name="shieldingNeutronRodX12Y5.position" x="471.4285714285714" y="171.42857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX12Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX12Y5">
+            <position name="leadBoxWithNeutronShieldingSolidX12Y5.position" x="214.28571428571422" y="-85.71428571428572" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX12Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX12Y6">
+            <position name="shieldingNeutronRodX12Y6.position" x="471.4285714285714" y="214.28571428571428" unit="mm"/>
+            <first ref="shieldingNeutronRodX12Y5"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX12Y6">
+            <position name="leadBoxWithNeutronShieldingSolidX12Y6.position" x="214.28571428571422" y="-42.85714285714289" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX12Y5"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX12Y7">
+            <position name="shieldingNeutronRodX12Y7.position" x="471.4285714285714" y="257.1428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX12Y6"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX12Y7">
+            <position name="leadBoxWithNeutronShieldingSolidX12Y7.position" x="214.28571428571422" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX12Y6"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX12Y8">
+            <position name="shieldingNeutronRodX12Y8.position" x="471.4285714285714" y="300.0" unit="mm"/>
+            <first ref="shieldingNeutronRodX12Y7"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX12Y8">
+            <position name="leadBoxWithNeutronShieldingSolidX12Y8.position" x="214.28571428571422" y="42.85714285714283" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX12Y7"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX12Y9">
+            <position name="shieldingNeutronRodX12Y9.position" x="471.4285714285714" y="342.85714285714283" unit="mm"/>
+            <first ref="shieldingNeutronRodX12Y8"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX12Y9">
+            <position name="leadBoxWithNeutronShieldingSolidX12Y9.position" x="214.28571428571422" y="85.71428571428567" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX12Y8"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX12Y10">
+            <position name="shieldingNeutronRodX12Y10.position" x="471.4285714285714" y="385.71428571428567" unit="mm"/>
+            <first ref="shieldingNeutronRodX12Y9"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX12Y10">
+            <position name="leadBoxWithNeutronShieldingSolidX12Y10.position" x="214.28571428571422" y="128.57142857142856" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX12Y9"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX12Y11">
+            <position name="shieldingNeutronRodX12Y11.position" x="471.4285714285714" y="428.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX12Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX12Y11">
+            <position name="leadBoxWithNeutronShieldingSolidX12Y11.position" x="214.28571428571422" y="171.4285714285714" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX12Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX12Y12">
+            <position name="shieldingNeutronRodX12Y12.position" x="471.4285714285714" y="471.4285714285714" unit="mm"/>
+            <first ref="shieldingNeutronRodX12Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX12Y12">
+            <position name="leadBoxWithNeutronShieldingSolidX12Y12.position" x="214.28571428571422" y="214.28571428571422" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX12Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX12Y13">
+            <position name="shieldingNeutronRodX12Y13.position" x="471.4285714285714" y="514.2857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX12Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX12Y13">
+            <position name="leadBoxWithNeutronShieldingSolidX12Y13.position" x="214.28571428571422" y="257.1428571428571" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX12Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX13Y1">
+            <position name="shieldingNeutronRodX13Y1.position" x="514.2857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX12Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX13Y1">
+            <position name="leadBoxWithNeutronShieldingSolidX13Y1.position" x="257.1428571428571" y="-257.14285714285717" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX12Y13"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX13Y2">
+            <position name="shieldingNeutronRodX13Y2.position" x="514.2857142857142" y="42.857142857142854" unit="mm"/>
+            <first ref="shieldingNeutronRodX13Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX13Y2">
+            <position name="leadBoxWithNeutronShieldingSolidX13Y2.position" x="257.1428571428571" y="-214.28571428571428" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX13Y1"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX13Y3">
+            <position name="shieldingNeutronRodX13Y3.position" x="514.2857142857142" y="85.71428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX13Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX13Y3">
+            <position name="leadBoxWithNeutronShieldingSolidX13Y3.position" x="257.1428571428571" y="-171.42857142857144" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX13Y2"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX13Y4">
+            <position name="shieldingNeutronRodX13Y4.position" x="514.2857142857142" y="128.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX13Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX13Y4">
+            <position name="leadBoxWithNeutronShieldingSolidX13Y4.position" x="257.1428571428571" y="-128.57142857142858" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX13Y3"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX13Y5">
+            <position name="shieldingNeutronRodX13Y5.position" x="514.2857142857142" y="171.42857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX13Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX13Y5">
+            <position name="leadBoxWithNeutronShieldingSolidX13Y5.position" x="257.1428571428571" y="-85.71428571428572" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX13Y4"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX13Y6">
+            <position name="shieldingNeutronRodX13Y6.position" x="514.2857142857142" y="214.28571428571428" unit="mm"/>
+            <first ref="shieldingNeutronRodX13Y5"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX13Y6">
+            <position name="leadBoxWithNeutronShieldingSolidX13Y6.position" x="257.1428571428571" y="-42.85714285714289" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX13Y5"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX13Y7">
+            <position name="shieldingNeutronRodX13Y7.position" x="514.2857142857142" y="257.1428571428571" unit="mm"/>
+            <first ref="shieldingNeutronRodX13Y6"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX13Y7">
+            <position name="leadBoxWithNeutronShieldingSolidX13Y7.position" x="257.1428571428571" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX13Y6"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX13Y8">
+            <position name="shieldingNeutronRodX13Y8.position" x="514.2857142857142" y="300.0" unit="mm"/>
+            <first ref="shieldingNeutronRodX13Y7"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX13Y8">
+            <position name="leadBoxWithNeutronShieldingSolidX13Y8.position" x="257.1428571428571" y="42.85714285714283" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX13Y7"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX13Y9">
+            <position name="shieldingNeutronRodX13Y9.position" x="514.2857142857142" y="342.85714285714283" unit="mm"/>
+            <first ref="shieldingNeutronRodX13Y8"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX13Y9">
+            <position name="leadBoxWithNeutronShieldingSolidX13Y9.position" x="257.1428571428571" y="85.71428571428567" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX13Y8"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX13Y10">
+            <position name="shieldingNeutronRodX13Y10.position" x="514.2857142857142" y="385.71428571428567" unit="mm"/>
+            <first ref="shieldingNeutronRodX13Y9"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX13Y10">
+            <position name="leadBoxWithNeutronShieldingSolidX13Y10.position" x="257.1428571428571" y="128.57142857142856" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX13Y9"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX13Y11">
+            <position name="shieldingNeutronRodX13Y11.position" x="514.2857142857142" y="428.57142857142856" unit="mm"/>
+            <first ref="shieldingNeutronRodX13Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX13Y11">
+            <position name="leadBoxWithNeutronShieldingSolidX13Y11.position" x="257.1428571428571" y="171.4285714285714" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX13Y10"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX13Y12">
+            <position name="shieldingNeutronRodX13Y12.position" x="514.2857142857142" y="471.4285714285714" unit="mm"/>
+            <first ref="shieldingNeutronRodX13Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX13Y12">
+            <position name="leadBoxWithNeutronShieldingSolidX13Y12.position" x="257.1428571428571" y="214.28571428571422" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX13Y11"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </subtraction>
+        <union lunit="mm" aunit="rad" name="shieldingNeutronRodX13Y13">
+            <position name="shieldingNeutronRodX13Y13.position" x="514.2857142857142" y="514.2857142857142" unit="mm"/>
+            <first ref="shieldingNeutronRodX13Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
+        </union>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithNeutronShieldingSolidX13Y13">
+            <position name="leadBoxWithNeutronShieldingSolidX13Y13.position" x="257.1428571428571" y="257.1428571428571" unit="mm"/>
+            <first ref="leadBoxWithNeutronShieldingSolidX13Y12"/>
+            <second ref="neutronShieldingRodSolid"/>
         </subtraction>
         <box lunit="mm" aunit="rad" name="worldBox" x="1450.0" y="1600.0" z="1450.0"/>
     </solids>
@@ -4097,8 +5616,12 @@
             <solidref ref="gasSolidAboveReadoutSolid"/>
         </volume>
         <assembly name="Chamber">
-            <physvol name="gas">
-                <volumeref ref="gasVolume"/>
+            <physvol name="gasNotAboveReadout">
+                <volumeref ref="gasVolumeNotAboveReadout"/>
+            </physvol>
+            <physvol name="gasAboveReadout">
+                <volumeref ref="gasVolumeAboveReadout"/>
+                <rotation name="gasAboveReadout.rotation" z="45.0" unit="deg"/>
             </physvol>
             <physvol name="chamberBackplate">
                 <volumeref ref="chamberBackplateVolume"/>
@@ -4169,9 +5692,9 @@
             <materialref ref="G4_Cu"/>
             <solidref ref="electronicsCardSolid"/>
         </volume>
-        <volume name="flatcableVolume">
+        <volume name="flatCableVolume">
             <materialref ref="G4_Cu"/>
-            <solidref ref="flatcableSolid"/>
+            <solidref ref="flatCableSolid"/>
         </volume>
         <assembly name="electronicsBox">
             <physvol name="electronicsCard1">
@@ -4190,21 +5713,21 @@
                 <volumeref ref="electronicsCardVolume"/>
                 <position name="electronicsCard4.position" x="15.0" unit="mm"/>
             </physvol>
-            <physvol name="flatcable1">
-                <volumeref ref="flatcableVolume"/>
-                <position name="flatcable1.position" x="-15.0" z="-125.0" unit="mm"/>
+            <physvol name="flatCable1">
+                <volumeref ref="flatCableVolume"/>
+                <position name="flatCable1.position" x="-15.0" z="-125.0" unit="mm"/>
             </physvol>
-            <physvol name="flatcable2">
-                <volumeref ref="flatcableVolume"/>
-                <position name="flatcable2.position" x="-5.0" z="-125.0" unit="mm"/>
+            <physvol name="flatCable2">
+                <volumeref ref="flatCableVolume"/>
+                <position name="flatCable2.position" x="-5.0" z="-125.0" unit="mm"/>
             </physvol>
-            <physvol name="flatcable3">
-                <volumeref ref="flatcableVolume"/>
-                <position name="flatcable3.position" x="5.0" z="-125.0" unit="mm"/>
+            <physvol name="flatCable3">
+                <volumeref ref="flatCableVolume"/>
+                <position name="flatCable3.position" x="5.0" z="-125.0" unit="mm"/>
             </physvol>
-            <physvol name="flatcable4">
-                <volumeref ref="flatcableVolume"/>
-                <position name="flatcable4.position" x="15.0" z="-125.0" unit="mm"/>
+            <physvol name="flatCable4">
+                <volumeref ref="flatCableVolume"/>
+                <position name="flatCable4.position" x="15.0" z="-125.0" unit="mm"/>
             </physvol>
         </assembly>
         <volume name="copperBoxVolume">
@@ -4213,7 +5736,11 @@
         </volume>
         <volume name="shieldingVolume">
             <materialref ref="G4_Pb"/>
-            <solidref ref="leadBoxWithShaftSolid"/>
+            <solidref ref="leadBoxWithNeutronShieldingSolidX13Y13"/>
+        </volume>
+        <volume name="neutronShieldingRods">
+            <materialref ref="BoratedHDPE5pct"/>
+            <solidref ref="shieldingNeutronRodX13Y13"/>
         </volume>
         <assembly name="shielding">
             <physvol name="shielding20cm">
@@ -4223,6 +5750,10 @@
             <physvol name="copperBox">
                 <volumeref ref="copperBoxVolume"/>
                 <position name="copperBox.position" z="119.5" unit="mm"/>
+            </physvol>
+            <physvol name="neutronShieldingRods">
+                <volumeref ref="neutronShieldingRods"/>
+                <position name="neutronShieldingRods.position" x="-257.14285714285717" y="-257.14285714285717" z="19.5" unit="mm"/>
             </physvol>
         </assembly>
         <volume name="world">

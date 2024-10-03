@@ -7,7 +7,7 @@ import space.kscience.gdml.*
 
 open class Chamber(
     val useXenon: Boolean = false,
-    val splitGas: Boolean = false,
+    val splitGas: Boolean = true,
 ) : Geometry() {
     companion object Parameters {
         // Body
