@@ -20,9 +20,9 @@ open class Electronics : Geometry() {
         const val cardShortSideY: Double = 70.0
 
         //flat cable Dimensions
-        const val flatcableLongSideZ: Double = 150.0
-        const val flatcableShortSideX: Double = 1.0
-        const val flatcableShortSideY: Double = 70.0
+        const val flatCableLongSideZ: Double = 150.0
+        const val flatCableShortSideX: Double = 1.0
+        const val flatCableShortSideY: Double = 70.0
 
         // Distance 
         const val DetectorToElectronicsDistanceZ: Double = 235.0
@@ -61,11 +61,11 @@ open class Electronics : Geometry() {
                 "electronicsCardSolid")
 
             //Flat cable
-            val flatcableSolid = gdml.solids.box(
-                flatcableShortSideX,
-                flatcableShortSideY,
-                flatcableLongSideZ,
-                "flatcableSolid")
+            val flatCableSolid = gdml.solids.box(
+                flatCableShortSideX,
+                flatCableShortSideY,
+                flatCableLongSideZ,
+                "flatCableSolid")
 
             val electronicsBoxVolume = 
             gdml.structure.volume(Materials.Copper.ref,electronicsBoxSolid,"electronicsBoxVolume")
@@ -76,15 +76,13 @@ open class Electronics : Geometry() {
             val electronicsCardVolume = 
             gdml.structure.volume(Materials.Copper.ref,electronicsCardSolid,"electronicsCardVolume")
 
-            val flatcableVolume =
-            gdml.structure.volume(Materials.Copper.ref,flatcableSolid,"flatcableVolume")
+            val flatCableVolume =
+            gdml.structure.volume(Materials.Copper.ref,flatCableSolid,"flatCableVolume")
 
             return@lazy gdml.structure.assembly {
                 name = "electronicsBox"
                 //physVolume(electronicsBoxVolume, name = "electronicsBox")
-
                 //physVolume(electronicsBoxFillingVolume, name = "electronicsBoxFilling")
-
 
                 physVolume(electronicsCardVolume, name = "electronicsCard1"){
                     position(x = - 15.0 ) { unit = LUnit.MM }
@@ -99,17 +97,17 @@ open class Electronics : Geometry() {
                     position(x = 15.0 ) { unit = LUnit.MM }
                 }
 
-                physVolume(flatcableVolume, name = "flatcable1"){
-                    position(x = - 15.0, z = - cardLongSizeZ / 2 - flatcableLongSideZ / 2) { unit = LUnit.MM }
+                physVolume(flatCableVolume, name = "flatCable1"){
+                    position(x = - 15.0, z = - cardLongSizeZ / 2 - flatCableLongSideZ / 2) { unit = LUnit.MM }
                 }
-                physVolume(flatcableVolume, name = "flatcable2"){
-                    position(x = - 5.0, z = - cardLongSizeZ / 2 - flatcableLongSideZ / 2) { unit = LUnit.MM }
+                physVolume(flatCableVolume, name = "flatCable2"){
+                    position(x = - 5.0, z = - cardLongSizeZ / 2 - flatCableLongSideZ / 2) { unit = LUnit.MM }
                 }
-                physVolume(flatcableVolume, name = "flatcable3"){
-                    position(x = 5.0, z = - cardLongSizeZ / 2 - flatcableLongSideZ / 2) { unit = LUnit.MM }
+                physVolume(flatCableVolume, name = "flatCable3"){
+                    position(x = 5.0, z = - cardLongSizeZ / 2 - flatCableLongSideZ / 2) { unit = LUnit.MM }
                 }
-                physVolume(flatcableVolume, name = "flatcable4"){
-                    position(x = 15.0, z = - cardLongSizeZ / 2 - flatcableLongSideZ / 2) { unit = LUnit.MM }
+                physVolume(flatCableVolume, name = "flatCable4"){
+                    position(x = 15.0, z = - cardLongSizeZ / 2 - flatCableLongSideZ / 2) { unit = LUnit.MM }
                 }
             }
         }

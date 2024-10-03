@@ -17,7 +17,7 @@ fun completeGeometry(
 
         val chamberVolume = Chamber().generate(this)
         val detectorPipeVolume = DetectorPipe().generate(this)
-        val electronicsBoxVolume = Electronics().generate(this) 
+        val electronicsBoxVolume = Electronics().generate(this)
         val shieldingVolume = Shielding().generate(this)
         val vetoSystemVolume = vetoSystem.generate(this)
 
@@ -31,9 +31,11 @@ fun completeGeometry(
                         unit = LUnit.MM
                     }
                 }
-                physVolume(electronicsBoxVolume, name  = "ElectronicsBox"){
-                    position(x = Electronics.PipeToElectronicsDistanceX,
-                    z = Electronics.DetectorToElectronicsDistanceZ) {
+                physVolume(electronicsBoxVolume, name = "ElectronicsBox") {
+                    position(
+                        x = Electronics.PipeToElectronicsDistanceX,
+                        z = Electronics.DetectorToElectronicsDistanceZ
+                    ) {
                         unit = LUnit.MM
                     }
                 }
@@ -64,7 +66,7 @@ val geometries = mapOf(
 
         val chamberVolume = Chamber().generate(this)
         val detectorPipeVolume = DetectorPipe().generate(this)
-        val  electronicsBoxVolume = Electronics().generate(this)
+        val electronicsBoxVolume = Electronics().generate(this)
         val shieldingVolume = Shielding(layers = true).generate(this)
 
         structure {
@@ -77,9 +79,11 @@ val geometries = mapOf(
                         unit = LUnit.MM
                     }
                 }
-                physVolume(electronicsBoxVolume, name  = "ElectronicsBox"){
-                    position(x = Electronics.PipeToElectronicsDistanceX,
-                    z = Electronics.DetectorToElectronicsDistanceZ) {
+                physVolume(electronicsBoxVolume, name = "ElectronicsBox") {
+                    position(
+                        x = Electronics.PipeToElectronicsDistanceX,
+                        z = Electronics.DetectorToElectronicsDistanceZ
+                    ) {
                         unit = LUnit.MM
                     }
                 }
@@ -106,9 +110,11 @@ val geometries = mapOf(
                         unit = LUnit.MM
                     }
                 }
-                physVolume(electronicsBoxVolume, name  = "ElectronicsBox"){
-                    position(x = Electronics.PipeToElectronicsDistanceX,
-                    z = Electronics.DetectorToElectronicsDistanceZ) {
+                physVolume(electronicsBoxVolume, name = "ElectronicsBox") {
+                    position(
+                        x = Electronics.PipeToElectronicsDistanceX,
+                        z = Electronics.DetectorToElectronicsDistanceZ
+                    ) {
                         unit = LUnit.MM
                     }
                 }
@@ -135,9 +141,33 @@ val geometries = mapOf(
                         unit = LUnit.MM
                     }
                 }
-                physVolume(electronicsBoxVolume, name  = "ElectronicsBox"){
-                    position(x = Electronics.PipeToElectronicsDistanceX,
-                    z = Electronics.DetectorToElectronicsDistanceZ) {
+                physVolume(electronicsBoxVolume, name = "ElectronicsBox") {
+                    position(
+                        x = Electronics.PipeToElectronicsDistanceX,
+                        z = Electronics.DetectorToElectronicsDistanceZ
+                    ) {
+                        unit = LUnit.MM
+                    }
+                }
+                physVolume(shieldingVolume, name = "Shielding")
+            }
+        }
+    }.withUnits(LUnit.MM, AUnit.RAD),
+    "NeutronShieldingTubes" to Gdml {
+
+        loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
+
+        val chamberVolume = Chamber().generate(this)
+        val detectorPipeVolume = DetectorPipe().generate(this)
+        val shieldingVolume = BabyIAXO.Shielding(hdpeNeutronShieldingDiameter = 20.0).generate(this)
+
+        structure {
+            val worldBox = solids.box(worldSizeX, worldSizeY, worldSizeZ, "worldBox")
+
+            world = volume(Materials.Air.ref, worldBox, "world") {
+                physVolume(chamberVolume, name = "Chamber")
+                physVolume(detectorPipeVolume, name = "DetectorPipe") {
+                    position(z = DetectorPipe.ZinWorld) {
                         unit = LUnit.MM
                     }
                 }
@@ -163,9 +193,11 @@ val geometries = mapOf(
                         unit = LUnit.MM
                     }
                 }
-                physVolume(electronicsBoxVolume, name  = "ElectronicsBox"){
-                    position(x = Electronics.PipeToElectronicsDistanceX,
-                    z = Electronics.DetectorToElectronicsDistanceZ) {
+                physVolume(electronicsBoxVolume, name = "ElectronicsBox") {
+                    position(
+                        x = Electronics.PipeToElectronicsDistanceX,
+                        z = Electronics.DetectorToElectronicsDistanceZ
+                    ) {
                         unit = LUnit.MM
                     }
                 }

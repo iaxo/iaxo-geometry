@@ -3183,6 +3183,11 @@
             <fraction n="0.2" ref="G4_LUNG_ICRP"/>
             <fraction n="0.8" ref="G4_AIR"/>
         </material>
+        <material state="solid" name="BoratedHDPE5pct">
+            <D value="1.04" unit="g/cm3"/>
+            <fraction n="0.05" ref="G4_B"/>
+            <fraction n="0.95" ref="G4_POLYETHYLENE"/>
+        </material>
         <material state="liquid" name="LiquidScintillatorBase">
             <D value="1.03" unit="g/cm3"/>
             <fraction n="0.085" ref="G4_H"/>
@@ -3751,9 +3756,10 @@
             <fraction n="0.98225450491" ref="Xenon50Neon50Gas"/>
             <fraction n="0.01774549509" ref="IsobutaneGas"/>
         </material>
-        <material state="gas" name="XenonNeon2.3%Isobutane1.05bar">
-            <D value="3.1908975" unit="kg/m3"/>
-            <fraction n="1.0" ref="XenonNeon2.3%Isobutane1bar"/>
+        <material state="gas" name="XenonNeon5%Isobutane1bar">
+            <D value="3.01977" unit="kg/m3"/>
+            <fraction n="0.961177731" ref="Xenon50Neon50Gas"/>
+            <fraction n="0.038822269" ref="IsobutaneGas"/>
         </material>
         <material state="gas" name="Argon1%Isobutane1.2bar">
             <D value="1.942584" unit="kg/m3"/>
@@ -3803,6 +3809,30 @@
             <D value="2.35872" unit="kg/m3"/>
             <fraction n="1.0" ref="Argon10%Isobutane1bar"/>
         </material>
+        <material state="gas" name="Argon1%Isobutane1.5bar">
+            <D value="2.42836" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon1%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon2%Isobutane1.5bar">
+            <D value="2.43936" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon2%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon3%Isobutane1.5bar">
+            <D value="2.45036" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon3%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon4%Isobutane1.5bar">
+            <D value="2.46136" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon4%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon5%Isobutane1.5bar">
+            <D value="2.47235" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon5%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon10%Isobutane1.5bar">
+            <D value="2.52735" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon10%Isobutane1bar"/>
+        </material>
         <material state="gas" name="Argon1%Isobutane1.6bar">
             <D value="2.590112" unit="kg/m3"/>
             <fraction n="1.0" ref="Argon1%Isobutane1bar"/>
@@ -3826,6 +3856,50 @@
         <material state="gas" name="Argon10%Isobutane1.6bar">
             <D value="2.69568" unit="kg/m3"/>
             <fraction n="1.0" ref="Argon10%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon1%Isobutane2.0bar">
+            <D value="3.23781" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon1%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon2%Isobutane2.0bar">
+            <D value="3.25248" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon2%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon3%Isobutane2.0bar">
+            <D value="3.26714" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon3%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon4%Isobutane2.0bar">
+            <D value="3.28181" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon4%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon5%Isobutane2.0bar">
+            <D value="3.29647" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon5%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="Argon10%Isobutane2.0bar">
+            <D value="3.3698" unit="kg/m3"/>
+            <fraction n="1.0" ref="Argon10%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="XenonNeon2.3%Isobutane1.05bar">
+            <D value="3.1908975" unit="kg/m3"/>
+            <fraction n="1.0" ref="XenonNeon2.3%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="XenonNeon2.3%Isobutane1.5bar">
+            <D value="4.5585" unit="kg/m3"/>
+            <fraction n="1.0" ref="XenonNeon2.3%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="XenonNeon2.3%Isobutane2.0bar">
+            <D value="6.078" unit="kg/m3"/>
+            <fraction n="1.0" ref="XenonNeon2.3%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="XenonNeon5%Isobutane1.5bar">
+            <D value="4.52972" unit="kg/m3"/>
+            <fraction n="1.0" ref="XenonNeon5%Isobutane1bar"/>
+        </material>
+        <material state="gas" name="XenonNeon5%Isobutane2.0bar">
+            <D value="6.03963" unit="kg/m3"/>
+            <fraction n="1.0" ref="XenonNeon5%Isobutane1bar"/>
         </material>
         <material state="solid" name="Copper">
             <D value="8.96" unit="g/cm3"/>
@@ -3942,6 +4016,28 @@
             <first ref="gasSolidAux2"/>
             <second ref="cathodeWindowMylarSolid"/>
         </subtraction>
+        <box lunit="mm" aunit="rad" name="gasSolidAboveReadoutOriginal" x="60.0" y="60.0" z="30.0"/>
+        <subtraction lunit="mm" aunit="rad" name="gasSolidAboveReadoutAux">
+            <position name="gasSolidAboveReadoutAux.position" z="-14.9" unit="mm"/>
+            <rotation name="gasSolidAboveReadoutAux.rotation" z="45.0" unit="deg"/>
+            <first ref="gasSolidAboveReadoutOriginal"/>
+            <second ref="copperReadoutSolid"/>
+        </subtraction>
+        <subtraction lunit="mm" aunit="rad" name="gasSolidAboveReadoutAux2">
+            <position name="gasSolidAboveReadoutAux2.position" z="14.996020000000001" unit="mm"/>
+            <first ref="gasSolidAboveReadoutAux"/>
+            <second ref="cathodeWindowAluminiumSolid"/>
+        </subtraction>
+        <subtraction lunit="mm" aunit="rad" name="gasSolidAboveReadoutSolid">
+            <position name="gasSolidAboveReadoutSolid.position" z="14.99802" unit="mm"/>
+            <first ref="gasSolidAboveReadoutAux2"/>
+            <second ref="cathodeWindowMylarSolid"/>
+        </subtraction>
+        <subtraction lunit="mm" aunit="rad" name="gasSolidWithHole">
+            <rotation name="gasSolidWithHole.rotation" z="45.0" unit="deg"/>
+            <first ref="gasSolid"/>
+            <second ref="gasSolidAboveReadoutSolid"/>
+        </subtraction>
         <tube lunit="mm" aunit="rad" name="detectorPipeChamberFlangeSolid" rmax="67.0" z="14.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
         <tube lunit="mm" aunit="rad" name="detectorPipeTelescopeFlangeSolid" rmax="75.0" z="18.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
         <tube lunit="mm" aunit="rad" name="detectorPipeSection1of2Solid" rmax="46.0" z="327.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
@@ -4004,7 +4100,7 @@
             <second ref="electronicsBoxInSolid"/>
         </subtraction>
         <box lunit="mm" aunit="rad" name="electronicsCardSolid" x="2.5" y="70.0" z="100.0"/>
-        <box lunit="mm" aunit="rad" name="flatcableSolid" x="1.0" y="70.0" z="150.0"/>
+        <box lunit="mm" aunit="rad" name="flatCableSolid" x="1.0" y="70.0" z="150.0"/>
         <box lunit="mm" aunit="rad" name="shieldingLayerBox1" x="220.0" y="220.0" z="360.0"/>
         <box lunit="mm" aunit="rad" name="shieldingLayerHole1" x="200.0" y="200.0" z="350.0"/>
         <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole1">
@@ -4145,11 +4241,11 @@
             <first ref="shieldingLayerBox20"/>
             <second ref="shieldingLayerHole20"/>
         </subtraction>
-        <box lunit="mm" aunit="rad" name="copperBoxOutterSolid" x="200.0" y="200.0" z="350.0"/>
+        <box lunit="mm" aunit="rad" name="copperBoxOuterSolid" x="200.0" y="200.0" z="350.0"/>
         <box lunit="mm" aunit="rad" name="copperBoxInnerSolid" x="180.0" y="150.0" z="350.0"/>
         <subtraction lunit="mm" aunit="rad" name="copperBoxSolid">
             <position name="copperBoxSolid.position" z="10.0" unit="mm"/>
-            <first ref="copperBoxOutterSolid"/>
+            <first ref="copperBoxOuterSolid"/>
             <second ref="copperBoxInnerSolid"/>
         </subtraction>
         <box lunit="mm" aunit="rad" name="worldBox" x="1450.0" y="1600.0" z="1450.0"/>
@@ -4199,9 +4295,21 @@
             <materialref ref="Argon1%Isobutane1.4bar"/>
             <solidref ref="gasSolid"/>
         </volume>
+        <volume name="gasVolumeNotAboveReadout">
+            <materialref ref="Argon1%Isobutane1.4bar"/>
+            <solidref ref="gasSolidWithHole"/>
+        </volume>
+        <volume name="gasVolumeAboveReadout">
+            <materialref ref="Argon1%Isobutane1.4bar"/>
+            <solidref ref="gasSolidAboveReadoutSolid"/>
+        </volume>
         <assembly name="Chamber">
-            <physvol name="gas">
-                <volumeref ref="gasVolume"/>
+            <physvol name="gasNotAboveReadout">
+                <volumeref ref="gasVolumeNotAboveReadout"/>
+            </physvol>
+            <physvol name="gasAboveReadout">
+                <volumeref ref="gasVolumeAboveReadout"/>
+                <rotation name="gasAboveReadout.rotation" z="45.0" unit="deg"/>
             </physvol>
             <physvol name="chamberBackplate">
                 <volumeref ref="chamberBackplateVolume"/>
@@ -4272,9 +4380,9 @@
             <materialref ref="G4_Cu"/>
             <solidref ref="electronicsCardSolid"/>
         </volume>
-        <volume name="flatcableVolume">
+        <volume name="flatCableVolume">
             <materialref ref="G4_Cu"/>
-            <solidref ref="flatcableSolid"/>
+            <solidref ref="flatCableSolid"/>
         </volume>
         <assembly name="electronicsBox">
             <physvol name="electronicsCard1">
@@ -4293,21 +4401,21 @@
                 <volumeref ref="electronicsCardVolume"/>
                 <position name="electronicsCard4.position" x="15.0" unit="mm"/>
             </physvol>
-            <physvol name="flatcable1">
-                <volumeref ref="flatcableVolume"/>
-                <position name="flatcable1.position" x="-15.0" z="-125.0" unit="mm"/>
+            <physvol name="flatCable1">
+                <volumeref ref="flatCableVolume"/>
+                <position name="flatCable1.position" x="-15.0" z="-125.0" unit="mm"/>
             </physvol>
-            <physvol name="flatcable2">
-                <volumeref ref="flatcableVolume"/>
-                <position name="flatcable2.position" x="-5.0" z="-125.0" unit="mm"/>
+            <physvol name="flatCable2">
+                <volumeref ref="flatCableVolume"/>
+                <position name="flatCable2.position" x="-5.0" z="-125.0" unit="mm"/>
             </physvol>
-            <physvol name="flatcable3">
-                <volumeref ref="flatcableVolume"/>
-                <position name="flatcable3.position" x="5.0" z="-125.0" unit="mm"/>
+            <physvol name="flatCable3">
+                <volumeref ref="flatCableVolume"/>
+                <position name="flatCable3.position" x="5.0" z="-125.0" unit="mm"/>
             </physvol>
-            <physvol name="flatcable4">
-                <volumeref ref="flatcableVolume"/>
-                <position name="flatcable4.position" x="15.0" z="-125.0" unit="mm"/>
+            <physvol name="flatCable4">
+                <volumeref ref="flatCableVolume"/>
+                <position name="flatCable4.position" x="15.0" z="-125.0" unit="mm"/>
             </physvol>
         </assembly>
         <volume name="shieldingVolumeLayer1">

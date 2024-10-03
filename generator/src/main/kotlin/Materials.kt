@@ -33,5 +33,6 @@ enum class Materials(val ref: GdmlRef<GdmlMaterial>) {
     Lucite(resolve("G4_LUCITE")),
     Neoprene(resolve("G4_RUBBER_NEOPRENE")),
     Steel(resolve("G4_STAINLESS-STEEL")),
+    BoratedHDPE5pct(resolve("BoratedHDPE5pct")),
 }
 
