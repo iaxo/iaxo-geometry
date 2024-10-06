@@ -5,14 +5,17 @@ import Geometry
 import space.kscience.gdml.*
 
 open class ShieldingNeutrons(
-    open val copperBox: Boolean = true,
+    open val innerVetoes: Boolean = false,
 ) : Geometry() {
     companion object Parameters {
 
         const val vetoOuterThickness: Double = 100.0
         const val vetoInnerThickness: Double = 50.0
+        const val vetoInnerSpacing = 50.0
+        const val shieldingThicknessBase: Double = 200.0
 
-        const val shieldingThickness: Double = 200.0 + vetoInnerThickness
+        const val shieldingThickness: Double = shieldingThicknessBase + vetoInnerThickness
+
         const val chamberHoleXY: Double = 200.0
         const val chamberHoleZ: Double = 150.0
 
@@ -29,8 +32,7 @@ open class ShieldingNeutrons(
         const val OffsetZ: Double =
             DetectorToShieldingSeparation + Chamber.Height / 2 + Chamber.ReadoutKaptonThickness + Chamber.BackplateThickness
 
-        val vetoInnerSpacing = 50.0
-        val vetoInnerLength = shieldingThickness + chamberHoleZ + vetoInnerSpacing
+        const val vetoInnerLength = shieldingThickness + chamberHoleZ + vetoInnerSpacing
     }
 
     override fun generate(gdml: Gdml): GdmlRef<GdmlAssembly> {
@@ -108,59 +110,63 @@ open class ShieldingNeutrons(
                     position(z = SizeZ / 2 - ShaftLongSide / 2) { unit = LUnit.MM }
                 }
 
-            val leadShieldingVolumeHoleInnerVetoes1 =
-                gdml.solids.subtraction(
-                    leadBoxWithShaftSolid,
-                    vetoInnerBoxLateralSolid,
-                    "leadShieldingVolumeHoleInnerVetoes1"
-                ) {
-                    position(
-                        y = vetoInnerThickness / 2 + chamberHoleXY / 2 + vetoInnerSpacing,
-                        x = vetoInnerThickness / 2,
-                        z = -vetoInnerLength / 2 + SizeZ / 2
-                    ) { unit = LUnit.MM }
-                }
-            val leadShieldingVolumeHoleInnerVetoes2 =
-                gdml.solids.subtraction(
-                    leadShieldingVolumeHoleInnerVetoes1,
-                    vetoInnerBoxLateralSolid,
-                    "leadShieldingVolumeHoleInnerVetoes2"
-                ) {
-                    position(
-                        y = -vetoInnerThickness / 2 - chamberHoleXY / 2 - vetoInnerSpacing,
-                        x = -vetoInnerThickness / 2,
-                        z = -vetoInnerLength / 2 + SizeZ / 2
-                    ) { unit = LUnit.MM }
-                }
-            val leadShieldingVolumeHoleInnerVetoes3 =
-                gdml.solids.subtraction(
-                    leadShieldingVolumeHoleInnerVetoes2,
-                    vetoInnerBoxLateralSolid,
-                    "leadShieldingVolumeHoleInnerVetoes3"
-                ) {
-                    rotation(z = 90.0) { unit = AUnit.DEGREE }
-                    position(
-                        x = -vetoInnerThickness / 2 - chamberHoleXY / 2 - vetoInnerSpacing,
-                        y = vetoInnerThickness / 2,
-                        z = -vetoInnerLength / 2 + SizeZ / 2
-                    ) { unit = LUnit.MM }
-                }
-            val leadShieldingVolumeHoleInnerVetoes4 =
-                gdml.solids.subtraction(
-                    leadShieldingVolumeHoleInnerVetoes3,
-                    vetoInnerBoxLateralSolid,
-                    "leadShieldingVolumeHoleInnerVetoes4"
-                ) {
-                    rotation(z = 90.0) { unit = AUnit.DEGREE }
-                    position(
-                        x = vetoInnerThickness / 2 + chamberHoleXY / 2 + vetoInnerSpacing,
-                        y = -vetoInnerThickness / 2,
-                        z = -vetoInnerLength / 2 + SizeZ / 2
-                    ) { unit = LUnit.MM }
-                }
 
-            val leadShieldingVolume =
+            val leadShieldingVolume = if (innerVetoes) {
+                val leadShieldingVolumeHoleInnerVetoes1 =
+                    gdml.solids.subtraction(
+                        leadBoxWithShaftSolid,
+                        vetoInnerBoxLateralSolid,
+                        "leadShieldingVolumeHoleInnerVetoes1"
+                    ) {
+                        position(
+                            y = vetoInnerThickness / 2 + chamberHoleXY / 2 + vetoInnerSpacing,
+                            x = vetoInnerThickness / 2,
+                            z = -vetoInnerLength / 2 + SizeZ / 2
+                        ) { unit = LUnit.MM }
+                    }
+                val leadShieldingVolumeHoleInnerVetoes2 =
+                    gdml.solids.subtraction(
+                        leadShieldingVolumeHoleInnerVetoes1,
+                        vetoInnerBoxLateralSolid,
+                        "leadShieldingVolumeHoleInnerVetoes2"
+                    ) {
+                        position(
+                            y = -vetoInnerThickness / 2 - chamberHoleXY / 2 - vetoInnerSpacing,
+                            x = -vetoInnerThickness / 2,
+                            z = -vetoInnerLength / 2 + SizeZ / 2
+                        ) { unit = LUnit.MM }
+                    }
+                val leadShieldingVolumeHoleInnerVetoes3 =
+                    gdml.solids.subtraction(
+                        leadShieldingVolumeHoleInnerVetoes2,
+                        vetoInnerBoxLateralSolid,
+                        "leadShieldingVolumeHoleInnerVetoes3"
+                    ) {
+                        rotation(z = 90.0) { unit = AUnit.DEGREE }
+                        position(
+                            x = -vetoInnerThickness / 2 - chamberHoleXY / 2 - vetoInnerSpacing,
+                            y = vetoInnerThickness / 2,
+                            z = -vetoInnerLength / 2 + SizeZ / 2
+                        ) { unit = LUnit.MM }
+                    }
+                val leadShieldingVolumeHoleInnerVetoes4 =
+                    gdml.solids.subtraction(
+                        leadShieldingVolumeHoleInnerVetoes3,
+                        vetoInnerBoxLateralSolid,
+                        "leadShieldingVolumeHoleInnerVetoes4"
+                    ) {
+                        rotation(z = 90.0) { unit = AUnit.DEGREE }
+                        position(
+                            x = vetoInnerThickness / 2 + chamberHoleXY / 2 + vetoInnerSpacing,
+                            y = -vetoInnerThickness / 2,
+                            z = -vetoInnerLength / 2 + SizeZ / 2
+                        ) { unit = LUnit.MM }
+                    }
+
                 gdml.structure.volume(Materials.Lead.ref, leadShieldingVolumeHoleInnerVetoes4, "shieldingVolume")
+            } else {
+                gdml.structure.volume(Materials.Lead.ref, leadBoxWithShaftSolid, "shieldingVolume")
+            }
 
             return@lazy gdml.structure.assembly {
                 name = "shielding"
@@ -213,43 +219,44 @@ open class ShieldingNeutrons(
                     }
                 }
 
-                // inner veto
-                physVolume(vetoInnerBoxLateralVolume, name = "vetoInnerTop") {
-                    position(
-                        y = vetoInnerThickness / 2 + chamberHoleXY / 2 + vetoInnerSpacing,
-                        x = vetoInnerThickness / 2,
-                        z = -OffsetZ - vetoInnerLength / 2 + SizeZ / 2
-                    ) {
-                        unit = LUnit.MM
+                if (innerVetoes) {
+                    physVolume(vetoInnerBoxLateralVolume, name = "vetoInnerTop") {
+                        position(
+                            y = vetoInnerThickness / 2 + chamberHoleXY / 2 + vetoInnerSpacing,
+                            x = vetoInnerThickness / 2,
+                            z = -OffsetZ - vetoInnerLength / 2 + SizeZ / 2
+                        ) {
+                            unit = LUnit.MM
+                        }
                     }
-                }
-                physVolume(vetoInnerBoxLateralVolume, name = "vetoInnerBottom") {
-                    position(
-                        y = -vetoInnerThickness / 2 - chamberHoleXY / 2 - vetoInnerSpacing,
-                        x = -vetoInnerThickness / 2,
-                        z = -OffsetZ - vetoInnerLength / 2 + SizeZ / 2
-                    ) {
-                        unit = LUnit.MM
+                    physVolume(vetoInnerBoxLateralVolume, name = "vetoInnerBottom") {
+                        position(
+                            y = -vetoInnerThickness / 2 - chamberHoleXY / 2 - vetoInnerSpacing,
+                            x = -vetoInnerThickness / 2,
+                            z = -OffsetZ - vetoInnerLength / 2 + SizeZ / 2
+                        ) {
+                            unit = LUnit.MM
+                        }
                     }
-                }
-                physVolume(vetoInnerBoxLateralVolume, name = "vetoInnerRight") {
-                    rotation(z = 90.0) { unit = AUnit.DEGREE }
-                    position(
-                        x = -vetoInnerThickness / 2 - chamberHoleXY / 2 - vetoInnerSpacing,
-                        y = vetoInnerThickness / 2,
-                        z = -OffsetZ - vetoInnerLength / 2 + SizeZ / 2
-                    ) {
-                        unit = LUnit.MM
+                    physVolume(vetoInnerBoxLateralVolume, name = "vetoInnerRight") {
+                        rotation(z = 90.0) { unit = AUnit.DEGREE }
+                        position(
+                            x = -vetoInnerThickness / 2 - chamberHoleXY / 2 - vetoInnerSpacing,
+                            y = vetoInnerThickness / 2,
+                            z = -OffsetZ - vetoInnerLength / 2 + SizeZ / 2
+                        ) {
+                            unit = LUnit.MM
+                        }
                     }
-                }
-                physVolume(vetoInnerBoxLateralVolume, name = "vetoInnerLeft") {
-                    rotation(z = 90.0) { unit = AUnit.DEGREE }
-                    position(
-                        x = vetoInnerThickness / 2 + chamberHoleXY / 2 + vetoInnerSpacing,
-                        y = -vetoInnerThickness / 2,
-                        z = -OffsetZ - vetoInnerLength / 2 + SizeZ / 2
-                    ) {
-                        unit = LUnit.MM
+                    physVolume(vetoInnerBoxLateralVolume, name = "vetoInnerLeft") {
+                        rotation(z = 90.0) { unit = AUnit.DEGREE }
+                        position(
+                            x = vetoInnerThickness / 2 + chamberHoleXY / 2 + vetoInnerSpacing,
+                            y = -vetoInnerThickness / 2,
+                            z = -OffsetZ - vetoInnerLength / 2 + SizeZ / 2
+                        ) {
+                            unit = LUnit.MM
+                        }
                     }
                 }
             }
