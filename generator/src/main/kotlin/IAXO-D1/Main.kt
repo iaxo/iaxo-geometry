@@ -1,5 +1,6 @@
 package `IAXO-D1`
 
+import BabyIAXO.ShieldingNeutrons
 import BabyIAXO.Veto
 import materialsUrl
 
@@ -153,6 +154,30 @@ val geometries = mapOf(
             }
         }
     }.withUnits(LUnit.MM, AUnit.RAD),
+    "NeutronShieldingVetoes" to Gdml {
+
+        loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
+
+        val chamberVolume = Chamber().generate(this)
+        val detectorPipeVolume = DetectorPipe().generate(this)
+        val shieldingVolume = ShieldingNeutrons().generate(this)
+
+        structure {
+            val worldBox = solids.box(1100, 1100, 1100, "worldBox")
+
+            world = volume(Materials.Air.ref, worldBox, "world") {
+
+                physVolume(chamberVolume, name = "Chamber")
+                physVolume(detectorPipeVolume, name = "DetectorPipe") {
+                    position(z = DetectorPipe.ZinWorld) {
+                        unit = LUnit.MM
+                    }
+                }
+                physVolume(shieldingVolume, name = "Shielding")
+            }
+        }
+    }.withUnits(LUnit.MM, AUnit.RAD),
+
     "NoVetosGasNotSplit" to Gdml {
 
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */

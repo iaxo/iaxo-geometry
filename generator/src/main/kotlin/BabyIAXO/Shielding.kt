@@ -129,7 +129,7 @@ open class Shielding(
 
                 return@lazy gdml.structure.assembly {
                     name = "shielding"
-                    physVolume(leadShieldingVolume, name = "shielding20cm") {
+                    physVolume(leadShieldingVolume, name = "shieldingLead") {
                         position(z = -OffsetZ) { unit = LUnit.MM }
                     }
                     physVolume(copperBoxVolume, name = "copperBox") {
