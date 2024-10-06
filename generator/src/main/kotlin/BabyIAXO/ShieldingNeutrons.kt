@@ -57,13 +57,21 @@ open class ShieldingNeutrons(
             )
 
             val vetoOuterBoxLateralVolume =
-                gdml.structure.volume(Materials.EJ254_5pct.ref, vetoOuterBoxLateralSolid, "vetoOuterBoxLateralVolume")
+                gdml.structure.volume(
+                    Materials.EJ254_5pct.ref,
+                    vetoOuterBoxLateralSolid,
+                    "scintillatorVolumeOuterLateral"
+                )
 
             val vetoOuterBoxBackVolume =
-                gdml.structure.volume(Materials.EJ254_5pct.ref, vetoOuterBackBoxSolid, "vetoOuterBoxBackVolume")
+                gdml.structure.volume(Materials.EJ254_5pct.ref, vetoOuterBackBoxSolid, "scintillatorVolumeOuterBack")
 
             val vetoInnerBoxLateralVolume =
-                gdml.structure.volume(Materials.EJ254_5pct.ref, vetoInnerBoxLateralSolid, "vetoInnerBoxLateralVolume")
+                gdml.structure.volume(
+                    Materials.EJ254_5pct.ref,
+                    vetoInnerBoxLateralSolid,
+                    "scintillatorVolumeInnerLateral"
+                )
 
             val copperBoxOuterSolid =
                 gdml.solids.box(
@@ -166,7 +174,7 @@ open class ShieldingNeutrons(
                 physVolume(vetoOuterBoxBackVolume, name = "vetoOuterBack") {
                     position(z = -OffsetZ - SizeZ / 2 - vetoOuterThickness / 2) { unit = LUnit.MM }
                 }
-                physVolume(vetoOuterBoxLateralVolume, name = "vetoOuterLateralTop") {
+                physVolume(vetoOuterBoxLateralVolume, name = "scintillatorOuterTop") {
                     position(
                         y = SizeXY / 2 + vetoOuterThickness / 2,
                         x = vetoOuterThickness / 2,
@@ -175,7 +183,7 @@ open class ShieldingNeutrons(
                         unit = LUnit.MM
                     }
                 }
-                physVolume(vetoOuterBoxLateralVolume, name = "vetoOuterLateralBottom") {
+                physVolume(vetoOuterBoxLateralVolume, name = "scintillatorOuterBottom") {
                     position(
                         y = -SizeXY / 2 - vetoOuterThickness / 2,
                         x = -vetoOuterThickness / 2,
@@ -184,7 +192,7 @@ open class ShieldingNeutrons(
                         unit = LUnit.MM
                     }
                 }
-                physVolume(vetoOuterBoxLateralVolume, name = "vetoOuterLateralRight") {
+                physVolume(vetoOuterBoxLateralVolume, name = "scintillatorOuterRight") {
                     rotation(z = 90.0) { unit = AUnit.DEGREE }
                     position(
                         x = -SizeXY / 2 - vetoOuterThickness / 2,
@@ -194,7 +202,7 @@ open class ShieldingNeutrons(
                         unit = LUnit.MM
                     }
                 }
-                physVolume(vetoOuterBoxLateralVolume, name = "vetoOuterLateralLeft") {
+                physVolume(vetoOuterBoxLateralVolume, name = "scintillatorOuterLeft") {
                     rotation(z = 90.0) { unit = AUnit.DEGREE }
                     position(
                         x = SizeXY / 2 + vetoOuterThickness / 2,
@@ -206,7 +214,7 @@ open class ShieldingNeutrons(
                 }
 
                 // inner veto
-                physVolume(vetoInnerBoxLateralVolume, name = "vetoInnerLateralTop") {
+                physVolume(vetoInnerBoxLateralVolume, name = "vetoInnerTop") {
                     position(
                         y = vetoInnerThickness / 2 + chamberHoleXY / 2 + vetoInnerSpacing,
                         x = vetoInnerThickness / 2,
@@ -215,7 +223,7 @@ open class ShieldingNeutrons(
                         unit = LUnit.MM
                     }
                 }
-                physVolume(vetoInnerBoxLateralVolume, name = "vetoInnerLateralBottom") {
+                physVolume(vetoInnerBoxLateralVolume, name = "vetoInnerBottom") {
                     position(
                         y = -vetoInnerThickness / 2 - chamberHoleXY / 2 - vetoInnerSpacing,
                         x = -vetoInnerThickness / 2,
@@ -224,7 +232,7 @@ open class ShieldingNeutrons(
                         unit = LUnit.MM
                     }
                 }
-                physVolume(vetoInnerBoxLateralVolume, name = "vetoInnerLateralRight") {
+                physVolume(vetoInnerBoxLateralVolume, name = "vetoInnerRight") {
                     rotation(z = 90.0) { unit = AUnit.DEGREE }
                     position(
                         x = -vetoInnerThickness / 2 - chamberHoleXY / 2 - vetoInnerSpacing,
@@ -234,7 +242,7 @@ open class ShieldingNeutrons(
                         unit = LUnit.MM
                     }
                 }
-                physVolume(vetoInnerBoxLateralVolume, name = "vetoInnerLateralLeft") {
+                physVolume(vetoInnerBoxLateralVolume, name = "vetoInnerLeft") {
                     rotation(z = 90.0) { unit = AUnit.DEGREE }
                     position(
                         x = vetoInnerThickness / 2 + chamberHoleXY / 2 + vetoInnerSpacing,

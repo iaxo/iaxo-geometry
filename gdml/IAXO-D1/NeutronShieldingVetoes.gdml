@@ -4275,15 +4275,15 @@
                 <position name="detectorPipeFilling.position" z="82.675" unit="mm"/>
             </physvol>
         </assembly>
-        <volume name="vetoOuterBoxLateralVolume">
+        <volume name="scintillatorVolumeOuterLateral">
             <materialref ref="EJ254-5pct"/>
             <solidref ref="vetoOuterBoxLateralSolid"/>
         </volume>
-        <volume name="vetoOuterBoxBackVolume">
+        <volume name="scintillatorVolumeOuterBack">
             <materialref ref="EJ254-5pct"/>
             <solidref ref="vetoOuterBoxSolid"/>
         </volume>
-        <volume name="vetoInnerBoxLateralVolume">
+        <volume name="scintillatorVolumeInnerLateral">
             <materialref ref="EJ254-5pct"/>
             <solidref ref="vetoInnerBoxLateralSolid"/>
         </volume>
@@ -4305,44 +4305,44 @@
                 <position name="copperBox.position" z="144.5" unit="mm"/>
             </physvol>
             <physvol name="vetoOuterBack">
-                <volumeref ref="vetoOuterBoxBackVolume"/>
+                <volumeref ref="scintillatorVolumeOuterBack"/>
                 <position name="vetoOuterBack.position" z="-355.5" unit="mm"/>
             </physvol>
-            <physvol name="vetoOuterLateralTop">
-                <volumeref ref="vetoOuterBoxLateralVolume"/>
-                <position name="vetoOuterLateralTop.position" x="50.0" y="400.0" z="-30.5" unit="mm"/>
+            <physvol name="scintillatorOuterTop">
+                <volumeref ref="scintillatorVolumeOuterLateral"/>
+                <position name="scintillatorOuterTop.position" x="50.0" y="400.0" z="-30.5" unit="mm"/>
             </physvol>
-            <physvol name="vetoOuterLateralBottom">
-                <volumeref ref="vetoOuterBoxLateralVolume"/>
-                <position name="vetoOuterLateralBottom.position" x="-50.0" y="-400.0" z="-30.5" unit="mm"/>
+            <physvol name="scintillatorOuterBottom">
+                <volumeref ref="scintillatorVolumeOuterLateral"/>
+                <position name="scintillatorOuterBottom.position" x="-50.0" y="-400.0" z="-30.5" unit="mm"/>
             </physvol>
-            <physvol name="vetoOuterLateralRight">
-                <volumeref ref="vetoOuterBoxLateralVolume"/>
-                <position name="vetoOuterLateralRight.position" x="-400.0" y="50.0" z="-30.5" unit="mm"/>
-                <rotation name="vetoOuterLateralRight.rotation" z="90.0" unit="deg"/>
+            <physvol name="scintillatorOuterRight">
+                <volumeref ref="scintillatorVolumeOuterLateral"/>
+                <position name="scintillatorOuterRight.position" x="-400.0" y="50.0" z="-30.5" unit="mm"/>
+                <rotation name="scintillatorOuterRight.rotation" z="90.0" unit="deg"/>
             </physvol>
-            <physvol name="vetoOuterLateralLeft">
-                <volumeref ref="vetoOuterBoxLateralVolume"/>
-                <position name="vetoOuterLateralLeft.position" x="400.0" y="-50.0" z="-30.5" unit="mm"/>
-                <rotation name="vetoOuterLateralLeft.rotation" z="90.0" unit="deg"/>
+            <physvol name="scintillatorOuterLeft">
+                <volumeref ref="scintillatorVolumeOuterLateral"/>
+                <position name="scintillatorOuterLeft.position" x="400.0" y="-50.0" z="-30.5" unit="mm"/>
+                <rotation name="scintillatorOuterLeft.rotation" z="90.0" unit="deg"/>
             </physvol>
-            <physvol name="vetoInnerLateralTop">
-                <volumeref ref="vetoInnerBoxLateralVolume"/>
-                <position name="vetoInnerLateralTop.position" x="25.0" y="175.0" z="119.5" unit="mm"/>
+            <physvol name="vetoInnerTop">
+                <volumeref ref="scintillatorVolumeInnerLateral"/>
+                <position name="vetoInnerTop.position" x="25.0" y="175.0" z="119.5" unit="mm"/>
             </physvol>
-            <physvol name="vetoInnerLateralBottom">
-                <volumeref ref="vetoInnerBoxLateralVolume"/>
-                <position name="vetoInnerLateralBottom.position" x="-25.0" y="-175.0" z="119.5" unit="mm"/>
+            <physvol name="vetoInnerBottom">
+                <volumeref ref="scintillatorVolumeInnerLateral"/>
+                <position name="vetoInnerBottom.position" x="-25.0" y="-175.0" z="119.5" unit="mm"/>
             </physvol>
-            <physvol name="vetoInnerLateralRight">
-                <volumeref ref="vetoInnerBoxLateralVolume"/>
-                <position name="vetoInnerLateralRight.position" x="-175.0" y="25.0" z="119.5" unit="mm"/>
-                <rotation name="vetoInnerLateralRight.rotation" z="90.0" unit="deg"/>
+            <physvol name="vetoInnerRight">
+                <volumeref ref="scintillatorVolumeInnerLateral"/>
+                <position name="vetoInnerRight.position" x="-175.0" y="25.0" z="119.5" unit="mm"/>
+                <rotation name="vetoInnerRight.rotation" z="90.0" unit="deg"/>
             </physvol>
-            <physvol name="vetoInnerLateralLeft">
-                <volumeref ref="vetoInnerBoxLateralVolume"/>
-                <position name="vetoInnerLateralLeft.position" x="175.0" y="-25.0" z="119.5" unit="mm"/>
-                <rotation name="vetoInnerLateralLeft.rotation" z="90.0" unit="deg"/>
+            <physvol name="vetoInnerLeft">
+                <volumeref ref="scintillatorVolumeInnerLateral"/>
+                <position name="vetoInnerLeft.position" x="175.0" y="-25.0" z="119.5" unit="mm"/>
+                <rotation name="vetoInnerLeft.rotation" z="90.0" unit="deg"/>
             </physvol>
         </assembly>
         <volume name="world">
