@@ -3170,6 +3170,11 @@
             <fraction n="0.085" ref="G4_H"/>
             <fraction n="0.915" ref="G4_C"/>
         </material>
+        <material state="solid" name="PVT">
+            <D value="1.03" unit="g/cm3"/>
+            <fraction n="0.085" ref="G4_H"/>
+            <fraction n="0.915" ref="G4_C"/>
+        </material>
         <element name="6Li">
             <fraction n="1.0" ref="Li6"/>
         </element>
@@ -3187,6 +3192,24 @@
             <D value="1.04" unit="g/cm3"/>
             <fraction n="0.05" ref="G4_B"/>
             <fraction n="0.95" ref="G4_POLYETHYLENE"/>
+        </material>
+        <material state="solid" name="EJ254-5pct">
+            <D value="1.026" unit="g/cm3"/>
+            <fraction n="0.084647652" ref="G4_H"/>
+            <fraction n="0.865300985" ref="G4_C"/>
+            <fraction n="0.050051363" ref="G4_B"/>
+        </material>
+        <material state="solid" name="EJ254-2.5pct">
+            <D value="1.023" unit="g/cm3"/>
+            <fraction n="0.084809873" ref="G4_H"/>
+            <fraction n="0.890156445" ref="G4_C"/>
+            <fraction n="0.025033682" ref="G4_B"/>
+        </material>
+        <material state="solid" name="EJ254-1pct">
+            <D value="1.021" unit="g/cm3"/>
+            <fraction n="0.084766095" ref="G4_H"/>
+            <fraction n="0.905135339" ref="G4_C"/>
+            <fraction n="0.010098567" ref="G4_B"/>
         </material>
         <material state="liquid" name="LiquidScintillatorBase">
             <D value="1.03" unit="g/cm3"/>
@@ -5784,9 +5807,9 @@
             <solidref ref="shieldingNeutronRodX13Y13"/>
         </volume>
         <assembly name="shielding">
-            <physvol name="shielding20cm">
+            <physvol name="shieldingLead">
                 <volumeref ref="shieldingVolume"/>
-                <position name="shielding20cm.position" z="19.5" unit="mm"/>
+                <position name="shieldingLead.position" z="19.5" unit="mm"/>
             </physvol>
             <physvol name="copperBox">
                 <volumeref ref="copperBoxVolume"/>
