@@ -10,6 +10,10 @@ private const val worldSizeX = 1350.0
 private const val worldSizeY = 1350.0
 private const val worldSizeZ = 3000.0
 
+private const val worldSizeXReduced = 1100.0
+private const val worldSizeYReduced = 1100.0
+private const val worldSizeZReduced = 1100.0
+
 fun completeGeometry(
     vetoSystem: VetoSystem = VetoSystem(),
 ): Gdml {
@@ -123,7 +127,7 @@ val geometries = mapOf(
             }
         }
     }.withUnits(LUnit.MM, AUnit.RAD),
-    "NoVetos" to Gdml {
+    "NoVetoes" to Gdml {
 
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
 
@@ -133,7 +137,7 @@ val geometries = mapOf(
         val shieldingVolume = Shielding().generate(this)
 
         structure {
-            val worldBox = solids.box(worldSizeX, worldSizeY, worldSizeZ, "worldBox")
+            val worldBox = solids.box(worldSizeXReduced, worldSizeYReduced, worldSizeZReduced, "worldBox")
 
             world = volume(Materials.Air.ref, worldBox, "world") {
                 physVolume(chamberVolume, name = "Chamber")
@@ -163,7 +167,7 @@ val geometries = mapOf(
         val shieldingVolume = ShieldingNeutrons().generate(this)
 
         structure {
-            val worldBox = solids.box(1100, 1100, 1100, "worldBox")
+            val worldBox = solids.box(worldSizeXReduced, worldSizeYReduced, worldSizeZReduced, "worldBox")
 
             world = volume(Materials.Air.ref, worldBox, "world") {
 
@@ -178,7 +182,7 @@ val geometries = mapOf(
         }
     }.withUnits(LUnit.MM, AUnit.RAD),
 
-    "NoVetosGasNotSplit" to Gdml {
+    "NoVetoesGasNotSplit" to Gdml {
 
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
 
@@ -215,10 +219,10 @@ val geometries = mapOf(
 
         val chamberVolume = Chamber().generate(this)
         val detectorPipeVolume = DetectorPipe().generate(this)
-        val shieldingVolume = BabyIAXO.Shielding(hdpeNeutronShieldingDiameter = 20.0).generate(this)
+        val shieldingVolume = BabyIAXO.ShieldingNeutronRods(hdpeNeutronShieldingDiameter = 20.0).generate(this)
 
         structure {
-            val worldBox = solids.box(worldSizeX, worldSizeY, worldSizeZ, "worldBox")
+            val worldBox = solids.box(worldSizeXReduced, worldSizeYReduced, worldSizeZReduced, "worldBox")
 
             world = volume(Materials.Air.ref, worldBox, "world") {
                 physVolume(chamberVolume, name = "Chamber")

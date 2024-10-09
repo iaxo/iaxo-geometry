@@ -3211,6 +3211,22 @@
             <fraction n="0.905135339" ref="G4_C"/>
             <fraction n="0.010098567" ref="G4_B"/>
         </material>
+        <material state="solid" name="mirrobor_B4C">
+            <D value="1.55" unit="g/cm3"/>
+            <fraction n="0.2080661841" ref="G4_C"/>
+            <fraction n="0.7919338159" ref="G4_B"/>
+        </material>
+        <material state="solid" name="mirrobor_additives">
+            <D value="1.55" unit="g/cm3"/>
+            <fraction n="0.7" ref="G4_C"/>
+            <fraction n="0.25" ref="G4_O"/>
+            <fraction n="0.05" ref="G4_H"/>
+        </material>
+        <material state="solid" name="mirrobor">
+            <D value="1.55" unit="g/cm3"/>
+            <fraction n="0.8" ref="mirrobor_B4C"/>
+            <fraction n="0.2" ref="mirrobor_additives"/>
+        </material>
         <material state="liquid" name="LiquidScintillatorBase">
             <D value="1.03" unit="g/cm3"/>
             <fraction n="0.085" ref="G4_H"/>
@@ -4133,28 +4149,6 @@
             <first ref="leadBoxSolid"/>
             <second ref="leadBoxShaftSolid"/>
         </subtraction>
-        <subtraction lunit="mm" aunit="rad" name="leadShieldingVolumeHoleInnerVetoes1">
-            <position name="leadShieldingVolumeHoleInnerVetoes1.position" x="25.0" y="175.0" z="100.0" unit="mm"/>
-            <first ref="leadBoxWithShaftSolid"/>
-            <second ref="vetoInnerBoxLateralSolid"/>
-        </subtraction>
-        <subtraction lunit="mm" aunit="rad" name="leadShieldingVolumeHoleInnerVetoes2">
-            <position name="leadShieldingVolumeHoleInnerVetoes2.position" x="-25.0" y="-175.0" z="100.0" unit="mm"/>
-            <first ref="leadShieldingVolumeHoleInnerVetoes1"/>
-            <second ref="vetoInnerBoxLateralSolid"/>
-        </subtraction>
-        <subtraction lunit="mm" aunit="rad" name="leadShieldingVolumeHoleInnerVetoes3">
-            <position name="leadShieldingVolumeHoleInnerVetoes3.position" x="-175.0" y="25.0" z="100.0" unit="mm"/>
-            <rotation name="leadShieldingVolumeHoleInnerVetoes3.rotation" z="90.0" unit="deg"/>
-            <first ref="leadShieldingVolumeHoleInnerVetoes2"/>
-            <second ref="vetoInnerBoxLateralSolid"/>
-        </subtraction>
-        <subtraction lunit="mm" aunit="rad" name="leadShieldingVolumeHoleInnerVetoes4">
-            <position name="leadShieldingVolumeHoleInnerVetoes4.position" x="175.0" y="-25.0" z="100.0" unit="mm"/>
-            <rotation name="leadShieldingVolumeHoleInnerVetoes4.rotation" z="90.0" unit="deg"/>
-            <first ref="leadShieldingVolumeHoleInnerVetoes3"/>
-            <second ref="vetoInnerBoxLateralSolid"/>
-        </subtraction>
         <box lunit="mm" aunit="rad" name="worldBox" x="1100.0" y="1100.0" z="1100.0"/>
     </solids>
     <structure>
@@ -4293,7 +4287,7 @@
         </volume>
         <volume name="shieldingVolume">
             <materialref ref="G4_Pb"/>
-            <solidref ref="leadShieldingVolumeHoleInnerVetoes4"/>
+            <solidref ref="leadBoxWithShaftSolid"/>
         </volume>
         <assembly name="shielding">
             <physvol name="shieldingLead">
@@ -4325,24 +4319,6 @@
                 <volumeref ref="scintillatorVolumeOuterLateral"/>
                 <position name="scintillatorOuterLeft.position" x="400.0" y="-50.0" z="-30.5" unit="mm"/>
                 <rotation name="scintillatorOuterLeft.rotation" z="90.0" unit="deg"/>
-            </physvol>
-            <physvol name="vetoInnerTop">
-                <volumeref ref="scintillatorVolumeInnerLateral"/>
-                <position name="vetoInnerTop.position" x="25.0" y="175.0" z="119.5" unit="mm"/>
-            </physvol>
-            <physvol name="vetoInnerBottom">
-                <volumeref ref="scintillatorVolumeInnerLateral"/>
-                <position name="vetoInnerBottom.position" x="-25.0" y="-175.0" z="119.5" unit="mm"/>
-            </physvol>
-            <physvol name="vetoInnerRight">
-                <volumeref ref="scintillatorVolumeInnerLateral"/>
-                <position name="vetoInnerRight.position" x="-175.0" y="25.0" z="119.5" unit="mm"/>
-                <rotation name="vetoInnerRight.rotation" z="90.0" unit="deg"/>
-            </physvol>
-            <physvol name="vetoInnerLeft">
-                <volumeref ref="scintillatorVolumeInnerLateral"/>
-                <position name="vetoInnerLeft.position" x="175.0" y="-25.0" z="119.5" unit="mm"/>
-                <rotation name="vetoInnerLeft.rotation" z="90.0" unit="deg"/>
             </physvol>
         </assembly>
         <volume name="world">

@@ -177,6 +177,8 @@ open class ShieldingNeutrons(
                     position(z = -OffsetZ + SizeZ / 2 - ShaftLongSide / 2) { unit = LUnit.MM }
                 }
 
+                // assembly
+
                 physVolume(vetoOuterBoxBackVolume, name = "vetoOuterBack") {
                     position(z = -OffsetZ - SizeZ / 2 - vetoOuterThickness / 2) { unit = LUnit.MM }
                 }

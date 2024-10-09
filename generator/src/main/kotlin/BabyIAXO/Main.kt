@@ -53,7 +53,7 @@ val geometries = mapOf(
     "CompleteVeto2Layers" to completeGeometry(vetoSystem = VetoSystem(numberOfLayers = 2)),
     "CompleteVeto3Layers" to completeGeometry(vetoSystem = VetoSystem(numberOfLayers = 3)),
     "CompleteVeto4Layers" to completeGeometry(vetoSystem = VetoSystem(numberOfLayers = 4)),
-    "NoVetos" to Gdml {
+    "NoVetoes" to Gdml {
 
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
 
@@ -84,7 +84,7 @@ val geometries = mapOf(
             }
         }
     }.withUnits(LUnit.MM, AUnit.RAD),
-    "NoVetosGasNotSplit" to Gdml {
+    "NoVetoesGasNotSplit" to Gdml {
 
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
 
@@ -108,29 +108,6 @@ val geometries = mapOf(
                         x = Electronics.PipeToElectronicsDistanceX,
                         z = Electronics.DetectorToElectronicsDistanceZ
                     ) {
-                        unit = LUnit.MM
-                    }
-                }
-                physVolume(shieldingVolume, name = "Shielding")
-            }
-        }
-    }.withUnits(LUnit.MM, AUnit.RAD),
-
-    "NeutronShieldingTubes" to Gdml {
-
-        loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
-
-        val chamberVolume = Chamber().generate(this)
-        val detectorPipeVolume = DetectorPipe().generate(this)
-        val shieldingVolume = Shielding(hdpeNeutronShieldingDiameter = 20.0).generate(this)
-
-        structure {
-            val worldBox = solids.box(worldSizeX, worldSizeY, worldSizeZ, "worldBox")
-
-            world = volume(Materials.Air.ref, worldBox, "world") {
-                physVolume(chamberVolume, name = "Chamber")
-                physVolume(detectorPipeVolume, name = "DetectorPipe") {
-                    position(z = DetectorPipe.ZinWorld) {
                         unit = LUnit.MM
                     }
                 }

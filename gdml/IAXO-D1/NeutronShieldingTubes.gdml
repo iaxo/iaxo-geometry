@@ -3211,6 +3211,22 @@
             <fraction n="0.905135339" ref="G4_C"/>
             <fraction n="0.010098567" ref="G4_B"/>
         </material>
+        <material state="solid" name="mirrobor_B4C">
+            <D value="1.55" unit="g/cm3"/>
+            <fraction n="0.2080661841" ref="G4_C"/>
+            <fraction n="0.7919338159" ref="G4_B"/>
+        </material>
+        <material state="solid" name="mirrobor_additives">
+            <D value="1.55" unit="g/cm3"/>
+            <fraction n="0.7" ref="G4_C"/>
+            <fraction n="0.25" ref="G4_O"/>
+            <fraction n="0.05" ref="G4_H"/>
+        </material>
+        <material state="solid" name="mirrobor">
+            <D value="1.55" unit="g/cm3"/>
+            <fraction n="0.8" ref="mirrobor_B4C"/>
+            <fraction n="0.2" ref="mirrobor_additives"/>
+        </material>
         <material state="liquid" name="LiquidScintillatorBase">
             <D value="1.03" unit="g/cm3"/>
             <fraction n="0.085" ref="G4_H"/>
@@ -5575,7 +5591,7 @@
             <first ref="leadBoxWithNeutronShieldingSolidX13Y12"/>
             <second ref="neutronShieldingRodSolid"/>
         </subtraction>
-        <box lunit="mm" aunit="rad" name="worldBox" x="1350.0" y="1350.0" z="3000.0"/>
+        <box lunit="mm" aunit="rad" name="worldBox" x="1100.0" y="1100.0" z="1100.0"/>
     </solids>
     <structure>
         <volume name="chamberBodyVolume">
