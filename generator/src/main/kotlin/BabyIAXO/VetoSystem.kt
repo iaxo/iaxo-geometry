@@ -148,7 +148,8 @@ class VetoLayer(
     private val n: Int = 4,
     private val separation: Double = Veto.SeparationAdjacent,
     val vetoSize: VetoSize = VetoSize.DEFAULT,
-    val isFront: Boolean = false
+    val isFront: Boolean = false,
+    val reverseIndex: Boolean = false
 ) : Geometry() {
     override fun generate(gdml: Gdml): GdmlRef<GdmlAssembly> {
         val step = Veto.Width + 2 * Veto.WrappingThickness + separation
@@ -171,21 +172,22 @@ class VetoLayer(
         } else {
             val offset = step * (n - 1) / 2.0
             if (n != 3) {
-                throw Exception("Front veto layer can only have 3 vetos (n=3)")
+                throw Exception("Front veto layer can only have 3 vetoes (n=3)")
             }
             val vetoSmall = Veto(VetoSize.SMALL).generate(gdml)
             val vetoLayerVolume: GdmlRef<GdmlAssembly> by lazy {
                 return@lazy gdml.structure.assembly {
                     repeat(n) { j ->
+                        val index = if (reverseIndex) n - j else j
                         if (j == 1) {
-                            physVolume(vetoSmall, name = "vetoSmall$j") {
+                            physVolume(vetoSmall, name = "vetoSmall$index") {
                                 position(
                                     x = step * j - offset,
                                     z = (Veto.LongSideLengthMap[VetoSize.SMALL]!! - Veto.LongSideLengthMap[VetoSize.DEFAULT]!!) / 2
                                 ) { unit = LUnit.MM }
                             }
                             // rotated
-                            physVolume(vetoSmall, name = "vetoSmallRotated$j") {
+                            physVolume(vetoSmall, name = "vetoSmallRotated$index") {
 
                                 position(
                                     x = step * j - offset,
@@ -194,7 +196,7 @@ class VetoLayer(
                                 rotation(x = 180) { unit = AUnit.DEG }
                             }
                         } else {
-                            physVolume(veto, name = "veto$j") {
+                            physVolume(veto, name = "veto$index") {
                                 position(x = step * j - offset) { unit = LUnit.MM }
                             }
                         }

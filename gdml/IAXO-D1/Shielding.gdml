@@ -3193,6 +3193,11 @@
             <fraction n="0.05" ref="G4_B"/>
             <fraction n="0.95" ref="G4_POLYETHYLENE"/>
         </material>
+        <material state="solid" name="BoratedHDPE1pct">
+            <D value="0.96" unit="g/cm3"/>
+            <fraction n="0.01" ref="G4_B"/>
+            <fraction n="0.99" ref="G4_POLYETHYLENE"/>
+        </material>
         <material state="solid" name="EJ254-5pct">
             <D value="1.026" unit="g/cm3"/>
             <fraction n="0.084647652" ref="G4_H"/>
