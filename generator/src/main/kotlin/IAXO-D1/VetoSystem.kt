@@ -17,6 +17,7 @@ class VetoLayerTop(private val numberOfLayers: Int = 3) : Geometry() {
     override fun generate(gdml: Gdml): GdmlRef<GdmlAssembly> {
 
         val vetoLayer = VetoLayer(4, vetoSize = VetoSize.LARGE).generate(gdml)
+        val vetoLayerReversedIndex = VetoLayer(4, vetoSize = VetoSize.LARGE, reverseIndex = true).generate(gdml)
 
         val vetoLayerVolume: GdmlRef<GdmlAssembly> by lazy {
             return@lazy gdml.structure.assembly {
@@ -30,11 +31,20 @@ class VetoLayerTop(private val numberOfLayers: Int = 3) : Geometry() {
                             rotation { unit = AUnit.DEG; y = 180 * i }
                         }
                     } else {
-                        physVolume(vetoLayer, name = "vetoLayerTop$i") {
-                            position(
-                                y = (Veto.FullThickness + 5) * (i - 1)
-                            ) { unit = LUnit.MM }
-                            rotation { unit = AUnit.DEG; y = 180 * i }
+                        if (i % 2 == 0) {
+                            physVolume(vetoLayerReversedIndex, name = "vetoLayerTop$i") {
+                                position(
+                                    y = (Veto.FullThickness + 5) * (i - 1)
+                                ) { unit = LUnit.MM }
+                                rotation { unit = AUnit.DEG; y = 180 * i }
+                            }
+                        } else {
+                            physVolume(vetoLayer, name = "vetoLayerTop$i") {
+                                position(
+                                    y = (Veto.FullThickness + 5) * (i - 1)
+                                ) { unit = LUnit.MM }
+                                rotation { unit = AUnit.DEG; y = 180 * i }
+                            }
                         }
                     }
                 }
@@ -50,6 +60,7 @@ class VetoLayerBottom(private val numberOfLayers: Int = 3) : Geometry() {
     override fun generate(gdml: Gdml): GdmlRef<GdmlAssembly> {
 
         val vetoLayer = VetoLayer(4, vetoSize = VetoSize.LARGE).generate(gdml)
+        val vetoLayerReversedIndex = VetoLayer(4, vetoSize = VetoSize.LARGE, reverseIndex = true).generate(gdml)
 
         val vetoLayerVolume: GdmlRef<GdmlAssembly> by lazy {
             return@lazy gdml.structure.assembly {
@@ -62,11 +73,21 @@ class VetoLayerBottom(private val numberOfLayers: Int = 3) : Geometry() {
                             rotation { unit = AUnit.DEG; y = 180 * (i + 1) }
                         }
                     } else {
-                        physVolume(vetoLayer, name = "vetoLayerBottom$i") {
-                            position(
-                                y = -(Veto.FullThickness + 5) * (i - 1)
-                            ) { unit = LUnit.MM }
-                            rotation { unit = AUnit.DEG; y = 180 * (i + 1) }
+                        if (i % 2 == 0) {
+                            // revert the indices so that geometry looks okay
+                            physVolume(vetoLayerReversedIndex, name = "vetoLayerBottom$i") {
+                                position(
+                                    y = -(Veto.FullThickness + 5) * (i - 1)
+                                ) { unit = LUnit.MM }
+                                rotation { unit = AUnit.DEG; y = 180 * (i + 1) }
+                            }
+                        } else {
+                            physVolume(vetoLayer, name = "vetoLayerBottom$i") {
+                                position(
+                                    y = -(Veto.FullThickness + 5) * (i - 1)
+                                ) { unit = LUnit.MM }
+                                rotation { unit = AUnit.DEG; y = 180 * (i + 1) }
+                            }
                         }
                     }
                 }
@@ -130,7 +151,9 @@ class VetoLayerBack(private val numberOfLayers: Int = 3) : Geometry() {
         val vetoLayerVolume: GdmlRef<GdmlAssembly> by lazy {
             return@lazy gdml.structure.assembly {
                 for (i in 1..numberOfLayers) {
-                    physVolume(vetoLayer, name = "vetoLayerBack$i") {
+                    // We revert back layer so the numbering looks uniform
+                    val i_reverse = numberOfLayers - i + 1
+                    physVolume(vetoLayer, name = "vetoLayerBack$i_reverse") {
                         position(
                             z = -(Veto.FullThickness + 20) * (i - 1),
                             y = 0
