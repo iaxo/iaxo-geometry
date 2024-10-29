@@ -9,106 +9,137 @@
 
   <!-- Global definitions in GDML file -->
   <define>
+    <!-- World -->
     <constant name="world_size_X" value="45000" /> <!-- In mm -->
     <constant name="world_size_Y" value="50000" />
-    <constant name="world_size_Z" value="35000" />
+    <constant name="world_size_Z" value="31840" />
     <position name="WorldPosition" unit="mm" x="0" y="0" z="0"/>
-    <!-- Scintillator definitions -->
-    <constant name="scintillatorXSize" value="400" />  <!--in mm's -->
+
+    <!-- Scintillator Setup (NIKHEF MuonLab Bars)-->
+    <constant name="scintillatorXSize" value="400" />  <!-- In mm -->
     <constant name="scintillatorYSize" value="90" />
     <constant name="scintillatorZSize" value="50"/>
     <position name="scintillatorPosition1" unit="mm" x="821" y="1000" z="-world_size_Z/2 + scintillatorZSize/2"/>
-    <position name="scintillatorPosition2" unit="mm" x="821" y="1000" z="-world_size_Z/2 + scintillatorZSize/2 +50"/>
+    <position name="scintillatorPosition2" unit="mm" x="821" y="1000" z="-world_size_Z/2 + scintillatorZSize/2 + scintillatorZSize"/>
     <position name="scintillatorPosition3" unit="mm" x="7450" y="9600" z="-world_size_Z/2 + scintillatorZSize/2"/>
-    <position name="scintillatorPosition4" unit="mm" x="7450" y="9600" z="-world_size_Z/2 + scintillatorZSize/2 +50"/>
+    <position name="scintillatorPosition4" unit="mm" x="7450" y="9600" z="-world_size_Z/2 + scintillatorZSize/2 + scintillatorZSize"/>
     <position name="scintillatorPosition5" unit="mm" x="-4654.35" y="12285" z="-world_size_Z/2 + scintillatorZSize/2"/>
-    <position name="scintillatorPosition6" unit="mm" x="-4654.35" y="12285"  z="-world_size_Z/2 + scintillatorZSize/2 +50"/>
+    <position name="scintillatorPosition6" unit="mm" x="-4654.35" y="12285"  z="-world_size_Z/2 + scintillatorZSize/2 + scintillatorZSize"/>
     <position name="scintillatorPosition7" unit="mm" x="-11573.6" y="-625" z="-world_size_Z/2 + scintillatorZSize/2"/>
-    <position name="scintillatorPosition8" unit="mm" x="-11573.6" y="-625" z="-world_size_Z/2 + scintillatorZSize/2 +50"/>
+    <position name="scintillatorPosition8" unit="mm" x="-11573.6" y="-625" z="-world_size_Z/2 + scintillatorZSize/2 + scintillatorZSize"/>
     <position name="scintillatorPosition9" unit="mm" x="-1463.3" y="-11289.2" z="-world_size_Z/2 + scintillatorZSize/2"/>
-    <position name="scintillatorPosition10" unit="mm" x="-1463.3" y="-11289.2" z="-world_size_Z/2 + scintillatorZSize/2 +50"/>
+    <position name="scintillatorPosition10" unit="mm" x="-1463.3" y="-11289.2" z="-world_size_Z/2 + scintillatorZSize/2 + scintillatorZSize"/>
     <position name="scintillatorPosition11" unit="mm" x="11802" y="-4970" z="-world_size_Z/2 + scintillatorZSize/2"/>
-    <position name="scintillatorPosition12" unit="mm" x="11802" y="-4970"  z="-world_size_Z/2 + scintillatorZSize/2 +50"/>
-    <constant name="wall1ZSize" value="24200" />
-    <constant name="wall2ZSize" value="31540" />
-    <constant name="wall3ZSize" value="wall2ZSize - wall1ZSize" />
-    <constant name="roof1ZSize" value="500" />
-    <constant name="roof2ZSize" value="300" />
+    <position name="scintillatorPosition12" unit="mm" x="11802" y="-4970"  z="-world_size_Z/2 + scintillatorZSize/2 + scintillatorZSize"/>
+
+    <!-- HERA South Vertical Walls -->
+    <constant name="wallZLevel1" value="24200" />
+    <constant name="wallZLevel2" value="31540" />
+    <constant name="wallZLevel3" value="7340" />
+
     <constant name="wall1XSize" value="1500" />
     <constant name="wall1YSize" value="46000" />
-    <position name="wall1Position" unit="mm" x="-13500" y="0" z="-world_size_Z/2 + wall1ZSize/2"/>
+    <constant name="wall1ZSize" value="wallZLevel1" />
+    <position name="wall1Position" unit="mm" x="-13500" y="0" z="-world_size_Z/2 + wallZLevel1/2"/>
+
     <constant name="wall2XSize" value="25000" />
     <constant name="wall2YSize" value="1500" />
-    <position name="wall2Position" unit="mm" x="-250" y="-22250" z="-world_size_Z/2 + wall1ZSize/2"/>
+    <constant name="wall2ZSize" value="wallZLevel1" />
+    <position name="wall2Position" unit="mm" x="-250" y="-22250" z="-world_size_Z/2 + wallZLevel1/2"/>
+
     <constant name="wall3XSize" value="1500" />
     <constant name="wall3YSize" value="20150" />
-    <position name="wall3Position" unit="mm" x="13000" y="-12925" z="-world_size_Z/2 + wall2ZSize/2"/>
+    <constant name="wall3ZSize" value="wallZLevel2" />
+    <position name="wall3Position" unit="mm" x="13000" y="-12925" z="-world_size_Z/2 + wallZLevel2/2"/>
+
     <constant name="wall4XSize" value="25500" />
     <constant name="wall4YSize" value="1500" />
-    <position name="wall4Position" unit="mm" x="0" y="22250" z="-world_size_Z/2 + wall1ZSize/2"/>
+    <constant name="wall4ZSize" value="wallZLevel1" />
+    <position name="wall4Position" unit="mm" x="0" y="22250" z="-world_size_Z/2 + wallZLevel1/2"/>
+
     <constant name="wall5XSize" value="8000" />
     <constant name="wall5YSize" value="500" />
-    <position name="wall5Position" unit="mm" x="16750" y="22750" z="-world_size_Z/2 + wall2ZSize/2"/>
+    <constant name="wall5ZSize" value="wallZLevel2" />
+    <position name="wall5Position" unit="mm" x="16750" y="22750" z="-world_size_Z/2 + wallZLevel2/2"/>
+
     <constant name="wall6XSize" value="500" />
     <constant name="wall6YSize" value="25850" />
-    <position name="wall6Position" unit="mm" x="21000" y="10075" z="-world_size_Z/2 + wall2ZSize/2"/>
+    <constant name="wall6ZSize" value="wallZLevel2" />
+    <position name="wall6Position" unit="mm" x="21000" y="10075" z="-world_size_Z/2 + wallZLevel2/2"/>
+
     <constant name="wall7XSize" value="8500" />
     <constant name="wall7YSize" value="500" />
-    <position name="wall7Position" unit="mm" x="16500" y="-2600" z="-world_size_Z/2 + wall2ZSize/2"/>
+    <constant name="wall7ZSize" value="wallZLevel2" />
+    <position name="wall7Position" unit="mm" x="16500" y="-2600" z="-world_size_Z/2 + wallZLevel2/2"/>
+
     <constant name="wall8XSize" value="9800" />
     <constant name="wall8YSize" value="1500" />
-    <position name="wall8Position" unit="mm" x="7350" y="-22250" z="-world_size_Z/2 + wall1ZSize + wall3ZSize/2"/>
+    <constant name="wall8ZSize" value="wallZLevel3" />
+    <position name="wall8Position" unit="mm" x="7350" y="-22250" z="-world_size_Z/2 + wallZLevel1 + wallZLevel3/2"/>
+
     <constant name="wall9XSize" value="10300" />
     <constant name="wall9YSize" value="1500" />
-    <position name="wall9Position" unit="mm" x="7600" y="22250" z="-world_size_Z/2 + wall1ZSize + wall3ZSize/2"/>
+    <constant name="wall9ZSize" value="wallZLevel3" />
+    <position name="wall9Position" unit="mm" x="7600" y="22250" z="-world_size_Z/2 + wallZLevel1 + wallZLevel3/2"/>
+
     <constant name="wall10XSize" value="200" />
-    <constant name="wall10YSize" value="45000" />
-    <position name="wall10Position" unit="mm" x="2550" y="0" z="-world_size_Z/2 + wall1ZSize + wall3ZSize/2"/>
+    <constant name="wall10YSize" value="43000" />
+    <constant name="wall10ZSize" value="wallZLevel3" />
+    <position name="wall10Position" unit="mm" x="2550" y="0" z="-world_size_Z/2 + wallZLevel1 + wallZLevel3/2"/>
+
+    <!-- HERA South Top Level Ceilings -->
+    <constant name="roofZThickness1" value="500" />
+    <constant name="roofZThickness2" value="300" />
+
     <constant name="roof1XSize" value="16700" />
     <constant name="roof1YSize" value="46000" />
-    <position name="roof1Position" unit="mm" x="-5900" y="0" z="-world_size_Z/2 + 24200 + roof1ZSize/2"/>
+    <constant name="roof1ZSize" value="roofZThickness1" />
+    <position name="roof1Position" unit="mm" x="-5900" y="0" z="-world_size_Z/2 + wallZLevel1 + roof1ZSize/2"/>``
+
     <constant name="roof2XSize" value="10400" />
     <constant name="roof2YSize" value="25850" />
+    <constant name="roof2ZSize" value="roofZThickness2" />
     <position name="roof2Position" unit="mm" x="16050" y="10075" z="-world_size_Z/2 + 31540 +roof2ZSize/2"/>
+
     <constant name="roof3XSize" value="6000" />
     <constant name="roof3YSize" value="9900" />
+    <constant name="roof3ZSize" value="roofZThickness2" />
     <position name="roof3Position" unit="mm" x="7850" y="18050" z="-world_size_Z/2 + 31540 +roof2ZSize/2 "/>
+
     <constant name="roof4XSize" value="8900" />
     <constant name="roof4YSize" value="20150" />
+    <constant name="roof4ZSize" value="roofZThickness2" />
     <position name="roof4Position" unit="mm" x="9300" y="-12925" z="-world_size_Z/2 + 31540  +roof2ZSize/2"/>
+
     <constant name="roof5XSize" value="2400" />
     <constant name="roof5YSize" value="46000" />
+    <constant name="roof5ZSize" value="roofZThickness2" />
     <position name="roof5Position" unit="mm" x="3650" y="0" z="-world_size_Z/2 + 31540  +roof2ZSize/2"/>
+
     <constant name="roof6XSize" value="6000" />
     <constant name="roof6YSize" value="6950" />
+    <constant name="roof6ZSize" value="roofZThickness2" />
     <position name="roof6Position" unit="mm" x="7850" y="625" z="-world_size_Z/2 + 31540  +roof2ZSize/2"/>
+
+
+    <!-- HERA South Plattform Tunnel Exits/Entries -->
     <constant name="block1XSize" value="25000" />
-    <constant name="block1YSize" value="11000" />
+    <constant name="block1YSize" value="9500" />
     <constant name="block1ZSize" value="4800" />
-    <position name="block1Position" unit="mm" x="0" y="-17500" z="-world_size_Z/2 + block1ZSize/2"/>
-    <constant name="insideroof1XSize" value="16700" />
-    <constant name="insideroof1YSize" value="46000" />
+    <position name="block1Position" unit="mm" x="-250" y="-16750" z="-world_size_Z/2 + block1ZSize/2"/>
+
+    <!-- HERA South Intermediate Level Ceilings/Floors -->
+    <constant name="insideroof1XSize" value="15200" />
+    <constant name="insideroof1YSize" value="43000" />
     <constant name="insideroof1ZSize" value="1000" />
-    <position name="insideroof1Position" unit="mm" x="-5900" y="0" z="-world_size_Z/2 + 15000 + insideroof1ZSize/2"/>
-    <constant name="insideroof2XSize" value="16700" />
-    <constant name="insideroof2YSize" value="46000" />
+    <position name="insideroof1Position" unit="mm" x="-5150" y="0" z="-world_size_Z/2 + 15000 + insideroof1ZSize/2"/>
+
+    <constant name="insideroof2XSize" value="15200" />
+    <constant name="insideroof2YSize" value="43000" />
     <constant name="insideroof2ZSize" value="500" />
-    <position name="insideroof2Position" unit="mm" x="-5900" y="0" z="-world_size_Z/2 + 19400 + insideroof2ZSize/2"/>
-    <constant name="outsidegroundXSize" value="world_size_X" />
-    <constant name="outsidegroundYSize" value="world_size_Y" />
-    <constant name="outsidegroundZSize" value="wall1ZSize + +roof1ZSize + 740" />
-    <constant name="insidegroundXSize" value="35500" />
-    <constant name="insidegroundYSize" value="46000" />
-    <constant name="insidegroundZSize" value="wall1ZSize + roof1ZSize+ 840" />
-    <position name="groundPosition" unit="mm" x="3500" y="0" z="-world_size_Z/2 + outsidegroundZSize/2"/>
-    <constant name="roofgroundXSize" value="16700" />
-    <constant name="roofgroundYSize" value="46000" />
-    <constant name="roofgroundZSize" value="740" />
-    <position name="roofgroundPosition" unit="mm" x="-5900" y="0" z="-world_size_Z/2 + 24200 + roof1ZSize + roofgroundZSize/2"/>
-    <constant name="blockgroundXSize" value="8500" />
-    <constant name="blockgroundYSize" value="20150" />
-    <constant name="blockgroundZSize" value="24700 + 740" />
-    <position name="blockgroundPosition" unit="mm" x="18000" y="-12925" z="-world_size_Z/2 + blockgroundZSize/2"/>
+    <position name="insideroof2Position" unit="mm" x="-5150" y="0" z="-world_size_Z/2 + 19400 + insideroof2ZSize/2"/>
+
+    <!-- HERA South Intermediate Level Ceiling Side Rooms -->
     <constant name="miniroofXSize" value="8000" />
     <constant name="miniroofYSize" value="24850" />
     <constant name="miniroofZSize" value="200" />
@@ -120,6 +151,34 @@
     <position name="miniroof6Position" unit="mm" x="16750" y="10075" z="-world_size_Z/2 + miniroofZSize/2 + 18900"/>
     <position name="miniroof7Position" unit="mm" x="16750" y="10075" z="-world_size_Z/2 + miniroofZSize/2 + 24240"/>
     <position name="miniroof8Position" unit="mm" x="16750" y="10075" z="-world_size_Z/2 + miniroofZSize/2 + 27140"/>
+
+    <!-- Ground (Soil) -->
+    <constant name="roofgroundXSize" value="16700" />
+    <constant name="roofgroundYSize" value="46000" />
+    <constant name="roofgroundZSize" value="740" />
+    <position name="roofgroundPosition" unit="mm" x="-5900" y="0" z="-world_size_Z/2 + 24200 + roof1ZSize + roofgroundZSize/2"/>
+
+    <constant name="blockgroundXSize" value="7500" />
+    <constant name="blockgroundYSize" value="20150" />
+    <constant name="blockgroundZSize" value="24700 + 740" />
+    <position name="blockgroundPosition" unit="mm" x="17500" y="-12925" z="-world_size_Z/2 + blockgroundZSize/2"/>
+
+    <constant name="outsidegroundXSize" value="world_size_X - 7000" />
+    <constant name="outsidegroundYSize" value="world_size_Y" />
+    <constant name="outsidegroundZSize" value="wallZLevel1 + roof1ZSize + 740" />
+
+    <constant name="insidegroundXSize" value="35500" />
+    <constant name="insidegroundYSize" value="46000" />
+    <constant name="insidegroundZSize" value="wallZLevel1 + roof1ZSize + 840" />
+
+    <position name="groundPosition" unit="mm" x="3500" y="0" z="-world_size_Z/2 + outsidegroundZSize/2"/>
+
+    <constant name="sidegroundXSize" value="7000" />
+    <constant name="sidegroundYSize" value="world_size_Y" />
+    <constant name="sidegroundZSize" value="wallZLevel1 + roof1ZSize + 740" />
+
+    <position name="sidegroundPosition" unit="mm" x="-19000" y="0" z="-world_size_Z/2 + outsidegroundZSize/2"/>
+
   </define>
 
 
@@ -133,7 +192,7 @@
       <fraction n="0.08" ref="H" />
     </material>
 
-    <material name="Ground" state="solid">
+    <material name="Ground" state="solid"> <!-- Soil -->
       <T unit="K" value="293.15"/>
       <D unit="g/cm3" value="2"/>
       <fraction n="0.4" ref="Si" />
@@ -148,6 +207,7 @@
   <!-- Solid definitions -->
   <solids>
     <box name="WorldSolid" x="world_size_X" y="world_size_Y" z="world_size_Z" lunit="mm"/>
+
     <box name="scintillatorBox1" x="scintillatorXSize" y="scintillatorYSize" z="scintillatorZSize" lunit="mm" />
     <box name="scintillatorBox2" x="scintillatorXSize" y="scintillatorYSize" z="scintillatorZSize" lunit="mm" />
     <box name="scintillatorBox3" x="scintillatorXSize" y="scintillatorYSize" z="scintillatorZSize" lunit="mm" />
@@ -160,95 +220,95 @@
     <box name="scintillatorBox10" x="scintillatorXSize" y="scintillatorYSize" z="scintillatorZSize" lunit="mm" />
     <box name="scintillatorBox11" x="scintillatorYSize" y="scintillatorXSize" z="scintillatorZSize" lunit="mm" />
     <box name="scintillatorBox12" x="scintillatorYSize" y="scintillatorXSize" z="scintillatorZSize" lunit="mm" />
+
     <box name="wall1Box" x="wall1XSize" y="wall1YSize" z="wall1ZSize" lunit="mm" />
-    <box name="wall2Box" x="wall2XSize" y="wall2YSize" z="wall1ZSize" lunit="mm" />
-    <box name="wall3Box" x="wall3XSize" y="wall3YSize" z="wall2ZSize" lunit="mm" />
-    <box name="wall4Box" x="wall4XSize" y="wall4YSize" z="wall1ZSize" lunit="mm" />
-    <box name="wall5Box" x="wall5XSize" y="wall5YSize" z="wall2ZSize" lunit="mm" />
-    <box name="wall6Box" x="wall6XSize" y="wall6YSize" z="wall2ZSize" lunit="mm" />
-    <box name="wall7Box" x="wall7XSize" y="wall7YSize" z="wall2ZSize" lunit="mm" />
-    <box name="wall8Box" x="wall8XSize" y="wall8YSize" z="wall3ZSize" lunit="mm" />
-    <box name="wall9Box" x="wall9XSize" y="wall9YSize" z="wall3ZSize" lunit="mm" />
-    <box name="wall10Box" x="wall10XSize" y="wall10YSize" z="wall3ZSize" lunit="mm" />
+    <box name="wall2Box" x="wall2XSize" y="wall2YSize" z="wall2ZSize" lunit="mm" />
+    <box name="wall3Box" x="wall3XSize" y="wall3YSize" z="wall3ZSize" lunit="mm" />
+    <box name="wall4Box" x="wall4XSize" y="wall4YSize" z="wall4ZSize" lunit="mm" />
+    <box name="wall5Box" x="wall5XSize" y="wall5YSize" z="wall5ZSize" lunit="mm" />
+    <box name="wall6Box" x="wall6XSize" y="wall6YSize" z="wall6ZSize" lunit="mm" />
+    <box name="wall7Box" x="wall7XSize" y="wall7YSize" z="wall7ZSize" lunit="mm" />
+    <box name="wall8Box" x="wall8XSize" y="wall8YSize" z="wall8ZSize" lunit="mm" />
+    <box name="wall9Box" x="wall9XSize" y="wall9YSize" z="wall9ZSize" lunit="mm" />
+    <box name="wall10Box" x="wall10XSize" y="wall10YSize" z="wall10ZSize" lunit="mm" />
+
     <box name="roof1Box" x="roof1XSize" y="roof1YSize" z="roof1ZSize" lunit="mm" />
     <box name="roof2Box" x="roof2XSize" y="roof2YSize" z="roof2ZSize" lunit="mm" />
-    <box name="roof3Box" x="roof3XSize" y="roof3YSize" z="roof2ZSize" lunit="mm" />
-    <box name="roof4Box" x="roof4XSize" y="roof4YSize" z="roof2ZSize" lunit="mm" />
-    <box name="roof5Box" x="roof5XSize" y="roof5YSize" z="roof2ZSize" lunit="mm" />
-    <box name="roof6Box" x="roof6XSize" y="roof6YSize" z="roof2ZSize" lunit="mm" />
+    <box name="roof3Box" x="roof3XSize" y="roof3YSize" z="roof3ZSize" lunit="mm" />
+    <box name="roof4Box" x="roof4XSize" y="roof4YSize" z="roof4ZSize" lunit="mm" />
+    <box name="roof5Box" x="roof5XSize" y="roof5YSize" z="roof5ZSize" lunit="mm" />
+    <box name="roof6Box" x="roof6XSize" y="roof6YSize" z="roof6ZSize" lunit="mm" />
+
     <box name="block1Box" x="block1XSize" y="block1YSize" z="block1ZSize" lunit="mm" />
-    <box name="blockgroundBox" x="blockgroundXSize" y="blockgroundYSize" z="blockgroundZSize" lunit="mm" />
-    <box name="miniroofBox" x="miniroofXSize" y="miniroofYSize" z="miniroofZSize" lunit="mm" />
-    <box name="roofgroundBox" x="roofgroundXSize" y="roofgroundYSize" z="roofgroundZSize" lunit="mm" />
+
     <box name="insideroof1Box" x="insideroof1XSize" y="insideroof1YSize" z="insideroof1ZSize" lunit="mm" />
     <box name="insideroof2Box" x="insideroof2XSize" y="insideroof2YSize" z="insideroof2ZSize" lunit="mm" />
+
+    <box name="miniroofBox" x="miniroofXSize" y="miniroofYSize" z="miniroofZSize" lunit="mm" />
+
+    <box name="blockgroundBox" x="blockgroundXSize" y="blockgroundYSize" z="blockgroundZSize" lunit="mm" />
+
+    <box name="roofgroundBox" x="roofgroundXSize" y="roofgroundYSize" z="roofgroundZSize" lunit="mm" />
+
     <box name="outsidegroundBox" x="outsidegroundXSize" y="outsidegroundYSize" z="outsidegroundZSize" lunit="mm" />
     <box name="insidegroundBox" x="insidegroundXSize" y="insidegroundYSize" z="insidegroundZSize" lunit="mm" />
     <subtraction name="groundBox">
         <first ref="outsidegroundBox"/>
         <second ref="insidegroundBox"/>
     </subtraction>
+
+    <box name="sidegroundBox" x="sidegroundXSize" y="sidegroundYSize" z="sidegroundZSize" lunit="mm" />
   </solids>
 
-  <!-- Structure definitions and physical volume -->
+
+  <!-- Structure Definitions (Volumes and Physical Volumes) -->
   <structure>
 
-    <!-- Define scintillator volume -->
+    <!-- Volume Definitions (Materials + Solids) -->
     <volume name="scintillatorVolume1">
       <materialref ref="Scintillator"/>
       <solidref ref="scintillatorBox1"/>
     </volume>
-
     <volume name="scintillatorVolume2">
       <materialref ref="Scintillator"/>
       <solidref ref="scintillatorBox2"/>
     </volume>
-
     <volume name="scintillatorVolume3">
       <materialref ref="Scintillator"/>
       <solidref ref="scintillatorBox3"/>
     </volume>
-
     <volume name="scintillatorVolume4">
       <materialref ref="Scintillator"/>
       <solidref ref="scintillatorBox4"/>
     </volume>
-
     <volume name="scintillatorVolume5">
       <materialref ref="Scintillator"/>
       <solidref ref="scintillatorBox5"/>
     </volume>
-
     <volume name="scintillatorVolume6">
       <materialref ref="Scintillator"/>
       <solidref ref="scintillatorBox6"/>
     </volume>
-
     <volume name="scintillatorVolume7">
       <materialref ref="Scintillator"/>
       <solidref ref="scintillatorBox7"/>
     </volume>
-
     <volume name="scintillatorVolume8">
       <materialref ref="Scintillator"/>
       <solidref ref="scintillatorBox8"/>
     </volume>
-
     <volume name="scintillatorVolume9">
       <materialref ref="Scintillator"/>
       <solidref ref="scintillatorBox9"/>
     </volume>
-
     <volume name="scintillatorVolume10">
       <materialref ref="Scintillator"/>
       <solidref ref="scintillatorBox10"/>
     </volume>
-
     <volume name="scintillatorVolume11">
       <materialref ref="Scintillator"/>
       <solidref ref="scintillatorBox11"/>
     </volume>
-
     <volume name="scintillatorVolume12">
       <materialref ref="Scintillator"/>
       <solidref ref="scintillatorBox12"/>
@@ -294,6 +354,7 @@
       <materialref ref="G4_CONCRETE"/>
       <solidref ref="wall10Box"/>
     </volume>
+
     <volume name="roof1Volume">
       <materialref ref="G4_CONCRETE"/>
       <solidref ref="roof1Box"/>
@@ -318,14 +379,17 @@
       <materialref ref="G4_CONCRETE"/>
       <solidref ref="roof6Box"/>
     </volume>
+
     <volume name="block1Volume">
       <materialref ref="G4_CONCRETE"/>
       <solidref ref="block1Box"/>
     </volume>
+
     <volume name="groundVolume">
       <materialref ref="Ground"/>
       <solidref ref="groundBox"/>
     </volume>
+
     <volume name="insideroof1Volume">
       <materialref ref="G4_CONCRETE"/>
       <solidref ref="insideroof1Box"/>
@@ -334,25 +398,33 @@
       <materialref ref="G4_CONCRETE"/>
       <solidref ref="insideroof2Box"/>
     </volume>
+
     <volume name="miniroofVolume">
       <materialref ref="G4_CONCRETE"/>
       <solidref ref="miniroofBox"/>
     </volume>
+
     <volume name="roofgroundVolume">
       <materialref ref="Ground"/>
       <solidref ref="roofgroundBox"/>
     </volume>
+
     <volume name="blockgroundVolume">
       <materialref ref="Ground"/>
       <solidref ref="blockgroundBox"/>
     </volume>
 
+    <volume name="sidegroundVolume">
+      <materialref ref="Ground"/>
+      <solidref ref="sidegroundBox"/>
+    </volume>
 
-    <!-- Define World volume and place scintillator inside -->
+    <!-- Define World Volume and Physical Volumes Inside (Volumes and Positions) -->
     <volume name="World">
       <materialref ref="G4_AIR"/>
       <solidref ref="WorldSolid"/>
       <positionref ref="WorldPosition"/>
+
       <physvol name="scintillator1">
         <volumeref ref="scintillatorVolume1"/>
         <positionref ref="scintillatorPosition1"/>
@@ -401,6 +473,7 @@
         <volumeref ref="scintillatorVolume12"/>
         <positionref ref="scintillatorPosition12"/>
       </physvol>
+
       <physvol name="wall1">
         <volumeref ref="wall1Volume"/>
         <positionref ref="wall1Position"/>
@@ -441,6 +514,7 @@
         <volumeref ref="wall10Volume"/>
         <positionref ref="wall10Position"/>
       </physvol>
+
       <physvol name="roof1">
         <volumeref ref="roof1Volume"/>
         <positionref ref="roof1Position"/>
@@ -465,10 +539,21 @@
         <volumeref ref="roof6Volume"/>
         <positionref ref="roof6Position"/>
       </physvol>
+
       <physvol name="block1">
         <volumeref ref="block1Volume"/>
         <positionref ref="block1Position"/>
       </physvol>
+
+      <physvol name="insideroof1">
+        <volumeref ref="insideroof1Volume"/>
+        <positionref ref="insideroof1Position"/>
+      </physvol>
+      <physvol name="insideroof2">
+        <volumeref ref="insideroof2Volume"/>
+        <positionref ref="insideroof2Position"/>
+      </physvol>
+
       <physvol name="miniroof1">
         <volumeref ref="miniroofVolume"/>
         <positionref ref="miniroof1Position"/>
@@ -501,31 +586,32 @@
         <volumeref ref="miniroofVolume"/>
         <positionref ref="miniroof8Position"/>
       </physvol>
-      <physvol name="insideroof1">
-        <volumeref ref="insideroof1Volume"/>
-        <positionref ref="insideroof1Position"/>
-      </physvol>
-      <physvol name="insideroof2">
-        <volumeref ref="insideroof2Volume"/>
-        <positionref ref="insideroof2Position"/>
-      </physvol>
+
       <physvol name="roofground">
         <volumeref ref="roofgroundVolume"/>
         <positionref ref="roofgroundPosition"/>
       </physvol>
-      <physvol name="ground">
-        <volumeref ref="groundVolume"/>
-        <positionref ref="groundPosition"/>
-      </physvol>
+
       <physvol name="blockground">
         <volumeref ref="blockgroundVolume"/>
         <positionref ref="blockgroundPosition"/>
       </physvol>
+
+      <physvol name="ground">
+        <volumeref ref="groundVolume"/>
+        <positionref ref="groundPosition"/>
+      </physvol>
+
+      <physvol name="sideground">
+        <volumeref ref="sidegroundVolume"/>
+        <positionref ref="sidegroundPosition"/>
+      </physvol>
+
     </volume>
   </structure>
 
-<!-- Setup definition and name -->
-  <setup name="scintillator_bar_HS_concrete_1" version="1.0">
+<!-- Setup Definition (World and Name) -->
+  <setup name="HERA_South_Hall_Simple_6_Scintillator_Pairs_BabyIAXO_Outer_Radius" version="1.0">
     <world ref="World"/>
   </setup>
 
