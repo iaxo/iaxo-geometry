@@ -243,7 +243,7 @@ class VetoLayerTop(private val numberOfLayers: Int = 3) : Geometry() {
 class VetoLayerBottom(private val numberOfLayers: Int = 3) : Geometry() {
     override fun generate(gdml: Gdml): GdmlRef<GdmlAssembly> {
 
-        val vetoLayer = VetoLayer(4, reverseIndex = true).generate(gdml)
+        val vetoLayer = VetoLayer(4).generate(gdml)
 
         val vetoLayerVolume: GdmlRef<GdmlAssembly> by lazy {
             return@lazy gdml.structure.assembly {
