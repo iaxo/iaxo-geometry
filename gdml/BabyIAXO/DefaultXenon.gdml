@@ -4480,21 +4480,21 @@
             </physvol>
         </assembly>
         <assembly name="assembly-9">
-            <physvol name="assembly-9.veto4">
+            <physvol name="assembly-9.veto1">
                 <volumeref ref="assembly-8"/>
-                <position name="assembly-9.veto4.position" x="-310.5" unit="mm"/>
-            </physvol>
-            <physvol name="assembly-9.veto3">
-                <volumeref ref="assembly-8"/>
-                <position name="assembly-9.veto3.position" x="-103.5" unit="mm"/>
+                <position name="assembly-9.veto1.position" x="-310.5" unit="mm"/>
             </physvol>
             <physvol name="assembly-9.veto2">
                 <volumeref ref="assembly-8"/>
-                <position name="assembly-9.veto2.position" x="103.5" unit="mm"/>
+                <position name="assembly-9.veto2.position" x="-103.5" unit="mm"/>
             </physvol>
-            <physvol name="assembly-9.veto1">
+            <physvol name="assembly-9.veto3">
                 <volumeref ref="assembly-8"/>
-                <position name="assembly-9.veto1.position" x="310.5" unit="mm"/>
+                <position name="assembly-9.veto3.position" x="103.5" unit="mm"/>
+            </physvol>
+            <physvol name="assembly-9.veto4">
+                <volumeref ref="assembly-8"/>
+                <position name="assembly-9.veto4.position" x="310.5" unit="mm"/>
             </physvol>
         </assembly>
         <assembly name="assembly-10">
