@@ -66,7 +66,7 @@ class VetoLayerBottom(private val numberOfLayers: Int = 3) : Geometry() {
             return@lazy gdml.structure.assembly {
                 for (i in 1..numberOfLayers) {
                     if (i == 1) {
-                        physVolume(vetoLayer, name = "vetoLayerBottom$i") {
+                        physVolume(vetoLayerReversedIndex, name = "vetoLayerBottom$i") {
                             position(
                                 y = -(Veto.FullThickness + 5) * (i - 1) + 20
                             ) { unit = LUnit.MM }
@@ -75,14 +75,14 @@ class VetoLayerBottom(private val numberOfLayers: Int = 3) : Geometry() {
                     } else {
                         if (i % 2 == 0) {
                             // revert the indices so that geometry looks okay
-                            physVolume(vetoLayerReversedIndex, name = "vetoLayerBottom$i") {
+                            physVolume(vetoLayer, name = "vetoLayerBottom$i") {
                                 position(
                                     y = -(Veto.FullThickness + 5) * (i - 1)
                                 ) { unit = LUnit.MM }
                                 rotation { unit = AUnit.DEG; y = 180 * (i + 1) }
                             }
                         } else {
-                            physVolume(vetoLayer, name = "vetoLayerBottom$i") {
+                            physVolume(vetoLayerReversedIndex, name = "vetoLayerBottom$i") {
                                 position(
                                     y = -(Veto.FullThickness + 5) * (i - 1)
                                 ) { unit = LUnit.MM }
@@ -146,14 +146,13 @@ class VetoLayerLeft(private val numberOfLayers: Int = 3) : Geometry() {
 class VetoLayerBack(private val numberOfLayers: Int = 3) : Geometry() {
     override fun generate(gdml: Gdml): GdmlRef<GdmlAssembly> {
 
-        val vetoLayer = VetoLayer(3, separation = 10.0).generate(gdml)
+        val vetoLayer = VetoLayer(3, separation = 10.0, reverseIndex = true).generate(gdml)
 
         val vetoLayerVolume: GdmlRef<GdmlAssembly> by lazy {
             return@lazy gdml.structure.assembly {
                 for (i in 1..numberOfLayers) {
                     // We revert back layer so the numbering looks uniform
-                    val i_reverse = numberOfLayers - i + 1
-                    physVolume(vetoLayer, name = "vetoLayerBack$i_reverse") {
+                    physVolume(vetoLayer, name = "vetoLayerBack$i") {
                         position(
                             z = -(Veto.FullThickness + 20) * (i - 1),
                             y = 0

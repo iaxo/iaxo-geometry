@@ -161,7 +161,8 @@ class VetoLayer(
             val vetoLayerVolume: GdmlRef<GdmlAssembly> by lazy {
                 return@lazy gdml.structure.assembly {
                     for (i in 1..n) {
-                        physVolume(veto, name = "$name.veto$i") {
+                        val index = if (!reverseIndex) n - i + 1 else i
+                        physVolume(veto, name = "$name.veto$index") {
                             position(x = step * i - offset) { unit = LUnit.MM }
                         }
                     }
@@ -178,7 +179,7 @@ class VetoLayer(
             val vetoLayerVolume: GdmlRef<GdmlAssembly> by lazy {
                 return@lazy gdml.structure.assembly {
                     repeat(n) { j ->
-                        val index = if (reverseIndex) n - j else j
+                        val index = if (reverseIndex) n - j + 1 else j
                         if (j == 1) {
                             physVolume(vetoSmall, name = "vetoSmall$index") {
                                 position(

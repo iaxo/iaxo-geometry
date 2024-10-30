@@ -4425,21 +4425,21 @@
             </physvol>
         </assembly>
         <assembly name="assembly-6">
-            <physvol name="assembly-6.veto1">
+            <physvol name="assembly-6.veto4">
                 <volumeref ref="assembly-5"/>
-                <position name="assembly-6.veto1.position" x="-310.5" unit="mm"/>
-            </physvol>
-            <physvol name="assembly-6.veto2">
-                <volumeref ref="assembly-5"/>
-                <position name="assembly-6.veto2.position" x="-103.5" unit="mm"/>
+                <position name="assembly-6.veto4.position" x="-310.5" unit="mm"/>
             </physvol>
             <physvol name="assembly-6.veto3">
                 <volumeref ref="assembly-5"/>
-                <position name="assembly-6.veto3.position" x="103.5" unit="mm"/>
+                <position name="assembly-6.veto3.position" x="-103.5" unit="mm"/>
             </physvol>
-            <physvol name="assembly-6.veto4">
+            <physvol name="assembly-6.veto2">
                 <volumeref ref="assembly-5"/>
-                <position name="assembly-6.veto4.position" x="310.5" unit="mm"/>
+                <position name="assembly-6.veto2.position" x="103.5" unit="mm"/>
+            </physvol>
+            <physvol name="assembly-6.veto1">
+                <volumeref ref="assembly-5"/>
+                <position name="assembly-6.veto1.position" x="310.5" unit="mm"/>
             </physvol>
         </assembly>
         <assembly name="assembly-7">
@@ -4517,17 +4517,17 @@
             </physvol>
         </assembly>
         <assembly name="assembly-11">
-            <physvol name="assembly-11.veto1">
+            <physvol name="assembly-11.veto3">
                 <volumeref ref="assembly-10"/>
-                <position name="assembly-11.veto1.position" x="-207.0" unit="mm"/>
+                <position name="assembly-11.veto3.position" x="-207.0" unit="mm"/>
             </physvol>
             <physvol name="assembly-11.veto2">
                 <volumeref ref="assembly-10"/>
                 <position name="assembly-11.veto2.position" unit="mm"/>
             </physvol>
-            <physvol name="assembly-11.veto3">
+            <physvol name="assembly-11.veto1">
                 <volumeref ref="assembly-10"/>
-                <position name="assembly-11.veto3.position" x="207.0" unit="mm"/>
+                <position name="assembly-11.veto1.position" x="207.0" unit="mm"/>
             </physvol>
         </assembly>
         <assembly name="assembly-9">
@@ -4568,21 +4568,21 @@
             </physvol>
         </assembly>
         <assembly name="assembly-13">
-            <physvol name="assembly-13.veto1">
+            <physvol name="assembly-13.veto4">
                 <volumeref ref="assembly-12"/>
-                <position name="assembly-13.veto1.position" x="-310.5" unit="mm"/>
-            </physvol>
-            <physvol name="assembly-13.veto2">
-                <volumeref ref="assembly-12"/>
-                <position name="assembly-13.veto2.position" x="-103.5" unit="mm"/>
+                <position name="assembly-13.veto4.position" x="-310.5" unit="mm"/>
             </physvol>
             <physvol name="assembly-13.veto3">
                 <volumeref ref="assembly-12"/>
-                <position name="assembly-13.veto3.position" x="103.5" unit="mm"/>
+                <position name="assembly-13.veto3.position" x="-103.5" unit="mm"/>
             </physvol>
-            <physvol name="assembly-13.veto4">
+            <physvol name="assembly-13.veto2">
                 <volumeref ref="assembly-12"/>
-                <position name="assembly-13.veto4.position" x="310.5" unit="mm"/>
+                <position name="assembly-13.veto2.position" x="103.5" unit="mm"/>
+            </physvol>
+            <physvol name="assembly-13.veto1">
+                <volumeref ref="assembly-12"/>
+                <position name="assembly-13.veto1.position" x="310.5" unit="mm"/>
             </physvol>
         </assembly>
         <assembly name="assembly-14">
@@ -4625,17 +4625,17 @@
         </assembly>
         <assembly name="assembly-16">
             <physvol name="vetoLayerBottom1">
-                <volumeref ref="assembly-13"/>
+                <volumeref ref="assembly-15"/>
                 <position name="vetoLayerBottom1.position" y="20.0" unit="mm"/>
                 <rotation name="vetoLayerBottom1.rotation" y="360.0" unit="deg"/>
             </physvol>
             <physvol name="vetoLayerBottom2">
-                <volumeref ref="assembly-15"/>
+                <volumeref ref="assembly-13"/>
                 <position name="vetoLayerBottom2.position" y="-59.0" unit="mm"/>
                 <rotation name="vetoLayerBottom2.rotation" y="540.0" unit="deg"/>
             </physvol>
             <physvol name="vetoLayerBottom3">
-                <volumeref ref="assembly-13"/>
+                <volumeref ref="assembly-15"/>
                 <position name="vetoLayerBottom3.position" y="-118.0" unit="mm"/>
                 <rotation name="vetoLayerBottom3.rotation" y="720.0" unit="deg"/>
             </physvol>
@@ -4661,17 +4661,17 @@
             </physvol>
         </assembly>
         <assembly name="assembly-18">
-            <physvol name="assembly-18.veto1">
+            <physvol name="assembly-18.veto3">
                 <volumeref ref="assembly-17"/>
-                <position name="assembly-18.veto1.position" x="-212.0" unit="mm"/>
+                <position name="assembly-18.veto3.position" x="-212.0" unit="mm"/>
             </physvol>
             <physvol name="assembly-18.veto2">
                 <volumeref ref="assembly-17"/>
                 <position name="assembly-18.veto2.position" unit="mm"/>
             </physvol>
-            <physvol name="assembly-18.veto3">
+            <physvol name="assembly-18.veto1">
                 <volumeref ref="assembly-17"/>
-                <position name="assembly-18.veto3.position" x="212.0" unit="mm"/>
+                <position name="assembly-18.veto1.position" x="212.0" unit="mm"/>
             </physvol>
         </assembly>
         <assembly name="assembly-19">
@@ -4712,17 +4712,17 @@
             </physvol>
         </assembly>
         <assembly name="assembly-21">
-            <physvol name="assembly-21.veto1">
+            <physvol name="assembly-21.veto3">
                 <volumeref ref="assembly-20"/>
-                <position name="assembly-21.veto1.position" x="-212.0" unit="mm"/>
+                <position name="assembly-21.veto3.position" x="-212.0" unit="mm"/>
             </physvol>
             <physvol name="assembly-21.veto2">
                 <volumeref ref="assembly-20"/>
                 <position name="assembly-21.veto2.position" unit="mm"/>
             </physvol>
-            <physvol name="assembly-21.veto3">
+            <physvol name="assembly-21.veto1">
                 <volumeref ref="assembly-20"/>
-                <position name="assembly-21.veto3.position" x="212.0" unit="mm"/>
+                <position name="assembly-21.veto1.position" x="212.0" unit="mm"/>
             </physvol>
         </assembly>
         <assembly name="assembly-22">
@@ -4777,20 +4777,20 @@
             </physvol>
         </assembly>
         <assembly name="assembly-25">
-            <physvol name="vetoLayerBack3">
+            <physvol name="vetoLayerBack1">
                 <volumeref ref="assembly-24"/>
-                <position name="vetoLayerBack3.position" z="-0.0" unit="mm"/>
-                <rotation name="vetoLayerBack3.rotation" x="-90.0" y="-90.0" unit="deg"/>
+                <position name="vetoLayerBack1.position" z="-0.0" unit="mm"/>
+                <rotation name="vetoLayerBack1.rotation" x="-90.0" y="-90.0" unit="deg"/>
             </physvol>
             <physvol name="vetoLayerBack2">
                 <volumeref ref="assembly-24"/>
                 <position name="vetoLayerBack2.position" z="-74.0" unit="mm"/>
                 <rotation name="vetoLayerBack2.rotation" x="-90.0" y="-90.0" unit="deg"/>
             </physvol>
-            <physvol name="vetoLayerBack1">
+            <physvol name="vetoLayerBack3">
                 <volumeref ref="assembly-24"/>
-                <position name="vetoLayerBack1.position" z="-148.0" unit="mm"/>
-                <rotation name="vetoLayerBack1.rotation" x="-90.0" y="-90.0" unit="deg"/>
+                <position name="vetoLayerBack3.position" z="-148.0" unit="mm"/>
+                <rotation name="vetoLayerBack3.rotation" x="-90.0" y="-90.0" unit="deg"/>
             </physvol>
         </assembly>
         <assembly name="assembly-26">
@@ -4814,17 +4814,17 @@
             </physvol>
         </assembly>
         <assembly name="assembly-27">
-            <physvol name="assembly-27.veto1">
+            <physvol name="assembly-27.veto3">
                 <volumeref ref="assembly-26"/>
-                <position name="assembly-27.veto1.position" x="-212.0" unit="mm"/>
+                <position name="assembly-27.veto3.position" x="-212.0" unit="mm"/>
             </physvol>
             <physvol name="assembly-27.veto2">
                 <volumeref ref="assembly-26"/>
                 <position name="assembly-27.veto2.position" unit="mm"/>
             </physvol>
-            <physvol name="assembly-27.veto3">
+            <physvol name="assembly-27.veto1">
                 <volumeref ref="assembly-26"/>
-                <position name="assembly-27.veto3.position" x="212.0" unit="mm"/>
+                <position name="assembly-27.veto1.position" x="212.0" unit="mm"/>
             </physvol>
         </assembly>
         <assembly name="assembly-28">
