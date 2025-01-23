@@ -4143,8 +4143,8 @@
             <first ref="electronicsBoxOutSolid"/>
             <second ref="electronicsBoxInSolid"/>
         </subtraction>
-        <box lunit="mm" aunit="rad" name="electronicsCardSolid" x="2.5" y="70.0" z="100.0"/>
-        <box lunit="mm" aunit="rad" name="flatCableSolid" x="1.0" y="70.0" z="150.0"/>
+        <box lunit="mm" aunit="rad" name="SAFECSolid" x="0.31" y="102.6" z="226.94"/>
+        <box lunit="mm" aunit="rad" name="SAFEC_MMSolid" x="0.1" y="102.25" z="141.0"/>
         <box lunit="mm" aunit="rad" name="copperBoxOuterSolid" x="200.0" y="200.0" z="350.0"/>
         <box lunit="mm" aunit="rad" name="copperBoxInnerSolid" x="180.0" y="150.0" z="350.0"/>
         <subtraction lunit="mm" aunit="rad" name="copperBoxSolid">
@@ -4287,46 +4287,86 @@
             <materialref ref="G4_Galactic"/>
             <solidref ref="electronicsBoxInSolid"/>
         </volume>
-        <volume name="electronicsCardVolume">
-            <materialref ref="G4_Cu"/>
-            <solidref ref="electronicsCardSolid"/>
+        <volume name="kaptonSAFECVolume">
+            <materialref ref="G4_KAPTON"/>
+            <solidref ref="SAFECSolid"/>
         </volume>
-        <volume name="flatCableVolume">
+        <volume name="copperSAFECVolume">
             <materialref ref="G4_Cu"/>
-            <solidref ref="flatCableSolid"/>
+            <solidref ref="SAFECSolid"/>
+        </volume>
+        <volume name="copperSAFEC_MMVolume">
+            <materialref ref="G4_Cu"/>
+            <solidref ref="SAFEC_MMSolid"/>
+        </volume>
+        <volume name="kaptonSAFEC_MMVolume">
+            <materialref ref="G4_KAPTON"/>
+            <solidref ref="SAFEC_MMSolid"/>
         </volume>
         <assembly name="electronicsBox">
-            <physvol name="electronicsCard1">
-                <volumeref ref="electronicsCardVolume"/>
-                <position name="electronicsCard1.position" x="-15.0" unit="mm"/>
+            <physvol name="copperSAFEC1">
+                <volumeref ref="copperSAFECVolume"/>
+                <position name="copperSAFEC1.position" x="-15.155" unit="mm"/>
             </physvol>
-            <physvol name="electronicsCard2">
-                <volumeref ref="electronicsCardVolume"/>
-                <position name="electronicsCard2.position" x="-5.0" unit="mm"/>
+            <physvol name="kaptonSAFEC1">
+                <volumeref ref="kaptonSAFECVolume"/>
+                <position name="kaptonSAFEC1.position" x="-14.845" unit="mm"/>
             </physvol>
-            <physvol name="electronicsCard3">
-                <volumeref ref="electronicsCardVolume"/>
-                <position name="electronicsCard3.position" x="5.0" unit="mm"/>
+            <physvol name="copperSAFEC_MM1">
+                <volumeref ref="copperSAFEC_MMVolume"/>
+                <position name="copperSAFEC_MM1.position" x="-14.639999999999999" z="-128.76999999999998" unit="mm"/>
             </physvol>
-            <physvol name="electronicsCard4">
-                <volumeref ref="electronicsCardVolume"/>
-                <position name="electronicsCard4.position" x="15.0" unit="mm"/>
+            <physvol name="kaptonSAFEC_MM1">
+                <volumeref ref="kaptonSAFEC_MMVolume"/>
+                <position name="kaptonSAFEC_MM1.position" x="-14.54" z="-128.76999999999998" unit="mm"/>
             </physvol>
-            <physvol name="flatCable1">
-                <volumeref ref="flatCableVolume"/>
-                <position name="flatCable1.position" x="-15.0" z="-125.0" unit="mm"/>
+            <physvol name="copperSAFEC2">
+                <volumeref ref="copperSAFECVolume"/>
+                <position name="copperSAFEC2.position" x="-5.155" unit="mm"/>
             </physvol>
-            <physvol name="flatCable2">
-                <volumeref ref="flatCableVolume"/>
-                <position name="flatCable2.position" x="-5.0" z="-125.0" unit="mm"/>
+            <physvol name="kaptonSAFEC2">
+                <volumeref ref="kaptonSAFECVolume"/>
+                <position name="kaptonSAFEC2.position" x="-4.845" unit="mm"/>
             </physvol>
-            <physvol name="flatCable3">
-                <volumeref ref="flatCableVolume"/>
-                <position name="flatCable3.position" x="5.0" z="-125.0" unit="mm"/>
+            <physvol name="copperSAFEC_MM2">
+                <volumeref ref="copperSAFEC_MMVolume"/>
+                <position name="copperSAFEC_MM2.position" x="-4.640000000000001" z="-128.76999999999998" unit="mm"/>
             </physvol>
-            <physvol name="flatCable4">
-                <volumeref ref="flatCableVolume"/>
-                <position name="flatCable4.position" x="15.0" z="-125.0" unit="mm"/>
+            <physvol name="kaptonSAFEC_MM2">
+                <volumeref ref="kaptonSAFEC_MMVolume"/>
+                <position name="kaptonSAFEC_MM2.position" x="-4.54" z="-128.76999999999998" unit="mm"/>
+            </physvol>
+            <physvol name="copperSAFEC3">
+                <volumeref ref="copperSAFECVolume"/>
+                <position name="copperSAFEC3.position" x="4.845" unit="mm"/>
+            </physvol>
+            <physvol name="kaptonSAFEC3">
+                <volumeref ref="kaptonSAFECVolume"/>
+                <position name="kaptonSAFEC3.position" x="5.155" unit="mm"/>
+            </physvol>
+            <physvol name="copperSAFEC_MM3">
+                <volumeref ref="copperSAFEC_MMVolume"/>
+                <position name="copperSAFEC_MM3.position" x="5.359999999999999" z="-128.76999999999998" unit="mm"/>
+            </physvol>
+            <physvol name="kaptonSAFEC_MM3">
+                <volumeref ref="kaptonSAFEC_MMVolume"/>
+                <position name="kaptonSAFEC_MM3.position" x="5.46" z="-128.76999999999998" unit="mm"/>
+            </physvol>
+            <physvol name="copperSAFEC4">
+                <volumeref ref="copperSAFECVolume"/>
+                <position name="copperSAFEC4.position" x="14.845" unit="mm"/>
+            </physvol>
+            <physvol name="kaptonSAFEC4">
+                <volumeref ref="kaptonSAFECVolume"/>
+                <position name="kaptonSAFEC4.position" x="15.155" unit="mm"/>
+            </physvol>
+            <physvol name="copperSAFEC_MM4">
+                <volumeref ref="copperSAFEC_MMVolume"/>
+                <position name="copperSAFEC_MM4.position" x="15.360000000000001" z="-128.76999999999998" unit="mm"/>
+            </physvol>
+            <physvol name="kaptonSAFEC_MM4">
+                <volumeref ref="kaptonSAFEC_MMVolume"/>
+                <position name="kaptonSAFEC_MM4.position" x="15.46" z="-128.76999999999998" unit="mm"/>
             </physvol>
         </assembly>
         <volume name="copperBoxVolume">
