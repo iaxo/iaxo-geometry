@@ -71,7 +71,7 @@ class VetoLayerBottom(private val numberOfLayers: Int = 3) : Geometry() {
                                 y = -(Veto.FullThickness + 5) * (i - 1) + 20,
                                 z = -350
                             ) { unit = LUnit.MM }
-                            rotation { unit = AUnit.DEG; y = 180 * (i + 1) }
+                            rotation { unit = AUnit.DEG; y = 180 * i }
                         }
                     } else {
                         if (i % 2 == 0) {
@@ -80,14 +80,14 @@ class VetoLayerBottom(private val numberOfLayers: Int = 3) : Geometry() {
                                 position(
                                     y = -(Veto.FullThickness + 5) * (i - 1)
                                 ) { unit = LUnit.MM }
-                                rotation { unit = AUnit.DEG; y = 180 * (i + 1) }
+                                rotation { unit = AUnit.DEG; y = 180 * i }
                             }
                         } else {
                             physVolume(vetoLayer, name = "vetoLayerBottom$i") {
                                 position(
                                     y = -(Veto.FullThickness + 5) * (i - 1)
                                 ) { unit = LUnit.MM }
-                                rotation { unit = AUnit.DEG; y = 180 * (i + 1) }
+                                rotation { unit = AUnit.DEG; y = 180 * i }
                             }
                         }
                     }
