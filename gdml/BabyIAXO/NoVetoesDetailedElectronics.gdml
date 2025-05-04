@@ -4145,152 +4145,21 @@
         </subtraction>
         <box lunit="mm" aunit="rad" name="SAFECSolid" x="0.31" y="102.6" z="226.94"/>
         <box lunit="mm" aunit="rad" name="SAFEC_MMSolid" x="0.1" y="102.25" z="141.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox1" x="220.0" y="220.0" z="360.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole1" x="200.0" y="200.0" z="350.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole1">
-            <position name="shieldingLayerBoxWithHole1.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox1"/>
-            <second ref="shieldingLayerHole1"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox2" x="240.0" y="240.0" z="370.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole2" x="220.0" y="220.0" z="360.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole2">
-            <position name="shieldingLayerBoxWithHole2.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox2"/>
-            <second ref="shieldingLayerHole2"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox3" x="260.0" y="260.0" z="380.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole3" x="240.0" y="240.0" z="370.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole3">
-            <position name="shieldingLayerBoxWithHole3.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox3"/>
-            <second ref="shieldingLayerHole3"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox4" x="280.0" y="280.0" z="390.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole4" x="260.0" y="260.0" z="380.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole4">
-            <position name="shieldingLayerBoxWithHole4.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox4"/>
-            <second ref="shieldingLayerHole4"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox5" x="300.0" y="300.0" z="400.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole5" x="280.0" y="280.0" z="390.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole5">
-            <position name="shieldingLayerBoxWithHole5.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox5"/>
-            <second ref="shieldingLayerHole5"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox6" x="320.0" y="320.0" z="410.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole6" x="300.0" y="300.0" z="400.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole6">
-            <position name="shieldingLayerBoxWithHole6.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox6"/>
-            <second ref="shieldingLayerHole6"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox7" x="340.0" y="340.0" z="420.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole7" x="320.0" y="320.0" z="410.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole7">
-            <position name="shieldingLayerBoxWithHole7.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox7"/>
-            <second ref="shieldingLayerHole7"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox8" x="360.0" y="360.0" z="430.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole8" x="340.0" y="340.0" z="420.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole8">
-            <position name="shieldingLayerBoxWithHole8.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox8"/>
-            <second ref="shieldingLayerHole8"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox9" x="380.0" y="380.0" z="440.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole9" x="360.0" y="360.0" z="430.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole9">
-            <position name="shieldingLayerBoxWithHole9.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox9"/>
-            <second ref="shieldingLayerHole9"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox10" x="400.0" y="400.0" z="450.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole10" x="380.0" y="380.0" z="440.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole10">
-            <position name="shieldingLayerBoxWithHole10.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox10"/>
-            <second ref="shieldingLayerHole10"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox11" x="420.0" y="420.0" z="460.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole11" x="400.0" y="400.0" z="450.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole11">
-            <position name="shieldingLayerBoxWithHole11.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox11"/>
-            <second ref="shieldingLayerHole11"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox12" x="440.0" y="440.0" z="470.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole12" x="420.0" y="420.0" z="460.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole12">
-            <position name="shieldingLayerBoxWithHole12.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox12"/>
-            <second ref="shieldingLayerHole12"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox13" x="460.0" y="460.0" z="480.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole13" x="440.0" y="440.0" z="470.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole13">
-            <position name="shieldingLayerBoxWithHole13.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox13"/>
-            <second ref="shieldingLayerHole13"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox14" x="480.0" y="480.0" z="490.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole14" x="460.0" y="460.0" z="480.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole14">
-            <position name="shieldingLayerBoxWithHole14.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox14"/>
-            <second ref="shieldingLayerHole14"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox15" x="500.0" y="500.0" z="500.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole15" x="480.0" y="480.0" z="490.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole15">
-            <position name="shieldingLayerBoxWithHole15.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox15"/>
-            <second ref="shieldingLayerHole15"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox16" x="520.0" y="520.0" z="510.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole16" x="500.0" y="500.0" z="500.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole16">
-            <position name="shieldingLayerBoxWithHole16.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox16"/>
-            <second ref="shieldingLayerHole16"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox17" x="540.0" y="540.0" z="520.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole17" x="520.0" y="520.0" z="510.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole17">
-            <position name="shieldingLayerBoxWithHole17.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox17"/>
-            <second ref="shieldingLayerHole17"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox18" x="560.0" y="560.0" z="530.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole18" x="540.0" y="540.0" z="520.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole18">
-            <position name="shieldingLayerBoxWithHole18.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox18"/>
-            <second ref="shieldingLayerHole18"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox19" x="580.0" y="580.0" z="540.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole19" x="560.0" y="560.0" z="530.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole19">
-            <position name="shieldingLayerBoxWithHole19.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox19"/>
-            <second ref="shieldingLayerHole19"/>
-        </subtraction>
-        <box lunit="mm" aunit="rad" name="shieldingLayerBox20" x="600.0" y="600.0" z="550.0"/>
-        <box lunit="mm" aunit="rad" name="shieldingLayerHole20" x="580.0" y="580.0" z="540.0"/>
-        <subtraction lunit="mm" aunit="rad" name="shieldingLayerBoxWithHole20">
-            <position name="shieldingLayerBoxWithHole20.position" z="5.0" unit="mm"/>
-            <first ref="shieldingLayerBox20"/>
-            <second ref="shieldingLayerHole20"/>
-        </subtraction>
+        <box lunit="mm" aunit="rad" name="chipSolid" x="1.0" y="28.0" z="28.0"/>
+        <box lunit="mm" aunit="rad" name="componentsSolid" x="1.0" y="76.2" z="9.3"/>
         <box lunit="mm" aunit="rad" name="copperBoxOuterSolid" x="200.0" y="200.0" z="350.0"/>
         <box lunit="mm" aunit="rad" name="copperBoxInnerSolid" x="180.0" y="150.0" z="350.0"/>
         <subtraction lunit="mm" aunit="rad" name="copperBoxSolid">
             <position name="copperBoxSolid.position" z="10.0" unit="mm"/>
             <first ref="copperBoxOuterSolid"/>
             <second ref="copperBoxInnerSolid"/>
+        </subtraction>
+        <box lunit="mm" aunit="rad" name="leadBoxSolid" x="600.0" y="600.0" z="550.0"/>
+        <box lunit="mm" aunit="rad" name="leadBoxShaftSolid" x="200.0" y="200.0" z="350.0"/>
+        <subtraction lunit="mm" aunit="rad" name="leadBoxWithShaftSolid">
+            <position name="leadBoxWithShaftSolid.position" z="100.0" unit="mm"/>
+            <first ref="leadBoxSolid"/>
+            <second ref="leadBoxShaftSolid"/>
         </subtraction>
         <box lunit="mm" aunit="rad" name="worldBox" x="1450.0" y="1600.0" z="1450.0"/>
     </solids>
@@ -4436,6 +4305,14 @@
             <materialref ref="G4_KAPTON"/>
             <solidref ref="SAFEC_MMSolid"/>
         </volume>
+        <volume name="chipVolume">
+            <materialref ref="G4_Si"/>
+            <solidref ref="chipSolid"/>
+        </volume>
+        <volume name="componentsVolume">
+            <materialref ref="G4_Si"/>
+            <solidref ref="componentsSolid"/>
+        </volume>
         <assembly name="electronicsBox">
             <physvol name="copperSAFEC1">
                 <volumeref ref="copperSAFECVolume"/>
@@ -4453,6 +4330,14 @@
                 <volumeref ref="kaptonSAFEC_MMVolume"/>
                 <position name="kaptonSAFEC_MM1.position" x="-14.54" z="-128.76999999999998" unit="mm"/>
             </physvol>
+            <physvol name="chip1">
+                <volumeref ref="chipVolume"/>
+                <position name="chip1.position" x="-14.19" z="38.1" unit="mm"/>
+            </physvol>
+            <physvol name="components1">
+                <volumeref ref="componentsVolume"/>
+                <position name="components1.position" x="-14.19" z="-38.1" unit="mm"/>
+            </physvol>
             <physvol name="copperSAFEC2">
                 <volumeref ref="copperSAFECVolume"/>
                 <position name="copperSAFEC2.position" x="-5.155" unit="mm"/>
@@ -4468,6 +4353,14 @@
             <physvol name="kaptonSAFEC_MM2">
                 <volumeref ref="kaptonSAFEC_MMVolume"/>
                 <position name="kaptonSAFEC_MM2.position" x="-4.54" z="-128.76999999999998" unit="mm"/>
+            </physvol>
+            <physvol name="chip2">
+                <volumeref ref="chipVolume"/>
+                <position name="chip2.position" x="-4.19" z="38.1" unit="mm"/>
+            </physvol>
+            <physvol name="components2">
+                <volumeref ref="componentsVolume"/>
+                <position name="components2.position" x="-4.19" z="-38.1" unit="mm"/>
             </physvol>
             <physvol name="copperSAFEC3">
                 <volumeref ref="copperSAFECVolume"/>
@@ -4485,6 +4378,14 @@
                 <volumeref ref="kaptonSAFEC_MMVolume"/>
                 <position name="kaptonSAFEC_MM3.position" x="5.46" z="-128.76999999999998" unit="mm"/>
             </physvol>
+            <physvol name="chip3">
+                <volumeref ref="chipVolume"/>
+                <position name="chip3.position" x="5.81" z="38.1" unit="mm"/>
+            </physvol>
+            <physvol name="components3">
+                <volumeref ref="componentsVolume"/>
+                <position name="components3.position" x="5.81" z="-38.1" unit="mm"/>
+            </physvol>
             <physvol name="copperSAFEC4">
                 <volumeref ref="copperSAFECVolume"/>
                 <position name="copperSAFEC4.position" x="14.845" unit="mm"/>
@@ -4501,171 +4402,31 @@
                 <volumeref ref="kaptonSAFEC_MMVolume"/>
                 <position name="kaptonSAFEC_MM4.position" x="15.46" z="-128.76999999999998" unit="mm"/>
             </physvol>
+            <physvol name="chip4">
+                <volumeref ref="chipVolume"/>
+                <position name="chip4.position" x="15.81" z="38.1" unit="mm"/>
+            </physvol>
+            <physvol name="components4">
+                <volumeref ref="componentsVolume"/>
+                <position name="components4.position" x="15.81" z="-38.1" unit="mm"/>
+            </physvol>
         </assembly>
-        <volume name="shieldingVolumeLayer1">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole1"/>
-        </volume>
-        <volume name="shieldingVolumeLayer2">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole2"/>
-        </volume>
-        <volume name="shieldingVolumeLayer3">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole3"/>
-        </volume>
-        <volume name="shieldingVolumeLayer4">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole4"/>
-        </volume>
-        <volume name="shieldingVolumeLayer5">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole5"/>
-        </volume>
-        <volume name="shieldingVolumeLayer6">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole6"/>
-        </volume>
-        <volume name="shieldingVolumeLayer7">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole7"/>
-        </volume>
-        <volume name="shieldingVolumeLayer8">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole8"/>
-        </volume>
-        <volume name="shieldingVolumeLayer9">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole9"/>
-        </volume>
-        <volume name="shieldingVolumeLayer10">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole10"/>
-        </volume>
-        <volume name="shieldingVolumeLayer11">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole11"/>
-        </volume>
-        <volume name="shieldingVolumeLayer12">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole12"/>
-        </volume>
-        <volume name="shieldingVolumeLayer13">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole13"/>
-        </volume>
-        <volume name="shieldingVolumeLayer14">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole14"/>
-        </volume>
-        <volume name="shieldingVolumeLayer15">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole15"/>
-        </volume>
-        <volume name="shieldingVolumeLayer16">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole16"/>
-        </volume>
-        <volume name="shieldingVolumeLayer17">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole17"/>
-        </volume>
-        <volume name="shieldingVolumeLayer18">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole18"/>
-        </volume>
-        <volume name="shieldingVolumeLayer19">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole19"/>
-        </volume>
-        <volume name="shieldingVolumeLayer20">
-            <materialref ref="G4_Pb"/>
-            <solidref ref="shieldingLayerBoxWithHole20"/>
-        </volume>
         <volume name="copperBoxVolume">
             <materialref ref="G4_Cu"/>
             <solidref ref="copperBoxSolid"/>
         </volume>
+        <volume name="shieldingVolume">
+            <materialref ref="G4_Pb"/>
+            <solidref ref="leadBoxWithShaftSolid"/>
+        </volume>
         <assembly name="shielding">
-            <physvol name="shieldingLayer1">
-                <volumeref ref="shieldingVolumeLayer1"/>
-                <position name="shieldingLayer1.position" z="114.5" unit="mm"/>
+            <physvol name="shieldingLead">
+                <volumeref ref="shieldingVolume"/>
+                <position name="shieldingLead.position" z="19.5" unit="mm"/>
             </physvol>
-            <physvol name="shieldingLayer2">
-                <volumeref ref="shieldingVolumeLayer2"/>
-                <position name="shieldingLayer2.position" z="109.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayer3">
-                <volumeref ref="shieldingVolumeLayer3"/>
-                <position name="shieldingLayer3.position" z="104.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayer4">
-                <volumeref ref="shieldingVolumeLayer4"/>
-                <position name="shieldingLayer4.position" z="99.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayer5">
-                <volumeref ref="shieldingVolumeLayer5"/>
-                <position name="shieldingLayer5.position" z="94.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayer6">
-                <volumeref ref="shieldingVolumeLayer6"/>
-                <position name="shieldingLayer6.position" z="89.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayer7">
-                <volumeref ref="shieldingVolumeLayer7"/>
-                <position name="shieldingLayer7.position" z="84.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayer8">
-                <volumeref ref="shieldingVolumeLayer8"/>
-                <position name="shieldingLayer8.position" z="79.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayer9">
-                <volumeref ref="shieldingVolumeLayer9"/>
-                <position name="shieldingLayer9.position" z="74.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayer10">
-                <volumeref ref="shieldingVolumeLayer10"/>
-                <position name="shieldingLayer10.position" z="69.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayer11">
-                <volumeref ref="shieldingVolumeLayer11"/>
-                <position name="shieldingLayer11.position" z="64.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayer12">
-                <volumeref ref="shieldingVolumeLayer12"/>
-                <position name="shieldingLayer12.position" z="59.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayer13">
-                <volumeref ref="shieldingVolumeLayer13"/>
-                <position name="shieldingLayer13.position" z="54.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayer14">
-                <volumeref ref="shieldingVolumeLayer14"/>
-                <position name="shieldingLayer14.position" z="49.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayer15">
-                <volumeref ref="shieldingVolumeLayer15"/>
-                <position name="shieldingLayer15.position" z="44.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayer16">
-                <volumeref ref="shieldingVolumeLayer16"/>
-                <position name="shieldingLayer16.position" z="39.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayer17">
-                <volumeref ref="shieldingVolumeLayer17"/>
-                <position name="shieldingLayer17.position" z="34.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayer18">
-                <volumeref ref="shieldingVolumeLayer18"/>
-                <position name="shieldingLayer18.position" z="29.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayer19">
-                <volumeref ref="shieldingVolumeLayer19"/>
-                <position name="shieldingLayer19.position" z="24.5" unit="mm"/>
-            </physvol>
-            <physvol name="shieldingLayer20">
-                <volumeref ref="shieldingVolumeLayer20"/>
-                <position name="shieldingLayer20.position" z="19.5" unit="mm"/>
+            <physvol name="copperBox">
+                <volumeref ref="copperBoxVolume"/>
+                <position name="copperBox.position" z="119.5" unit="mm"/>
             </physvol>
         </assembly>
         <volume name="world">

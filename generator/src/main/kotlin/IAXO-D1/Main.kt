@@ -336,5 +336,36 @@ val geometries = mapOf(
             }
         }
     }.withUnits(LUnit.MM, AUnit.RAD),
+    "NoVetoesDetailedElectronics" to Gdml {
+
+        loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
+
+        val chamberVolume = Chamber().generate(this)
+        val detectorPipeVolume = DetectorPipe().generate(this)
+        val electronicsBoxVolume = Electronics(detailedElectronics=true).generate(this)
+        val shieldingVolume = Shielding().generate(this)
+
+        structure {
+            val worldBox = solids.box(worldSizeX, worldSizeY, worldSizeZ, "worldBox")
+
+            world = volume(Materials.Air.ref, worldBox, "world") {
+                physVolume(chamberVolume, name = "Chamber")
+                physVolume(detectorPipeVolume, name = "DetectorPipe") {
+                    position(z = DetectorPipe.ZinWorld) {
+                        unit = LUnit.MM
+                    }
+                }
+                physVolume(electronicsBoxVolume, name = "ElectronicsBox") {
+                    position(
+                        x = Electronics.PipeToElectronicsDistanceX,
+                        z = Electronics.DetectorToElectronicsDistanceZ
+                    ) {
+                        unit = LUnit.MM
+                    }
+                }
+                physVolume(shieldingVolume, name = "Shielding")
+            }
+        }
+    }.withUnits(LUnit.MM, AUnit.RAD),
 )
 

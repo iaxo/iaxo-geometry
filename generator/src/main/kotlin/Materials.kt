@@ -36,5 +36,6 @@ enum class Materials(val ref: GdmlRef<GdmlMaterial>) {
     BoratedHDPE5pct(resolve("BoratedHDPE5pct")),
     EJ254_5pct(resolve("EJ254-5pct")),
     EJ254_1pct(resolve("EJ254-1pct")),
+    Silicon(resolve("G4_Si"))
 }
 
