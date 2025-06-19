@@ -4160,23 +4160,27 @@
             </physvol>
         </assembly>
         <assembly name="assembly-7">
+            <physvol name="assembly-7.veto4">
+                <volumeref ref="assembly-6"/>
+                <position name="assembly-7.veto4.position" x="-310.5" unit="mm"/>
+            </physvol>
             <physvol name="assembly-7.veto3">
                 <volumeref ref="assembly-6"/>
-                <position name="assembly-7.veto3.position" x="-207.0" unit="mm"/>
+                <position name="assembly-7.veto3.position" x="-103.5" unit="mm"/>
             </physvol>
             <physvol name="assembly-7.veto2">
                 <volumeref ref="assembly-6"/>
-                <position name="assembly-7.veto2.position" unit="mm"/>
+                <position name="assembly-7.veto2.position" x="103.5" unit="mm"/>
             </physvol>
             <physvol name="assembly-7.veto1">
                 <volumeref ref="assembly-6"/>
-                <position name="assembly-7.veto1.position" x="207.0" unit="mm"/>
+                <position name="assembly-7.veto1.position" x="310.5" unit="mm"/>
             </physvol>
         </assembly>
         <assembly name="assembly-5">
             <physvol name="vetoLayerTop1">
-                <volumeref ref="assembly-7"/>
-                <position name="vetoLayerTop1.position" y="-35.0" z="-240.0" unit="mm"/>
+                <volumeref ref="assembly-2"/>
+                <position name="vetoLayerTop1.position" unit="mm"/>
                 <rotation name="vetoLayerTop1.rotation" y="180.0" unit="deg"/>
             </physvol>
             <physvol name="vetoLayerTop2">
@@ -4185,8 +4189,8 @@
                 <rotation name="vetoLayerTop2.rotation" y="360.0" unit="deg"/>
             </physvol>
             <physvol name="vetoLayerTop3">
-                <volumeref ref="assembly-2"/>
-                <position name="vetoLayerTop3.position" y="118.0" unit="mm"/>
+                <volumeref ref="assembly-7"/>
+                <position name="vetoLayerTop3.position" y="118.0" z="-350.0" unit="mm"/>
                 <rotation name="vetoLayerTop3.rotation" y="540.0" unit="deg"/>
             </physvol>
         </assembly>

@@ -23,28 +23,28 @@ class VetoLayerTop(private val numberOfLayers: Int = 3) : Geometry() {
             return@lazy gdml.structure.assembly {
                 for (i in 1..numberOfLayers) {
                     if (i == 1) {
-                        physVolume(VetoLayer(3, vetoSize = VetoSize.DEFAULT).generate(gdml), name = "vetoLayerTop$i") {
-                            position(
-                                y = (Veto.FullThickness + 5) * (i - 1) - 35,
-                                z = -240
-                            ) { unit = LUnit.MM }
-                            rotation { unit = AUnit.DEG; y = 180 * i }
-                        }
-                    } else {
-                        if (i % 2 == 0) {
-                            physVolume(vetoLayerReversedIndex, name = "vetoLayerTop$i") {
-                                position(
-                                    y = (Veto.FullThickness + 5) * (i - 1)
-                                ) { unit = LUnit.MM }
-                                rotation { unit = AUnit.DEG; y = 180 * i }
-                            }
-                        } else {
                             physVolume(vetoLayer, name = "vetoLayerTop$i") {
                                 position(
                                     y = (Veto.FullThickness + 5) * (i - 1)
                                 ) { unit = LUnit.MM }
                                 rotation { unit = AUnit.DEG; y = 180 * i }
                             }
+                    } else {
+                        if (i % 2 == 0) {
+                            physVolume(vetoLayerReversedIndex, name = "vetoLayerTop$i") {
+			        position(
+			            y = (Veto.FullThickness + 5) * (i - 1)
+			        ) { unit = LUnit.MM }
+			        rotation { unit = AUnit.DEG; y = 180 * i }
+                            }
+                        } else {
+                            physVolume(VetoLayer(4, vetoSize = VetoSize.DEFAULT).generate(gdml), name = "vetoLayerTop$i") {
+				position(
+				    y = (Veto.FullThickness + 5) * (i - 1),
+				    z = -350
+				) { unit = LUnit.MM }
+				rotation { unit = AUnit.DEG; y = 180 * i }
+		            }
                         }
                     }
                 }
@@ -54,7 +54,6 @@ class VetoLayerTop(private val numberOfLayers: Int = 3) : Geometry() {
         return vetoLayerVolume
     }
 }
-
 
 class VetoLayerBottom(private val numberOfLayers: Int = 3) : Geometry() {
     override fun generate(gdml: Gdml): GdmlRef<GdmlAssembly> {
