@@ -4483,7 +4483,7 @@
         <assembly name="assembly-9">
             <physvol name="vetoLayerTop1">
                 <volumeref ref="assembly-6"/>
-                <position name="vetoLayerTop1.position" unit="mm"/>
+                <position name="vetoLayerTop1.position" y="20.0" unit="mm"/>
                 <rotation name="vetoLayerTop1.rotation" y="180.0" unit="deg"/>
             </physvol>
         </assembly>

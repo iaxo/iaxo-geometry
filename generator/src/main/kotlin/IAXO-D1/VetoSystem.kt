@@ -25,7 +25,7 @@ class VetoLayerTop(private val numberOfLayers: Int = 3) : Geometry() {
                     if (i == 1) {
                             physVolume(vetoLayer, name = "vetoLayerTop$i") {
                                 position(
-                                    y = (Veto.FullThickness + 5) * (i - 1)
+                                    y = (Veto.FullThickness + 5) * (i - 1) + 20
                                 ) { unit = LUnit.MM }
                                 rotation { unit = AUnit.DEG; y = 180 * i }
                             }
@@ -33,14 +33,14 @@ class VetoLayerTop(private val numberOfLayers: Int = 3) : Geometry() {
                         if (i % 2 == 0) {
                             physVolume(vetoLayerReversedIndex, name = "vetoLayerTop$i") {
 			        position(
-			            y = (Veto.FullThickness + 5) * (i - 1)
+			            y = (Veto.FullThickness + 5) * (i - 1) + 25
 			        ) { unit = LUnit.MM }
 			        rotation { unit = AUnit.DEG; y = 180 * i }
                             }
                         } else {
                             physVolume(VetoLayer(4, vetoSize = VetoSize.DEFAULT).generate(gdml), name = "vetoLayerTop$i") {
 				position(
-				    y = (Veto.FullThickness + 5) * (i - 1),
+				    y = (Veto.FullThickness + 5) * (i - 1) + 30,
 				    z = -350
 				) { unit = LUnit.MM }
 				rotation { unit = AUnit.DEG; y = 180 * i }
