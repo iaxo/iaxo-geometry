@@ -4137,6 +4137,7 @@
             <first ref="detectorPipeNotEmpty"/>
             <second ref="detectorPipeInside"/>
         </subtraction>
+        <tube lunit="mm" aunit="rad" name="detectorPipeCap" rmax="75.0" z="5.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
         <box lunit="mm" aunit="rad" name="leadBoxSolid" x="160.0" y="160.0" z="160.0"/>
         <box lunit="mm" aunit="rad" name="leadBoxHoleSolid" x="150.0" y="150.0" z="150.0"/>
         <subtraction lunit="mm" aunit="rad" name="leadBoxWithHoleSolid">
@@ -4271,6 +4272,10 @@
         <volume name="detectorPipeFillingVolume">
             <materialref ref="G4_Galactic"/>
             <solidref ref="detectorPipeInside"/>
+        </volume>
+        <volume name="detectorPipeCapVolume">
+            <materialref ref="G4_Cu"/>
+            <solidref ref="detectorPipeCap"/>
         </volume>
         <assembly name="detectorPipe">
             <physvol name="detectorPipe">

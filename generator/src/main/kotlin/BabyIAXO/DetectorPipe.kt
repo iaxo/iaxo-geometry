@@ -1,10 +1,9 @@
 package BabyIAXO
 
 import Geometry
-
 import space.kscience.gdml.*
 
-open class DetectorPipe : Geometry() {
+open class DetectorPipe(val withCap: Boolean = false) : Geometry() {
     companion object Parameters {
         private const val TotalLength: Double = 491.0
 
@@ -22,6 +21,11 @@ open class DetectorPipe : Geometry() {
         const val Union1Z: Double = ChamberFlangeThickness / 2 + Section1of2Length / 2
         const val Union2Z: Double = Union1Z + Section1of2Length / 2 + Section2of2Length / 2
         const val Union3Z: Double = Union2Z + Section2of2Length / 2 + TelescopeFlangeThickness / 2
+
+        // Cap parameters
+        const val CapThickness: Double = 5.0
+        const val CapRadius: Double = 75.0
+        const val CapPosition: Double = 487.0
 
         // Inside
         const val InsideSection1of3Radius: Double = 43.0 / 2
@@ -153,6 +157,9 @@ open class DetectorPipe : Geometry() {
                 gdml.structure.volume(Materials.Copper.ref, detectorPipeSolid, "detectorPipeVolume")
             val detectorPipeFillingVolume =
                 gdml.structure.volume(Materials.Vacuum.ref, detectorPipeInside, "detectorPipeFillingVolume")
+            val detectorPipeCap = gdml.solids.tube(CapRadius, CapThickness, "detectorPipeCap")
+            val detectorPipeCapVolume = gdml.structure.volume(Materials.Copper.ref, detectorPipeCap, "detectorPipeCapVolume")
+
 
             return@lazy gdml.structure.assembly {
                 name = "detectorPipe"
@@ -162,6 +169,12 @@ open class DetectorPipe : Geometry() {
                 physVolume(detectorPipeFillingVolume) {
                     name = "detectorPipeFilling"
                     position(z = FillingOffsetWithPipe) { unit = LUnit.MM }
+                }
+                if (withCap) {
+                    physVolume(detectorPipeCapVolume) {
+                        name = "detectorPipeCap"
+                        position(z = CapPosition) { unit = LUnit.MM }
+                    }
                 }
             }
         }
