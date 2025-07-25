@@ -4480,66 +4480,54 @@
                 <position name="assembly-8.veto4.position" x="310.5" unit="mm"/>
             </physvol>
         </assembly>
-        <volume name="scintillatorVolume-800.0mm">
-            <materialref ref="BC408"/>
-            <solidref ref="scintillatorSolid-800.0mm"/>
-        </volume>
-        <volume name="captureLayerVolume-800.0mm">
-            <materialref ref="G4_Cd"/>
-            <solidref ref="captureLayerSolid-800.0mm"/>
-        </volume>
-        <volume name="scintillatorWrappingSolid-800.0mm">
-            <materialref ref="G4_RUBBER_NEOPRENE"/>
-            <solidref ref="scintillatorWrappingSolid-800.0mm.solid"/>
-        </volume>
-        <volume name="scintillatorLightGuideVolume-800.0mm">
-            <materialref ref="G4_LUCITE"/>
-            <solidref ref="scintillatorLightGuideSolid-800.0mm"/>
-        </volume>
-        <assembly name="assembly-10">
-            <physvol name="scintillatorVolume-800.0mm-f1a5df66">
-                <volumeref ref="scintillatorVolume-800.0mm"/>
-            </physvol>
-            <physvol name="scintillatorWrappingSolid-800.0mm-f1a5df67">
-                <volumeref ref="scintillatorWrappingSolid-800.0mm"/>
-            </physvol>
-            <physvol name="captureLayerVolume-800.0mm-f1a5df68">
-                <volumeref ref="captureLayerVolume-800.0mm"/>
-                <position name="captureLayerVolume-800.0mm-f1a5df68.position" y="26.5" unit="mm"/>
-            </physvol>
-            <physvol name="captureLayerVolume-800.0mm-f1a5df69">
-                <volumeref ref="captureLayerVolume-800.0mm"/>
-                <position name="captureLayerVolume-800.0mm-f1a5df69.position" y="-26.5" unit="mm"/>
-            </physvol>
-            <physvol name="scintillatorLightGuideVolume-800.0mm-f1a5df6a">
-                <volumeref ref="scintillatorLightGuideVolume-800.0mm"/>
-                <position name="scintillatorLightGuideVolume-800.0mm-f1a5df6a.position" z="-465.0" unit="mm"/>
-            </physvol>
-        </assembly>
-        <assembly name="assembly-11">
-            <physvol name="assembly-11.veto3">
-                <volumeref ref="assembly-10"/>
-                <position name="assembly-11.veto3.position" x="-207.0" unit="mm"/>
-            </physvol>
-            <physvol name="assembly-11.veto2">
-                <volumeref ref="assembly-10"/>
-                <position name="assembly-11.veto2.position" unit="mm"/>
-            </physvol>
-            <physvol name="assembly-11.veto1">
-                <volumeref ref="assembly-10"/>
-                <position name="assembly-11.veto1.position" x="207.0" unit="mm"/>
-            </physvol>
-        </assembly>
         <assembly name="assembly-9">
             <physvol name="vetoLayerTop1">
-                <volumeref ref="assembly-11"/>
-                <position name="vetoLayerTop1.position" y="-35.0" z="-240.0" unit="mm"/>
+                <volumeref ref="assembly-6"/>
+                <position name="vetoLayerTop1.position" y="20.0" unit="mm"/>
                 <rotation name="vetoLayerTop1.rotation" y="180.0" unit="deg"/>
             </physvol>
             <physvol name="vetoLayerTop2">
                 <volumeref ref="assembly-8"/>
-                <position name="vetoLayerTop2.position" y="59.0" unit="mm"/>
+                <position name="vetoLayerTop2.position" y="84.0" unit="mm"/>
                 <rotation name="vetoLayerTop2.rotation" y="360.0" unit="deg"/>
+            </physvol>
+        </assembly>
+        <assembly name="assembly-10">
+            <physvol name="scintillatorVolume-1500.0mm-f1a5df66">
+                <volumeref ref="scintillatorVolume-1500.0mm"/>
+            </physvol>
+            <physvol name="scintillatorWrappingSolid-1500.0mm-f1a5df67">
+                <volumeref ref="scintillatorWrappingSolid-1500.0mm"/>
+            </physvol>
+            <physvol name="captureLayerVolume-1500.0mm-f1a5df68">
+                <volumeref ref="captureLayerVolume-1500.0mm"/>
+                <position name="captureLayerVolume-1500.0mm-f1a5df68.position" y="26.5" unit="mm"/>
+            </physvol>
+            <physvol name="captureLayerVolume-1500.0mm-f1a5df69">
+                <volumeref ref="captureLayerVolume-1500.0mm"/>
+                <position name="captureLayerVolume-1500.0mm-f1a5df69.position" y="-26.5" unit="mm"/>
+            </physvol>
+            <physvol name="scintillatorLightGuideVolume-1500.0mm-f1a5df6a">
+                <volumeref ref="scintillatorLightGuideVolume-1500.0mm"/>
+                <position name="scintillatorLightGuideVolume-1500.0mm-f1a5df6a.position" z="-815.0" unit="mm"/>
+            </physvol>
+        </assembly>
+        <assembly name="assembly-11">
+            <physvol name="assembly-11.veto4">
+                <volumeref ref="assembly-10"/>
+                <position name="assembly-11.veto4.position" x="-310.5" unit="mm"/>
+            </physvol>
+            <physvol name="assembly-11.veto3">
+                <volumeref ref="assembly-10"/>
+                <position name="assembly-11.veto3.position" x="-103.5" unit="mm"/>
+            </physvol>
+            <physvol name="assembly-11.veto2">
+                <volumeref ref="assembly-10"/>
+                <position name="assembly-11.veto2.position" x="103.5" unit="mm"/>
+            </physvol>
+            <physvol name="assembly-11.veto1">
+                <volumeref ref="assembly-10"/>
+                <position name="assembly-11.veto1.position" x="310.5" unit="mm"/>
             </physvol>
         </assembly>
         <assembly name="assembly-12">
@@ -4563,291 +4551,269 @@
             </physvol>
         </assembly>
         <assembly name="assembly-13">
-            <physvol name="assembly-13.veto4">
+            <physvol name="assembly-13.veto1">
                 <volumeref ref="assembly-12"/>
-                <position name="assembly-13.veto4.position" x="-310.5" unit="mm"/>
-            </physvol>
-            <physvol name="assembly-13.veto3">
-                <volumeref ref="assembly-12"/>
-                <position name="assembly-13.veto3.position" x="-103.5" unit="mm"/>
+                <position name="assembly-13.veto1.position" x="-310.5" unit="mm"/>
             </physvol>
             <physvol name="assembly-13.veto2">
                 <volumeref ref="assembly-12"/>
-                <position name="assembly-13.veto2.position" x="103.5" unit="mm"/>
+                <position name="assembly-13.veto2.position" x="-103.5" unit="mm"/>
             </physvol>
-            <physvol name="assembly-13.veto1">
+            <physvol name="assembly-13.veto3">
                 <volumeref ref="assembly-12"/>
-                <position name="assembly-13.veto1.position" x="310.5" unit="mm"/>
+                <position name="assembly-13.veto3.position" x="103.5" unit="mm"/>
+            </physvol>
+            <physvol name="assembly-13.veto4">
+                <volumeref ref="assembly-12"/>
+                <position name="assembly-13.veto4.position" x="310.5" unit="mm"/>
             </physvol>
         </assembly>
-        <assembly name="assembly-14">
-            <physvol name="scintillatorVolume-1500.0mm-f1a5df6a">
-                <volumeref ref="scintillatorVolume-1500.0mm"/>
-            </physvol>
-            <physvol name="scintillatorWrappingSolid-1500.0mm-f1a5df6b">
-                <volumeref ref="scintillatorWrappingSolid-1500.0mm"/>
-            </physvol>
-            <physvol name="captureLayerVolume-1500.0mm-f1a5df6c">
-                <volumeref ref="captureLayerVolume-1500.0mm"/>
-                <position name="captureLayerVolume-1500.0mm-f1a5df6c.position" y="26.5" unit="mm"/>
-            </physvol>
-            <physvol name="captureLayerVolume-1500.0mm-f1a5df6d">
-                <volumeref ref="captureLayerVolume-1500.0mm"/>
-                <position name="captureLayerVolume-1500.0mm-f1a5df6d.position" y="-26.5" unit="mm"/>
-            </physvol>
-            <physvol name="scintillatorLightGuideVolume-1500.0mm-f1a5df6e">
-                <volumeref ref="scintillatorLightGuideVolume-1500.0mm"/>
-                <position name="scintillatorLightGuideVolume-1500.0mm-f1a5df6e.position" z="-815.0" unit="mm"/>
-            </physvol>
-        </assembly>
+        <volume name="scintillatorVolume-800.0mm">
+            <materialref ref="BC408"/>
+            <solidref ref="scintillatorSolid-800.0mm"/>
+        </volume>
+        <volume name="captureLayerVolume-800.0mm">
+            <materialref ref="G4_Cd"/>
+            <solidref ref="captureLayerSolid-800.0mm"/>
+        </volume>
+        <volume name="scintillatorWrappingSolid-800.0mm">
+            <materialref ref="G4_RUBBER_NEOPRENE"/>
+            <solidref ref="scintillatorWrappingSolid-800.0mm.solid"/>
+        </volume>
+        <volume name="scintillatorLightGuideVolume-800.0mm">
+            <materialref ref="G4_LUCITE"/>
+            <solidref ref="scintillatorLightGuideSolid-800.0mm"/>
+        </volume>
         <assembly name="assembly-15">
-            <physvol name="assembly-15.veto1">
-                <volumeref ref="assembly-14"/>
-                <position name="assembly-15.veto1.position" x="-310.5" unit="mm"/>
-            </physvol>
-            <physvol name="assembly-15.veto2">
-                <volumeref ref="assembly-14"/>
-                <position name="assembly-15.veto2.position" x="-103.5" unit="mm"/>
-            </physvol>
-            <physvol name="assembly-15.veto3">
-                <volumeref ref="assembly-14"/>
-                <position name="assembly-15.veto3.position" x="103.5" unit="mm"/>
-            </physvol>
-            <physvol name="assembly-15.veto4">
-                <volumeref ref="assembly-14"/>
-                <position name="assembly-15.veto4.position" x="310.5" unit="mm"/>
-            </physvol>
-        </assembly>
-        <assembly name="assembly-17">
-            <physvol name="scintillatorVolume-800.0mm-f1a5df6d">
+            <physvol name="scintillatorVolume-800.0mm-f1a5df6b">
                 <volumeref ref="scintillatorVolume-800.0mm"/>
             </physvol>
-            <physvol name="scintillatorWrappingSolid-800.0mm-f1a5df6e">
+            <physvol name="scintillatorWrappingSolid-800.0mm-f1a5df6c">
                 <volumeref ref="scintillatorWrappingSolid-800.0mm"/>
             </physvol>
-            <physvol name="captureLayerVolume-800.0mm-f1a5df6f">
+            <physvol name="captureLayerVolume-800.0mm-f1a5df6d">
                 <volumeref ref="captureLayerVolume-800.0mm"/>
-                <position name="captureLayerVolume-800.0mm-f1a5df6f.position" y="26.5" unit="mm"/>
+                <position name="captureLayerVolume-800.0mm-f1a5df6d.position" y="26.5" unit="mm"/>
             </physvol>
-            <physvol name="captureLayerVolume-800.0mm-f1a5df70">
+            <physvol name="captureLayerVolume-800.0mm-f1a5df6e">
                 <volumeref ref="captureLayerVolume-800.0mm"/>
-                <position name="captureLayerVolume-800.0mm-f1a5df70.position" y="-26.5" unit="mm"/>
+                <position name="captureLayerVolume-800.0mm-f1a5df6e.position" y="-26.5" unit="mm"/>
             </physvol>
-            <physvol name="scintillatorLightGuideVolume-800.0mm-f1a5df71">
+            <physvol name="scintillatorLightGuideVolume-800.0mm-f1a5df6f">
                 <volumeref ref="scintillatorLightGuideVolume-800.0mm"/>
-                <position name="scintillatorLightGuideVolume-800.0mm-f1a5df71.position" z="-465.0" unit="mm"/>
-            </physvol>
-        </assembly>
-        <assembly name="assembly-18">
-            <physvol name="assembly-18.veto4">
-                <volumeref ref="assembly-17"/>
-                <position name="assembly-18.veto4.position" x="-310.5" unit="mm"/>
-            </physvol>
-            <physvol name="assembly-18.veto3">
-                <volumeref ref="assembly-17"/>
-                <position name="assembly-18.veto3.position" x="-103.5" unit="mm"/>
-            </physvol>
-            <physvol name="assembly-18.veto2">
-                <volumeref ref="assembly-17"/>
-                <position name="assembly-18.veto2.position" x="103.5" unit="mm"/>
-            </physvol>
-            <physvol name="assembly-18.veto1">
-                <volumeref ref="assembly-17"/>
-                <position name="assembly-18.veto1.position" x="310.5" unit="mm"/>
+                <position name="scintillatorLightGuideVolume-800.0mm-f1a5df6f.position" z="-465.0" unit="mm"/>
             </physvol>
         </assembly>
         <assembly name="assembly-16">
+            <physvol name="assembly-16.veto4">
+                <volumeref ref="assembly-15"/>
+                <position name="assembly-16.veto4.position" x="-310.5" unit="mm"/>
+            </physvol>
+            <physvol name="assembly-16.veto3">
+                <volumeref ref="assembly-15"/>
+                <position name="assembly-16.veto3.position" x="-103.5" unit="mm"/>
+            </physvol>
+            <physvol name="assembly-16.veto2">
+                <volumeref ref="assembly-15"/>
+                <position name="assembly-16.veto2.position" x="103.5" unit="mm"/>
+            </physvol>
+            <physvol name="assembly-16.veto1">
+                <volumeref ref="assembly-15"/>
+                <position name="assembly-16.veto1.position" x="310.5" unit="mm"/>
+            </physvol>
+        </assembly>
+        <assembly name="assembly-14">
             <physvol name="vetoLayerBottom1">
-                <volumeref ref="assembly-18"/>
+                <volumeref ref="assembly-16"/>
                 <position name="vetoLayerBottom1.position" y="20.0" z="-350.0" unit="mm"/>
                 <rotation name="vetoLayerBottom1.rotation" y="180.0" unit="deg"/>
             </physvol>
             <physvol name="vetoLayerBottom2">
-                <volumeref ref="assembly-15"/>
+                <volumeref ref="assembly-13"/>
                 <position name="vetoLayerBottom2.position" y="-59.0" unit="mm"/>
                 <rotation name="vetoLayerBottom2.rotation" y="360.0" unit="deg"/>
             </physvol>
         </assembly>
-        <assembly name="assembly-19">
-            <physvol name="scintillatorVolume-1500.0mm-f1a5df6f">
+        <assembly name="assembly-17">
+            <physvol name="scintillatorVolume-1500.0mm-f1a5df6d">
                 <volumeref ref="scintillatorVolume-1500.0mm"/>
             </physvol>
-            <physvol name="scintillatorWrappingSolid-1500.0mm-f1a5df70">
+            <physvol name="scintillatorWrappingSolid-1500.0mm-f1a5df6e">
                 <volumeref ref="scintillatorWrappingSolid-1500.0mm"/>
             </physvol>
-            <physvol name="captureLayerVolume-1500.0mm-f1a5df71">
+            <physvol name="captureLayerVolume-1500.0mm-f1a5df6f">
                 <volumeref ref="captureLayerVolume-1500.0mm"/>
-                <position name="captureLayerVolume-1500.0mm-f1a5df71.position" y="26.5" unit="mm"/>
+                <position name="captureLayerVolume-1500.0mm-f1a5df6f.position" y="26.5" unit="mm"/>
             </physvol>
-            <physvol name="captureLayerVolume-1500.0mm-f1a5df72">
+            <physvol name="captureLayerVolume-1500.0mm-f1a5df70">
                 <volumeref ref="captureLayerVolume-1500.0mm"/>
-                <position name="captureLayerVolume-1500.0mm-f1a5df72.position" y="-26.5" unit="mm"/>
+                <position name="captureLayerVolume-1500.0mm-f1a5df70.position" y="-26.5" unit="mm"/>
             </physvol>
-            <physvol name="scintillatorLightGuideVolume-1500.0mm-f1a5df73">
+            <physvol name="scintillatorLightGuideVolume-1500.0mm-f1a5df71">
                 <volumeref ref="scintillatorLightGuideVolume-1500.0mm"/>
-                <position name="scintillatorLightGuideVolume-1500.0mm-f1a5df73.position" z="-815.0" unit="mm"/>
+                <position name="scintillatorLightGuideVolume-1500.0mm-f1a5df71.position" z="-815.0" unit="mm"/>
             </physvol>
         </assembly>
-        <assembly name="assembly-20">
-            <physvol name="assembly-20.veto3">
-                <volumeref ref="assembly-19"/>
-                <position name="assembly-20.veto3.position" x="-212.0" unit="mm"/>
+        <assembly name="assembly-18">
+            <physvol name="assembly-18.veto3">
+                <volumeref ref="assembly-17"/>
+                <position name="assembly-18.veto3.position" x="-212.0" unit="mm"/>
             </physvol>
-            <physvol name="assembly-20.veto2">
-                <volumeref ref="assembly-19"/>
-                <position name="assembly-20.veto2.position" unit="mm"/>
+            <physvol name="assembly-18.veto2">
+                <volumeref ref="assembly-17"/>
+                <position name="assembly-18.veto2.position" unit="mm"/>
             </physvol>
-            <physvol name="assembly-20.veto1">
-                <volumeref ref="assembly-19"/>
-                <position name="assembly-20.veto1.position" x="212.0" unit="mm"/>
+            <physvol name="assembly-18.veto1">
+                <volumeref ref="assembly-17"/>
+                <position name="assembly-18.veto1.position" x="212.0" unit="mm"/>
             </physvol>
         </assembly>
-        <assembly name="assembly-21">
+        <assembly name="assembly-19">
             <physvol name="vetoLayerRight1">
-                <volumeref ref="assembly-20"/>
+                <volumeref ref="assembly-18"/>
                 <position name="vetoLayerRight1.position" x="-0.0" unit="mm"/>
                 <rotation name="vetoLayerRight1.rotation" x="180.0" z="-90.0" unit="deg"/>
             </physvol>
             <physvol name="vetoLayerRight2">
-                <volumeref ref="assembly-20"/>
+                <volumeref ref="assembly-18"/>
                 <position name="vetoLayerRight2.position" x="-74.0" unit="mm"/>
                 <rotation name="vetoLayerRight2.rotation" x="180.0" z="-90.0" unit="deg"/>
             </physvol>
         </assembly>
-        <assembly name="assembly-22">
-            <physvol name="scintillatorVolume-1500.0mm-f1a5df87">
+        <assembly name="assembly-20">
+            <physvol name="scintillatorVolume-1500.0mm-f1a5df85">
                 <volumeref ref="scintillatorVolume-1500.0mm"/>
             </physvol>
-            <physvol name="scintillatorWrappingSolid-1500.0mm-f1a5df88">
+            <physvol name="scintillatorWrappingSolid-1500.0mm-f1a5df86">
                 <volumeref ref="scintillatorWrappingSolid-1500.0mm"/>
             </physvol>
-            <physvol name="captureLayerVolume-1500.0mm-f1a5df89">
+            <physvol name="captureLayerVolume-1500.0mm-f1a5df87">
                 <volumeref ref="captureLayerVolume-1500.0mm"/>
-                <position name="captureLayerVolume-1500.0mm-f1a5df89.position" y="26.5" unit="mm"/>
+                <position name="captureLayerVolume-1500.0mm-f1a5df87.position" y="26.5" unit="mm"/>
             </physvol>
-            <physvol name="captureLayerVolume-1500.0mm-f1a5df8a">
+            <physvol name="captureLayerVolume-1500.0mm-f1a5df88">
                 <volumeref ref="captureLayerVolume-1500.0mm"/>
-                <position name="captureLayerVolume-1500.0mm-f1a5df8a.position" y="-26.5" unit="mm"/>
+                <position name="captureLayerVolume-1500.0mm-f1a5df88.position" y="-26.5" unit="mm"/>
             </physvol>
-            <physvol name="scintillatorLightGuideVolume-1500.0mm-f1a5df8b">
+            <physvol name="scintillatorLightGuideVolume-1500.0mm-f1a5df89">
                 <volumeref ref="scintillatorLightGuideVolume-1500.0mm"/>
-                <position name="scintillatorLightGuideVolume-1500.0mm-f1a5df8b.position" z="-815.0" unit="mm"/>
+                <position name="scintillatorLightGuideVolume-1500.0mm-f1a5df89.position" z="-815.0" unit="mm"/>
             </physvol>
         </assembly>
-        <assembly name="assembly-23">
-            <physvol name="assembly-23.veto3">
-                <volumeref ref="assembly-22"/>
-                <position name="assembly-23.veto3.position" x="-212.0" unit="mm"/>
+        <assembly name="assembly-21">
+            <physvol name="assembly-21.veto3">
+                <volumeref ref="assembly-20"/>
+                <position name="assembly-21.veto3.position" x="-212.0" unit="mm"/>
             </physvol>
-            <physvol name="assembly-23.veto2">
-                <volumeref ref="assembly-22"/>
-                <position name="assembly-23.veto2.position" unit="mm"/>
+            <physvol name="assembly-21.veto2">
+                <volumeref ref="assembly-20"/>
+                <position name="assembly-21.veto2.position" unit="mm"/>
             </physvol>
-            <physvol name="assembly-23.veto1">
-                <volumeref ref="assembly-22"/>
-                <position name="assembly-23.veto1.position" x="212.0" unit="mm"/>
+            <physvol name="assembly-21.veto1">
+                <volumeref ref="assembly-20"/>
+                <position name="assembly-21.veto1.position" x="212.0" unit="mm"/>
             </physvol>
         </assembly>
-        <assembly name="assembly-24">
+        <assembly name="assembly-22">
             <physvol name="vetoLayerLeft1">
-                <volumeref ref="assembly-23"/>
+                <volumeref ref="assembly-21"/>
                 <position name="vetoLayerLeft1.position" unit="mm"/>
                 <rotation name="vetoLayerLeft1.rotation" z="90.0" unit="deg"/>
             </physvol>
             <physvol name="vetoLayerLeft2">
-                <volumeref ref="assembly-23"/>
+                <volumeref ref="assembly-21"/>
                 <position name="vetoLayerLeft2.position" x="74.0" unit="mm"/>
                 <rotation name="vetoLayerLeft2.rotation" z="90.0" unit="deg"/>
             </physvol>
         </assembly>
-        <assembly name="assembly-25">
-            <physvol name="scintillatorVolume-800.0mm-f1a5df8a">
+        <assembly name="assembly-23">
+            <physvol name="scintillatorVolume-800.0mm-f1a5df88">
                 <volumeref ref="scintillatorVolume-800.0mm"/>
             </physvol>
-            <physvol name="scintillatorWrappingSolid-800.0mm-f1a5df8b">
+            <physvol name="scintillatorWrappingSolid-800.0mm-f1a5df89">
                 <volumeref ref="scintillatorWrappingSolid-800.0mm"/>
             </physvol>
-            <physvol name="captureLayerVolume-800.0mm-f1a5df8c">
+            <physvol name="captureLayerVolume-800.0mm-f1a5df8a">
                 <volumeref ref="captureLayerVolume-800.0mm"/>
-                <position name="captureLayerVolume-800.0mm-f1a5df8c.position" y="26.5" unit="mm"/>
+                <position name="captureLayerVolume-800.0mm-f1a5df8a.position" y="26.5" unit="mm"/>
             </physvol>
-            <physvol name="captureLayerVolume-800.0mm-f1a5df8d">
+            <physvol name="captureLayerVolume-800.0mm-f1a5df8b">
                 <volumeref ref="captureLayerVolume-800.0mm"/>
-                <position name="captureLayerVolume-800.0mm-f1a5df8d.position" y="-26.5" unit="mm"/>
+                <position name="captureLayerVolume-800.0mm-f1a5df8b.position" y="-26.5" unit="mm"/>
             </physvol>
-            <physvol name="scintillatorLightGuideVolume-800.0mm-f1a5df8e">
+            <physvol name="scintillatorLightGuideVolume-800.0mm-f1a5df8c">
                 <volumeref ref="scintillatorLightGuideVolume-800.0mm"/>
-                <position name="scintillatorLightGuideVolume-800.0mm-f1a5df8e.position" z="-465.0" unit="mm"/>
+                <position name="scintillatorLightGuideVolume-800.0mm-f1a5df8c.position" z="-465.0" unit="mm"/>
             </physvol>
         </assembly>
-        <assembly name="assembly-26">
-            <physvol name="assembly-26.veto1">
-                <volumeref ref="assembly-25"/>
-                <position name="assembly-26.veto1.position" x="-212.0" unit="mm"/>
+        <assembly name="assembly-24">
+            <physvol name="assembly-24.veto1">
+                <volumeref ref="assembly-23"/>
+                <position name="assembly-24.veto1.position" x="-212.0" unit="mm"/>
             </physvol>
-            <physvol name="assembly-26.veto2">
-                <volumeref ref="assembly-25"/>
-                <position name="assembly-26.veto2.position" unit="mm"/>
+            <physvol name="assembly-24.veto2">
+                <volumeref ref="assembly-23"/>
+                <position name="assembly-24.veto2.position" unit="mm"/>
             </physvol>
-            <physvol name="assembly-26.veto3">
-                <volumeref ref="assembly-25"/>
-                <position name="assembly-26.veto3.position" x="212.0" unit="mm"/>
+            <physvol name="assembly-24.veto3">
+                <volumeref ref="assembly-23"/>
+                <position name="assembly-24.veto3.position" x="212.0" unit="mm"/>
             </physvol>
         </assembly>
-        <assembly name="assembly-27">
+        <assembly name="assembly-25">
             <physvol name="vetoLayerBack1">
-                <volumeref ref="assembly-26"/>
+                <volumeref ref="assembly-24"/>
                 <position name="vetoLayerBack1.position" z="-0.0" unit="mm"/>
                 <rotation name="vetoLayerBack1.rotation" x="-90.0" y="-90.0" unit="deg"/>
             </physvol>
             <physvol name="vetoLayerBack2">
-                <volumeref ref="assembly-26"/>
+                <volumeref ref="assembly-24"/>
                 <position name="vetoLayerBack2.position" z="-74.0" unit="mm"/>
                 <rotation name="vetoLayerBack2.rotation" x="-90.0" y="-90.0" unit="deg"/>
             </physvol>
         </assembly>
-        <assembly name="assembly-28">
-            <physvol name="scintillatorVolume-800.0mm-f1a5df8d">
+        <assembly name="assembly-26">
+            <physvol name="scintillatorVolume-800.0mm-f1a5df8b">
                 <volumeref ref="scintillatorVolume-800.0mm"/>
             </physvol>
-            <physvol name="scintillatorWrappingSolid-800.0mm-f1a5df8e">
+            <physvol name="scintillatorWrappingSolid-800.0mm-f1a5df8c">
                 <volumeref ref="scintillatorWrappingSolid-800.0mm"/>
             </physvol>
-            <physvol name="captureLayerVolume-800.0mm-f1a5df8f">
+            <physvol name="captureLayerVolume-800.0mm-f1a5df8d">
                 <volumeref ref="captureLayerVolume-800.0mm"/>
-                <position name="captureLayerVolume-800.0mm-f1a5df8f.position" y="26.5" unit="mm"/>
+                <position name="captureLayerVolume-800.0mm-f1a5df8d.position" y="26.5" unit="mm"/>
             </physvol>
-            <physvol name="captureLayerVolume-800.0mm-f1a5df90">
+            <physvol name="captureLayerVolume-800.0mm-f1a5df8e">
                 <volumeref ref="captureLayerVolume-800.0mm"/>
-                <position name="captureLayerVolume-800.0mm-f1a5df90.position" y="-26.5" unit="mm"/>
+                <position name="captureLayerVolume-800.0mm-f1a5df8e.position" y="-26.5" unit="mm"/>
             </physvol>
-            <physvol name="scintillatorLightGuideVolume-800.0mm-f1a5df91">
+            <physvol name="scintillatorLightGuideVolume-800.0mm-f1a5df8f">
                 <volumeref ref="scintillatorLightGuideVolume-800.0mm"/>
-                <position name="scintillatorLightGuideVolume-800.0mm-f1a5df91.position" z="-465.0" unit="mm"/>
+                <position name="scintillatorLightGuideVolume-800.0mm-f1a5df8f.position" z="-465.0" unit="mm"/>
             </physvol>
         </assembly>
-        <assembly name="assembly-29">
-            <physvol name="assembly-29.veto3">
-                <volumeref ref="assembly-28"/>
-                <position name="assembly-29.veto3.position" x="-212.0" unit="mm"/>
+        <assembly name="assembly-27">
+            <physvol name="assembly-27.veto3">
+                <volumeref ref="assembly-26"/>
+                <position name="assembly-27.veto3.position" x="-212.0" unit="mm"/>
             </physvol>
-            <physvol name="assembly-29.veto2">
-                <volumeref ref="assembly-28"/>
-                <position name="assembly-29.veto2.position" unit="mm"/>
+            <physvol name="assembly-27.veto2">
+                <volumeref ref="assembly-26"/>
+                <position name="assembly-27.veto2.position" unit="mm"/>
             </physvol>
-            <physvol name="assembly-29.veto1">
-                <volumeref ref="assembly-28"/>
-                <position name="assembly-29.veto1.position" x="212.0" unit="mm"/>
+            <physvol name="assembly-27.veto1">
+                <volumeref ref="assembly-26"/>
+                <position name="assembly-27.veto1.position" x="212.0" unit="mm"/>
             </physvol>
         </assembly>
-        <assembly name="assembly-30">
+        <assembly name="assembly-28">
             <physvol name="vetoLayerFront1">
-                <volumeref ref="assembly-29"/>
+                <volumeref ref="assembly-27"/>
                 <position name="vetoLayerFront1.position" unit="mm"/>
                 <rotation name="vetoLayerFront1.rotation" x="-90.0" y="90.0" unit="deg"/>
             </physvol>
             <physvol name="vetoLayerFront2">
-                <volumeref ref="assembly-29"/>
+                <volumeref ref="assembly-27"/>
                 <position name="vetoLayerFront2.position" z="74.0" unit="mm"/>
                 <rotation name="vetoLayerFront2.rotation" x="-90.0" y="90.0" unit="deg"/>
             </physvol>
@@ -4858,23 +4824,23 @@
                 <position name="vetoSystemTop.position" y="327.0" z="19.5" unit="mm"/>
             </physvol>
             <physvol name="vetoSystemBottom">
-                <volumeref ref="assembly-16"/>
+                <volumeref ref="assembly-14"/>
                 <position name="vetoSystemBottom.position" y="-437.0" z="19.5" unit="mm"/>
             </physvol>
             <physvol name="vetoSystemRight">
-                <volumeref ref="assembly-21"/>
+                <volumeref ref="assembly-19"/>
                 <position name="vetoSystemRight.position" x="-387.0" z="119.5" unit="mm"/>
             </physvol>
             <physvol name="vetoSystemLeft">
-                <volumeref ref="assembly-24"/>
+                <volumeref ref="assembly-22"/>
                 <position name="vetoSystemLeft.position" x="387.0" z="-80.5" unit="mm"/>
             </physvol>
             <physvol name="vetoSystemBack">
-                <volumeref ref="assembly-27"/>
+                <volumeref ref="assembly-25"/>
                 <position name="vetoSystemBack.position" x="-65.0" z="-692.5" unit="mm"/>
             </physvol>
             <physvol name="vetoSystemFront">
-                <volumeref ref="assembly-30"/>
+                <volumeref ref="assembly-28"/>
                 <position name="vetoSystemFront.position" x="65.0" z="711.5" unit="mm"/>
             </physvol>
         </assembly>

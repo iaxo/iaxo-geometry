@@ -4137,6 +4137,7 @@
             <first ref="detectorPipeNotEmpty"/>
             <second ref="detectorPipeInside"/>
         </subtraction>
+        <tube lunit="mm" aunit="rad" name="detectorPipeCap" rmax="75.0" z="5.0" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
         <box lunit="mm" aunit="rad" name="electronicsBoxOutSolid" x="41.0" y="90.0" z="200.0"/>
         <box lunit="mm" aunit="rad" name="electronicsBoxInSolid" x="31.0" y="80.0" z="190.0"/>
         <subtraction lunit="mm" aunit="rad" name="electronicsBoxSolid">
@@ -4200,8 +4201,6 @@
             <first ref="scintillatorLightGuide1Solid-800.0mm"/>
             <second ref="scintillatorLightGuide2Solid-800.0mm"/>
         </union>
-
-        <tube lunit="mm" aunit="rad" name="telescopeFlangeCoverSolid" rmax="75.0" z="5" rmin="0.0" startphi="0.0" deltaphi="6.283185307179586"/>
         <box lunit="mm" aunit="rad" name="worldBox" x="1350.0" y="1350.0" z="3000.0"/>
     </solids>
     <structure>
@@ -4313,9 +4312,9 @@
             <materialref ref="G4_Galactic"/>
             <solidref ref="detectorPipeInside"/>
         </volume>
-        <volume name="telescopeFlangeCoverVolume">
-            <materialref ref="StainlessSteel"/>
-            <solidref ref="telescopeFlangeCoverSolid"/>
+        <volume name="detectorPipeCapVolume">
+            <materialref ref="G4_Cu"/>
+            <solidref ref="detectorPipeCap"/>
         </volume>
         <assembly name="detectorPipe">
             <physvol name="detectorPipe">
@@ -4325,9 +4324,9 @@
                 <volumeref ref="detectorPipeFillingVolume"/>
                 <position name="detectorPipeFilling.position" z="82.675" unit="mm"/>
             </physvol>
-             <physvol name="telescopeFlangeCover">
-                <volumeref ref="telescopeFlangeCoverVolume"/>
-                <position name="telescopeFlangeCover.position" z="475+14/2+5" unit="mm"/>
+            <physvol name="detectorPipeCap">
+                <volumeref ref="detectorPipeCapVolume"/>
+                <position name="detectorPipeCap.position" z="487.0" unit="mm"/>
             </physvol>
         </assembly>
         <volume name="electronicsBoxVolume">
@@ -4527,33 +4526,37 @@
             </physvol>
         </assembly>
         <assembly name="assembly-11">
+            <physvol name="assembly-11.veto4">
+                <volumeref ref="assembly-10"/>
+                <position name="assembly-11.veto4.position" x="-310.5" unit="mm"/>
+            </physvol>
             <physvol name="assembly-11.veto3">
                 <volumeref ref="assembly-10"/>
-                <position name="assembly-11.veto3.position" x="-207.0" unit="mm"/>
+                <position name="assembly-11.veto3.position" x="-103.5" unit="mm"/>
             </physvol>
             <physvol name="assembly-11.veto2">
                 <volumeref ref="assembly-10"/>
-                <position name="assembly-11.veto2.position" unit="mm"/>
+                <position name="assembly-11.veto2.position" x="103.5" unit="mm"/>
             </physvol>
             <physvol name="assembly-11.veto1">
                 <volumeref ref="assembly-10"/>
-                <position name="assembly-11.veto1.position" x="207.0" unit="mm"/>
+                <position name="assembly-11.veto1.position" x="310.5" unit="mm"/>
             </physvol>
         </assembly>
         <assembly name="assembly-9">
             <physvol name="vetoLayerTop1">
-                <volumeref ref="assembly-11"/>
-                <position name="vetoLayerTop1.position" y="-35.0" z="-240.0" unit="mm"/>
+                <volumeref ref="assembly-6"/>
+                <position name="vetoLayerTop1.position" y="20.0" unit="mm"/>
                 <rotation name="vetoLayerTop1.rotation" y="180.0" unit="deg"/>
             </physvol>
             <physvol name="vetoLayerTop2">
                 <volumeref ref="assembly-8"/>
-                <position name="vetoLayerTop2.position" y="59.0" unit="mm"/>
+                <position name="vetoLayerTop2.position" y="84.0" unit="mm"/>
                 <rotation name="vetoLayerTop2.rotation" y="360.0" unit="deg"/>
             </physvol>
             <physvol name="vetoLayerTop3">
-                <volumeref ref="assembly-6"/>
-                <position name="vetoLayerTop3.position" y="118.0" unit="mm"/>
+                <volumeref ref="assembly-11"/>
+                <position name="vetoLayerTop3.position" y="148.0" z="-350.0" unit="mm"/>
                 <rotation name="vetoLayerTop3.rotation" y="540.0" unit="deg"/>
             </physvol>
         </assembly>
