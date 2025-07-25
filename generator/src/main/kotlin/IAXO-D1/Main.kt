@@ -327,7 +327,7 @@ val geometries = mapOf(
     "DetectorPipe" to Gdml {
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
 
-        val detectorPipeVolume = DetectorPipe().generate(this)
+        val detectorPipeVolume = DetectorPipe(withCap = false).generate(this)
 
         structure {
             val worldBox = solids.box(worldSizeX, worldSizeY, worldSizeZ, "worldBox")
