@@ -157,9 +157,10 @@ open class DetectorPipe(val withCap: Boolean = false) : Geometry() {
                 gdml.structure.volume(Materials.Copper.ref, detectorPipeSolid, "detectorPipeVolume")
             val detectorPipeFillingVolume =
                 gdml.structure.volume(Materials.Vacuum.ref, detectorPipeInside, "detectorPipeFillingVolume")
-            val detectorPipeCap = gdml.solids.tube(CapRadius, CapThickness, "detectorPipeCap")
-            val detectorPipeCapVolume = gdml.structure.volume(Materials.Copper.ref, detectorPipeCap, "detectorPipeCapVolume")
-
+            val detectorPipeCapVolume = if (withCap) {
+                val detectorPipeCap = gdml.solids.tube(CapRadius, CapThickness, "detectorPipeCap")
+                gdml.structure.volume(Materials.Copper.ref, detectorPipeCap, "detectorPipeCapVolume")
+            } else null
 
             return@lazy gdml.structure.assembly {
                 name = "detectorPipe"
@@ -170,7 +171,7 @@ open class DetectorPipe(val withCap: Boolean = false) : Geometry() {
                     name = "detectorPipeFilling"
                     position(z = FillingOffsetWithPipe) { unit = LUnit.MM }
                 }
-                if (withCap) {
+                if (withCap && detectorPipeCapVolume != null) {
                     physVolume(detectorPipeCapVolume) {
                         name = "detectorPipeCap"
                         position(z = CapPosition) { unit = LUnit.MM }
