@@ -4126,15 +4126,15 @@
             <solidref ref="cathodeFillingSolid"/>
         </volume>
         <volume name="gasVolume">
-            <materialref ref="Argon1%Isobutane1.4bar"/>
+            <materialref ref="Argon2%Isobutane1.4bar"/>
             <solidref ref="gasSolid"/>
         </volume>
         <volume name="gasVolumeNotAboveReadout">
-            <materialref ref="Argon1%Isobutane1.4bar"/>
+            <materialref ref="Argon2%Isobutane1.4bar"/>
             <solidref ref="gasSolidWithHole"/>
         </volume>
         <volume name="gasVolumeAboveReadout">
-            <materialref ref="Argon1%Isobutane1.4bar"/>
+            <materialref ref="Argon2%Isobutane1.4bar"/>
             <solidref ref="gasSolidAboveReadoutSolid"/>
         </volume>
         <assembly name="Chamber">
