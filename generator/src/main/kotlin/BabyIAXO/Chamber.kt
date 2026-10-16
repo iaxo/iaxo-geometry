@@ -224,7 +224,8 @@ open class Chamber(
                 "gasSolidAboveReadoutAux"
             ) {
                 position(z = -Height / 2 + ReadoutCopperThickness / 2) { unit = LUnit.MM }
-                rotation(z = 45) { unit = AUnit.DEG }
+                // The gas square and copper readout share their 45-degree chamber placement.
+                rotation(z = 0) { unit = AUnit.DEG }
             }
 
             val gasSolidAboveReadoutAux2 =
