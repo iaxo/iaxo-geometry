@@ -4443,7 +4443,6 @@
         <volume name="world">
             <physvol name="VetoSystem">
                 <volumeref ref="assembly-0"/>
-                <position name="VetoSystem.position" y="40.0" z="400.0" unit="mm"/>
             </physvol>
             <materialref ref="G4_AIR"/>
             <solidref ref="worldBox"/>

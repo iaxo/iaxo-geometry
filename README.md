@@ -43,3 +43,21 @@ You may need to give the script permission to run via `chmod +x gradlew`.
 Since the geometry is divided into groups, we can use the tree view to easily navigate the geometry.
 
 ![image](https://user-images.githubusercontent.com/35803280/158363294-0a850d7a-1d6c-4949-a195-0d91de79bc8e.png)
+
+### Validation
+
+From the repository root, after running the generator in `generator/`:
+
+```bash
+python3 tests/check_gdml.py --generated generator/gdml
+root -l -b -q 'macros/CheckOverlaps.C("gdml")'
+```
+
+The ROOT macro accepts a single GDML file or a directory, checks mesh overlaps,
+adds deterministic sampling and a thin-readout gas-partition regression, and
+returns a nonzero exit status on failure. Directory scans exclude `gdml/old`
+and explicitly report parameterized `${...}` templates as requiring substitution;
+instantiate those templates before checking them individually.
+The XML and variant checks use only the Python standard library.
+See [the October 2026 validation notes](docs/geometry-validation-20261016.md)
+for the fixes, tested template parameters, and numerical-check limitations.

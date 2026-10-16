@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<!DOCTYPE gdml [
-        <!ENTITY materials SYSTEM "https://rest-for-physics.github.io/materials/rest.xml">
-        ]>
 
 <gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
@@ -184,6 +181,183 @@
 
   <!-- Material definitions -->
   <materials>
+    <!-- Dependencies from the shared REST material catalog, embedded for standalone use. -->
+    <isotope Z="1.0" N="1" name="H1">
+      <atom value="1.007825" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="1.0" N="2" name="H2">
+      <atom value="2.014102" unit="g/mole" type="A" />
+    </isotope>
+    <element name="H">
+      <fraction n="0.999885" ref="H1" />
+      <fraction n="1.15E-4" ref="H2" />
+    </element>
+    <isotope Z="6.0" N="12" name="C12">
+      <atom value="12.0" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="6.0" N="13" name="C13">
+      <atom value="13.0034" unit="g/mole" type="A" />
+    </isotope>
+    <element name="C">
+      <fraction n="0.9893" ref="C12" />
+      <fraction n="0.0107" ref="C13" />
+    </element>
+    <isotope Z="8.0" N="16" name="O16">
+      <atom value="15.9949" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="8.0" N="17" name="O17">
+      <atom value="16.9991" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="8.0" N="18" name="O18">
+      <atom value="17.9992" unit="g/mole" type="A" />
+    </isotope>
+    <element name="O">
+      <fraction n="0.99757" ref="O16" />
+      <fraction n="3.8E-4" ref="O17" />
+      <fraction n="0.00205" ref="O18" />
+    </element>
+    <isotope Z="11.0" N="23" name="Na23">
+      <atom value="22.9898" unit="g/mole" type="A" />
+    </isotope>
+    <element name="Na">
+      <fraction n="1.0" ref="Na23" />
+    </element>
+    <isotope Z="12.0" N="24" name="Mg24">
+      <atom value="23.985" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="12.0" N="25" name="Mg25">
+      <atom value="24.9858" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="12.0" N="26" name="Mg26">
+      <atom value="25.9826" unit="g/mole" type="A" />
+    </isotope>
+    <element name="Mg">
+      <fraction n="0.7899" ref="Mg24" />
+      <fraction n="0.1" ref="Mg25" />
+      <fraction n="0.1101" ref="Mg26" />
+    </element>
+    <isotope Z="13.0" N="27" name="Al27">
+      <atom value="26.9815" unit="g/mole" type="A" />
+    </isotope>
+    <element name="Al">
+      <fraction n="1.0" ref="Al27" />
+    </element>
+    <isotope Z="14.0" N="28" name="Si28">
+      <atom value="27.9769" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="14.0" N="29" name="Si29">
+      <atom value="28.9765" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="14.0" N="30" name="Si30">
+      <atom value="29.9738" unit="g/mole" type="A" />
+    </isotope>
+    <element name="Si">
+      <fraction n="0.922296" ref="Si28" />
+      <fraction n="0.046832" ref="Si29" />
+      <fraction n="0.030872" ref="Si30" />
+    </element>
+    <isotope Z="19.0" N="39" name="K39">
+      <atom value="38.9637" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="19.0" N="40" name="K40">
+      <atom value="39.964" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="19.0" N="41" name="K41">
+      <atom value="40.9618" unit="g/mole" type="A" />
+    </isotope>
+    <element name="K">
+      <fraction n="0.932581" ref="K39" />
+      <fraction n="1.17E-4" ref="K40" />
+      <fraction n="0.067302" ref="K41" />
+    </element>
+    <isotope Z="20.0" N="40" name="Ca40">
+      <atom value="39.9626" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="20.0" N="42" name="Ca42">
+      <atom value="41.9586" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="20.0" N="43" name="Ca43">
+      <atom value="42.9588" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="20.0" N="44" name="Ca44">
+      <atom value="43.9555" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="20.0" N="46" name="Ca46">
+      <atom value="45.9537" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="20.0" N="48" name="Ca48">
+      <atom value="47.9525" unit="g/mole" type="A" />
+    </isotope>
+    <element name="Ca">
+      <fraction n="0.96941" ref="Ca40" />
+      <fraction n="0.00647" ref="Ca42" />
+      <fraction n="0.00135" ref="Ca43" />
+      <fraction n="0.02086" ref="Ca44" />
+      <fraction n="4.0E-5" ref="Ca46" />
+      <fraction n="0.00187" ref="Ca48" />
+    </element>
+    <isotope Z="26.0" N="54" name="Fe54">
+      <atom value="53.9396" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="26.0" N="56" name="Fe56">
+      <atom value="55.9349" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="26.0" N="57" name="Fe57">
+      <atom value="56.9354" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="26.0" N="58" name="Fe58">
+      <atom value="57.9333" unit="g/mole" type="A" />
+    </isotope>
+    <element name="Fe">
+      <fraction n="0.05845" ref="Fe54" />
+      <fraction n="0.91754" ref="Fe56" />
+      <fraction n="0.02119" ref="Fe57" />
+      <fraction n="0.00282" ref="Fe58" />
+    </element>
+    <material state="solid" name="G4_CONCRETE">
+      <D value="2.3" unit="g/cm3" />
+      <fraction n="0.01" ref="H" />
+      <fraction n="0.001" ref="C" />
+      <fraction n="0.529107" ref="O" />
+      <fraction n="0.016" ref="Na" />
+      <fraction n="0.002" ref="Mg" />
+      <fraction n="0.033872" ref="Al" />
+      <fraction n="0.337021" ref="Si" />
+      <fraction n="0.013" ref="K" />
+      <fraction n="0.044" ref="Ca" />
+      <fraction n="0.014" ref="Fe" />
+    </material>
+    <isotope Z="7.0" N="14" name="N14">
+      <atom value="14.0031" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="7.0" N="15" name="N15">
+      <atom value="15.0001" unit="g/mole" type="A" />
+    </isotope>
+    <element name="N">
+      <fraction n="0.99632" ref="N14" />
+      <fraction n="0.00368" ref="N15" />
+    </element>
+    <isotope Z="18.0" N="36" name="Ar36">
+      <atom value="35.9675" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="18.0" N="38" name="Ar38">
+      <atom value="37.9627" unit="g/mole" type="A" />
+    </isotope>
+    <isotope Z="18.0" N="40" name="Ar40">
+      <atom value="39.9624" unit="g/mole" type="A" />
+    </isotope>
+    <element name="Ar">
+      <fraction n="0.003365" ref="Ar36" />
+      <fraction n="6.32E-4" ref="Ar38" />
+      <fraction n="0.996003" ref="Ar40" />
+    </element>
+    <material state="gas" name="G4_AIR">
+      <D value="0.00120479" unit="g/cm3" />
+      <fraction n="1.24E-4" ref="C" />
+      <fraction n="0.755268" ref="N" />
+      <fraction n="0.231781" ref="O" />
+      <fraction n="0.012827" ref="Ar" />
+    </material>
     <material name="Scintillator" state="solid">
       <T unit="K" value="293.15"/>
       <D unit="g/cm3" value="1.18"/>

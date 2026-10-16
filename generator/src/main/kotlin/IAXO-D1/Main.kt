@@ -16,13 +16,14 @@ private const val worldSizeZReduced = 1100.0
 
 fun completeGeometry(
     vetoSystem: VetoSystem = VetoSystem(),
-    withCap: Boolean = false
+    withCap: Boolean = false,
+    useXenon: Boolean = false,
 ): Gdml {
     return Gdml {
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
 
-        val chamberVolume = Chamber().generate(this)
-        val detectorPipeVolume = DetectorPipe(withCap = false).generate(this)
+        val chamberVolume = Chamber(useXenon = useXenon).generate(this)
+        val detectorPipeVolume = DetectorPipe(withCap = withCap).generate(this)
         val electronicsBoxVolume = Electronics().generate(this)
         val shieldingVolume = Shielding().generate(this)
         val vetoSystemVolume = vetoSystem.generate(this)
@@ -61,7 +62,7 @@ fun completeGeometry(
 
 val geometries = mapOf(
     "Default" to completeGeometry(),
-    "DefaultXenon" to BabyIAXO.completeGeometry(useXenon = true),
+    "DefaultXenon" to completeGeometry(useXenon = true),
     "CompleteVeto1Layers" to completeGeometry(vetoSystem = VetoSystem(numberOfLayers = 1)),
     "CompleteVeto2Layers" to completeGeometry(vetoSystem = VetoSystem(numberOfLayers = 2)),
     "CompleteVeto3Layers" to completeGeometry(vetoSystem = VetoSystem(numberOfLayers = 3)),
@@ -337,47 +338,7 @@ val geometries = mapOf(
             }
         }
     }.withUnits(LUnit.MM, AUnit.RAD),
-    "DefaultClosedPipe" to Gdml {
-
-        loadMaterialsFromUrl(materialsUrl)
-
-        val chamberVolume = Chamber().generate(this)
-        val detectorPipeVolume = DetectorPipe(withCap = true).generate(this)  // capped pipe here
-        val electronicsBoxVolume = Electronics().generate(this)
-        val shieldingVolume = Shielding().generate(this)
-        val vetoSystemVolume = VetoSystem().generate(this)
-
-        structure {
-            val worldBox = solids.box(worldSizeX, worldSizeY, worldSizeZ, "worldBox")
-
-            world = volume(Materials.Air.ref, worldBox, "world") {
-                physVolume(chamberVolume, name = "Chamber")
-                physVolume(detectorPipeVolume, name = "DetectorPipe") {
-                    position(z = DetectorPipe.ZinWorld) {
-                        unit = LUnit.MM
-                    }
-                }
-                physVolume(electronicsBoxVolume, name = "ElectronicsBox") {
-                    position(
-                        x = Electronics.PipeToElectronicsDistanceX,
-                        z = Electronics.DetectorToElectronicsDistanceZ
-                    ) {
-                        unit = LUnit.MM
-                    }
-                }
-                physVolume(shieldingVolume, name = "Shielding")
-                physVolume(vetoSystemVolume, name = "VetoSystem") {
-                    position(
-                        x = 0,
-                        y = 40,
-                        z = 400,
-                    ) {
-                        unit = LUnit.MM
-                    }
-                }
-            }
-        }
-    }.withUnits(LUnit.MM, AUnit.RAD),
+    "DefaultClosedPipe" to completeGeometry(withCap = true),
     "NoVetoesClosedPipe" to Gdml {
 
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */

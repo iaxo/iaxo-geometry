@@ -1,5 +1,6 @@
 package BabyIAXO
 
+import Materials
 import materialsUrl
 
 import space.kscience.gdml.*
@@ -178,35 +179,10 @@ val geometries = mapOf(
             }
         }
     }.withUnits(LUnit.MM, AUnit.RAD),
-    "ChamberAndPipe" to Gdml {
-
-        loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
-
-        val chamberVolume = Chamber().generate(this)
-        val detectorPipeVolume = DetectorPipe().generate(this)
-        val electronicsBoxVolume = Electronics().generate(this)
-
-        structure {
-            val worldBox = solids.box(worldSizeX, worldSizeY, worldSizeZ, "worldBox")
-
-            world = volume(Materials.Air.ref, worldBox, "world") {
-                physVolume(chamberVolume, name = "Chamber")
-                physVolume(detectorPipeVolume, name = "DetectorPipe") {
-                    position(z = DetectorPipe.ZinWorld) {
-                        unit = LUnit.MM
-                    }
-                }
-                physVolume(electronicsBoxVolume, name = "ElectronicsBox") {
-                    position(
-                        x = Electronics.PipeToElectronicsDistanceX,
-                        z = Electronics.DetectorToElectronicsDistanceZ
-                    ) {
-                        unit = LUnit.MM
-                    }
-                }
-            }
-        }
-    }.withUnits(LUnit.MM, AUnit.RAD),
+    "ChamberAndPipe" to chamberAndPipe(),
+    "ChamberAndPipeArgon1pct" to chamberAndPipe(Materials.GasArgon1pct),
+    "ChamberAndPipeArgon2pct" to chamberAndPipe(Materials.GasArgon),
+    "ChamberAndPipeXenon" to chamberAndPipe(Materials.GasXenon),
     "VetoSystem" to Gdml {
 
         loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
@@ -217,13 +193,7 @@ val geometries = mapOf(
             val worldBox = solids.box(worldSizeX, worldSizeY, worldSizeZ, "worldBox")
 
             world = volume(Materials.Air.ref, worldBox, "world") {
-                physVolume(vetoSystemVolume, name = "VetoSystem") {
-                    position(
-                        x = 0,
-                        y = 40,
-                        z = 400,
-                    ) { unit = LUnit.MM }
-                }
+                physVolume(vetoSystemVolume, name = "VetoSystem")
             }
         }
     }.withUnits(LUnit.MM, AUnit.RAD),
@@ -318,4 +288,34 @@ val geometries = mapOf(
         }
     }.withUnits(LUnit.MM, AUnit.RAD),
 )
+
+fun chamberAndPipe(gasMaterial: Materials = Materials.GasArgon): Gdml = Gdml {
+
+    loadMaterialsFromUrl(materialsUrl) /* This adds all materials form the URL (we do not need them all) */
+
+    val chamberVolume = Chamber(gasMaterial = gasMaterial).generate(this)
+    val detectorPipeVolume = DetectorPipe().generate(this)
+    val electronicsBoxVolume = Electronics().generate(this)
+
+    structure {
+        val worldBox = solids.box(worldSizeX, worldSizeY, worldSizeZ, "worldBox")
+
+        world = volume(Materials.Air.ref, worldBox, "world") {
+            physVolume(chamberVolume, name = "Chamber")
+            physVolume(detectorPipeVolume, name = "DetectorPipe") {
+                position(z = DetectorPipe.ZinWorld) {
+                    unit = LUnit.MM
+                }
+            }
+            physVolume(electronicsBoxVolume, name = "ElectronicsBox") {
+                position(
+                    x = Electronics.PipeToElectronicsDistanceX,
+                    z = Electronics.DetectorToElectronicsDistanceZ
+                ) {
+                    unit = LUnit.MM
+                }
+            }
+        }
+    }
+}.withUnits(LUnit.MM, AUnit.RAD)
 

@@ -8,6 +8,7 @@ import space.kscience.gdml.*
 open class Chamber(
     val useXenon: Boolean = false,
     val splitGas: Boolean = true,
+    val gasMaterial: Materials = if (useXenon) Materials.GasXenon else Materials.GasArgon,
 ) : Geometry() {
     companion object Parameters {
         // Body
@@ -247,7 +248,7 @@ open class Chamber(
                     rotation(z = 45) { unit = AUnit.DEG }
                 }
 
-            val gasMaterialRef = if (useXenon) Materials.GasXenon.ref else Materials.GasArgon.ref
+            val gasMaterialRef = gasMaterial.ref
 
             val gasVolume = gdml.structure.volume(gasMaterialRef, gasSolid, "gasVolume")
             val gasVolumeNotAboveReadout =

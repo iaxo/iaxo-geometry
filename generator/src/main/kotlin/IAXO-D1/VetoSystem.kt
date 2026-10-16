@@ -22,10 +22,12 @@ class VetoLayerTop(private val numberOfLayers: Int = 3) : Geometry() {
         val vetoLayerVolume: GdmlRef<GdmlAssembly> by lazy {
             return@lazy gdml.structure.assembly {
                 for (i in 1..numberOfLayers) {
+                    // Keep a 64 mm pitch: the light guides are thicker than the bars.
+                    val layerY = 20.0 + (Veto.FullThickness + 10) * (i - 1)
                     if (i == 1) {
                             physVolume(vetoLayer, name = "vetoLayerTop$i") {
                                 position(
-                                    y = (Veto.FullThickness + 5) * (i - 1) + 20
+                                    y = layerY
                                 ) { unit = LUnit.MM }
                                 rotation { unit = AUnit.DEG; y = 180 * i }
                             }
@@ -33,14 +35,14 @@ class VetoLayerTop(private val numberOfLayers: Int = 3) : Geometry() {
                         if (i % 2 == 0) {
                             physVolume(vetoLayerReversedIndex, name = "vetoLayerTop$i") {
 			        position(
-			            y = (Veto.FullThickness + 5) * (i - 1) + 25
+			            y = layerY
 			        ) { unit = LUnit.MM }
 			        rotation { unit = AUnit.DEG; y = 180 * i }
                             }
                         } else {
                             physVolume(VetoLayer(4, vetoSize = VetoSize.DEFAULT).generate(gdml), name = "vetoLayerTop$i") {
 				position(
-				    y = (Veto.FullThickness + 5) * (i - 1) + 30,
+				    y = layerY,
 				    z = -350
 				) { unit = LUnit.MM }
 				rotation { unit = AUnit.DEG; y = 180 * i }

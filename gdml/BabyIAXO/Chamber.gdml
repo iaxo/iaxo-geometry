@@ -4063,7 +4063,7 @@
         <box lunit="mm" aunit="rad" name="gasSolidAboveReadoutOriginal" x="60.0" y="60.0" z="30.0"/>
         <subtraction lunit="mm" aunit="rad" name="gasSolidAboveReadoutAux">
             <position name="gasSolidAboveReadoutAux.position" z="-14.9" unit="mm"/>
-            <rotation name="gasSolidAboveReadoutAux.rotation" z="45.0" unit="deg"/>
+            <rotation name="gasSolidAboveReadoutAux.rotation" unit="deg"/>
             <first ref="gasSolidAboveReadoutOriginal"/>
             <second ref="copperReadoutSolid"/>
         </subtraction>

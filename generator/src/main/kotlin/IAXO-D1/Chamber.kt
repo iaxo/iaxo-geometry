@@ -1,5 +1,5 @@
 package `IAXO-D1`
 
-class Chamber : BabyIAXO.Chamber() {
+class Chamber(useXenon: Boolean = false) : BabyIAXO.Chamber(useXenon = useXenon) {
 
 }
